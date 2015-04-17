@@ -7,35 +7,35 @@
 // CWebApplication properties can be configured here.
 error_reporting(E_ALL^E_NOTICE);
 return array(
-    'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>'admin',
+	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+	'name'=>'admin',
 
-    // preloading 'log' component
-    'preload'=>array('log'),
+	// preloading 'log' component
+	'preload'=>array('log'),
 
-    // autoloading model and component classes
-    'import'=>array(
+	// autoloading model and component classes
+	'import'=>array(
         'application.controllers.BaseController',
-        'application.models.*',
-        'application.components.*',
-    ),
+		'application.models.*',
+		'application.components.*',
+	),
 
-    'defaultController'=>'site',
+	'defaultController'=>'site',
 
-    // application components
-    'components'=>array(
-        'user'=>array(
-            // enable cookie-based authentication
-            'allowAutoLogin'=>true,
-        ),
+	// application components
+	'components'=>array(
+		'user'=>array(
+			// enable cookie-based authentication
+			'allowAutoLogin'=>true,
+		),
 //		'db'=>array(
 //			'connectionString' => 'sqlite:protected/data/blog.db',
 //			'tablePrefix' => 'tbl_',
 //		),
-
-        // uncomment the following to use a MySQL database
+    
+		// uncomment the following to use a MySQL database
         //mysql读写分离
-        'db'=>array(
+		'db'=>array(
             'class' => 'application.extensions.DbConnectionMan',    //DbConnectionMan
             'emulatePrepare' => true,
             'charset' => 'utf8',
@@ -44,7 +44,7 @@ return array(
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
             'password' => 'root',
-            'tablePrefix' => 'tbl_',
+			'tablePrefix' => 'tbl_',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
@@ -60,39 +60,39 @@ return array(
 //                    'password'=>'xxx'
 //                ),
             ),
-        ),
-        'errorHandler'=>array(
-            // use 'site/error' action to display errors
-            'errorAction'=>'site/error',
-        ),
-        'urlManager'=>array(
+		),
+		'errorHandler'=>array(
+			// use 'site/error' action to display errors
+			'errorAction'=>'site/error',
+		),
+		'urlManager'=>array(
             'showScriptName'=>false,
-            'urlFormat'=>'path',
-            'rules'=>array(
-                'post/<id:\d+>/<title:.*?>'=>'post/view',
-                'posts/<tag:.*?>'=>'post/index',
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-            ),
-        ),
-        'log'=>array(
-            'class'=>'CLogRouter',
-            'routes'=>array(
-                array(
-                    'class'=>'CFileLogRoute',
-                    'levels'=>'error, warning',
-                ),
-                // uncomment the following to show log messages on web pages
-                /*
-                array(
-                    'class'=>'CWebLogRoute',
-                ),
-                */
-            ),
-        ),
-    ),
+			'urlFormat'=>'path',
+			'rules'=>array(
+				'post/<id:\d+>/<title:.*?>'=>'post/view',
+				'posts/<tag:.*?>'=>'post/index',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+			),
+		),
+		'log'=>array(
+			'class'=>'CLogRouter',
+			'routes'=>array(
+				array(
+					'class'=>'CFileLogRoute',
+					'levels'=>'error, warning',
+				),
+				// uncomment the following to show log messages on web pages
+				/*
+				array(
+					'class'=>'CWebLogRoute',
+				),
+				*/
+			),
+		),
+	),
 
-    // application-level parameters that can be accessed
-    // using Yii::app()->params['paramName']
+	// application-level parameters that can be accessed
+	// using Yii::app()->params['paramName']
     'params' => array(
         'cdnUrl' => '',
         'cdnSSLUrl' => '',
