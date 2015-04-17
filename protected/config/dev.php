@@ -8,7 +8,7 @@
 error_reporting(E_ALL^E_NOTICE);
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'admin',
+	'name'=>'home',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
