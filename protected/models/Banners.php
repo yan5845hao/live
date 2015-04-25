@@ -33,7 +33,7 @@ class Banners extends CActiveRecord
          */
         public function tableName()
         {
-                return '{{banner}}';
+                return 'banner';
         }
         /**
          * 根据banner分组获取banner

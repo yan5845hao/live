@@ -23,7 +23,7 @@ class ConfigurationGroup extends CActiveRecord
          */
         public function tableName()
         {
-                return '{{configuration_group}}';
+                return 'configuration_group';
         }
 
         /**

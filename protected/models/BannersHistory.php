@@ -18,7 +18,7 @@ class BannersHistory extends CActiveRecord
          */
         public function tableName()
         {
-                return '{{banner_history}}';
+                return 'banner_history';
         }
         /**
          * @return array validation rules for model attributes.

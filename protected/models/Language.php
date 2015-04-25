@@ -21,7 +21,7 @@ class Language extends CActiveRecord
          */
         public function tableName()
         {
-                return '{{language}}';
+                return 'language';
         }
 
         /**

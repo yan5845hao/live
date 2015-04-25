@@ -33,6 +33,7 @@ class BaseController extends CController
 
         parent::__construct($id, $module);
         Yii::app()->charset = 'UTF-8';
+        $this->layout = 'main';
         $this->breadcrumbs = new Breadcrumbs();
         $this->breadcrumbs->add('首页', $this->createUrl('site/index'));
         $this->imagesUrl = cdn_images_url();
@@ -41,5 +42,7 @@ class BaseController extends CController
         $this->session->open();
         $this->cookie_path = '/';
         $this->cookie_domain = Yii::app()->params['cookieDomain'];
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/live_common.js");
     }
 }

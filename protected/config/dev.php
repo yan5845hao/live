@@ -43,14 +43,13 @@ return array(
             'enableParamLogging' => YII_DEBUG,
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
-            'password' => 'root',
-			'tablePrefix' => 'tbl_',
+            'password' => '',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
                     'connectionString' => 'mysql:host=localhost;dbname=live',
                     'username'=>'root',
-                    'password'=>'root',
+                    'password'=>'',
                     'emulatePrepare' => true,
                     'charset' => 'utf8',
                 ),

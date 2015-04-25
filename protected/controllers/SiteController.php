@@ -5,11 +5,12 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
-        if (Yii::app()->user->isGuest) {
-            $this->forward('site/login');
-        } else {
-            $this->render('index');
-        }
+//        if (Yii::app()->user->isGuest) {
+//            $this->forward('site/login');
+//        } else {
+//            $this->render('index');
+//        }
+        $this->render('index');
     }
 
 	/**
