@@ -19,8 +19,6 @@ class MyAccountController extends BaseController
     }
     public function actionIndex()
     {
-        $this->breadcrumbs->add('我的途风', $this->createUrl('MyAccount/index'));
-        $this->breadcrumbs->add('欢迎页');
         $this->render('index');
     }
 }
