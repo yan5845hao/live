@@ -1,8 +1,17 @@
 <?php
 
-class SiteController extends Controller
+class SiteController extends BaseController
 {
-	public $layout='column1';
+
+    public function actionIndex()
+    {
+//        if (Yii::app()->user->isGuest) {
+//            $this->forward('site/login');
+//        } else {
+//            $this->render('index');
+//        }
+        $this->render('index');
+    }
 
 	/**
 	 * Declares class-based actions.

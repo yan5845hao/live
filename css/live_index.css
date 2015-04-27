@@ -1,0 +1,57 @@
+ul, ol, li {
+    padding: 0;
+    margin: 0
+}
+
+ul, ol {
+    list-style: none
+}
+
+li {
+    list-style: inherit
+}
+.index-top-banner {
+    height: 350px;
+    position: relative;
+    min-width: 1000px;
+    overflow: hidden;
+    z-index: 1
+}
+
+.index-top-banner a {
+    display: block;
+    width: 1920px;
+    height: 340px;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px
+}
+
+.slideBtns {
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    display: inline-block;
+    height: 6px;
+    padding: 7px 0 7px 15px;
+    background: #fff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc
+}
+
+.slideBtns li {
+    width: 10px;
+    height: 10px;
+    float: left;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #aaa;
+    margin-right: 15px
+}
+
+.slideBtns li.cur {
+    background: #555
+}

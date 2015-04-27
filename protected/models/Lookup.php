@@ -27,7 +27,7 @@ class Lookup extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{lookup}}';
+		return 'lookup';
 	}
 
 	/**
