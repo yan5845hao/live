@@ -1,11 +1,13 @@
 <script language="javascript">
     function get_mobile_code() {
-        $.post('/account/verifycode', {mobile: jQuery.trim($('#mobile').val()), send_code:<?php echo $_SESSION['send_code'];?>}, function (msg) {
-            alert(jQuery.trim(unescape(msg)));
-            if (msg == '提交成功') {
+        $.post('/account/verifycode', {mobile: jQuery.trim($('#mobile').val()), send_code:<?php echo $_SESSION['send_code'];?>}, function (data) {
+            if(data.message == '提交成功'){
                 RemainTime();
+                $("#verify_mobile").text();
+            }else{
+                $("#verify_mobile").html('<span class="error">'+data.message+'</span>');
             }
-        });
+        },'json');
     }
     ;
     var iTime = 59;
@@ -38,35 +40,37 @@
         }
         document.getElementById('zphone').value = sTime;
     }
+    function removeError()
+    {
+        $("#verify_mobile").text('');
+        $("#verify_code").text('');
+        $("#verify_password").text('');
+        $("#verify_password_repeat").text('');
+    }
     function verify() {
-        verified_password = false;
         var mobile = $('#mobile').val();
         var mobile_code = $('#mobile_code').val();
         var password = $('#password').val();
         var password_repeat = $('#password_repeat').val();
+        removeError();
         if (mobile == '') {
-            alert('手机号码不能为空');
+            $("#verify_mobile").html('<span class="error">手机号码不能为空</span>');
             return false;
         } else if (mobile_code == '') {
-            alert('验证码不能为空');
+            $("#verify_code").html('<span class="error">验证码不能为空</span>');
             return false;
         } else if (password == '') {
-            alert('密码不能为空');
+            $("#verify_password").html('<span class="error">密码不能为空</span>');
             return false;
         } else if (password_repeat == '') {
-            alert('确认密码不能为空');
+            $("#verify_password_repeat").html('<span class="error">确认密码不能为空</span>');
             return false;
         } else if (password_repeat != password) {
-            alert('确认密码不正确');
+            $("#verify_password_repeat").html('<span class="error">确认密码不正确</span>');
             return false;
         } else {
             return true;
         }
-        //if(password.length < 5) return ;
-//        if(password.length > 12 || password.length < 5){
-//            verify.html('<span class="error">请输入5-12个字符的密码。</span>');
-//            return false;
-//        }
     }
     function checkForm() {
         if (verify()) {
@@ -78,41 +82,44 @@
 <form action="<?php echo Yii::app()->createUrl('/account/register'); ?>" method="post" name="formUser" id="formUser">
     <table width="100%" border="0" align="left" cellpadding="5" cellspacing="3">
         <tr>
-            <td align="right">手机
+            <td align="right">手机<span style="color:#FF0000"> *</span></td>
             <td>
-                <input id="mobile" name="mobile" type="text" size="25" class="inputBg"/><span
-                    style="color:#FF0000"> *</span>
-                <input id="zphone" type="button" value=" 获取手机验证码 " onClick="get_mobile_code();"></td>
-        </tr>
-        <tr>
-            <td align="right">验证码</td>
-            <td>
-                <input type="text" size="8" name="mobile_code" id="mobile_code" class="inputBg"/>
-                <?php if ($model->hasErrors('mobile_code')) { ?>
-                    <span class="error" id="mobile_code_error"><?php echo $model->getError('mobile_code') ?></span>
+                <input id="mobile" name="mobile" type="text" size="25" value="<?php echo $model->phone; ?>" class="inputBg"/>
+                <input id="zphone" type="button" value=" 获取手机验证码 " onClick="get_mobile_code();">
+                <span id="verify_mobile">
+                <?php if ($model->hasErrors('mobile')) { ?>
+                    <span class="error"><?php echo $model->getError('mobile') ?></span>
                 <?php } ?>
+                </span>
             </td>
         </tr>
         <tr>
-            <td align="right">登陆密码</td>
+            <td align="right">验证码<span style="color:#FF0000"> *</span></td>
             <td>
-                <input type="password" name="password" tabindex="4" id="password" class="inputBg" autocomplete="off"
-                       maxlength="12"/>
+                <input type="text" size="8" name="mobile_code" id="mobile_code" class="inputBg" />
+                <span id="verify_code">
+                <?php if ($model->hasErrors('mobile_code')) { ?>
+                    <span class="error"><?php echo $model->getError('mobile_code') ?></span>
+                <?php } ?>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">登陆密码<span style="color:#FF0000"> *</span></td>
+            <td>
+                <input type="password" name="password" tabindex="4" id="password" class="inputBg" autocomplete="off" maxlength="12"/>
+                <span id="verify_password">
                 <?php if ($model->hasErrors('password')) { ?>
                     <span class="error"><?php echo $model->getError('password') ?></span>
                 <?php } ?>
+                </span>
             </td>
         </tr>
         <tr>
-            <td align="right">确认密码</td>
+            <td align="right">确认密码<span style="color:#FF0000"> *</span></td>
             <td>
-                <input type="password" name="password_repeat" tabindex="4" id="password_repeat" class="inputBg"
-                       autocomplete="off" maxlength="12"/>
-                <span id="verify_password_repeat">
-                <?php if ($model->hasErrors('password_repeat')) { ?>
-                    <span class="error"
-                          id="password_repeat_error"><?php echo $model->getError('password_repeat') ?></span>
-                <?php } ?>
+                <input type="password" name="password_repeat" tabindex="4" id="password_repeat" class="inputBg" autocomplete="off" maxlength="12"/>
+                <span id="verify_password_repeat"></span>
             </td>
         </tr>
         <tr>

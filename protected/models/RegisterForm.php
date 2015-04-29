@@ -4,20 +4,15 @@
  */
 class RegisterForm extends CFormModel
 {
-    public $email = '';
-    public $cell_confirm = '';
-    public $first_name = '';
+    public $phone = '';
     public $password = '';
-    public $password_repeat = '';
-    public $vvc = '';
 
     public function rules()
     {
         return array(
-            array('password', 'required'),
-            array('phone', 'length', 'min' => 7, 'max' => 13),
-            array('password', 'length', 'min' => 5, 'max' => 12, 'tooLong' => '请输入5-12个字符的密码。'),
-            array('password_repeat', 'compare', 'compareAttribute' => 'password', 'message' => '两次密码输入不一致。')
+            array('password', 'required', 'message' => '密码不能为空。'),
+            array('phone', 'length', 'min' => 7, 'max' => 13, 'tooLong'=>'手机号码不正确', 'tooShort' => '手机号码不正确。'),
+            array('password', 'length', 'min' => 5, 'max' => 12, 'tooLong' => '请输入5-12个字符的密码。', 'tooShort' => '请输入5-12个字符的密码。')
         );
     }
 
@@ -40,7 +35,6 @@ class RegisterForm extends CFormModel
         return array(
             'cell_confirm' => '手机号',
             'password' => '密码',
-            'password_repeat' => '确认密码'
         );
     }
 
