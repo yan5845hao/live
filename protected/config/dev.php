@@ -43,13 +43,13 @@ return array(
             'enableParamLogging' => YII_DEBUG,
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
-            'password' => '',
+            'password' => 'root',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
                     'connectionString' => 'mysql:host=localhost;dbname=live',
                     'username'=>'root',
-                    'password'=>'',
+                    'password'=>'root',
                     'emulatePrepare' => true,
                     'charset' => 'utf8',
                 ),
@@ -88,6 +88,12 @@ return array(
 				*/
 			),
 		),
+        'sms'=>array(
+            'class' => 'Sms',
+            'url' => "http://106.ihuyi.cn/webservice/sms.php?method=Submit",
+            'account' => 'cf_fjy',
+            'password' => '123456'
+        ),
 	),
 
 	// application-level parameters that can be accessed

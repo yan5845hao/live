@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>捕捉梦想捕捉爱!-捕梦网</title>
+    <title>title</title>
     <?php
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     ?>
@@ -15,7 +15,7 @@
     <?php
     if(Yii::app()->user->isGuest){
         ?>
-        <a href="<?php echo $this->createUrl('site/login')?>">登陆</a> | 注册
+        <a href="<?php echo $this->createUrl('site/login')?>">登陆</a> | <a href="<?php echo $this->createUrl('account/register')?>">注册</a>
     <?php
     }else{
         ?>
