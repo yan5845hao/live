@@ -65,4 +65,17 @@ class Customer extends CActiveRecord
         return md5('live_'.$str);
     }
 
+    public function registerLive($customer_data)
+    {
+        try{
+            $customer_data['password'] = $this->md5($customer_data['password']);
+            $this->setAttributes($customer_data);
+            $this->save();
+            return true;
+        }catch(Exception $e){
+            $e->getMessage();
+            return false;
+        }
+    }
+
 }

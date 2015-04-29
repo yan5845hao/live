@@ -35,21 +35,19 @@ class AccountController extends BaseController
             if ($_POST['mobile'] != $_SESSION['mobile'] or $_POST['mobile_code'] != $_SESSION['mobile_code'] or empty($_POST['mobile']) or empty($_POST['mobile_code'])) {
                 $form->addError('mobile_code','手机验证码输入错误');
             } else if ($form->validate()) {
-                $customer = new Customer;
-                $customer_data['password'] = $customer->md5($customer_data['password']);
-                $customer->setAttributes($customer_data);
-                if($customer->save()){
-//                    $identify = new CustomerIdentity();
-//                    $identify->assignCustomer($customer);
-//                    Yii::app()->user->login($identify);
+                $customer = new Customer();
+                if($customer->registerLive($customer_data)){
+                    $identify = new CustomerIdentity();
+                    $identify->assignCustomer($customer);
+                    Yii::app()->user->login($identify);
+                    $_SESSION['mobile'] = '';
+                    $_SESSION['mobile_code'] = '';
+                    $this->redirect($this->createUrl('MyAccount/index'));
+                }else{
+                    $form->addError('mobile','该手机号码已经是本站会员');
                 }
-                //$this->redirect($this->createUrl('MyAccount/index'));
+
             }
-            /**
-             *
-            $_SESSION['mobile'] = '';
-            $_SESSION['mobile_code'] = '';
-             */
         }
         $this->render('register', array('model' => $form));
     }
