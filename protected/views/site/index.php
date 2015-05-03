@@ -4,6 +4,3 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . "/css/live_index
 <div class="index-top-banner" id="banner">
     <?php $this->widget('application.widgets.BannerWidget',array('group'=>'Index Page Top850x390','slider_type'=>'image')); ?>
 </div>
-<br>
-<?php $this->widget('application.widgets.MenuWidget'); ?>
-<br><br><br><br><br><br><br><br><br><br><br><br>
