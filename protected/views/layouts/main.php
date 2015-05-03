@@ -15,20 +15,20 @@
     <?php
     if(Yii::app()->user->isGuest){
         ?>
-        <a href="<?php echo $this->createUrl('site/login')?>">登陆</a> | <a href="<?php echo $this->createUrl('account/register')?>">注册</a>
+        <a href="<?php echo $this->createUrl('/site/login')?>">登陆</a> | <a href="<?php echo $this->createUrl('/account/register')?>">注册</a>
     <?php
     }else{
         ?>
         欢迎,
         <?php echo Yii::app()->user->name;?>
-        | <a href="<?php echo $this->createUrl('site/logout')?>">退出</a>
+        | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>
     <?php } ?>
-    &nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->createUrl('MyAccount/index')?>">个人中心</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->createUrl('/myaccount')?>">个人中心</a>
 </div>
 <div class="wrap" style="height: 110px;">
     <div class="header">
         <h1 class="logo">
-            <a href="<?php echo $this->createUrl('site/index')?>">
+            <a href="<?php echo $this->createUrl('/site/index')?>">
                 <img alt="logo" src="#" width="161" height="56" class="pngFix">
             </a>
         </h1>
@@ -43,6 +43,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="clear wrap">
+    <h1><a href="<?php echo Yii::app()->createUrl('/site') ;?>">首页</a>  |  <a href="<?php echo Yii::app()->createUrl('/bigshots') ;?>">大咖秀</a>    |    明星档    |    星愿城     |     大牌店     |     粉社会</h1>
 </div>
 <div class="wrap clear">
 <?php echo $content; ?>
