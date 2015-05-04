@@ -22,7 +22,7 @@
     <?php
     if(Yii::app()->user->isGuest){
     ?>
-        <a href="<?php echo $this->createUrl('/site/login')?>" target="_blank" class="c-gap-left">【登录】</a>
+        <a href="<?php echo $this->createUrl('/site/login')?>" class="c-gap-left">【登录】</a>
         <a href="<?php echo $this->createUrl('/account/register')?>">【注册】</a>
     <?php
     }else{
