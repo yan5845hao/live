@@ -21,4 +21,8 @@ class MyAccountController extends BaseController
     {
         $this->render('index');
     }
+    public function actionmydata()
+    {
+        $this->render('index');
+    }
 }
