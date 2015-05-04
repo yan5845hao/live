@@ -71,6 +71,8 @@ class SiteController extends BaseController
 	 */
 	public function actionLogin()
 	{
+        $this->layout = 'sign_layout';
+        
 		if (!defined('CRYPT_BLOWFISH')||!CRYPT_BLOWFISH)
 			throw new CHttpException(500,"This application requires that PHP was compiled with Blowfish support for crypt().");
 

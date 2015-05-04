@@ -9,6 +9,7 @@ class AccountController extends BaseController
     public function __construct($id, $module = null)
     {
         parent::__construct($id, $module);
+        $this->layout = 'sign_layout';
     }
 
     public function actionIndex()
