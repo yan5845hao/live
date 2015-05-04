@@ -88,6 +88,12 @@ return array(
 				*/
 			),
 		),
+        'sms'=>array(
+            'class' => 'Sms',
+            'url' => "http://106.ihuyi.cn/webservice/sms.php?method=Submit",
+            'account' => 'cf_fjy',
+            'password' => '123456'
+        ),
 	),
 
 	// application-level parameters that can be accessed

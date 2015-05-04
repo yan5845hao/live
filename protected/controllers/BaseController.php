@@ -43,6 +43,7 @@ class BaseController extends CController
         $this->cookie_path = '/';
         $this->cookie_domain = Yii::app()->params['cookieDomain'];
         Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/live_common.js");
+//        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/live_common.js");
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery-1.11.2.js");
     }
 }
