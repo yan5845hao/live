@@ -1,0 +1,41 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, select, textarea, p, blockquote, th, td {
+margin:0;padding:0;}
+body{color:#000;font-size:12px;text-align:left;background:#151515;font-family:'微软雅黑';line-height:20px;}
+li{list-style:none;}
+img{border:0; vertical-align:top;}
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {font-style:inherit; font-weight:normal;}
+h1, h2, h3, h4, h5, h6 {font-size:12px; font-weight:normal;}
+i{font-style:normal;}
+a{color:#5c7a99;text-decoration:none;}
+a:hover{color:#5c7a99;text-decoration:none;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+.clearfix:after{display:block; visibility:hidden; clear:both; height:0; content:".";}
+.clearfix{zoom:1;}
+.hide{display:none;}
+.f14{font-size:14px;font-weight:bold;color:#dd5049;}
+.f34{font-size:34px;}
+.col6d{font-weight:bold;color:#6d6d6d;}
+.hei15{height:15px;overflow:hidden;}
+em{font-style:normal;}
+.tongyi_head{background:#00b6be;height:42px;line-height:42px;}
+.c-gap-left-small{margin-left:5px;}
+.c-gap-right-small{margin-right:5px;}
+.c-gap-top-small{margin-top:5px;}
+.c-gap-bottom-small{margin-bottom:5px;}
+.c-gap-left{margin-left:10px;}
+.c-gap-right{margin-right:10px;}
+.c-gap-top{margin-top:10px;}
+.c-gap-bottom{margin-bottom:10px;}
+.c-gap-left-large{margin-left:20px;}
+.c-gap-right-large{margin-right:20px;}
+.c-gap-top-large{margin-top:20px;}
+.c-gap-bottom-large{margin-bottom:20px;}
+
+
+.red_color{color:#ff0101;}
+.gray_color{color:#999;}
+
+
