@@ -8,6 +8,8 @@
     //Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/main.css');
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/common.css');
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery-1.11.2.js");
     ?>
 </head>
 <body>
