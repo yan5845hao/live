@@ -67,11 +67,7 @@ return array(
 		'urlManager'=>array(
             'showScriptName'=>false,
 			'urlFormat'=>'path',
-			'rules'=>array(
-				'post/<id:\d+>/<title:.*?>'=>'post/view',
-				'posts/<tag:.*?>'=>'post/index',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+            'rules' => include('route.php'),
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
