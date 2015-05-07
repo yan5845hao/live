@@ -18,15 +18,16 @@
             <button></button>
         </div>
         <div class="login left">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <?php
             if(Yii::app()->user->isGuest){
                 ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="<?php echo $this->createUrl('/site/login')?>" class="c-gap-left">【登录】</a>
                 <a href="<?php echo $this->createUrl('/account/register')?>">【注册】</a>
             <?php
             }else{
                 ?>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span style="color: #5D5D5D"> 欢迎 , </span>
                 <a href="<?php echo $this->createUrl('/myaccount')?>"><?php echo Yii::app()->user->name;?></a>
                 | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>

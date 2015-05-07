@@ -23,9 +23,9 @@
         <?php
         if(Yii::app()->user->isGuest){
         ?>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="<?php echo $this->createUrl('/site/login')?>" class="c-gap-left">【登录】</a>
             <a href="<?php echo $this->createUrl('/account/register')?>">【注册】</a>
-            <a href="<?php echo $this->createUrl('/myaccount')?>">个人中心</a>
         <?php
         }else{
         ?>
