@@ -16,6 +16,7 @@ class MyAccountController extends BaseController
         if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
         $this->user = Yii::app()->user;
         $this->userID = $this->user->id;
+        $this->layout = 'sign_layout';
     }
     public function actionIndex()
     {

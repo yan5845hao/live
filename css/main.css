@@ -4,7 +4,7 @@
 .top{width:1244px;margin:0 auto;height:96px;}
 .logo img{float:left;margin-top:14px;}
 .logo span{color:#ffa300;font-family:'微软雅黑','黑体','宋体';font-size:16px;margin-left:10px;float:left;font-weight:bold;margin-top:56px;}
-.search{position:relative;background:url(../images/mxindex/search_bg.png) no-repeat;width:415px;height:38px;margin-top:29px; margin-left:100px;}
+.search{position:relative;background:url(../images/search_bg.png) no-repeat;width:415px;height:38px;margin-top:29px; margin-left:100px;}
 .search button{position:absolute;right:0px;top:0px;height:38px;width:60px;border:none;background:none;cursor:pointer;}
 .search input{height:33px;padding-left:50px;width:300px;background:none;border:none;color:#fff;font-size:14px;font-family:'微软雅黑','黑体','宋体';}
 .login ,.enter{height:96px;line-height:96px;}
@@ -14,16 +14,8 @@
 .enter a:hover,.enter a:active{color:#6b33a2;text-decoration:none;}
 
 
-.banner{width: 1244px;height: 570px;text-align: center;margin:0 auto;}
-.huangdeng-btn li{width:14px; height:14px;border:none;background:#7d03e4; -moz-border-radius: 59px;-webkit-border-radius: 59px;border-radius:59px;/* W3C syntax */}
-.huandeng-outer{position:relative;overflow:hidden;height:570px;}
-.huandeng-inner{position:absolute;left:0px;top:0px;}
-.huandeng-inner div{float:left;}
-.huangdeng-btn{position:absolute;left:0px;bottom:0px;width:100%;z-index:10;text-align:center;}
-.huangdeng-btn li{display:inline-block;margin:0 5px;}
-.huangdeng-btn li.current{background:#fff;}
-
-
+.banner{width: 100%;height: 100%;background-repeat: no-repeat;background-size: 100%;background-position: 50% 50%;text-align: center;}
+.banner img{width: 100%;	height: 100%;}
 
 .content_wrapper{background:#f1f1f1;}
 .content{width:1244px;margin:0 auto;padding-top:20px;padding-bottom:20px;}
@@ -44,7 +36,7 @@
 .fensi_rank{width:350px;margin:20px auto;}
 .fensi_rank_num span,.fensi_rank_num button{display:inline-block;height:44px;line-height:44px;float:left;}
 .fensi_rank_num span{width:37px;background:#7d03e4;float:left;margin-right:5px;text-align:center;color:#fff;font-size:24px;}
-.fensi_rank_num button{margin-left:5px;border:none;background:url(../images/mxindex/button1.png) no-repeat;width:76px;height:44px;}
+.fensi_rank_num button{margin-left:5px;border:none;background:url(../images/button1.png) no-repeat;width:76px;height:44px;}
 .him_word_title{font-size:16px;}
 .him_word_title {border-bottom:1px solid #515151;padding-bottom:10px;margin-bottom:10px;}
 .him_word a{display:inline-block;padding:5px 10px;background:#f1f1f1;font-size:16px;margin-right:10px;}
@@ -58,14 +50,14 @@
 
 
 .month_cycle{margin-top:15px;position:relative;height:100px;}
-.month_cycle_btn_left{background:url(../images/mxindex/turn_left.png) no-repeat;width:17px;height:18px;float:left;margin-top:40px;}
-.month_cycle_btn_right{background:url(../images/mxindex/turn_right.png) no-repeat;width:15px;height:18px;float:left;margin-top:40px;}
+.month_cycle_btn_left{background:url(../images/turn_left.png) no-repeat;width:17px;height:18px;float:left;margin-top:40px;}
+.month_cycle_btn_right{background:url(../images/turn_right.png) no-repeat;width:15px;height:18px;float:left;margin-top:40px;}
 .month_cycle_list{float:left;}
 .month_cycle_list li{float:left;margin:0 20px;display:inline;height:69px;padding-top:28px;}
 .month_cycle_list li.current{height:97px;padding-top:0px;}
-.month_cycle_list a{display:block;background:url(../images/mxindex/icon1.png) no-repeat;width:36px;text-align:center;font-size:20px;height:36px;line-height:36px;}
-.month_cycle_list li.current a{margin-top:0px;color:#fff;font-size:24px;background:url(../images/mxindex/icon2.png) no-repeat;width:64px;height:64px;line-height:64px;}
-.month_cycle_list em{display:block;background:url(../images/mxindex/icon3.png) no-repeat;width:18px;height:18px;margin-left:9px;margin-top:15px;}
+.month_cycle_list a{display:block;background:url(../images/icon1.png) no-repeat;width:36px;text-align:center;font-size:20px;height:36px;line-height:36px;}
+.month_cycle_list li.current a{margin-top:0px;color:#fff;font-size:24px;background:url(../images/icon2.png) no-repeat;width:64px;height:64px;line-height:64px;}
+.month_cycle_list em{display:block;background:url(../images/icon3.png) no-repeat;width:18px;height:18px;margin-left:9px;margin-top:15px;}
 .month_cycle_list li.current em{margin-left:23px;}
 .cycle_line{width:448px;height:1px;overflow:hidden;background:#a808fe;position:absolute;z-index:1;top:88px;left:0px;}
 .month_cycle_layer{position:absolute;left:0px;top:0px;z-index:2;}
@@ -140,7 +132,7 @@
 .gongxian_list_txt{width:40%;height:62px;line-height:62px;font-size:16px;}
 .gongxian_list{background:#fff;padding:10px;}
 .gongxian_list_pic_txt_title{font-size:20px;}
-.gongxian_icon{background:url(../images/mxindex/icon9.png) no-repeat;width:16px;height:27px;display:block;}
+.gongxian_icon{background:url(../images/icon9.png) no-repeat;width:16px;height:27px;display:block;}
 .gongxian_list li{border-bottom:1px dashed #ddd;padding-bottom:7px;margin-bottom:8px;}
 
 
@@ -159,7 +151,7 @@
 .guess_youlike dd{float:right;width:85px;}
 .him_dianpu_con{background:#fff;margin-top:10px;padding-top:26px;padding-bottom:10px;}
 .him_fensi_left{width:918px;margin-right:18px;float:left;}
-.him_fensi_right{width:308px;float:right;}
+.him_fensi_right{width:307px;float:right;}
 .him_fensi_left_con{width:878px;padding-top:10px;padding-bottom:10px;margin-left:auto;margin-right:auto;background:#fff;border-bottom:1px dashed #dbdbdb;}
 .cur{border:none;padding-top:20px;}
 .him_fensi_pic{width:62px;float:left;}
@@ -192,7 +184,7 @@
 .fensi_jiazu_list{padding:10px 16px;background:#fff;margin-top:10px;}
 
 .fensi_jiazu_list li{height:26px;line-height:26px;margin-bottom:10px;font-size:20px;}
-.fensi_jiazu_list li span.xuhao{background:url(../images/mxindex/icon10.png) no-repeat;width:26px;height:26px;text-align:center;color:#fff;margin-right:4px;}
+.fensi_jiazu_list li span.xuhao{background:url(../images/icon10.png) no-repeat;width:26px;height:26px;text-align:center;color:#fff;margin-right:4px;}
 .fensi_jiazu_list li span,.fensi_jiazu_list li em{display:inline-block;}
 .fensi_jiazu_list li.current{position:relative;height:auto;line-height:auto;}
 .fensi_jiazu_list li.current span{position:absolute;left:0px;bottom:0px;width:275px;height:40px;line-height:40px;z-index:1;background:#a808fe;filter:alpha(opacity=50); /*IE滤镜，透明度50%*/-moz-opacity:0.5; /*Firefox私有，透明度50%*/opacity:0.5;/*其他，透明度50%*/}
@@ -219,6 +211,7 @@
 .foot_about a{margin-right:10px;}
 .foot_about a,.foot_about a:visited{color:#fff;text-decoration:none;}
 .foot_about a:hover,.foot_about a:active{color:#fff;text-decoration:none;}
+
 
 
 

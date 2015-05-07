@@ -4951,3 +4951,46 @@ Stack trace:
 REQUEST_URI=/image/u454_normal.png
 HTTP_REFERER=http://demi.live.com/bigshots
 ---
+2015/05/07 15:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ifr_status".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('ifr_status')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/ifr_status/
+---
+2015/05/07 15:49:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ifr_status".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('ifr_status')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/ifr_status/
+---
+2015/05/07 16:02:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/05/07 16:02:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2015/05/07 16:30:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('account/css/img...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/account/css/img/logo_bottom.png
+HTTP_REFERER=http://demi.live.com/account/register
+---

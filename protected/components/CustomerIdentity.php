@@ -27,7 +27,7 @@ class CustomerIdentity extends CUserIdentity
         if ($customer === null)
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         else if (!$this->validatePassword($customer->password,$this->password))
-            $this->errorCode = self::ERROR_PASSWORD_INVALID_INVALID;
+            $this->errorCode = self::ERROR_PASSWORD_INVALID;
         else {
             $this->_id = $customer->customer_id;
             $this->username = $customer->phone;

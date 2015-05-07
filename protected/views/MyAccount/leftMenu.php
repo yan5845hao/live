@@ -1,52 +1,23 @@
-<div class="myleft">
-    <div class="title1-con">
-        <ul class="navlist">
-            <li class="item">
-                <h4>基本信息</h4>
-                <ul>
-                    <li><a href="#">我的资料</a></li>
-                    <li><a href="#">修改密码</a></li>
-                    <li><a href="#">我的金币</a></li>
-
-                </ul>
-            </li>
-
-            <li class="item">
-                <h4>直播管理</h4>
-                <ul>
-                    <li><a href="#">我的守护记录</a></li>
-                    <li><a href="#">我的互动记录</a></li>
-                    <li><a href="#">我的座驾</a></li>
-                    <li><a href="#">我的道具</a></li>
-                    <li><a href="#">我的预约</a></li>
-
-                </ul>
-            </li>
-
-            <li class="item">
-                <h4>评论管理</h4>
-                <ul>
-                    <li><a href="#">视频评论</a></li>
-                    <li><a href="#">预约评论</a></li>
-                    <li><a href="#">明星档评论</a></li>
-                    <li><a href="#">明星评论</a></li>
-                </ul>
-            </li>
-
-            <li class="item">
-                <h4>我的关注</h4>
-                <ul>
-                    <li><a href="#">我关注的明星</a></li>
-                </ul>
-            </li>
-
-            <li class="item">
-                <h4>我的收藏</h4>
-                <ul>
-                    <li><a href="#">我收藏的视频</a></li>
-                </ul>
-            </li>
-
-        </ul>
+<div class="usercon205 left">
+    <div class="usercon205tit">用户中心</div>
+    <div class="usercon205con">
+        <dl>
+            <dt><img src="css/img/user04.jpg" width="24" height="22" />基本信息</dt>
+            <dd class="current"><a href="#">我的资料</a></dd>
+            <dd><a href="#">修改密码</a></dd>
+            <dd><a href="#">我的金币</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="css/img/user02.jpg" width="24" height="22" />直播管理</dt>
+            <dd><a href="#">我的守护记录</a></dd>
+            <dd><a href="#">我的互动记录</a></dd>
+            <dd><a href="#">我的座驾</a></dd>
+            <dd><a href="#">我的道具</a></dd>
+            <dd><a href="#">我的预约</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="css/img/user03.jpg" width="24" height="22" />我的收藏</dt>
+            <dd><a href="#">我收藏的视频</a></dd>
+        </dl>
     </div>
 </div>
