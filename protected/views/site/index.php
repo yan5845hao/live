@@ -678,17 +678,7 @@
                     <div class="item left"><h6>项目总数</h6><div>7689</div></div>
                     <div class="item right"><h6>项目总数</h6><div>7689</div></div>
                 </div>
-                <div class="picshow">
-                    <ul id="focus1">
-                        <li><a href='#'><img src="images/picshow04.jpg"/></a></li>
-                        <li><a href='#'><img src='images/picshow03.jpg'/></a></li>
-                        <li><a href='#'><img src='images/picshow02.jpg'/></a></li>
-                    </ul>
-                    <div class="dot"></div>
-                </div>
-                <script type="text/javascript">
-                    var myfocus = new focus("focus1",true);
-                </script>
+                <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom366x128','slider_type'=>'image','dotId'=>'focus1','cssClass'=>'picshow'))  ?>
             </div>
         </div>
 

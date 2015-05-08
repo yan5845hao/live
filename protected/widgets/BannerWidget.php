@@ -12,6 +12,7 @@ class BannerWidget extends CWidget
 {
     // need one, only one
     public $id = null;
+    public $dotId = null;
     public $group = null;
     public $image_path = null; // image path
     // more
@@ -26,7 +27,7 @@ class BannerWidget extends CWidget
 
     public function init()
     {
-        $lang = array('tchinese', 'schinese', 'all');
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/active.js");
         $this->language = (LANGUAGE_ID == 'cn'||LANGUAGE_ID == 'sc'?'schinese':(LANGUAGE_ID == 'tw'?'tchinese':'all'));
         if ($this->language == ''){
             $this->language = 'tchinese';
@@ -44,18 +45,18 @@ class BannerWidget extends CWidget
             case 'image':
                 $view = 'single_banner';
                 break;
-            case 'home_new':
-                $view = 'home_new_banner';
-                break;
             case 'home':
+                $view = 'home_banner';
+                break;
             default:
-                $view = 'image';
+                $view = 'single_banner';
                 break;
         }
 //        $loadImg = Photo::model()->loadImg;
         $this->render($view, array(
             'banner' => $banner,
             'loadImg' => '',
+            'dotId' => $this->dotId,
             'jsFile' => $this->jsFile,
             'cssFile' => $this->cssFile,
             'group' => $this->group,

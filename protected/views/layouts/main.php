@@ -7,7 +7,6 @@
     <?php
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/active.js");
     ?>
 </head>
 <body>
@@ -39,18 +38,7 @@
     </div>
 </div>
 <!--banner begin-->
-<div class="banner">
-    <ul id="focus">
-        <li><a href='#'><img src="images/banner.png"/></a></li>
-        <li><a href='#'><img src='images/picshow05.jpg'/></a></li>
-        <li><a href='#'><img src='images/picshow06.jpg'/></a></li>
-    </ul>
-    <div class="dot"></div>
-    <div class="dotbg"></div>
-</div>
-<script type="text/javascript">
-    var myfocus = new focus("focus");
-</script>
+<?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Top1920x570','slider_type'=>'home'))  ?>
 <!--banner end-->
 <div class="topnav">
     <div class="mainnav wrapper">
