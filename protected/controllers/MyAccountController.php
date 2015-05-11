@@ -17,6 +17,7 @@ class MyAccountController extends BaseController
         $this->user = Yii::app()->user;
         $this->userID = $this->user->id;
         $this->layout = 'sign_layout';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/account.css');
     }
     public function actionIndex()
     {
