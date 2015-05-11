@@ -22,6 +22,15 @@ class MyAccountController extends BaseController
     {
         $this->render('index');
     }
+    public function actionGold()
+    {
+        $this->render('gold');
+    }
+
+    public function actionModify()
+    {
+        $this->render('modifyAccount');
+    }
     public function actionmydata()
     {
         $this->render('index');
