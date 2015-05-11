@@ -14,33 +14,33 @@
         <div class="dkcol_w501title "></div>
         <div class="dkcol_w501con">
             <ul>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>111111</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
             </ul>
             <ul style="display:none;">
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>2222222</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
             </ul>
             <ul style="display:none;">
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>333333</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="#">BIGbang新年粉丝见面</a><br>
+                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
                         <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
             </ul>
             <div class="dkcol_w501btn left">
