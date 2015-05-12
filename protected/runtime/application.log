@@ -6902,3 +6902,137 @@ Stack trace:
 REQUEST_URI=/css/img/dot03.png
 HTTP_REFERER=http://demi.live.com/css/base.css
 ---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow03.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow03.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow03.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow07.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow07.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow07.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "efa1a779dab241a8f7f966c0ffb32e85.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('efa1a779dab241a...')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/efa1a779dab241a8f7f966c0ffb32e85.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow06.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow06.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow06.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow02.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow02.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow02.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow05.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow05.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow05.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner.png".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('banner.png')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/banner.png
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow03.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow03.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow03.jpg
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "banner.png".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('banner.png')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/banner.png
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow06.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow06.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow06.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "efa1a779dab241a8f7f966c0ffb32e85.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('efa1a779dab241a...')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/efa1a779dab241a8f7f966c0ffb32e85.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow03.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow03.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow03.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow02.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow02.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow02.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow05.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow05.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow05.jpg
+HTTP_REFERER=http://www.live.com/
+---
+2015/05/12 16:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "picshow07.jpg".' in /vagrant/git/live/yii/yii/web/CWebApplication.php:286
+Stack trace:
+#0 /vagrant/git/live/yii/yii/web/CWebApplication.php(141): CWebApplication->runController('picshow07.jpg')
+#1 /vagrant/git/live/yii/yii/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /vagrant/git/live/index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/picshow07.jpg
+HTTP_REFERER=http://www.live.com/
+---
