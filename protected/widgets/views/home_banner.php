@@ -9,7 +9,7 @@ if (is_array($banner) && count($banner)){
         ?>
             <li>
                 <a title="<?php echo(CHtml::encode($item['title'])); ?>" href="<?php  echo $item['url']; ?>" target="_blank" >
-                    <img alt="<?php echo $alt; ?>" src="<?php echo cdn_images_url().$item['image']; ?>" />
+                    <img alt="<?php echo $alt; ?>" src="<?php echo cdn_bumeng_url().$item['image']; ?>" />
                 </a>
             </li>
         <?php } ?>
