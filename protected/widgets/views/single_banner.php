@@ -15,7 +15,7 @@ if (is_array($banner) && count($banner)){
             ?>
             <li style="background: <?php echo $item['bgcolor'];?>;">
                 <a title="<?php echo(CHtml::encode($item['title'])); ?>" href="<?php  echo $item['url']; ?>" target="_blank" >
-                    <img alt="<?php echo $alt; ?>" src="<?php echo cdn_images_url().$item['image']; ?>" />
+                    <img alt="<?php echo $alt; ?>" src="<?php echo cdn_images_url().$item['image']; ?>1b" />
                 </a>
             </li>
         <?php } ?>

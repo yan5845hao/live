@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
     <title>title</title>
     <?php
-    Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
+    Yii::app()->clientScript->registerCssFile(Yii::app()->params['cdnUrl'].'/bumengpc/webserver/css/base.css');
+    Yii::app()->clientScript->registerCssFile(Yii::app()->params['cdnUrl']."/bumengpc/webserver/js/jquery.js");
     ?>
 </head>
 <body>
 <?php $uri = strtolower(Yii::app()->request->getPathInfo());?>
 <div class="topbar">
     <div class="top">
-        <div class="logo left"><a href="/"><img src="/images/logo.png" /></a><span>最大的明星粉丝互动娱乐平台</span></div>
+        <div class="logo left"><a href="/"><img src="<?php echo Yii::app()->params['cdnUrl']?>/bumengpc/webserver/images/logo.png" /></a><span>最大的明星粉丝互动娱乐平台</span></div>
         <div class="search left">
             <input type="text" value="刘德华" />
             <button></button>
@@ -62,7 +62,7 @@
 <!--footer-->
 <div class="footer">
     <div class="foot">
-        <div class="foot_logo clearfix"><span class="left"><img src="css/img/logo_bottom.png" /></span><span class="left foot_logo_intro">最大的明星粉丝互动娱乐平台</span></div>
+        <div class="foot_logo clearfix"><span class="left"><img src="<?php echo Yii::app()->params['cdnUrl']?>/bumengpc/webservercss/img/logo_bottom.png" /></span><span class="left foot_logo_intro">最大的明星粉丝互动娱乐平台</span></div>
         <div class="foot_about"><a href="" target="_blank">关于捕梦</a><a href="" target="_blank">中国最大的明星粉丝互动视频平台</a><a href="" target="_blank">联系我们</a><a href="" target="_blank">常见问题</a></div>
     </div>
 </div>

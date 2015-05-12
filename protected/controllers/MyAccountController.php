@@ -20,10 +20,17 @@ class MyAccountController extends BaseController
     }
     public function actionIndex()
     {
+               
+         
+         echo Yii::app()->session['subtime'];
         $this->render('index');
     }
     public function actionmydata()
     {
         $this->render('index');
+    }
+    public function actionmypassword()
+    {
+        $this->render('mypassword');
     }
 }

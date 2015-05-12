@@ -90,8 +90,20 @@ class SiteController extends BaseController
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
+			if($model->validate() && $model->login()){
+
+				$cookie = Yii::app()->request->getCookies();
+        		if(isset($cookie['subtime']->value)){
+        			Yii::app()->session['subtime'] = date("Y-m-d H:i:s",$cookie['subtime']->value);
+        		}else{
+        			Yii::app()->session['subtime'] = '你已经超过30天没有登录了';
+        		}
+				$cookie = new CHttpCookie('subtime',time());
+                $cookie->expire = time()+60*60*24*30;  //有限期30天
+                Yii::app()->request->cookies['subtime']=$cookie;
+
 				$this->redirect(Yii::app()->user->returnUrl);
+			}
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

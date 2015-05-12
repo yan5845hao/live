@@ -95,8 +95,10 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
     'params' => array(
-        'cdnUrl' => '',
-        'cdnSSLUrl' => '',
+        'cdnUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com/',
+        'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com/',
         'cookieDomain' => '',
     ),
+
+
 );
