@@ -26,206 +26,21 @@
         <div class="tab right"><a href="javascript:void(0);" class="cur"><i>生日会</i></a><a href="javascript:void(0);"><i>探班会</i></a><a href="javascript:void(0);"><i>畅聊室</i></a></div>
         <div class="content left">
             <div class="con">
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
+             <?php if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_BIRTHDAY_CONTENT; ?>
             </div>
             <div class="con">
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">跑男来了直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
+              <?php if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_CLASS_CONTENT; ?>
             </div>
             <div class="con">
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">金钟国中国唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="only"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
-                <div class="imgbox end">
-                    <div class="img">
-                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
-                        <div class="txtbg"></div>
-                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
-                        <span class="self"></span>
-                    </div>
-                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
-                </div>
+                <?php if(defined('HOME_PAGE_CHAT_CONTENT')) echo HOME_PAGE_CHAT_CONTENT; ?>
+              
             </div>
         </div>
     </div>
 </li>
 <li>
     <div class="con11">
-        <div class="line">
-            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
-            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
-            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
-            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
-
-        </div>
-        <div class="line">
-            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
-            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
-            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
-            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
-
-        </div>
-        <div class="line">
-            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
-            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
-            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
-            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
-
-        </div>
-        <div class="line">
-            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
-            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
-            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
-            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
-
-        </div>
+        <?php if(defined('HOME_PAGE_CHAT_CONTENT')) echo HOME_PAGE_TIME_CONTENT; ?>
     </div>
 </li>
 </ul>
