@@ -15,6 +15,9 @@ class BigShotsController extends BaseController
     {
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/main.css');
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/common.css');
+        if(defined('BIG_SHOTS_RECOMMEND_VIDEO')){
+            $recommend = CJSON::decode(BIG_SHOTS_RECOMMEND_VIDEO);
+        }
         $this->render('index');
     }
 
