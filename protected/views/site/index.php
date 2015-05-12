@@ -26,7 +26,9 @@
         <div class="tab right"><a href="javascript:void(0);" class="cur"><i>生日会</i></a><a href="javascript:void(0);"><i>探班会</i></a><a href="javascript:void(0);"><i>畅聊室</i></a></div>
         <div class="content left">
             <div class="con">
-             <?php if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_BIRTHDAY_CONTENT; ?>
+             <?php 
+                 if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_BIRTHDAY_CONTENT; 
+             ?>
             </div>
             <div class="con">
               <?php if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_CLASS_CONTENT; ?>
@@ -73,272 +75,22 @@
 <div class="bd">
 <ul class="ind03" id="content">
 <li>
-    <div class="imgbox big">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
+    <!--大咖秀热播全部-->
+    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_1; ?>  
 </li>
 <li>
-    <div class="imgbox big">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">音乐最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
+    <!--大咖秀热播音乐-->
+    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_2; ?>  
+   
 </li>
 <li>
-    <div class="imgbox big">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">影视最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
+ <!--大咖秀热播影视-->
+    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_3; ?>  
+   
 </li>
 <li>
-    <div class="imgbox big">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">综艺最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
-    <div class="imgbox col3">
-        <div class="img">
-            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
-            <div class="txtbg"></div>
-            <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
-        </div>
-        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="right comment">评论<i>15156</i></span></div>
-    </div>
+   <!--大咖秀热播综艺-->
+    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_4; ?>  
 </li>
 </ul>
 </div>
