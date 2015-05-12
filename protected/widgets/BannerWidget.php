@@ -27,7 +27,7 @@ class BannerWidget extends CWidget
 
     public function init()
     {
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/active.js");
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/banner.js");
         $this->language = (LANGUAGE_ID == 'cn'||LANGUAGE_ID == 'sc'?'schinese':(LANGUAGE_ID == 'tw'?'tchinese':'all'));
         if ($this->language == ''){
             $this->language = 'tchinese';

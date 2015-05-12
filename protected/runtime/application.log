@@ -4994,3 +4994,1911 @@ Stack trace:
 REQUEST_URI=/account/css/img/logo_bottom.png
 HTTP_REFERER=http://demi.live.com/account/register
 ---
+2015/05/11 17:28:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ifr_status".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('ifr_status')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/ifr_status/
+---
+2015/05/11 17:28:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ifr_status".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('ifr_status')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/ifr_status/
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/dkxlistpic04.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mygift.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myvisiter.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myccollection.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mytask.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/playimg.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/yangzishan.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/daka_flash.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/logo_bottom.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/dkxlistpic04.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mytask.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mygift.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/dkxlistpic04.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myccollection.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myvisiter.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/playimg.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/playimg....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/playimg.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yangzishan.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/yangzish...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/yangzishan.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/logo_bottom.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myccollection.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mytask.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mygift.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/images...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/images/dkxlistpic04.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myvisiter.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/playimg.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/playimg....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/playimg.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yangzishan.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/yangzish...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/yangzishan.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:34:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/logo_bottom.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mygift.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myccollection.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/myvisiter.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/playimg.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/playimg....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/playimg.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/mytask.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yangzishan.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/yangzish...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/yangzishan.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/logo_bottom.png
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+---
+2015/05/11 17:35:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('css')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('css')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('bigshots/css/im...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/bigshots/css/img/jiangpai1.png
+---
+2015/05/11 17:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/yangzishan.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/yangzish...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/yangzishan.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/playimg.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/playimg....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/playimg.jpg
+HTTP_REFERER=http://demi.live.com/bigshots/detail
+---
+2015/05/11 17:35:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/playimg.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('images/playimg....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/images/playimg.jpg
+---
+2015/05/11 17:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:42:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:47:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "detail".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('detail')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('detail')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/detail')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/detail
+HTTP_REFERER=http://demi.live.com/star
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon5.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic2.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon7.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic1.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon6.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic4.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/vid...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/videoicon1.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/vid...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/videoicon2.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon14.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon15.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic5.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic7.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic8.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon9.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/ico...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/icon8.png
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/pic...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/pic1.jpg
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:49:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\www\live\yii\yii\web\CController.php:483
+Stack trace:
+#0 D:\www\live\yii\yii\web\CController.php(270): CController->missingAction('images')
+#1 D:\www\live\yii\yii\web\CWebApplication.php(282): CController->run('images')
+#2 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('star/images/one...')
+#3 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\www\live\index.php(20): CApplication->run()
+#5 {main}
+REQUEST_URI=/star/images/one.jpg
+HTTP_REFERER=http://demi.live.com/star/detail
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dianzan.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dianzan...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dianzan.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/refresh.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/refresh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/refresh.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/play.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/play.jp...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/play.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/comment.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/comment.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:55:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 17:57:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:01:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/time2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/time2.j...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/time2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/fansi2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/fansi2....')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/fansi2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/prevbtn.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/prevbtn...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/prevbtn.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/asc.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/asc.png')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/asc.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/address2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/address...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/address2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticcon2.jpg".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticcon2.jpg
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot04.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot04.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot04.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/personheadbg.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/personh...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/personheadbg.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/account.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/account...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/account.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/commenticonbg02.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/comment...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/commenticonbg02.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---
+2015/05/11 18:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/dot03.png".' in D:\www\live\yii\yii\web\CWebApplication.php:286
+Stack trace:
+#0 D:\www\live\yii\yii\web\CWebApplication.php(141): CWebApplication->runController('css/img/dot03.p...')
+#1 D:\www\live\yii\yii\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\www\live\index.php(20): CApplication->run()
+#3 {main}
+REQUEST_URI=/css/img/dot03.png
+HTTP_REFERER=http://demi.live.com/css/base.css
+---

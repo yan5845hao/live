@@ -17,6 +17,7 @@ class MyAccountController extends BaseController
         $this->user = Yii::app()->user;
         $this->userID = $this->user->id;
         $this->layout = 'sign_layout';
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/account.css');
     }
     public function actionIndex()
     {
@@ -24,6 +25,15 @@ class MyAccountController extends BaseController
          
          echo Yii::app()->session['subtime'];
         $this->render('index');
+    }
+    public function actionGold()
+    {
+        $this->render('gold');
+    }
+
+    public function actionModify()
+    {
+        $this->render('modifyAccount');
     }
     public function actionmydata()
     {

@@ -1,21 +1,247 @@
+<!-- begin-->
 <div class="wrapper">
-    <div class="md">
-        <div class="hd">
-            <span class="title left">大咖秀<i>你想见的男神、女神在这里！</i></span>
-            <span class="more right"><a href="#" target="_blank">更多大咖秀场>></a></span>
-        </div>
-        <div class="bd">
-            <div class="col690 left">
-                <div class="ind01">
-                    <div class="imgbox"><a href="#" target="_blank"><img src="images/picshow01.jpg" title="男团" alt="男团"  /></a></div>
-                    <div class="txtbg"></div>
-                    <div class="txt"><p class="left"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></p><span class="right">粉丝<i>15156</i></span></div>
+<div class="md">
+<div class="hd">
+    <span class="title left">大咖秀<i>你想见的男神、女神在这里！</i></span>
+    <span class="more right"><a href="#" target="_blank">更多大咖秀场>></a></span>
+</div>
+<div class="bd">
+<div class="col690 left">
+    <div class="ind01">
+        <div class="imgbox"><a href="#" target="_blank"><img src="/images/picshow01.jpg" title="男团" alt="男团"  /></a></div>
+        <div class="txtbg"></div>
+        <div class="txt"><p class="left"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></p><span class="right">粉丝<i>15156</i></span></div>
+    </div>
+</div>
+<div class="col534 right">
+<div class="md4" id="tab05">
+<div class="hd">
+    <span class="title left" id="tab"><a href="javascript:void(0);" class="cur">直播中</a><a href="javascript:void(0);">倒计时</a></span>
+    <span class="more right"><a href="#">更多>></a></span>
+</div>
+<div class="bd">
+<ul id="content">
+<li>
+    <div class="con09" id="tab04">
+        <div class="tab right"><a href="javascript:void(0);" class="cur"><i>生日会</i></a><a href="javascript:void(0);"><i>探班会</i></a><a href="javascript:void(0);"><i>畅聊室</i></a></div>
+        <div class="content left">
+            <div class="con">
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
                 </div>
             </div>
-            <div class="col534 right"></div>
-            <div class="clear"></div>
+            <div class="con">
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">跑男来了直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+            </div>
+            <div class="con">
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">金钟国中国唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="only"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+                <div class="imgbox end">
+                    <div class="img">
+                        <a target="_blank" href="#"><img src="/images/picshow03.jpg"></a>
+                        <div class="txtbg"></div>
+                        <div class="txt"><a target="_blank" href="#">最强天团EXO北京首唱会直播中</a></div>
+                        <span class="self"></span>
+                    </div>
+                    <div class="numbers"><span class="comment">评论<i>15156</i></span></div>
+                </div>
+            </div>
         </div>
     </div>
+</li>
+<li>
+    <div class="con11">
+        <div class="line">
+            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
+            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
+            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
+            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
+
+        </div>
+        <div class="line">
+            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
+            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
+            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
+            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
+
+        </div>
+        <div class="line">
+            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
+            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
+            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
+            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
+
+        </div>
+        <div class="line">
+            <div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
+            <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
+            <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
+            <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
+
+        </div>
+    </div>
+</li>
+</ul>
+</div>
+<script type="text/javascript">
+    var tab05 = new changeTab("tab05");
+    var tab04 = new changeTabV("tab04");
+</script>
+
+</div>
+
+
+</div>
+<div class="clear"></div>
+</div>
+</div>
 </div>
 <div class="vspace" style="height:35px"></div>
 <!-- end-->
@@ -34,7 +260,7 @@
 <li>
     <div class="imgbox big">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"//></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -43,7 +269,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -51,7 +277,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -59,7 +285,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -67,7 +293,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -75,7 +301,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -83,7 +309,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -91,7 +317,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -101,7 +327,7 @@
 <li>
     <div class="imgbox big">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"//></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">音乐最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -110,7 +336,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -118,7 +344,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -126,7 +352,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -134,7 +360,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -142,7 +368,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -150,7 +376,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -158,7 +384,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -168,7 +394,7 @@
 <li>
     <div class="imgbox big">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"//></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">影视最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -177,7 +403,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -185,7 +411,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -193,7 +419,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -201,7 +427,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -209,7 +435,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -217,7 +443,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -225,7 +451,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -235,7 +461,7 @@
 <li>
     <div class="imgbox big">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"//></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"//></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">综艺最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -244,7 +470,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -252,7 +478,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -260,7 +486,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -268,7 +494,7 @@
     </div>
     <div class="imgbox">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -276,7 +502,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -284,7 +510,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -292,7 +518,7 @@
     </div>
     <div class="imgbox col3">
         <div class="img">
-            <a href="#" target="_blank"><img  src="images/picshow03.jpg"/></a>
+            <a href="#" target="_blank"><img  src="/images/picshow03.jpg"/></a>
             <div class="txtbg"></div>
             <div class="txt"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></div>
         </div>
@@ -316,7 +542,7 @@
             <div class="hotpop5">
                 <div class="item">
                     <i class="left">1</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -325,7 +551,7 @@
                 </div>
                 <div class="item">
                     <i class="left">2</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -334,7 +560,7 @@
                 </div>
                 <div class="item">
                     <i class="left">3</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -343,7 +569,7 @@
                 </div>
                 <div class="item">
                     <i class="left">4</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -352,7 +578,7 @@
                 </div>
                 <div class="item">
                     <i class="left">5</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -365,7 +591,7 @@
             <div class="hotpop5">
                 <div class="item">
                     <i class="left">1</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>音乐Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -374,7 +600,7 @@
                 </div>
                 <div class="item">
                     <i class="left">2</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -383,7 +609,7 @@
                 </div>
                 <div class="item">
                     <i class="left">3</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -392,7 +618,7 @@
                 </div>
                 <div class="item">
                     <i class="left">4</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -401,7 +627,7 @@
                 </div>
                 <div class="item">
                     <i class="left">5</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -414,7 +640,7 @@
             <div class="hotpop5">
                 <div class="item">
                     <i class="left">1</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>影视Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -423,7 +649,7 @@
                 </div>
                 <div class="item">
                     <i class="left">2</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -432,7 +658,7 @@
                 </div>
                 <div class="item">
                     <i class="left">3</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -441,7 +667,7 @@
                 </div>
                 <div class="item">
                     <i class="left">4</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -450,7 +676,7 @@
                 </div>
                 <div class="item">
                     <i class="left">5</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -463,7 +689,7 @@
             <div class="hotpop5">
                 <div class="item">
                     <i class="left">1</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>综艺Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -472,7 +698,7 @@
                 </div>
                 <div class="item">
                     <i class="left">2</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -481,7 +707,7 @@
                 </div>
                 <div class="item">
                     <i class="left">3</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -490,7 +716,7 @@
                 </div>
                 <div class="item">
                     <i class="left">4</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -499,7 +725,7 @@
                 </div>
                 <div class="item">
                     <i class="left">5</i>
-                    <div class="imgbox left"><img src="images/daka_pic01.png" /></div>
+                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
                     <div class="des left">
                         <h3>Sistar歌迷机场 遭围堵</h3>
                         <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
@@ -537,7 +763,7 @@
                     <ul>
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -551,7 +777,7 @@
                         </li>
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -565,7 +791,7 @@
                         </li>
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -579,7 +805,7 @@
                         </li>
                         <li class="last">
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利的应援公告及福利</a></p>
                             </div>
@@ -594,7 +820,7 @@
 
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -608,7 +834,7 @@
                         </li>
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -622,7 +848,7 @@
                         </li>
                         <li>
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -636,7 +862,7 @@
                         </li>
                         <li class="last">
                             <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
+                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
                                 <div class="txtbg"></div>
                                 <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
                             </div>
@@ -654,25 +880,40 @@
         </div>
     </div>
     <div class="col410 right">
-        <div class="md2">
+        <div class="md2" id="tab06">
             <div class="hd">
-                <span class="title left"><a href="#" class="cur">星愿排行榜</a><i>/</i><a href="#">公益贡献榜</a></span>
+                <span class="title left" id="tab"><a href="javascript:void(0);" class="cur">星愿排行榜</a><i>/</i><a href="javascript:void(0);">公益贡献榜</a></span>
                 <span class="more right"><a href="#" target="_blank">更多>></a></span>
             </div>
             <div class="bd">
                 <div class="ind05">
-                    <ul>
-                        <li><i>1</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>2</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>3</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>4</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>5</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>6</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>7</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>8</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></li>
-                        <li><i>9</i><a href="#" target="_blank">支持李焕熙赴巴马为百岁老人留影</a></li>
+                    <ul id="content">
+                        <li>
+                            <div><i>1</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>2</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>3</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>4</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>5</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>6</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>7</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>8</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>9</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                        </li>
+                        <li>
+                            <div><i>1</i><a href="#" target="_blank">第二个排行榜联手开展“童年公益计划”</a></div>
+                            <div><i>2</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>3</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>4</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>5</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>6</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>7</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>8</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                            <div><i>9</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
+                        </li>
+
                     </ul>
                 </div>
+                <script type="text/javascript">var tab06 = new changeTab("tab06",true);</script>
                 <div class="ind06">
                     <p>支持总金额<span>368</span></p>
                     <div class="item left"><h6>项目总数</h6><div>7689</div></div>
@@ -701,10 +942,16 @@
 <div class="bd">
 <div class="ind04">
 <div class="s_title">
-    <span class="right more"><a>更多>></a></span>
-    <a href="#" target="_blank">音乐</a><span>|</span><a href="#" target="_blank">影视</a><span>|</span><a href="#" target="_blank">综艺</a>
+
+    <a href="javascript:void(0);"  class="cur t">音乐</a><span>|</span><a href="javascript:void(0);" class="t">影视</a><span>|</span><a href="javascript:void(0);" class="t" >综艺</a>
+    <span class="right more"><a href="#" target="_blank">更多>></a></span>
 
 </div>
+<script type="text/javascript">
+    $(".ind04 .s_title a.t").on("click",function(){
+        $(this).addClass("cur").siblings("a").removeClass("cur");
+    });
+</script>
 <div class="con">
 <div class="col_left left">
 <table cellpadding="0" cellspacing="0" id="1">
@@ -1243,7 +1490,7 @@
     <ul>
         <li>
             <div class="headbox left">
-                <a href="#" target="_blank"><img  src="images/dkxlistpic01.jpg"/></a>
+                <a href="#" target="_blank"><img  src="/images/dkxlistpic01.jpg"/></a>
                 <div class="bg"></div>
             </div>
             <div class="des left">
@@ -1253,7 +1500,7 @@
         </li>
         <li>
             <div class="headbox left">
-                <a href="#" target="_blank"><img  src="images/dkxlistpic01.jpg"/></a>
+                <a href="#" target="_blank"><img  src="/images/dkxlistpic01.jpg"/></a>
                 <div class="bg"></div>
             </div>
             <div class="des left">
@@ -1263,7 +1510,7 @@
         </li>
         <li>
             <div class="headbox left">
-                <a href="#" target="_blank"><img  src="images/dkxlistpic01.jpg"/></a>
+                <a href="#" target="_blank"><img  src="/images/dkxlistpic01.jpg"/></a>
                 <div class="bg"></div>
             </div>
             <div class="des left">
@@ -1287,7 +1534,7 @@
         <div class="bd w">
             <div class="con01">
                 <div class="up">
-                    <div class="imgbox left"><img src="images/dkxlistpic01.jpg" /></div>
+                    <div class="imgbox left"><img src="/images/dkxlistpic01.jpg" /></div>
                     <h3>2015年01月07日</h3>
                     <p>迎来24岁生日的吴亦凡将献给粉丝怎么样的特…<a href="#" target="_blank">[详细]</a></p>
                     <div class="bline"><span class="left">粉丝<i>2368</i></span><span class="right">评论<i>2356</i></span></div>
@@ -1354,19 +1601,451 @@
         <div class="bd w">
             <ul class="con03">
                 <li class="first">
-                    <i>1</i>
-                    <div class="headbox"></div>
+                    <i class="left">1</i>
+                    <div class="headbox left"><img  src="/images/dkxlistpic04.jpg"/><div class="headbg"></div></div>
+                    <h2 class=""><a href="#" target="_blank">海.阳光</a></h2>
+                    <p class=""><img  src="css/img/jiangpai1.jpg"/></p>
 
                 </li>
-                <li><i>2</i><a href="#" target="_blank">兜一圈 </a> <img  src="css/img/jiangpai1.jpg" class="right"/></li>
-                <li><i>3</i><a href="#" target="_blank">兜一圈 </a> <img  src="css/img/jiangpai2.jpg" class="right"/></li>
-                <li><i>4</i><a href="#" target="_blank">兜一圈 </a> <img  src="css/img/jiangpai3.jpg" class="right"/></li>
-                <li><i>5</i><a href="#" target="_blank">兜一圈 </a> <img  src="css/img/jiangpai5.jpg" class="right"/></li>
+                <li><i class="left">2</i><a href="#" target="_blank" class="left">兜一圈 </a> <img  src="css/img/jiangpai1.jpg" class="right"/></li>
+                <li><i class="left">3</i><a href="#" target="_blank" class="left">兜一圈 </a> <img  src="css/img/jiangpai2.jpg" class="right"/></li>
+                <li><i class="left">4</i><a href="#" target="_blank" class="left">兜一圈 </a> <img  src="css/img/jiangpai3.jpg" class="right"/></li>
+                <li><i class="left">5</i><a href="#" target="_blank" class="left">兜一圈 </a> <img  src="css/img/jiangpai5.jpg" class="right"/></li>
             </ul>
         </div>
     </div>
 
 </div>
 <div class="clear"></div>
+<div class="vspace" style="height:35px"></div>
+
 </div>
 <!-- end-->
+
+
+<!-- begin-->
+<div class="wrapper">
+    <div class="md">
+        <div class="hd">
+            <span class="title left">娱乐厂牌<i>明星娱乐商城，来这儿就够了</i></span>
+            <span class="more right"><a href="#" target="_blank">更多娱乐厂牌>></a></span>
+        </div>
+        <div class="bd w n">
+            <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom574x396','slider_type'=>'image','dotId'=>'focus3','cssClass'=>'picshow con08 left'))  ?>
+            <div class="con10 left dark">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum1">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum1 = new album("myalbum1",3);</script>
+            </div>
+
+            <div class="con10 left red">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum2">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>华晨宇</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>李宇春</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum2 = new album("myalbum2",3);</script>
+            </div>
+
+            <div class="con10 left black">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum3">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum3 = new album("myalbum3",3);</script>
+            </div>
+
+            <div class="con10 left orange">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum4">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum4 = new album("myalbum4",3);</script>
+            </div>
+
+            <div class="con10 left green">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum5">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum5 = new album("myalbum5",3);</script>
+            </div>
+
+            <div class="con10 left blue">
+                <div class="album">
+                    <h5>新亚洲娱乐集团有限公司</h5>
+                    <p><img  src="/images/company1.jpg"/></p>
+                    <div class="focus"  id="myalbum6">
+                        <div class="imgbox">
+                            <ul class="imgline">
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
+                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
+                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
+                            </ul>
+                        </div>
+                        <a class="prev"></a><a class="next"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">var myalbum6 = new album("myalbum6",3);</script>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="clear"></div>
+    <div class="vspace" style="height:35px"></div>
+</div>
+
+<!-- end-->
+
+
+
+
+<!-- begin-->
+<div class="wrapper">
+<div class="md">
+<div class="hd">
+    <span class="title left">大牌店<i>明星热卖周边店</i></span>
+    <span class="more right"><a href="#" target="_blank">更多>></a></span>
+</div>
+<div class="bd">
+<div class="col815 left">
+    <div class="ind04" id="tab03">
+        <div class="s_title">
+            <a href="javascript:void(0);"  class="cur t">MV</a><span>|</span> <a href="javascript:void(0);"  class="t">音乐</a><span>|</span><a href="javascript:void(0);" class="t">CD</a><span>|</span><a href="javascript:void(0);" class="t" >饰品</a><span>|</span>
+            <a href="javascript:void(0);"  class="t">其他</a><span class="right more"><a href="#" target="_blank">更多>></a></span>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                $("#tab03 .s_title a.t").on("click",function(){
+                    var index = $(this).index();
+                    var i = index>0?index/2:0
+                    $(this).addClass("cur").siblings("a.t").removeClass("cur");
+                    $("#tab03_content li").eq(i).show().siblings("li").hide();
+                });
+            })();
+
+        </script>
+    </div>
+
+    <div class="con04">
+        <ul id="tab03_content">
+            <li>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+                <div class="imgbox">
+                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
+                    <div class="txtbg"></div>
+                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div class="col410 right">
+    <div class="ind04">
+        <div class="s_title">
+            <a href="javascript:void(0);" >最新上线</a>
+            <span class="right more"><a href="#" target="_blank"></a></span>
+
+        </div>
+
+    </div>
+    <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom379x166','slider_type'=>'image','dotId'=>'focus2','cssClass'=>'picshow con05'))  ?>
+    <div class="con06">
+        <a href="#" target="_blank"><img  src="/images/pic1.jpg"/></a>
+        <div class="txtbg"></div>
+        <div class="txt"><img  src="css/img/fansiluntan.png"/></div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="clear"></div>
+<div class="vspace" style="height:35px"></div>
+</div>
+
+<!-- end-->
+
+<!--beagin-->
+<div class="wrapper">
+    <div class="col45 left">
+        <div class="shd">
+            <div class="s_title"><span class="title"><i>微</i>入口</span></div>
+            <div class="more"><span><a href="#" target="_blank">更多</a></span></div>
+        </div>
+    </div>
+    <div class="col1185 right">
+        <div class="con07">
+            <ul>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>angelbaby</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+                <li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
+                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="vspace" style="height:35px"></div>
+
+</div>
+<!--end-->
