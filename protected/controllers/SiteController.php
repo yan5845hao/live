@@ -10,7 +10,9 @@ class SiteController extends BaseController
 //        } else {
 //            $this->render('index');
 //        }
-        $this->render('index');
+    	$date=strtotime(date('Y-m-d'));
+    	$scheduledata = StarSchedule::model()->getSchedule($date);
+        $this->render('index',array('scheduledata'=>$scheduledata));
     }
 
 	/**
@@ -117,4 +119,5 @@ class SiteController extends BaseController
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
 }
