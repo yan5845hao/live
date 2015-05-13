@@ -328,119 +328,10 @@
             <div class="bd">
                 <div class="ind02">
                     <ul>
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow" style="width:20%"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"  style="width:30%"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"  style="width:50%"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li class="last">
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
 
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
-                        <li class="last">
-                            <div class="imgbox">
-                                <a href="#" target="_blank"><img  src="/images/picshow02.jpg" alt="Boyfriend"  title="Boyfriend"/></a>
-                                <div class="txtbg"></div>
-                                <p><a href="#" target="_blank">Boyfriend的应援公告及福利</a></p>
-                            </div>
-                            <div class="numberbox">
-                                <p>已筹款<span>6470金币</span></p>
-                                <div class="progress">
-                                    <div class="yellow"></div>
-                                </div>
-                                <div class="des"><span class="left">70%</span><span class="right">剩余36天</span></div>
-                            </div>
-                        </li>
+                     <!--星愿城-->
+                    <?php if(defined('HOME_STAR_DREAM_LEFT')) echo HOME_STAR_DREAM_LEFT; ?>  
+                     
                     </ul>
                 </div>
             </div>
@@ -455,36 +346,17 @@
             <div class="bd">
                 <div class="ind05">
                     <ul id="content">
-                        <li>
-                            <div><i>1</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>2</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>3</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>4</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>5</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>6</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>7</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>8</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>9</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                        </li>
-                        <li>
-                            <div><i>1</i><a href="#" target="_blank">第二个排行榜联手开展“童年公益计划”</a></div>
-                            <div><i>2</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>3</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>4</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>5</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>6</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>7</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>8</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                            <div><i>9</i><a href="#" target="_blank">和Boyfriend联手开展“童年公益计划”</a></div>
-                        </li>
+                         <!--星愿排行榜-->
+                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_1; ?>
+                              <!--公益贡献榜-->
+                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_2; ?>  
 
                     </ul>
                 </div>
                 <script type="text/javascript">var tab06 = new changeTab("tab06",true);</script>
                 <div class="ind06">
-                    <p>支持总金额<span>368</span></p>
-                    <div class="item left"><h6>项目总数</h6><div>7689</div></div>
-                    <div class="item right"><h6>项目总数</h6><div>7689</div></div>
+                          <!--项目金额-->
+                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_3; ?>  
                 </div>
                 <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom366x128','slider_type'=>'image','dotId'=>'focus1','cssClass'=>'picshow'))  ?>
             </div>
@@ -510,7 +382,7 @@
 <div class="ind04">
 <div class="s_title">
 
-    <a href="javascript:void(0);"  class="cur t">音乐</a><span>|</span><a href="javascript:void(0);" class="t">影视</a><span>|</span><a href="javascript:void(0);" class="t" >综艺</a>
+    <a href="javascript:void(0);"  class="cur t">全部</a><span>|</span><a href="javascript:void(0);"  class="t">音乐</a><span>|</span><a href="javascript:void(0);" class="t">影视</a><span>|</span><a href="javascript:void(0);" class="t" >综艺</a>
     <span class="right more"><a href="#" target="_blank">更多>></a></span>
 
 </div>
@@ -579,8 +451,10 @@
     </tr>
     </tbody>
 </table>
+
+<!--<script type="text/javascript" src="http://bumeng-default.oss-cn-hangzhou.aliyuncs.com/bumengpc/webserver/js/date.js"></script>-->
 <script type="text/javascript">
-(function() {
+    (function() {
     var S = navigator.userAgent.indexOf("MSIE") != -1 && !window.opera;
     function M(C) {
         return document.getElementById(C)
@@ -1018,7 +892,12 @@
             b.cell.className = "cur"
             var aaa = b.cell;
             $(aaa).siblings().removeClass("cur").addClass("cell");
-            alert("涂军在这里做读取右侧数据，选择日期"+Y(c, a))
+            $.post("api/schedule",{startime:Y(c, a)},function(result){
+            
+             $("#showstartime").html(result);
+             
+            });
+          
             //涂军在这里做读取右侧数据
         }
         function X() {
@@ -1046,12 +925,14 @@
     W.init(A);
     Q.init(A);
     N.draw();
-})();
-//-->
+})();    
+
+
 
 </script>
+
 </div>
-<div class="col_right right">
+<div class="col_right right" id="showstartime">
     <p>2015年5月5日<span>星期二</span></p>
     <div class="date">8</div>
     <ul>
@@ -1100,51 +981,9 @@
         </div>
         <div class="bd w">
             <div class="con01">
-                <div class="up">
-                    <div class="imgbox left"><img src="/images/dkxlistpic01.jpg" /></div>
-                    <h3>2015年01月07日</h3>
-                    <p>迎来24岁生日的吴亦凡将献给粉丝怎么样的特…<a href="#" target="_blank">[详细]</a></p>
-                    <div class="bline"><span class="left">粉丝<i>2368</i></span><span class="right">评论<i>2356</i></span></div>
-                </div>
-                <ul class="list">
-                    <li>
-                        <div class="des left">
-                            <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                            <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                        </div>
-                        <div class="time right"><p>2014</p><p>09/22</p></div>
-                    </li>
-                    <li>
-                        <div class="des left">
-                            <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                            <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                        </div>
-                        <div class="time right"><p>2014</p><p>09/22</p></div>
-                    </li>
-                    <li>
-                        <div class="des left">
-                            <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                            <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                        </div>
-                        <div class="time right"><p>2014</p><p>09/22</p></div>
-                    </li>
-                    <li>
-                        <div class="des left">
-                            <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                            <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                        </div>
-                        <div class="time right"><p>2014</p><p>09/22</p></div>
-                    </li>
-                    <li>
-                        <div class="des left">
-                            <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                            <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                        </div>
-                        <div class="time right"><p>2014</p><p>09/22</p></div>
-                    </li>
-
-                </ul>
-            </div>
+                 <!--星闻-->
+                <?php if(defined('HOME_STAR_NEWS_MODDLE')) echo  HOME_STAR_NEWS_MODDLE; ?>  
+             
         </div>
     </div>
 </div>
@@ -1198,132 +1037,13 @@
             <span class="more right"><a href="#" target="_blank">更多娱乐厂牌>></a></span>
         </div>
         <div class="bd w n">
-            <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom574x396','slider_type'=>'image','dotId'=>'focus3','cssClass'=>'picshow con08 left'))  ?>
-            <div class="con10 left dark">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum1">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum1 = new album("myalbum1",3);</script>
-            </div>
+        <?php 
+            $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom574x396','slider_type'=>'image','dotId'=>'focus3','cssClass'=>'picshow con08 left')); 
 
-            <div class="con10 left red">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum2">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>华晨宇</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>李宇春</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum2 = new album("myalbum2",3);</script>
-            </div>
+            //娱乐厂牌
+                 if(defined('HOME_STAR_YULE_RIGHT')) echo  HOME_STAR_YULE_RIGHT;   
 
-            <div class="con10 left black">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum3">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum3 = new album("myalbum3",3);</script>
-            </div>
-
-            <div class="con10 left orange">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum4">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum4 = new album("myalbum4",3);</script>
-            </div>
-
-            <div class="con10 left green">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum5">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum5 = new album("myalbum5",3);</script>
-            </div>
-
-            <div class="con10 left blue">
-                <div class="album">
-                    <h5>新亚洲娱乐集团有限公司</h5>
-                    <p><img  src="/images/company1.jpg"/></p>
-                    <div class="focus"  id="myalbum6">
-                        <div class="imgbox">
-                            <ul class="imgline">
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"/></li>
-                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"/></li>
-                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"/></li>
-                            </ul>
-                        </div>
-                        <a class="prev"></a><a class="next"></a>
-                    </div>
-                </div>
-                <script type="text/javascript">var myalbum6 = new album("myalbum6",3);</script>
-            </div>
+        ?>
 
         </div>
     </div>
@@ -1350,7 +1070,7 @@
 <div class="col815 left">
     <div class="ind04" id="tab03">
         <div class="s_title">
-            <a href="javascript:void(0);"  class="cur t">MV</a><span>|</span> <a href="javascript:void(0);"  class="t">音乐</a><span>|</span><a href="javascript:void(0);" class="t">CD</a><span>|</span><a href="javascript:void(0);" class="t" >饰品</a><span>|</span>
+          <a href="javascript:void(0);"  class="cur t">全部</a><span>|</span>   <a href="javascript:void(0);"  class="t">MV</a><span>|</span> <a href="javascript:void(0);"  class="t">音乐</a><span>|</span><a href="javascript:void(0);" class="t" >饰品</a><span>|</span>
             <a href="javascript:void(0);"  class="t">其他</a><span class="right more"><a href="#" target="_blank">更多>></a></span>
         </div>
         <script type="text/javascript">
@@ -1368,166 +1088,14 @@
 
     <div class="con04">
         <ul id="tab03_content">
-            <li>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic4.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic7.png"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-            </li>
-            <li>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-                <div class="imgbox">
-                    <a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/pic1.jpg"></a>
-                    <div class="txtbg"></div>
-                    <p><a target="_blank" href="#">Boyfriend的应援公告及福利</a></p>
-                </div>
-            </li>
+        <?php
+            //大牌店
+                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT1;  
+                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT2;  
+                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT3;  
+                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT4;  
+                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT5;  
+         ?>
         </ul>
     </div>
 
@@ -1572,42 +1140,11 @@
     <div class="col1185 right">
         <div class="con07">
             <ul>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>范冰冰</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>angelbaby</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>范冰冰</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>范冰冰</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>范冰冰</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
-                <li>
-                    <div class="txtbg"></div>
-                    <p>范冰冰</p>
-                    <div class="head"><img  src="/images/fanbingbing.jpg"/></div>
-                    <div class="codeimg"><img  src="/images/code1.jpg"/></div>
-                </li>
+            <?php
+            //微入口
+            
+               if(defined('HOME_WEIBO_IN')) echo  HOME_WEIBO_IN; 
+               ?>
             </ul>
         </div>
     </div>
