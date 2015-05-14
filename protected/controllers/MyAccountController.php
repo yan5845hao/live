@@ -13,19 +13,37 @@ class MyAccountController extends BaseController
     {
         parent::__construct($id, $module);
         $this->session = Yii::app()->session;
-        if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
+        if (Yii::app()->user->isGuest) {
+            //管理员模拟用户登陆
+            if (isset($_SESSION['admin']) && $_SESSION['admin'] == Yii::app()->params['admin']) {
+                $customer_id = Yii::app()->request->getParam('customer_id');
+                $customer = Customer::model()->findByPk($customer_id);
+                if ($customer) {
+                    $identify = new CustomerIdentity();
+                    $identify->assignCustomer($customer);
+                    Yii::app()->user->login($identify);
+                    $this->redirect($this->createUrl('MyAccount/index'));
+                } else {
+                    Yii::app()->user->loginRequired();
+                }
+            } else {
+                Yii::app()->user->loginRequired();
+            }
+        }
         $this->user = Yii::app()->user;
         $this->userID = $this->user->id;
         $this->layout = 'sign_layout';
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/account.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
     }
+
     public function actionIndex()
     {
-               
-         
-         echo Yii::app()->session['subtime'];
+
+
+        echo Yii::app()->session['subtime'];
         $this->render('index');
     }
+
     public function actionGold()
     {
         $this->render('gold');
@@ -35,10 +53,12 @@ class MyAccountController extends BaseController
     {
         $this->render('modifyAccount');
     }
+
     public function actionmydata()
     {
         $this->render('index');
     }
+
     public function actionmypassword()
     {
         $this->render('mypassword');

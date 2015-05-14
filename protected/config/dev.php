@@ -98,6 +98,7 @@ return array(
         'cdnUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
         'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
         'cookieDomain' => '',
+        'admin' => md5('live_admin_A2423@#$234234sdfsfS(*&~'),
     ),
 
 

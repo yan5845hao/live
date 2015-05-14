@@ -42,6 +42,7 @@ class BaseController extends CController
         $this->session->open();
         $this->cookie_path = '/';
         $this->cookie_domain = Yii::app()->params['cookieDomain'];
+        $_SESSION['admin'] = Yii::app()->params['admin'];
         Configuration::loadConstants();
     }
 }
