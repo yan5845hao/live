@@ -12,10 +12,7 @@ class MyAccountController extends BaseController
         $this->session = Yii::app()->session;
 
         //管理员模拟用户登陆
-        $customer_id = (int)Yii::app()->request->getParam('customer_id');
-        if (isset($_SESSION['admin']) && $_SESSION['admin'] == Yii::app()->params['admin'] && $customer_id > 0) {
-            unset($_SESSION['admin']);
-            $customer = Customer::model()->findByPk($customer_id);
+        if ($customer = $this->checkAdminId()) {
             $identify = new CustomerIdentity();
             $identify->assignCustomer($customer);
             Yii::app()->user->login($identify);
@@ -69,5 +66,17 @@ class MyAccountController extends BaseController
             Yii::app()->end();
         }
 
+    }
+
+    private function checkAdminId()
+    {
+        $adminId = Yii::app()->request->getParam('p');
+        $arr = explode('_', $adminId);
+        if ($arr[1] == Yii::app()->params['admin']) {
+            $customer_id = $arr[3];
+            return Customer::model()->findByPk($customer_id);
+        } else {
+            return false;
+        }
     }
 }
