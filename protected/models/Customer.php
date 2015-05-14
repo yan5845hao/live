@@ -31,7 +31,7 @@ class Customer extends CActiveRecord
         // will receive user inputs.
         return array(
             array('phone,password', 'required'),
-            array('phone, password, name, gender, vip_code, face, active, address', 'safe'),
+            array('user_name,nick_name,email,gender, vip_code, face, active, address', 'safe'),
         );
     }
 
