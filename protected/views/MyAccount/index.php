@@ -18,6 +18,7 @@
                     </dl>
                 </div>
             </div>
+            <div style="clear: both;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
             <form url="<?php echo Yii::app()->createUrl('/myAccount/editInfo')?>">
             <div class="vspace" style="height:30px;"></div>
             <div class="usercon981con"><span>昵称</span><input name="nick_name" value="<?php echo $userInfo->nick_name;?>" type="text" /><em>更换昵称</em></div>
