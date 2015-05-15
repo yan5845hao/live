@@ -1,4 +1,62 @@
 // JavaScript Document
+//焦点图
+
+var myfocus = function(id,isNumber){
+	var index=0,
+	    obj=$("#"+id+" li"),
+		length = obj.length;
+	var change=function(num){
+		obj.eq(num).siblings("li").fadeOut(900).css("z-index","0");
+		obj.eq(num).fadeIn(600);
+		obj.eq(num).css({"background-color":obj.eq(num).attr("data-color"),"z-index":"99"})
+		$("#"+id).siblings(".dot").find("span").eq(num).addClass("cur").siblings("span").removeClass("cur");
+	};
+	var prev =function(){
+		if(index>0){
+			index--;
+		}
+		if(index<0)index=length-1;
+		change(index);
+	};
+	var next = function(){
+		if(index<length){
+			index++;
+		}
+		if(index>length-1)index=0;
+			change(index);
+	};
+	var init =function(){
+		for(var i=0;i<length;i++){
+			if(isNumber){
+				var html = "<span>"+(i+1)+"</span>";
+			}else{
+				var html = "<span></span>";
+			}
+
+			$("#"+id).siblings(".dot").append(html);			
+		}
+		var dotline = $("#"+id).siblings(".dot").find("span");
+		dotline.on("click",function(){
+			var n = $(this).index();
+			change(n);
+			index = n;
+			clearInterval(timer);
+			timer = setInterval(function(){next ();},6000);		
+		});
+		
+		obj.on("mouseover",function(){
+			clearInterval(timer);
+		});
+		obj.on("mouseout",function(){
+			timer = setInterval(function(){next ();},6000);
+		});
+	  change(index);
+	};
+	
+	init();
+	var timer = setInterval(function(){next ();},6000);
+}
+/*标签切换*/
 var changeTab =function(id,isspan){
 
 	var o = $("#"+id);
@@ -60,5 +118,21 @@ var album = function(id,maxshow){
 	});
 	next.on("click",function(){
 	 	nextF();	
+	});
+}
+/*回到顶部*/
+var gototop = function(id){
+	var screenHeight = $(window).height();
+
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		if(scrollTop>=screenHeight){
+		$("#"+id).show();	
+		}else{
+			$("#"+id).hide();	
+		}
+	});	
+	$("#"+id).click(function(){
+		$(window).scrollTop(0);	
 	});
 }
