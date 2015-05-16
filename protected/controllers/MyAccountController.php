@@ -27,7 +27,11 @@ class MyAccountController extends BaseController
         Yii::app()->session['subtime'];
         $customer_id = Yii::app()->user->id;
         $userInfo = Customer::model()->findByPk($customer_id);
-        $this->render('index', array('userInfo' => $userInfo));
+        if ($userInfo->customer_type == 2) {
+            $this->render('star/index', array('userInfo' => $userInfo));
+        } else {
+            $this->render('index', array('userInfo' => $userInfo));
+        }
     }
 
     public function actionGold()
@@ -79,5 +83,28 @@ class MyAccountController extends BaseController
         } else {
             return false;
         }
+    }
+
+    /**
+     * 以下是明星管理
+     */
+    public function actionNews()
+    {
+        $this->render('star/store');
+    }
+
+    public function actionPub()
+    {
+        $this->render('star/publish_news');
+    }
+
+    public function actionStore()
+    {
+        $this->render('star/store');
+    }
+
+    public function actionEvaluation()
+    {
+        $this->render('star/evaluation');
     }
 }
