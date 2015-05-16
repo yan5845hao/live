@@ -39,7 +39,14 @@
     </div>
 </div>
 <!--banner begin-->
-<?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Top1920x570','slider_type'=>'home'))  ?>
+<?php 
+$uri = strtolower(Yii::app()->request->getPathInfo());
+if(empty($uri)){
+
+
+	$this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Top1920x570','slider_type'=>'home'));
+}
+  ?>
 <!--banner end-->
 <div class="topnav">
     <div class="mainnav wrapper">
