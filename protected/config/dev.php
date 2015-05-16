@@ -90,6 +90,13 @@ return array(
             'account' => 'cf_fjy',
             'password' => '123456'
         ),
+        'aliyun'=>array (
+            'class' => 'application.extensions.oss.Aliyun',
+            'keyId' => 'Z7JWc80Qr4sa9z1y',
+            'keySecret' => 'wYNthiODxexruCFaz9jDQ8Yfr8MujJ',
+            'bucket' => 'bumeng-default',
+            'savePath' => 'bumengpc'
+        ),
 	),
 
 	// application-level parameters that can be accessed

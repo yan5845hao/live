@@ -58,6 +58,7 @@ class MyAccountController extends BaseController
         $customer->user_name = Yii::app()->request->getParam('user_name');
         $customer->nick_name = Yii::app()->request->getParam('nick_name');
         $customer->gender = Yii::app()->request->getParam('gender');
+        $customer->face = Yii::app()->request->getParam('face');
         if ($customer->save()) {
             echo CJSON::encode(array('ok' => true));
             Yii::app()->end();

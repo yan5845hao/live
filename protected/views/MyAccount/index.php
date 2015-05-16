@@ -4,9 +4,16 @@
         <?php include 'leftMenu.php' ;?>
         <div class="usercon981 right">
             <div class="usercon981tit">我的资料</div>
+            <?php $face = $userInfo->face?$userInfo->face:cdn_bumeng_url() . 'webserver/css/img/userline.png'; ?>
             <div class="usercon981titline"><img src="<?php echo Yii::app()->params['cdnUrl']?>/bumengpc/webserver/css/img/userline.png" width="939" height="2" /></div>
             <div class="usercon981info">
-                <div class="usercon981pic left"><img src="/images/default.png" width="205" height="205" /><span></span><em><a href="#">修改头像</a></em></div>
+                <div class="left">
+<!--                    <span></span><em><a href="#">修改头像</a></em>-->
+                    <div>
+                        <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" height="205" /></div>
+                        <div style="line-height: 30px; height: 30px; font-size: 14px; background: #ccc;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
+                    </div>
+                </div>
                 <div class="usercon981text left">
                     <dl>
                         <dt id="nick_name"><?php echo $userInfo->nick_name;?></dt>
@@ -18,8 +25,7 @@
                     </dl>
                 </div>
             </div>
-            <div style="clear: both;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
-            <form url="<?php echo Yii::app()->createUrl('/myAccount/editInfo')?>">
+            <form url="<?php echo Yii::app()->createUrl('/myAccount/editInfo')?>" id="form1">
             <div class="vspace" style="height:30px;"></div>
             <div class="usercon981con"><span>昵称</span><input name="nick_name" value="<?php echo $userInfo->nick_name;?>" type="text" /><em>更换昵称</em></div>
             <div class="usercon981con"><span>性别</span>
@@ -29,7 +35,8 @@
                 </ul>
             </div>
             <input name="gender" value="<?php echo $userInfo->gender;?>" type="hidden">
-                <input name="customer_id" value="<?php echo $userInfo->customer_id;?>" type="hidden">
+            <input name="customer_id" value="<?php echo $userInfo->customer_id;?>" type="hidden">
+            <input name="face" id="face" value="<?php echo $userInfo->face;?>" type="hidden">
             <div class="vspace" style="height:30px;"></div>
             <div class="usercon981con"><span>邮箱</span><input name="email" value="<?php echo $userInfo->email;?>" type="text"/></div>
             <div class="usercon981con"><span>真实姓名</span><input name="user_name" value="<?php echo $userInfo->user_name;?>" type="text"/></div>
@@ -44,8 +51,8 @@
 <script language="JavaScript">
     var form_submit = function()
     {
-        var url = $("form").attr("url");
-        var postData = $("form").serialize();
+        var url = $("#form1").attr("url");
+        var postData = $("#form1").serialize();
         var nickName = $("input[name = 'nick_name']").val();
         var email = $("input[name = 'email']").val();
         if(nickName == ''){

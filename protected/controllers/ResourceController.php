@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @title 文件上传
  * @author Demi.mo
@@ -13,11 +14,11 @@ class ResourceController extends BaseController
         $file = $_FILES['file'];
         $content = fopen($file['tmp_name'], 'r');
         $extName = Yii::app()->aliyun->getExtName($file['name']);
-        $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . $extName;
+        $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
         $size = $file['size'];
         $save = Yii::app()->aliyun->putResourceObject($key, $content, $size);
         if ($save) {
-            echo json_encode(array('url' => Yii::app()->params['cdnUrl'] . $key));
+            echo json_encode(array('url' => Yii::app()->params['cdnUrl'] . '/' . $key));
         } else {
             return false;
         }
