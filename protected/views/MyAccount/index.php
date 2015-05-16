@@ -12,6 +12,7 @@
                     <div>
                         <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" height="205" /></div>
                         <div style="line-height: 30px; height: 30px; font-size: 14px; background: #ccc;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
+                        <div id="imgError" style="color: red;"></div>
                     </div>
                 </div>
                 <div class="usercon981text left">
@@ -69,7 +70,9 @@
         }
         $("#nick_name").text(nickName);
         $.post(url,postData,function(result){
-            console.log(result);
+            if(result.ok){
+                alert('资料修改成功!');
+            }
         },'json');
     }
     var isEmail = function(mail){

@@ -28,13 +28,13 @@
         function uploadSuccess(file,data){
             var data = JSON.parse(data);
             var url = data['url'];
-             content =  '<img width="205" height="205" src="'+url+'">';
-             $('#imgshow').html(content);
+            content =  '<img width="205" height="205" src="'+url+'">';
+            $('#imgshow').html(content);
             $('#face').val(url);
         }
         function onUploadError(file,data){
             var data = JSON.parse(data);
-            $('#imgshow').html('上传失败，请联系管理员');
+            $('#imgError').html('上传失败，图片超出大小');
         }
     });
 </script>
