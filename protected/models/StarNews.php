@@ -46,6 +46,32 @@ class StarNews extends CActiveRecord
         /*
         * star news paging
         */
-       
+       public function getNews($page,$star_id=null){ 
+       		$size=5;
+       		if($page<2){
+       			$l=0;
+       		}else{
+       			$l=5*($page-1);	
+       		}
+
+       		
+
+
+
+
+       		$criteria = new CDbCriteria;
+			$sql = "SELECT * FROM star_news";
+			$model= Yii::app()->db->createCommand($sql)->queryAll();
+			$pages = new CPagination(count($model));              
+			$pages->pageSize = 1;
+			$pages->currentPage = $pages;
+			$pages->applylimit($criteria);
+			$model=Yii::app()->db->createCommand($sql." LIMIT :offset,:limit");
+			$model->bindValue(':offset', $pages->currentPage*$pages->pageSize);
+			$model->bindValue(':limit', $pages->pageSize);
+			$model=$model->queryAll();
+
+			return $model;
 	
-}
+    	}
+    }
