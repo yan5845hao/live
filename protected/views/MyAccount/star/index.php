@@ -9,14 +9,14 @@
             <div class="usercon981info">
                 <div style="font-size:14px; font-weight:bolder; margin-bottom:5px;">明星海报</div>
                 <div class="left">
-                    <?php $face = $userInfo->face?$userInfo->face:cdn_bumeng_url() . 'webserver//css/img/userline.png'; ?>
+                    <?php $face = $userInfo->face?$userInfo->face:'/images/default.png'; ?>
                     <div>
                         <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" height="205" /></div>
                         <div style="line-height: 30px; height: 30px; font-size: 14px; background: #f0f0f0;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
                         <div id="imgError" style="color: red;"></div>
                     </div>
                 </div>
-                <input type="hidden" name="face" value="<?php echo $userInfo->face;?>" >
+                <input type="hidden" id="face" name="face" value="<?php echo $userInfo->face;?>" >
             </div>
             <div class="vspace" style="height:30px;"></div>
             <div class="usercon981con"><span>简介</span></div>

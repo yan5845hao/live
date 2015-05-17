@@ -4,7 +4,7 @@
         <?php include 'leftMenu.php' ;?>
         <div class="usercon981 right">
             <div class="usercon981tit">我的资料</div>
-            <?php $face = $userInfo->face?$userInfo->face:cdn_bumeng_url() . 'webserver/css/img/userline.png'; ?>
+            <?php $face = $userInfo->face?$userInfo->face:'/images/default.png'; ?>
             <div class="usercon981titline"><img src="<?php echo Yii::app()->params['cdnUrl']?>/bumengpc/webserver/css/img/userline.png" width="939" height="2" /></div>
             <div class="usercon981info">
                 <div class="left">
@@ -30,9 +30,9 @@
             <div class="vspace" style="height:30px;"></div>
             <div class="usercon981con"><span>昵称</span><input name="nick_name" value="<?php echo $userInfo->nick_name;?>" type="text" /><em>更换昵称</em></div>
             <div class="usercon981con"><span>性别</span>
-                <ul>
-                    <li class="current"><a href="#">男</a></li>
-                    <li><a href="#">女</a></li>
+                <ul id="gender">
+                    <li <?php if($userInfo->gender == 'm'){ echo 'class="current"'; }?>><a href="javascript:;" onclick="select_gender('m')">男</a></li>
+                    <li <?php if($userInfo->gender == 'f'){ echo 'class="current"'; }?>><a href="javascript:;" onclick="select_gender('f')">女</a></li>
                 </ul>
             </div>
             <input name="gender" value="<?php echo $userInfo->gender;?>" type="hidden">
@@ -50,6 +50,16 @@
     </div>
 </div>
 <script language="JavaScript">
+    var select_gender = function(gender)
+    {
+        $("#gender li").removeClass("current");
+        if(gender == 'm'){
+            $("#gender li").eq(0).addClass("current");
+        }else{
+            $("#gender li").eq(1).addClass("current");
+        }
+        $("input[name = 'gender']").val(gender);
+    }
     var form_submit = function()
     {
         var url = $("#form1").attr("url");
