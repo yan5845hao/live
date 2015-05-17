@@ -6,6 +6,7 @@
  */
 class MyAccountController extends BaseController
 {
+    private $model;
     public function __construct($id, $module = null)
     {
         parent::__construct($id, $module);
@@ -88,7 +89,7 @@ class MyAccountController extends BaseController
     /**
      * 以下是明星管理相关
      */
-    public function ActionEditStar()
+    public function actionEditStar()
     {
         $customer_id = Yii::app()->request->getParam('customer_id');
         $file = $_FILES['faces'];
@@ -123,14 +124,67 @@ class MyAccountController extends BaseController
             return false;
         }
     }
+
     public function actionNews()
     {
-        $this->render('star/store');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
+        $star_id = Yii::app()->user->id;
+        $criteria = new CDbCriteria();
+        $criteria->addCondition("star_id = :star_id");
+        $criteria->params[':star_id'] = $star_id;
+        $criteria->order = 'createtime desc';
+        $dataProvider = new CActiveDataProvider('StarNews', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 4,
+            ),
+        ));
+        $this->render('star/news', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+    }
+    public function actionPubNews()
+    {
+        $image = '';
+        $id = Yii::app()->request->getParam('id');
+        $starNews = StarNews::model()->findByPk($id);
+        if($_POST){
+            $file = $_FILES['image'];
+            if($file['tmp_name']){
+                $content = fopen($file['tmp_name'], 'r');
+                $extName = Yii::app()->aliyun->getExtName($file['name']);
+                $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
+                $size = $file['size'];
+                Yii::app()->aliyun->putResourceObject($key, $content, $size);
+                $image = Yii::app()->params['cdnUrl'] . '/' . $key;
+            }
+            if($starNews){
+                $starNews->title = Yii::app()->request->getParam('title');
+                $starNews->content = Yii::app()->request->getParam('content');
+                if($image != ''){
+                $starNews->image = $image;
+                }
+                $starNews->createtime = new CDbExpression('NOW()');
+            }else{
+                $starNews = new StarNews();
+                $data = array(
+                    'title' => Yii::app()->request->getParam('title'),
+                    'content' => Yii::app()->request->getParam('content'),
+                    'star_id' => Yii::app()->user->id,
+                    'image' => $image,
+                    'createtime' =>  new CDbExpression('NOW()'),
+                );
+                $starNews->setAttributes($data);
+            }
+            $starNews->save(false);
+            $this->redirect($this->createUrl('/myAccount/news'));
+        }
+        $this->render('star/publishNews',array('newsInfo'=>$starNews));
     }
 
-    public function actionPub()
+    public function actionDeleteNews()
     {
-        $this->render('star/publish_news');
+        $id = Yii::app()->request->getParam('id');
+        StarNews::model()->findByPk($id)->delete();
+        $this->redirect($this->createUrl('/myAccount/news'));
     }
 
     public function actionStore()
@@ -141,5 +195,14 @@ class MyAccountController extends BaseController
     public function actionEvaluation()
     {
         $this->render('star/evaluation');
+    }
+
+    public function loadModel()
+    {
+        $customer_id = Yii::app()->user->id;
+        $model = Customer::model()->findByPk($customer_id);
+        if ($model === null)
+            throw new CHttpException(404, 'The requested page does not exist.');
+        return $model;
     }
 }

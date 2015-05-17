@@ -28,9 +28,8 @@ class StarNews extends CActiveRecord
                 // NOTE: you should only define rules for those attributes that
                 // will receive user inputs.
                 return array(
-                	     array('star_id,star_name,title,content', 'required'),
-                         array('star_name', 'length', 'max'=>40),
-                         array('star_name', 'length', 'max'=>128),
+                	     array('star_id,title,content', 'required'),
+                         array('star_id,star_name,title,content,image,createtime,lookcount,commentcount,introduce','safe')
                         );
         }
         /**
@@ -46,15 +45,15 @@ class StarNews extends CActiveRecord
         /*
         * star news paging
         */
-       public function getNews($page,$star_id=null){ 
+       public function getNews($page,$star_id=null){
        		$size=5;
        		if($page<2){
        			$l=0;
        		}else{
-       			$l=5*($page-1);	
+       			$l=5*($page-1);
        		}
 
-       		
+
 
 
 
@@ -62,7 +61,7 @@ class StarNews extends CActiveRecord
        		$criteria = new CDbCriteria;
 			$sql = "SELECT * FROM star_news";
 			$model= Yii::app()->db->createCommand($sql)->queryAll();
-			$pages = new CPagination(count($model));              
+			$pages = new CPagination(count($model));
 			$pages->pageSize = 1;
 			$pages->currentPage = $pages;
 			$pages->applylimit($criteria);
@@ -72,6 +71,6 @@ class StarNews extends CActiveRecord
 			$model=$model->queryAll();
 
 			return $model;
-	
+
     	}
     }

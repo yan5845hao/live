@@ -1,0 +1,64 @@
+.page_blue{
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+    font: 12px verdana, arial, helvetica, sans-serif;
+}
+ul.bluePager,ul.yiiPager
+{
+    font-size:11px;
+    border:0;
+    margin:0;
+    padding:0;
+    line-height:100%;
+    display:inline;
+    text-aligin:center;
+}
+
+ul.bluePager li,ul.yiiPager li
+{
+    display:inline;
+}
+
+ul.bluePager a:link,ul.yiiPager a:link,
+ul.bluePager a:visited,ul.yiiPager a:visited,
+ul.bluePager .total_page label,ul.yiiPager .total_page label,
+ul.bluePager .total_row label,ul.yiiPager .total_row label
+{
+    border: #ddd 1px solid;
+    color: #888888 !important;
+    padding:2px 5px;
+    text-decoration:none;
+}
+
+ul.bluePager .page a,ul.yiiPager .page a
+{
+    font-weight:normal;
+}
+
+ul.bluePager a:hover,ul.yiiPager a:hover
+{
+    color:#FFF !important; border:#156a9a 1px solid; background-color:#2b78a3
+}
+
+ul.bluePager .selected a,ul.yiiPager bluePager .selected a
+{
+    color:#3aa1d0 !important;
+    border: 1px solid #3aa1d0;
+}
+
+ul.bluePager .selected a:hover,ul.yiiPager .selected a:hover
+{
+    color:#FFF !important;
+}
+
+ul.bluePager .hidden a,ul.yiiPager .hidden a
+{
+    border:solid 1px #DEDEDE;
+    color:#888888;
+}
+
+ul.bluePager .hidden,ul.yiiPager .hidden
+{
+    display:none;
+}
