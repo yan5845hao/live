@@ -5,20 +5,9 @@
             <div class="focus"  id="myalbum1">
                 <div class="imgbox">
                     <ul class="imgline">
-                        <li>
-                            <img src="/images/picshow01.jpg"/>
-                            <h2 class="left">鹿晗各站及私人生日礼物汇总 就是宠你=NP</h2>
-                            <div class="timedaojishi right">三个小时</div>
-                            <p class="left"><span class="fansi">粉丝<i><a href="#" target="_blank">333333</a></i></span><span class="comment">评论<i><a href="#" target="_blank">333333</a></i></span></p>
-                            <div class="address right">北京</div>
-                        </li>
-                        <li>
-                            <img src="/images/picshow01.jpg"/>
-                            <h2 class="left">鹿晗各站及私人生日礼物汇总 就是宠你=NP</h2>
-                            <div class="timedaojishi right">三个小时</div>
-                            <p class="left"><span class="fansi">粉丝<i><a href="#" target="_blank">333333</a></i></span><span class="comment">评论<i><a href="#" target="_blank">333333</a></i></span></p>
-                            <div class="address right">北京</div>
-                        </li>
+                    <?php 
+                 	if(defined('STAR_SCHEDULE_TOP')) echo STAR_SCHEDULE_TOP; 
+             		?>
 
                     </ul>
                 </div>
@@ -36,49 +25,33 @@
             <div class="bd w">
                 <div class="con01 small">
                     <div class="up">
-                        <div class="imgbox left"><a href="/star/detail"><img src="/images/dkxlistpic01.jpg" /></a></div>
-                        <h3>鹿晗即将单飞粉丝怎么看</h3>
-                        <div class="date">2015-01-07  </div>
-                        <p>迎来24岁生日的吴亦凡将献给粉丝…<a href="#" target="_blank">[详细]</a></p>
+
+                        <div class="imgbox left"><a href="/star/detail"><img src="<?php echo $newsstar[0][img]?>" /></a></div>
+                        <h3><?php echo $newsstar[0][title]?></h3>
+                        <div class="date"><?php echo date('Y-m-d H:i:s',$newsstar[0][begintime]);?></div>
+                        <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="#" target="_blank">[详细]</a></p>
                         <div class="bline"><span class="left">粉丝<i>2368</i></span><span class="right">评论<i>2356</i></span></div>
                     </div>
                     <ul class="list">
-                        <li>
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">鹿晗生日当晚与不明女神共进晚餐</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
-                        <li class="end">
-                            <div class="des left">
-                                <h4><a href="#" target="_blank">李晨和范冰冰合影</a></h4>
-                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
-                            </div>
-                        </li>
+                    <?php //print_r($newsstar) ?>
+                    	<?php
+                    		$i=0;
+                    		foreach($newsstar as $v){  
+                    			if($i<>0){ 
+                    	?>
+		                    	<li>
+		                            <div class="des left">
+		                                <h4><a href="#" target="_blank"><?php echo $v['title']?></a></h4>
+		                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
+		                            </div>
+		                        </li>
+                    	<?php
+                    			}
+                    			$i++;
+                    		}
+
+                    	?>
+                       
 
                     </ul>
                 </div>
@@ -121,23 +94,33 @@
             </script>
             <div class="con13">
                 <ul>
+                <?php
+                	foreach($newsstarall as $val){ 
+
+
+                	
+                	?>
                     <li>
                         <div class="left l">
-                            <p  class="address">深圳</p>
+                            <p  class="address"><?php  echo mb_substr($val['address'],0,3,'utf-8'); ?></p>
                             <div class="time">
-                                <p>16</p>
-                                <span>2015年06月</span>
+                                <p><?php echo date('d',$val['begintime'])?></p>
+                                <span><?php echo date('Y年m月',$val['begintime'])?></span>
                             </div>
                         </div>
                         <div class="right">
                             <div class="headbox left">
                                 <img  src="/images/yangzishan.jpg"/>
                             </div>
-                            <h3>鹿晗杨子姗跑站宣传《重返20岁》"祖孙"齐卖萌</h3>
-                            <p>《重返20岁》是由韩国CJ E&M 株式会社、北京文传世纪文化传媒有限公司、天津世纪乐成文化传播有限公司和北京世纪乐成文化传媒有限公司联合出品的喜剧电影。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。影片讲述了一位七旬老太太不可思议变身为妙龄少女后，以新身份回到日常生活，引发的一系列啼笑。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。</p>
+                            <h3><?php echo $val['title']?></h3>
+                            <p><?php echo mb_substr($val['content'],0,278,'utf-8');?></p>
                             <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
                         </div>
                     </li>
+                    <?php
+
+                    	}
+                    	?>
                     <li class="even">
                         <div class="left l">
                             <p  class="address">哈尔滨</p>

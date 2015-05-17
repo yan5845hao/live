@@ -9,7 +9,16 @@ class StarController extends BaseController
     }
     public function actionIndex()
     {
-        $this->render('index');
+
+    	  $sql = "select * from star_schedule order by begintime desc limit 6";
+          $command = Yii::app()->db->createCommand($sql);
+          $newsstar = $command->queryAll();
+
+           $sql = "select * from star_schedule order by begintime desc ";
+          $command = Yii::app()->db->createCommand($sql);
+          $newsstarall = $command->queryAll();
+
+        $this->render('index',array('newsstar'=>$newsstar,'newsstarall'=>$newsstarall));
     }
 
     public function actionDetail()
