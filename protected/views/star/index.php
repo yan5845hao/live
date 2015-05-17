@@ -29,7 +29,7 @@
                         <div class="imgbox left"><a href="/star/detail"><img src="<?php echo $newsstar[0][img]?>" /></a></div>
                         <h3><?php echo $newsstar[0][title]?></h3>
                         <div class="date"><?php echo date('Y-m-d H:i:s',$newsstar[0][begintime]);?></div>
-                        <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="#" target="_blank">[详细]</a></p>
+                        <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$newsstar[0]['id']))?>" target="_blank">[详细]</a></p>
                         <div class="bline"><span class="left">粉丝<i>2368</i></span><span class="right">评论<i>2356</i></span></div>
                     </div>
                     <ul class="list">
@@ -41,7 +41,7 @@
                     	?>
 		                    	<li>
 		                            <div class="des left">
-		                                <h4><a href="#" target="_blank"><?php echo $v['title']?></a></h4>
+		                                <h4><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
 		                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
 		                            </div>
 		                        </li>
@@ -96,9 +96,7 @@
                 <ul>
                 <?php
                 	foreach($newsstarall as $val){ 
-
-
-                	
+	
                 	?>
                     <li>
                         <div class="left l">
@@ -112,7 +110,7 @@
                             <div class="headbox left">
                                 <img  src="/images/yangzishan.jpg"/>
                             </div>
-                            <h3><?php echo $val['title']?></h3>
+                            <h3><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$val['id']))?>" target="_blank"><?php echo $val['title']?></a></h3>
                             <p><?php echo mb_substr($val['content'],0,278,'utf-8');?></p>
                             <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
                         </div>

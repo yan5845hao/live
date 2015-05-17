@@ -21,6 +21,16 @@ class StarController extends BaseController
         $this->render('index',array('newsstar'=>$newsstar,'newsstarall'=>$newsstarall));
     }
 
+    public function actionInfo()
+    {
+
+    	$id = Yii::app()->getRequest()->getParam("id");
+		$newsdata=StarSchedule::model()->findByPk($id);
+		
+		$this->render('info',array('newsdata'=>$newsdata));
+    }
+
+
     public function actionDetail()
     {
         $this->render('detail');
