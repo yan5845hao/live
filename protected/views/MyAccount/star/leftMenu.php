@@ -10,18 +10,18 @@
         </dl>
         <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />我的档期管理</dt>
-            <dd><a href="#">发布档期</a></dd>
             <dd><a href="#">档期列表</a></dd>
+            <dd><a href="#">发布档期</a></dd>
         </dl>
         <dl>
             <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的新闻管理</dt>
-            <dd <?php if($uri == 'myaccount/pub'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/pub')?>">发布新闻</dd>
-            <dd><a href="#">新闻列表</a></dd>
+            <dd <?php if($uri == 'myaccount/news'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/news')?>">新闻列表</dd>
+            <dd <?php if($uri == 'myaccount/pubnews'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/pubNews')?>">发布新闻</dd>
         </dl>
         <dl>
             <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的视频管理</dt>
-            <dd><a href="#">内部视频</a></dd>
-            <dd><a href="#">外部视频</a></dd>
+            <dd><a href="#">视频列表</a></dd>
+            <dd><a href="#">发布视频</a></dd>
         </dl>
     </div>
 </div>

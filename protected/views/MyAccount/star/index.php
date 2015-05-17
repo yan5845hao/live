@@ -16,6 +16,7 @@
                         <div id="imgError" style="color: red;"></div>
                     </div>
                 </div>
+                <div class="left" style="color: #ccc;"><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;图片大小不成超过2M</div>
                 <input type="hidden" id="face" name="face" value="<?php echo $userInfo->face;?>" >
             </div>
             <div class="vspace" style="height:30px;"></div>
