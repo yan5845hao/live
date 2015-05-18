@@ -136,7 +136,7 @@ class MyAccountController extends BaseController
         $dataProvider = new CActiveDataProvider('StarNews', array(
             'criteria' => $criteria,
             'pagination' => array(
-                'pageSize' => 4,
+                'pageSize' => 10,
             ),
         ));
         $this->render('star/news', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
@@ -195,6 +195,62 @@ class MyAccountController extends BaseController
     public function actionEvaluation()
     {
         $this->render('star/evaluation');
+    }
+
+    public function actionVideo()
+    {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
+        $customer_id = Yii::app()->user->id;
+        $criteria = new CDbCriteria();
+        $criteria->addCondition("customer_id = :customer_id");
+        $criteria->params[':customer_id'] = $customer_id;
+        $criteria->order = 'created desc';
+        $dataProvider = new CActiveDataProvider('Customer', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+            ),
+        ));
+        $this->render('star/video', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+    }
+
+    public function actionPubVideo()
+    {
+        $image = '';
+        $id = Yii::app()->request->getParam('id');
+        $product = Product::model()->findByPk($id);
+        if($_POST){
+            $file = $_FILES['image'];
+            if($file['tmp_name']){
+                $content = fopen($file['tmp_name'], 'r');
+                $extName = Yii::app()->aliyun->getExtName($file['name']);
+                $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
+                $size = $file['size'];
+                Yii::app()->aliyun->putResourceObject($key, $content, $size);
+                $image = Yii::app()->params['cdnUrl'] . '/' . $key;
+            }
+            if($product){
+                $product->title = Yii::app()->request->getParam('title');
+                $product->content = Yii::app()->request->getParam('content');
+                if($image != ''){
+                    $product->image = $image;
+                }
+                $product->createtime = new CDbExpression('NOW()');
+            }else{
+                $product = new Product();
+                $data = array(
+                    'title' => Yii::app()->request->getParam('title'),
+                    'content' => Yii::app()->request->getParam('content'),
+                    'star_id' => Yii::app()->user->id,
+                    'image' => $image,
+                    'createtime' =>  new CDbExpression('NOW()'),
+                );
+                $product->setAttributes($data);
+            }
+            $product->save(false);
+            $this->redirect($this->createUrl('/myAccount/video'));
+        }
+        $this->render('star/publishVideo',array('product'=>$product));
     }
 
     public function loadModel()
