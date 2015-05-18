@@ -16,7 +16,8 @@
             //'buttonClass'		: 'class', //上传class
             //'buttonText'      	: '上传文件',
             //其他配置项
-            'fileSizeLimit'		: '0',	//上传文件限制 0问无限制
+            'fileSizeLimit'		: '200',	//上传文件限制 0问无限制
+            queueSizeLimit      : 1,
             'fileTypeDesc'		: 'Image Files', //文件类型
             'fileTypeExts'		: '*.jpg',	//文件后缀
             'onUploadSuccess' 	: uploadSuccess,
@@ -32,9 +33,8 @@
             $('#imgshow').html(content);
             $('#face').val(url);
         }
-        function onUploadError(file,data){
-            var data = JSON.parse(data);
-            $('#imgError').html('上传失败，图片超出大小');
+        function onUploadError(file){
+            alert('上传失败，请联系管理员!');
         }
     });
 </script>

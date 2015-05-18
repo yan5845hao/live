@@ -20,8 +20,8 @@
         </dl>
         <dl>
             <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的视频管理</dt>
-            <dd><a href="#">视频列表</a></dd>
-            <dd><a href="#">发布视频</a></dd>
+            <dd <?php if($uri == 'myaccount/video'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/video')?>">视频列表</a></dd>
+            <dd <?php if($uri == 'myaccount/pubvideo'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/pubVideo')?>">发布视频</a></dd>
         </dl>
     </div>
 </div>
