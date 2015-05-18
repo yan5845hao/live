@@ -10,8 +10,8 @@
         </dl>
         <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />我的档期管理</dt>
-            <dd><a href="#">档期列表</a></dd>
-            <dd><a href="#">发布档期</a></dd>
+            <dd><a href="<?php echo Yii::app()->createUrl('/myAccount/schedule')?>">档期列表</a></dd>
+            <dd><a href="<?php echo Yii::app()->createUrl('/myAccount/pubschedule')?>">发布档期</a></dd>
         </dl>
         <dl>
             <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的新闻管理</dt>
