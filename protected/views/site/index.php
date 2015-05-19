@@ -8,9 +8,10 @@
 <div class="bd">
 <div class="col690 left">
     <div class="ind01">
-        <div class="imgbox"><a href="#" target="_blank"><img src="/images/picshow01.jpg" title="男团" alt="男团"  /></a></div>
-        <div class="txtbg"></div>
-        <div class="txt"><p class="left"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></p><span class="right">粉丝<i>15156</i></span></div>
+      
+        <?php 
+                 if(defined('HOME_PAGE_ONE_GUANGGAO')) echo HOME_PAGE_ONE_GUANGGAO; 
+             ?>
     </div>
 </div>
 <div class="col534 right">
@@ -107,198 +108,23 @@
     <ul id="content">
         <li>
             <div class="hotpop5">
-                <div class="item">
-                    <i class="left">1</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">2</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">3</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">4</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">5</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
+            <?php if(defined('HOME_TWO_HOT_ALL')) echo HOME_TWO_HOT_ALL; ?>  
+              
             </div>
         </li>
         <li>
             <div class="hotpop5">
-                <div class="item">
-                    <i class="left">1</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>音乐Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">2</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">3</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">4</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">5</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
+                <?php if(defined('HOME_TWO_HOT_MUSIC')) echo HOME_TWO_HOT_MUSIC; ?>   
             </div>
         </li>
         <li>
             <div class="hotpop5">
-                <div class="item">
-                    <i class="left">1</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>影视Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">2</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">3</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">4</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">5</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
+               <?php if(defined('HOME_TWO_HOT_TV')) echo HOME_TWO_HOT_TV; ?>  
             </div>
         </li>
         <li>
             <div class="hotpop5">
-                <div class="item">
-                    <i class="left">1</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>综艺Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">2</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">3</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">4</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
-                <div class="item">
-                    <i class="left">5</i>
-                    <div class="imgbox left"><img src="/images/daka_pic01.png" /></div>
-                    <div class="des left">
-                        <h3>Sistar歌迷机场 遭围堵</h3>
-                        <div class="numbers"><span class="left playicon">播放<i>15156</i></span><span class="left comment">评论<i>15156</i></span></div>
-                    </div>
-                    <div class="play left"><a href="#" title="点击播放">点击播放</a></div>
-                </div>
+               <?php if(defined('HOME_TWO_HOT_TV')) echo HOME_TWO_HOT_ZY; ?> 
             </div>
         </li>
     </ul>

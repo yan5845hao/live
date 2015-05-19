@@ -16,7 +16,7 @@
     <div class="top">
         <div class="logo left"><a href="/"><img src="/images/logo.png" /></a><span>最大的明星粉丝互动娱乐平台</span></div>
         <div class="search left">
-            <input type="text" value="刘德华" />
+            <input type="text" value="" />
             <button></button>
         </div>
         <div class="login left">
@@ -54,11 +54,11 @@ if(empty($uri)){
             <a <?php if($controller == ''){echo 'class="s"';}?> href="/">首页</a>
             <a <?php if($controller == 'bigshots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigshots')?>">大枷秀</a>
             <a <?php if($controller == 'star'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/star')?>">明星档</a>
-            <a href="#">星愿城</a>
-            <a href="#">大牌店</a>
-            <a href="#">粉社会</a>
+            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">星愿城</a>
+            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">大牌店</a>
+            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">粉社会</a>
         </div>
-        <div class="nav_r left"><i></i><a href="#">排行榜</a><span>|</span><a href="#">娱乐厂牌</a><span>|</span><a href="#">微入口</a></div>
+        <div class="nav_r left"><i></i><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">排行榜</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">娱乐厂牌</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">微入口</a></div>
         <div class="user">
             <img class="head left" src="/images/dkxlistpic04.jpg"/>
             <div class="jiangpai left"><img  src="/css/img/jiangpai1.png"/></div>

@@ -12,10 +12,10 @@
         <div> 
         	
         	<video width="800" height="520" controls>
-			  <source src="/video/1.mp4" type="video/mp4">
+			  <source src="<?php echo $videodata['url']?>" type="video/mp4">
 			  <source src="movie.ogg" type="video/ogg">
 			  <source src="movie.webm" type="video/webm">
-			  <object data="/video/1.mp4" width="800" height="520">
+			  <object data="<?php echo $videodata['url']?>" width="800" height="520">
 			    <embed src="movie.swf" width="800" height="520">
 			  </object>
 			</video> 
