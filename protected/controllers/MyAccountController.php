@@ -105,7 +105,7 @@ class MyAccountController extends BaseController
             }
             $relation_star = CJSON::encode($_POST['relation_star']);
             $customer = Customer::model()->findByPk($customer_id);
-            $customerInfo = CustomerInfo::model()->findByPk($customer_id);
+            $customerInfo = CustomerInfo::model()->findByAttributes(array('customer_id' => $customer_id));
             $customer->face = Yii::app()->request->getParam('face');
             $customerInfo->content = Yii::app()->request->getParam('content');
             $customerInfo->birthday = Yii::app()->request->getParam('birthday');

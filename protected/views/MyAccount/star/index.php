@@ -24,7 +24,6 @@
             <div class="usercon981con mxinfo">
                 <textarea name="content" style="width: 600px; height: 64px; resize:none; "><?php echo $userInfo->description->content;?></textarea>
             </div>
-            <input type="hidden" name="content" value="<?php echo $userInfo->description->content;?>" >
             <div class="usercon981con"><span>生日</span><input name="birthday" value="<?php echo $userInfo->description->birthday;?>" type="text"/><em style="color: #ccc;">请填写日期格式，如：1990-04-20</em></div>
             <div class="usercon981con"><span>出生地</span><input name="address1" value="<?php echo $userInfo->description->address1;?>" type="text" /></div>
             <div class="usercon981con"><span>身高</span><input name="height" value="<?php echo $userInfo->description->height;?>" type="text" /></div>
