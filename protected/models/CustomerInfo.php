@@ -30,7 +30,7 @@ class CustomerInfo extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('content,address1,height,weight, occupation, tag, last_update', 'safe'),
+            array('content,address1,height,weight, occupation, tag, last_update, customer_id', 'safe'),
         );
     }
 
