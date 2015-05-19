@@ -50,7 +50,7 @@ class AccountController extends BaseController
                     $_SESSION['mobile_code'] = '';
                     $this->redirect($this->createUrl('MyAccount/index'));
                 }else{
-                    $form->addError('mobile','该手机号码已经是本站会员');
+                    $form->addError('mobile','提交失败，请检查必填项.');
                 }
 
             }
