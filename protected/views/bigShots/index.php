@@ -3,7 +3,7 @@
 <div class=" clearfix">
     <div class="dkcol_w730 left">
         <div class="dkcol_w730title "></div>
-        <div class="dkcol_flash "><img src="<?php echo $zhibo[0]['image'] ?>" width="730" height="485" /><span></span><i><a href="http://vtest.yooshow.com/<?php echo $zhibo[0]['liveid']?>"><?php echo $zhibo[0]['title']?></a></i>
+        <div class="dkcol_flash "><img src="<?php echo $zhibo[0]['image'] ?>" width="730" height="485" /><span></span><i><a href="http://vtest.yooshow.com/<?php echo $zhibo[0]['liveIdentity']?>"><?php echo $zhibo[0]['title']?></a></i>
             <ul>
                 <li><img src="images/daka_bofang.png" width="27" height="26" / >预约<em>1234</em></li>
                 <li><img src="images/daka_fensi.png"   width="18" height="26" />粉丝<em>2938</em></li>
@@ -46,7 +46,7 @@
             <li><a >音乐</a></li>
             <li><a href="#">广告</a></li>
             <li><a href="#">音乐</a></li>
-            <li><a href="#">广告</a></li>
+         
         </ul>
         <div class="right"><a class="dkxlb"><img src="images/daka_xiala.jpg" width="76" height="77" /></a></div>
     </div>
@@ -173,287 +173,24 @@
 <div class="dk_phtitle2">
 <!--周榜-->
 <ul>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">1</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁1</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">2</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">3</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">4</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">5</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">6</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">7</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">8</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">9</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">10</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-
+    <?php
+    	if(defined('STAR_SHOW_TWO_RIGHT_WEEK')) echo STAR_SHOW_TWO_RIGHT_WEEK;
+    ?>
 </ul>
 
 
 <!--月榜-->
 <ul style=" display:none;">
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">1</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡25岁2</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">2</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">3</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">4</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">5</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">6</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">7</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">8</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">9</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">10</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-
+        <?php
+    	if(defined('STAR_SHOW_TWO_RIGHT_MONTH')) echo STAR_SHOW_TWO_RIGHT_MONTH;
+    ?>
 </ul>
 
 <!--全部-->
 <ul style=" display:none;">
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">1</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡333</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">2</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph">3</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">4</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">5</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">6</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">7</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">8</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">9</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
-    <li>
-        <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-            <div class="dk_phtitle2_pic_ph4">10</div>
-        </div>
-        <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-        <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-        <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-    </li>
+     <?php
+    	if(defined('STAR_SHOW_TWO_RIGHT_YEAR')) echo STAR_SHOW_TWO_RIGHT_YEAR;
+    ?>
 
 </ul>
 
@@ -468,97 +205,27 @@
 </div>
 <div class="dk_phtitle2">
     <ul>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph">1</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph">2</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph">3</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">4</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">5</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">6</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">7</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">8</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">9</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
-        <li>
-            <div class="dk_phtitle2_pic"><a href="#"><img src="images/dkxlistpic04.jpg" width="62" height="63" /></a>
-                <div class="dk_phtitle2_pic_ph4">10</div>
-            </div>
-            <div class="dk_phtitle2_title"><a href="#">吴亦凡24岁生日</a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
-                <img src="images/dklistbofang.png" width="16" height="15" />播放：<em>32832</em></span></div>
-            <div class="dk_phtitle2_btn"><a href="#"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
-            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
-        </li>
+    <?php
+    	unset($zhibo[0]);
+    	$i=0;
+    	foreach($zhibo as $v){ 
+    		$i++;
 
+    ?>
+
+        <li>
+            <div class="dk_phtitle2_pic"><a href="http://vtest.yooshow.com/<?php echo $v['liveIdentity']?>"><img src="<?php echo $v['image']?>" width="62" height="63" /></a>
+                <div class="dk_phtitle2_pic_ph"><?php echo $i?></div>
+            </div>
+            <div class="dk_phtitle2_title"><a href="http://vtest.yooshow.com/<?php echo $v['liveIdentity']?>"><?php echo mb_substr($v['title'],0,7,'utf-8'); ?></a><span><img src="images/dklistfensi.jpg" width="16" height="15" />粉丝：<em>32832</em><br>
+                <img src="images/dklistbofang.png" width="16" height="15" />预约：<em>32832</em></span></div>
+            <div class="dk_phtitle2_btn"><a href="http://vtest.yooshow.com/<?php echo $v['liveIdentity']?>"><img src="images/dkxlistpic03.jpg" width="32" height="35" border="0" /></a></div>
+            <div style="margin-top:10px; float:left;height:3px;" ><img src="images/dakalistxx.png" width="240" height="3" /></div>
+        </li>
+        <?php
+        	}
+      
+        ?>
     </ul>
 
 

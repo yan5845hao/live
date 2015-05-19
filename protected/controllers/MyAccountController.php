@@ -289,6 +289,8 @@ class MyAccountController extends BaseController
         $criteria = new CDbCriteria();
         $criteria->addCondition("customer_id = :customer_id");
         $criteria->params[':customer_id'] = $customer_id;
+        $criteria->addCondition("type = :type");
+        $criteria->params[':type'] = 'video';
         $criteria->order = 'created desc';
         $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
@@ -330,6 +332,7 @@ class MyAccountController extends BaseController
                     'content' => Yii::app()->request->getParam('content'),
                     'star_id' => Yii::app()->user->id,
                     'image' => $image,
+                    'type'=> 'video',
                     'url' => Yii::app()->request->getParam('url'),
                     'created' =>  new CDbExpression('NOW()'),
                 );

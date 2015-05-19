@@ -20,7 +20,7 @@ class BigShotsController extends BaseController
             $recommend = CJSON::decode(BIG_SHOTS_RECOMMEND_VIDEO);
         }
         $time=date('Y-m-d H:i:s');
-    	$sql = "select * from starjourney order by prestarttime  asc limit 1";
+    	$sql = "select * from starjourney order by prestarttime  asc limit 11";
         $command = Yii::app()->db->createCommand($sql);
         $zhibo = $command->queryAll();
     	
@@ -31,5 +31,16 @@ class BigShotsController extends BaseController
     public function actionDetail()
     {
         $this->render('detail');
+    }
+    public function actionPlayvideo()
+    {
+
+    	$id = Yii::app()->getRequest()->getParam("id");
+		$videodata=Product::model()->findByPk($id);
+
+
+		$stardata=Customer::model()->findByPk($videodata[customer_id]);
+		print_r($stardata);exit;
+        $this->render('playvideo',array('videodata'=>$videodata));
     }
 }
