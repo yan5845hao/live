@@ -136,3 +136,52 @@ var gototop = function(id){
 		$(window).scrollTop(0);	
 	});
 }
+
+
+
+
+//login
+	$(function ($) {
+		//弹出登录
+		$("#loginyh").on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+
+		//关闭
+		$("#closeBtn").on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+			$("#mask").remove();
+		});
+	});
+	
+	
+//reg
+	$(function ($) {
+		//弹出注册
+		$("#regyh").on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#RegBox").fadeIn("slow");
+		});
+
+		//关闭
+		$("#closeReg").on('click', function () {
+			$("#RegBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+			$("#mask").remove();
+		});
+	});
+	
+
+
+//明星tab
+$(function ($) {
+$(".mxzx_tit li").on("click",function(){
+	var index = $(this).index();
+	$(this).addClass("current").siblings("li").removeClass("current");
+	$(".usercon205con div").eq(index).show().siblings("div").hide();
+});
+});

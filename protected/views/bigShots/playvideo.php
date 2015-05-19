@@ -44,15 +44,15 @@
                 <div class="con14">
                     <div class="up">
                         <div class="imgbox left">
-                        	<img src="/images/yangzishan.jpg" />
+                        	<img src="<?php echo $stardata['face']?>" />
                         	<a href="javascript:void(0);" id="guanzhu">关注</a>
-                            <a href="javascript:void(0);">TA的主页</a>
+                            <a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$starinfodata['customer_id']))?>">TA的主页</a>
                          <script type="text/javascript">$("#guanzhu").click(function(){
 							 $(this).toggleClass("cur");
 							 })</script>
                         </div>
-                        <h3>鹿晗</h3>
-                        <p>1990年4月20日出生于北京，是韩国娱乐公司S.M Entertainment。于2012年推出的男子组合EXO里的中国成员，是唯一集主唱、领舞、门面多个担当于一身的成员。杨子珊常常逼鹿晗叫奶奶...</p>
+                        <h3><?php echo $stardata['user_name']?></h3>
+                        <p><?php echo $starinfodata['content']?>...</p>
                     </div>
                     <div class="bottom">
                     	<p>粉丝总排名第9位</p>
@@ -70,36 +70,26 @@
             <div class="bd w">
                 <div class="con15">
                 	<ul>
-                    	<li>
+                	<?php
+                		foreach($videodatas as $v){ 
+                		?>
+                		<li>
                         	<div class="imgbox left">
-                            	<a href="#"><img  src="/images/daka_flash.jpg"/></a>
+                            	<a href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>"><img  src="<?php echo $v['image']?>"/></a>
                                 <div class="txtbg gq"></div>
                                 <div class="txt">超清</div>
                             </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
+                            <p><a href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>" target="_blank"><?php echo $v['title']?></a></p>
                             <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
+							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i><?php echo $v['play_total']?></i></a></span><span class="left comment"><a target="_blank" href="#">评论<i><?php echo $v['talk_total']?></i></a></span></div>
                         </li>
-                        <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="/images/daka_flash.jpg"/></a>
-                                <div class="txtbg cq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
-                         <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="/images/daka_flash.jpg"/></a>
-                                <div class="txtbg gq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
+
+                	<?php	
+
+                		 }
+                	?>
+                    	
+                    
                     </ul>
                 </div>
             </div>
@@ -119,56 +109,7 @@
             <div class="bd w">
                 <div class="con15">
                 	<ul>
-                    	<li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="images/daka_flash.jpg"/></a>
-                                <div class="txtbg gq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source">来源：优酷</div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
-                        <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="images/daka_flash.jpg"/></a>
-                                <div class="txtbg cq">酷</div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source">来源：优</div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
-                         <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="images/daka_flash.jpg"/></a>
-                                <div class="txtbg gq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source">来源：爱奇艺</div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
-                          <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="images/daka_flash.jpg"/></a>
-                                <div class="txtbg gq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
-                          <li>
-                        	<div class="imgbox left">
-                            	<a href="#"><img  src="images/daka_flash.jpg"/></a>
-                                <div class="txtbg gq"></div>
-                                <div class="txt">超清</div>
-                            </div>
-                            <p><a href="#" target="_blank">星映话-《重返20岁：别样青春》</a></p>
-                            <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i>15156</i></a></span><span class="left comment"><a target="_blank" href="#">评论<i>15156</i></a></span></div>
-                        </li>
+                    	<?php if(defined('VIDEO_PALY_RIGHT_TJ')) echo VIDEO_PALY_RIGHT_TJ;?>
                     </ul>
                 </div>
             </div>

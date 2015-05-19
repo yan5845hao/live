@@ -38,9 +38,14 @@ class BigShotsController extends BaseController
     	$id = Yii::app()->getRequest()->getParam("id");
 		$videodata=Product::model()->findByPk($id);
 
+		$sql = "select * from product where customer_id='{$videodata[customer_id]}' && type='video' && product_id <> '{$id}'  order by created desc limit 3";
+		
+        $command = Yii::app()->db->createCommand($sql);
+        $videodatas = $command->queryAll();
 
 		$stardata=Customer::model()->findByPk($videodata[customer_id]);
-		print_r($stardata);exit;
-        $this->render('playvideo',array('videodata'=>$videodata));
+		$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $videodata[customer_id]));
+		
+        $this->render('playvideo',array('videodata'=>$videodata,'starinfodata'=>$starinfodata,'stardata'=>$stardata,'videodatas'=>$videodatas));
     }
 }

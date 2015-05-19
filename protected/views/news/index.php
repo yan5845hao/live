@@ -3,7 +3,7 @@
 
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">大咖秀</a><span>></span>周华健演唱会  </div>
+	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">明星新闻</a><span>  </div>
 </div>
 
 <!--topnav end-->
@@ -27,11 +27,11 @@
 
                     	?>
                         	<li>
-                            	<div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><img src="<?php echo $v['toppic']?>" /></a></div>
-                                <h4><a href="#" target="_blank"><?php echo $v['title']?></a></h4>
+                            	<div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><img src="<?php echo $v['image']?>" style="width:160px; height:160px"/></a></div>
+                                <h4><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
                                 <div class="time"><?php echo date('Y-m-d H:i:s',$v['createtime']);?></div>
                                 <p><?php echo $v['introduce']?></p>
-                                <p><a href="#" target="_blank">查看详情</a></p>
+                                <p><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank">查看详情</a></p>
                                 <div class="bdsharebuttonbox"><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
                             </li>
                           <?php
@@ -77,15 +77,15 @@
                 <div class="con14">
                     <div class="up">
                         <div class="imgbox left">
-                        	<img src="images/yangzishan.jpg" />
+                        	<img src="<?php echo $stardata[face]?>" width="175" height="205"/>
                         	<a href="javascript:void(0);" id="guanzhu">关注</a>
-                            <a href="javascript:void(0);">TA的主页</a>
+                            <a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$newsdata->star_id))?>">TA的主页</a>
                          <script type="text/javascript">$("#guanzhu").click(function(){
 							 $(this).toggleClass("cur");
 							 })</script>
                         </div>
-                        <h3>鹿晗</h3>
-                        <p>1990年4月20日出生于北京，是韩国娱乐公司S.M Entertainment。于2012年推出的男子组合EXO里的中国成员，是唯一集主唱、领舞、门面多个担当于一身的成员。杨子珊常常逼鹿晗叫奶奶...</p>
+                        <h3><?php echo $stardata[user_name]?></h3>
+                        <p><?php echo $starinfodata[content]?>...</p>
                     </div>
                     <div class="bottom">
                     	<p>粉丝总排名第9位</p>
@@ -213,44 +213,9 @@
             </div>
             <div class="bd w">
                 <div class="hotpop6">
-                        	<div class="item top3">
-                            	<i class="left">1</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：3520005</span></div>
-                            </div>
-                            <div class="item top3">
-                            	<i class="left">2</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：2000005</span></div>
-                            </div>
-                            <div class="item top3">
-                            	<i class="left">3</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：200005</span></div>
-                            </div>
-                            <div class="item">
-                            	<i class="left">4</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：2000005</span></div>
-                            </div>
-                            <div class="item">
-                            	<i class="left">5</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：200005</span></div>
-                            </div>
-                            <div class="item last">
-                            	<i class="left">6</i>
-                                <div class="imgbox left"><img src="images/baby.jpg" /></div>
-                               <h3 class="left">孙红雷</h3>
-                               <div class="numbers right"><span class="left playicon">粉丝：2000005</span></div>
-                            </div>
+                        <?php if(defined('NEWS_LIST_HOT_STAR')) echo NEWS_LIST_HOT_STAR;?>
                           
-                        </div>
+                </div>
             </div>
             </div>    
     </div>

@@ -16,10 +16,10 @@
         </ul>
         <div class="intro_info_left_con">
             <dl class="clearfix">
-                <dt class="left"><img src="/images/pic2.png" /></dt>
+                <dt class="left"><img src="<?php echo $stardata[face]?>" width="190" height="245" /></dt>
                 <dd class="right">
-                    <h3>鹿晗</h3>
-                    <p class="c-gap-top">是美国一套久映电视荧幕十年的幽默情景喜剧系列（十季），被公认为史上最成功和世界影响力最大的美剧之一。全剧在全国广播公司（NBC）首播，于1994年9月22日开播，至2004年5月6日落幕，共10季236集。从故事上映至20年后的今天，这部平民经典仍在世界各地持续热播</p>
+                    <h3><?php echo $stardata[user_name]?></h3>
+                    <p class="c-gap-top"><?php echo $starinfodata[content]?></p>
                 </dd>
             </dl>
             <div class="fensi_rank clearfix">
@@ -27,81 +27,106 @@
                 <p class="fensi_rank_num clearfix"><span>0</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><button></button></p>
             </div>
             <h5 class="him_word_title">他的词条</h5>
-            <div class="him_word"><a href="" target="_blank">EXO</a><a href="" target="_blank">组合主唱</a><a href="" target="_blank">鹿晗童年照</a><a href="" target="_blank">足球小鹿</a></div>
+            <div class="him_word">
+            <?php
+            $tag=explode(',',$starinfodata[tag]);
+            	foreach($tag as $v){ 
+
+            			echo '<a >'.$v.'</a>';
+            	}
+            ?>
+            
+            </div>
         </div>
     </div>
     <div class="intro_info_mid left">
         <h2 class="latest_danan">最近档案<a href="" target="_blank">更多&gt;&gt;</a></h2>
-        <div class="latest_danan_con">
+        <div class="latest_danan_con" style="height:410px">
             <p><select class="c-gap-right"><option>2015</option></select><select><option>1月</option></select></p>
             <div class="month_cycle clearfix">
                 <div class="month_cycle_layer">
                     <div class="month_cycle_btn_left"></div>
                     <ul class="month_cycle_list">
-                        <li class="current"><span><a href="" target="_blank">8</a></span><em></em></li>
-                        <li><span><a href="" target="_blank">10</a></span><em></em></li>
-                        <li><span><a href="" target="_blank">15</a></span><em></em></li>
-                        <li><span><a href="" target="_blank">20</a></span><em></em></li>
-                        <li><span><a href="" target="_blank">23</a></span><em></em></li>
+                    <?php
+                  		$day=Yii::app()->getRequest()->getParam("day");
+                  		$i=0;
+                    	foreach($schedule as $k=>$v){ 
+
+                    		if($i==0){ 
+                    			$donum=$k;
+                    		}
+                    		if($i<5){ 
+		                  		if(empty($day) && $i==0){ 
+		                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+		                  		}else if($k==$day){ 
+		                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+		                  		}else{ 
+		                  			echo '<li><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+
+		                  		}
+	                  		}
+	                  		$i++;
+                    	}
+
+                    ?>
+                    
                     </ul>
                     <div class="month_cycle_btn_right"></div>
                 </div>
                 <div class="cycle_line"></div>
             </div>
             <div class="danan_list">
-                <dl>
+            <?php
+            if(empty($day) && isset($donum)){
+            	$key=$donum;
+            }else{ 
+            	$key=intval($day);
+            }
+            $i=1;
+            foreach($schedule[$key] as $val){ 
+            	if($i>3)continue;
+            ?>
+            	  <dl>
                     <dd>
-                        <p class="danan_list_title"><span><img src="/images/icon5.png" />10点半</span><span><img src="/images/icon6.png" />北京</span></p>
-                        <p>五棵松体育馆签售会，专辑免费拿。快来抢，仅此一次</p>
+                        <p class="danan_list_title"><span><img src="/images/icon5.png" /><?php echo date('H:i',$val['begintime'])?></span><span><img src="/images/icon6.png" /><?php echo $val['address']?></span></p>
+                        <p><a href="<?php echo Yii::app()->createUrl('star/info',array('id'=>$val['id']))?>"><?php echo $val['title']?></a></p>
                     </dd>
                 </dl>
-                <dl>
-                    <dd>
-                        <p class="danan_list_title"><span><img src="/images/icon5.png" />10点半</span><span><img src="/images/icon6.png" />北京</span></p>
-                        <p>五棵松体育馆签售会，专辑免费拿。快来抢，仅此一次</p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dd>
-                        <p class="danan_list_title"><span><img src="/images/icon5.png" />10点半</span><span><img src="/images/icon6.png" />北京</span></p>
-                        <p>五棵松体育馆签售会，专辑免费拿。快来抢，仅此一次</p>
-                    </dd>
-                </dl>
+
+			<?php
+				$i++;
+            }
+         
+            ?>
             </div>
         </div>
     </div>
     <div class="intro_info_right right">
-        <h2 class="latest_danan news_intro_info">最近档案<a href="" target="_blank">更多&gt;&gt;</a></h2>
+        <h2 class="latest_danan news_intro_info">最近新闻<a href="<?php echo Yii::app()->createUrl('/news/index',array('id'=>$getnews[0][star_id]))?>" target="_blank">更多&gt;&gt;</a></h2>
         <div class="him_news_con">
             <dl class="him_news clearfix">
-                <dt><a href="" target="_blank"><img src="/images/pic1.png" /></a></dt>
+                <dt><a href="" target="_blank"><img src="<?php echo $getnews[0][image]?>" width='94' height='117' /></a></dt>
                 <dd>
-                    <h4 class="c-gap-bottom">鹿晗即将单飞</h4>
-                    <p class="c-gap-bottom">五棵松体育馆签售会，专辑免费拿。快来抢，仅此一次五棵松体育馆签售会</p>
-                    <p><span class="gray_color">浏览</span><em class="red_color c-gap-left">134</em></p>
+                    <h4 class="c-gap-bottom"><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$getnews[0][id]))?>"><?php echo  mb_substr($getnews[0][title], 0, 20, 'utf-8')?></a></h4>
+                    <p class="c-gap-bottom"><?php echo $getnews[0][introduce]?></p>
+                    <p><span class="gray_color">浏览</span><em class="red_color c-gap-left"><?php echo $getnews[0][lookcount]?></em></p>
                 </dd>
             </dl>
             <ul class="him_news_list">
-                <li>
-                    <p class="him_news_list_title">鹿晗即将单飞</p>
-                    <p class="clearfix"><span class="left gray_color ">浏览 <em class="red_color c-gap-left">134</em></span><span class="right gray_color">2015-02-09</span></p>
+            <?php
+            unset($getnews[0]);
+            	foreach($getnews as $v){ 
+            ?>
+               <li>
+                    <p class="him_news_list_title"><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$v[id]))?>"><?php echo  mb_substr($v['title'], 0, 15, 'utf-8')?></a></p>
+                    <p class="clearfix"><span class="left gray_color ">浏览 <em class="red_color c-gap-left"><?php echo $v['lookcount']?></em></span><span class="right gray_color"><?php echo date('Y-m-d',$v['lookcount'])?></span></p>
                 </li>
-                <li>
-                    <p class="him_news_list_title">鹿晗即将单飞</p>
-                    <p class="clearfix"><span class="left gray_color">浏览 <em class="red_color c-gap-left">134</em></span><span class="right gray_color">2015-02-09</span></p>
-                </li>
-                <li>
-                    <p class="him_news_list_title">鹿晗即将单飞</p>
-                    <p class="clearfix"><span class="left gray_color">浏览 <em class="red_color c-gap-left">134</em></span><span class="right gray_color">2015-02-09</span></p>
-                </li>
-                <li>
-                    <p class="him_news_list_title">鹿晗即将单飞</p>
-                    <p class="clearfix"><span class="left gray_color">浏览 <em class="red_color c-gap-left">134</em></span><span class="right gray_color">2015-02-09</span></p>
-                </li>
-                <li>
-                    <p class="him_news_list_title">鹿晗即将单飞</p>
-                    <p class="clearfix"><span class="left gray_color">浏览 <em class="red_color c-gap-left">134</em></span><span class="right gray_color">2015-02-09</span></p>
-                </li>
+
+            <?php
+            	}
+
+            ?>
+          
             </ul>
         </div>
     </div>

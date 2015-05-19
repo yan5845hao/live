@@ -53,16 +53,18 @@ class StarNews extends CActiveRecord
        			$l=5*($page-1);
        		}
 
-
-
-
-
-
        		$criteria = new CDbCriteria;
-			$sql = "SELECT * FROM star_news";
+       		if($star_id==null){ 
+       			$sql = "SELECT * FROM star_news";
+       		}else{ 
+       			$sql = "SELECT * FROM star_news where star_id = '{$star_id}'";
+       		}
+			
 			$model= Yii::app()->db->createCommand($sql)->queryAll();
 			$pages = new CPagination(count($model));
-			$pages->pageSize = 1;
+			
+			
+			$pages->pageSize = $size;
 			$pages->currentPage = $pages;
 			$pages->applylimit($criteria);
 			$model=Yii::app()->db->createCommand($sql." LIMIT :offset,:limit");
