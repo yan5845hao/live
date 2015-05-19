@@ -14,7 +14,8 @@
                 </tr>
                 <?php
                 foreach ($data as $list) {
-                    $url = Yii::app()->createUrl('/myAccount/deleteVideo',array('id'=>$list['customer_id']));
+                	
+                    $url = Yii::app()->createUrl('/myAccount/deleteVideo',array('id'=>$list['product_id']));
                     ?>
                     <tr>
                         <td><?php echo $list['product_id'];?></td>

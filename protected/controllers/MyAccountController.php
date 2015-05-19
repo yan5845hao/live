@@ -145,6 +145,7 @@ class MyAccountController extends BaseController
     {
         Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
         $star_id = Yii::app()->user->id;
+
         $criteria = new CDbCriteria();
         $criteria->addCondition("star_id = :star_id");
         $criteria->params[':star_id'] = $star_id;
@@ -159,10 +160,17 @@ class MyAccountController extends BaseController
     }
     public function actionPubNews()
     {
+    	
+    	$stra_id=Yii::app()->user->id;
+    	$userdata = Customer::model()->findByPk($stra_id);
+    	$star_name = $userdata[user_name];
+    	
         $image = '';
         $id = Yii::app()->request->getParam('id');
         $starNews = StarNews::model()->findByPk($id);
         if($_POST){
+        	$createtime = time();
+       
             $file = $_FILES['image'];
             if($file['tmp_name']){
                 $content = fopen($file['tmp_name'], 'r');
@@ -175,18 +183,21 @@ class MyAccountController extends BaseController
             if($starNews){
                 $starNews->title = Yii::app()->request->getParam('title');
                 $starNews->content = Yii::app()->request->getParam('content');
+               	$starNews->introduce = Yii::app()->request->getParam('introduce');	
                 if($image != ''){
                 $starNews->image = $image;
                 }
-                $starNews->createtime = new CDbExpression('NOW()');
+                $starNews->createtime = $createtime;
             }else{
                 $starNews = new StarNews();
                 $data = array(
                     'title' => Yii::app()->request->getParam('title'),
                     'content' => Yii::app()->request->getParam('content'),
                     'star_id' => Yii::app()->user->id,
+                    'introduce' => Yii::app()->request->getParam('introduce'),
                     'image' => $image,
-                    'createtime' =>  new CDbExpression('NOW()'),
+                    'star_name'=> $star_name,
+                    'createtime' =>  $createtime,
                 );
                 $starNews->setAttributes($data);
             }

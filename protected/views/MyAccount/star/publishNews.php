@@ -14,7 +14,10 @@
                     <img src="<?php echo $newsInfo->image;?>" width="134" height="134" />
                 <?php } ?>
             </div>
-            <div class="usercon981con"><span>新闻介绍 <b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">输入新闻内容，2000字以内</b></span>
+            <div class="usercon981con"><span>新闻简介 <b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">输入新闻内容，200字以内</b></span>
+                <textarea name="introduce" cols="" rows="" style="width:600px; height:100px; border:0px; background-color:#f0f0f0;"><?php echo $newsInfo->introduce;?></textarea>
+            </div>
+            <div class="usercon981con"><span>新闻内容 <b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">输入新闻内容，2000字以内</b></span>
                 <textarea name="content" cols="" rows="" style="width:900px; height:250px; border:0px; background-color:#f0f0f0;"><?php echo $newsInfo->content;?></textarea>
             </div>
             <input type="hidden" name="id" value="<?php echo $newsInfo->id?>">
