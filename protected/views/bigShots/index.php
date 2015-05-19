@@ -3,9 +3,9 @@
 <div class=" clearfix">
     <div class="dkcol_w730 left">
         <div class="dkcol_w730title "></div>
-        <div class="dkcol_flash "><img src="images/daka_flash.jpg" width="730" height="485" /><span></span><i><a href="#">范冰冰粉丝见面会直播中</a></i>
+        <div class="dkcol_flash "><img src="<?php echo $zhibo[0]['image'] ?>" width="730" height="485" /><span></span><i><a href="http://vtest.yooshow.com/<?php echo $zhibo[0]['liveid']?>"><?php echo $zhibo[0]['title']?></a></i>
             <ul>
-                <li><img src="images/daka_bofang.png" width="27" height="26" / >播放<em>1234次</em></li>
+                <li><img src="images/daka_bofang.png" width="27" height="26" / >预约<em>1234</em></li>
                 <li><img src="images/daka_fensi.png"   width="18" height="26" />粉丝<em>2938</em></li>
             </ul>
         </div>
@@ -14,34 +14,20 @@
         <div class="dkcol_w501title "></div>
         <div class="dkcol_w501con">
             <ul>
-                <li><a href="#"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>111111</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
+			<?php
+				if(defined('STAR_SHOW_TJ_RIGHT1')) echo STAR_SHOW_TJ_RIGHT1; 
+			?>
+			</ul>
+            <ul style="display:none;">
+            <?php
+				if(defined('STAR_SHOW_TJ_RIGHT2')) echo STAR_SHOW_TJ_RIGHT2; 
+			?>
+
             </ul>
             <ul style="display:none;">
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>2222222</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-            </ul>
-            <ul style="display:none;">
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>333333</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
-                <li><a href="/bigshots/detail"><img src="images/daka_pic01.png" width="220" height="181" /></a><i><a href="/bigshots/detail">BIGbang新年粉丝见面</a><br>
-                        <img src="images/daka_minifensi.png" width="11" height="15" />粉丝：<em>23872</em> <img src="images/daka_miniplay.png" width="16" height="15" />播放：<em>254354</em></i><span></span></li>
+   			<?php
+				if(defined('STAR_SHOW_TJ_RIGHT3')) echo STAR_SHOW_TJ_RIGHT3; 
+			?>
             </ul>
             <div class="dkcol_w501btn left">
                 <dl>

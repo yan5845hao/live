@@ -14,15 +14,15 @@
                 </tr>
                 <?php
                 foreach ($data as $list) {
-                    $url = Yii::app()->createUrl('/myAccount/deleteVideo',array('id'=>$list['id']));
+                    $url = Yii::app()->createUrl('/myAccount/deleteVideo',array('id'=>$list['customer_id']));
                     ?>
                     <tr>
-<!--                        <td>--><?php //echo $list['id'];?><!--</td>-->
-<!--                        <td>--><?php //echo $list['title'];?><!--</td>-->
-<!--                        <td style="width: 300px;">--><?php //echo mb_substr($list['content'],0,300,'utf-8');?><!--</td>-->
-<!--                        <td><img width="100" height="80" src="--><?php //echo $list['image'];?><!--"></td>-->
-<!--                        <td>--><?php //echo $list['createtime'];?><!--</td>-->
-<!--                        <td><a href="--><?php //echo Yii::app()->createUrl('/myAccount/pubNews',array('id'=>$list['id']))?><!--">修改</a> | <a href='javascript:if(confirm("确实要删除该内容吗?"))location="--><?php //echo $url;?><!--"'>删除</a></td>-->
+                        <td><?php echo $list['product_id'];?></td>
+                        <td><?php echo $list['title'];?></td>
+                        <td style="width: 300px;" title="<?php echo $list['content'];?>"><?php echo mb_substr($list['content'],0,50,'utf-8');?></td>
+                        <td><img width="100" height="80" src="<?php echo $list['image'];?>"></td>
+                        <td><?php echo $list['created'];?></td>
+                        <td><a href="<?php echo Yii::app()->createUrl('/myAccount/pubVideo',array('id'=>$list['product_id']))?>">修改</a> | <a href='javascript:if(confirm("确实要删除该内容吗?"))location="<?php echo $url;?>"'>删除</a></td>
                     </tr>
                 <?php } ?>
                 </tbody></table>

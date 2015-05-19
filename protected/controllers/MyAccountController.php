@@ -180,6 +180,75 @@ class MyAccountController extends BaseController
         $this->render('star/publishNews',array('newsInfo'=>$starNews));
     }
 
+
+    public function actionSchedule()
+    {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
+        $starid = Yii::app()->user->id;
+        $criteria = new CDbCriteria();
+        $criteria->addCondition("starid = :starid");
+        $criteria->params[':starid'] = $starid;
+        $criteria->order = 'createtime desc';
+        $dataProvider = new CActiveDataProvider('StarSchedule', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 4,
+            ),
+        ));
+        $this->render('star/schedule', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+    }
+
+     public function actionPubschedule()
+    {
+
+        $image = '';
+        $id = Yii::app()->request->getParam('id');
+        $starNews = StarSchedule::model()->findByPk($id);
+
+        if($_POST){
+        	
+            $file = $_FILES['image'];
+            if($file['tmp_name']){
+                $content = fopen($file['tmp_name'], 'r');
+                $extName = Yii::app()->aliyun->getExtName($file['name']);
+                $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
+                $size = $file['size'];
+                Yii::app()->aliyun->putResourceObject($key, $content, $size);
+                $img = Yii::app()->params['cdnUrl'] . '/' . $key;
+            }
+            if($starNews){
+            	$createtime = time();
+                $starNews->title = Yii::app()->request->getParam('title');
+                $starNews->content = Yii::app()->request->getParam('content');
+                $starNews->address = Yii::app()->request->getParam('address');
+                $starNews->showtime = Yii::app()->request->getParam('showtime');
+                $starNews->begintime = strtotime(Yii::app()->request->getParam('begintime'));
+                if($img != ''){
+                	$starNews->img = $img;
+                }
+                $starNews->createtime = $createtime;
+            }else{
+                $starNews = new StarSchedule();
+                $createtime = time();
+                $data = array(
+                    'title' => Yii::app()->request->getParam('title'),
+                    'content' => Yii::app()->request->getParam('content'),
+                    'address' => Yii::app()->request->getParam('address'),
+                    'begintime' => Yii::app()->request->getParam('begintime'),
+                    'showtime' => Yii::app()->request->getParam('showtime'),
+                    'starid' => Yii::app()->user->id,
+                    'starname' => Yii::app()->user->name,
+                    'img' => $img,
+                    'createtime' =>  $createtime,
+                );
+                $starNews->setAttributes($data);
+            }
+            $starNews->save(false);
+            $this->redirect($this->createUrl('/myAccount/schedule'));
+        }
+        $this->render('star/pubschedule',array('newsInfo'=>$starNews));
+    }
+
     public function actionDeleteNews()
     {
         $id = Yii::app()->request->getParam('id');
@@ -205,7 +274,7 @@ class MyAccountController extends BaseController
         $criteria->addCondition("customer_id = :customer_id");
         $criteria->params[':customer_id'] = $customer_id;
         $criteria->order = 'created desc';
-        $dataProvider = new CActiveDataProvider('Customer', array(
+        $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
             'pagination' => array(
                 'pageSize' => 10,
@@ -218,6 +287,7 @@ class MyAccountController extends BaseController
     {
         $image = '';
         $id = Yii::app()->request->getParam('id');
+        $customer_id = Yii::app()->user->id;
         $product = Product::model()->findByPk($id);
         if($_POST){
             $file = $_FILES['image'];
@@ -235,7 +305,8 @@ class MyAccountController extends BaseController
                 if($image != ''){
                     $product->image = $image;
                 }
-                $product->createtime = new CDbExpression('NOW()');
+                $product->url = Yii::app()->request->getParam('url');
+                $product->created = new CDbExpression('NOW()');
             }else{
                 $product = new Product();
                 $data = array(
@@ -243,16 +314,24 @@ class MyAccountController extends BaseController
                     'content' => Yii::app()->request->getParam('content'),
                     'star_id' => Yii::app()->user->id,
                     'image' => $image,
-                    'createtime' =>  new CDbExpression('NOW()'),
+                    'url' => Yii::app()->request->getParam('url'),
+                    'created' =>  new CDbExpression('NOW()'),
                 );
                 $product->setAttributes($data);
             }
+            $product->customer_id = $customer_id;
             $product->save(false);
             $this->redirect($this->createUrl('/myAccount/video'));
         }
         $this->render('star/publishVideo',array('product'=>$product));
     }
 
+    public function actionDeleteVideo()
+    {
+        $id = Yii::app()->request->getParam('id');
+        Product::model()->findByPk($id)->delete();
+        $this->redirect($this->createUrl('/myAccount/video'));
+    }
     public function loadModel()
     {
         $customer_id = Yii::app()->user->id;
