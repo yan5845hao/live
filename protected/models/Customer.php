@@ -5,6 +5,11 @@
 class Customer extends CActiveRecord
 {
     private $_cached = array();
+    public static $type_name = array(
+        '1' => '普通用户',
+        '2' => '明星用户',
+        '3' => '其他用户'
+    );
     /**
      * Returns the static model of the specified AR class.
      * @return static the static model class
