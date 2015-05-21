@@ -10,7 +10,16 @@ class SiteController extends BaseController
 //        } else {
 //            $this->render('index');
 //        }
-        $this->render('index');
+    	$date=strtotime(date('Y-m-d'));
+    	$scheduledata = StarSchedule::model()->getSchedule($date);
+		$model=new LoginForm;
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+        $this->render('index',array('scheduledata'=>$scheduledata,'model'=>$model));
     }
 
 	/**
@@ -39,10 +48,11 @@ class SiteController extends BaseController
 	{
 	    if($error=Yii::app()->errorHandler->error)
 	    {
-	    	if(Yii::app()->request->isAjaxRequest)
-	    		echo $error['message'];
-	    	else
-	        	$this->render('error', $error);
+            $this->render('error', $error);
+//	    	if(Yii::app()->request->isAjaxRequest)
+//	    		echo $error['message'];
+//	    	else
+//	        	$this->render('error', $error);
 	    }
 	}
 
@@ -90,8 +100,20 @@ class SiteController extends BaseController
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
+			if($model->validate() && $model->login()){
+
+				$cookie = Yii::app()->request->getCookies();
+        		if(isset($cookie['subtime']->value)){
+        			Yii::app()->session['subtime'] = date("Y-m-d H:i:s",$cookie['subtime']->value);
+        		}else{
+        			Yii::app()->session['subtime'] = '你已经超过30天没有登录了';
+        		}
+				$cookie = new CHttpCookie('subtime',time());
+                $cookie->expire = time()+60*60*24*30;  //有限期30天
+                Yii::app()->request->cookies['subtime']=$cookie;
+
 				$this->redirect(Yii::app()->user->returnUrl);
+			}
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -102,7 +124,9 @@ class SiteController extends BaseController
 	 */
 	public function actionLogout()
 	{
+		Yii::app()->session['face']= '/images/default.png';
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
 }

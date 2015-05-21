@@ -41,11 +41,16 @@ class AccountController extends BaseController
                     $identify = new CustomerIdentity();
                     $identify->assignCustomer($customer);
                     Yii::app()->user->login($identify);
+
+                    $cookie = new CHttpCookie('subtime',time());
+                    $cookie->expire = time()+60*60*24*30;  //有限期30天
+                    Yii::app()->request->cookies['subtime']=$cookie;
+                    Yii::app()->session['subtime'] = '你今天刚注册成为本站会员';
                     $_SESSION['mobile'] = '';
                     $_SESSION['mobile_code'] = '';
                     $this->redirect($this->createUrl('MyAccount/index'));
                 }else{
-                    $form->addError('mobile','该手机号码已经是本站会员');
+                    $form->addError('mobile','提交失败，请检查必填项.');
                 }
 
             }

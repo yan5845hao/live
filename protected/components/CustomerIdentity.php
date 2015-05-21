@@ -10,7 +10,7 @@ class CustomerIdentity extends CUserIdentity
     const ERROR_EMPTY_PASSWORD = 11 ;
     const ERROR_NOT_ACTIVE = 10;
 
-    private $_id;
+    private $user_id;
     private $user = null;
 
     public function __construct($username = '', $password = '')
@@ -27,11 +27,12 @@ class CustomerIdentity extends CUserIdentity
         if ($customer === null)
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         else if (!$this->validatePassword($customer->password,$this->password))
-            $this->errorCode = self::ERROR_PASSWORD_INVALID_INVALID;
+            $this->errorCode = self::ERROR_PASSWORD_INVALID;
         else {
-            $this->_id = $customer->customer_id;
-            $this->username = $customer->phone;
-            $this->user = $customer ;
+            $this->user_id = $customer->customer_id;
+            $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
+            $this->username = $customer->nick_name ? $customer->nick_name : $phone;
+            $this->user = $customer;
             $this->errorCode = self::ERROR_NONE;
         }
         return $this->errorCode == self::ERROR_NONE;
@@ -44,8 +45,9 @@ class CustomerIdentity extends CUserIdentity
         }
     }
     public function assignCustomer($customer){
-        $this->_id = $customer->customer_id;
-        $this->username = $customer->phone;
+        $this->user_id = $customer->customer_id;
+        $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
+        $this->username = $customer->nick_name ? $customer->nick_name : $phone;
         $this->user = $customer;
         $this->errorCode = self::ERROR_NONE;
         $this->errorCode = self::ERROR_NONE;
@@ -57,6 +59,6 @@ class CustomerIdentity extends CUserIdentity
      */
     public function getId()
     {
-        return $this->_id;
+        return $this->user_id;
     }
 }

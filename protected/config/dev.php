@@ -43,13 +43,13 @@ return array(
             'enableParamLogging' => YII_DEBUG,
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
-            'password' => 'root',
+            'password' => '123789aa',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
                     'connectionString' => 'mysql:host=localhost;dbname=live',
                     'username'=>'root',
-                    'password'=>'root',
+                    'password'=>'123789aa',
                     'emulatePrepare' => true,
                     'charset' => 'utf8',
                 ),
@@ -67,11 +67,9 @@ return array(
 		'urlManager'=>array(
             'showScriptName'=>false,
 			'urlFormat'=>'path',
-			'rules'=>array(
-				'post/<id:\d+>/<title:.*?>'=>'post/view',
-				'posts/<tag:.*?>'=>'post/index',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+            'caseSensitive'=>true,
+            'showScriptName'=>false,
+            'rules' => include('route.php'),
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',
@@ -94,13 +92,23 @@ return array(
             'account' => 'cf_fjy',
             'password' => '123456'
         ),
+        'aliyun'=>array (
+            'class' => 'application.extensions.oss.Aliyun',
+            'keyId' => 'Z7JWc80Qr4sa9z1y',
+            'keySecret' => 'wYNthiODxexruCFaz9jDQ8Yfr8MujJ',
+            'bucket' => 'bumeng-default',
+            'savePath' => 'bumengpc'
+        ),
 	),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
     'params' => array(
-        'cdnUrl' => '',
-        'cdnSSLUrl' => '',
+        'cdnUrl' => 'http://ali-img.yooshow.com',
+        'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
         'cookieDomain' => '',
+        'admin' => md5('live_admin_A2423@#$234234sdfsfS(*&~'),
     ),
+
+
 );

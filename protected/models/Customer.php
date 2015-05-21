@@ -4,7 +4,11 @@
  */
 class Customer extends CActiveRecord
 {
-
+    private $_cached = array();
+    public static $type_name = array(
+        '1' => '普通用户',
+        '2' => '明星用户'
+    );
     /**
      * Returns the static model of the specified AR class.
      * @return static the static model class
@@ -31,7 +35,7 @@ class Customer extends CActiveRecord
         // will receive user inputs.
         return array(
             array('phone,password', 'required'),
-            array('phone, password, name, gender, vip_code, face, active, address', 'safe'),
+            array('user_name,nick_name,email,last_login, gender, vip_code, face, active, address', 'safe'),
         );
     }
 
@@ -75,6 +79,21 @@ class Customer extends CActiveRecord
         }catch(Exception $e){
             $e->getMessage();
             return false;
+        }
+    }
+
+    public function getDescription(){
+        $key = 'description'.$this->customer_id ;
+        if(isset($this->_cached[$key])){
+            return $this->_cached[$key];
+        }else{
+            $object = CustomerInfo::model()->findByAttributes(array('customer_id' => $this->customer_id));
+            if($object != null){
+                $this->_cached[$key] = $object ;
+            }else{
+                $object = new CustomerInfo();
+            }
+            return $object ;
         }
     }
 

@@ -1544,7 +1544,7 @@ function getPagination($cur_page, $total_items, $per_page=10, $footer_bar=true, 
     if($categoryPage == true){
         if(strpos($url, '?') > 0){
             $urlArr = explode('?',$url);
-            $url = $urlArr[0]; 
+            $url = $urlArr[0];
         }
         if(preg_match('/-p-/',$url)){
             $url = str_replace('-p-'.$cur_page,'',$url);
@@ -2788,16 +2788,16 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
         }else{
             $provider_detail_array = array();
         }
-        
+
 
     }
     if(count($productFreeSale) > 0){
         if($productFreeSale['is_free_sale'] == 1){
             $provider_detail_array[$get_product_detail['provider_id']]['day'] =   $productFreeSale['auto_confirm_duration'];
             $provider_detail_array[$get_product_detail['provider_id']]['email'] =   $productFreeSale['auto_confirm_email'];
-            $provider_detail_array[$get_product_detail['provider_id']]['auto_send_mail_to_free_sale'] =   $productFreeSale['send_mail_to_provider'];    
+            $provider_detail_array[$get_product_detail['provider_id']]['auto_send_mail_to_free_sale'] =   $productFreeSale['send_mail_to_provider'];
         }else{
-            $provider_detail_array = array(); 
+            $provider_detail_array = array();
         }
     }
     if( (in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_PAR))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_LL))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_AAC))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_SEA))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_LASSEN))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_LAAA))) || in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_BSSB))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_JOY))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_MIAMI))) || in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_LS))) || in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LLTS))) || in_array((int)$product_id, explode(',', Yii::t('checkout_process', 'AUTO_CONFIRMED_LOCAL_TB'))) || in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_AST))) || in_array($product_id, explode(',', Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_MS))) || in_array($product_id, explode(',', Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_HGH))) || in_array($product_id, explode(',', Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_NGH))) || in_array($product_id, explode(',', Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_BSSB_CUSTOME))) || in_array($product_id, explode(',', Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_TP))) || ( $get_product_detail['vacation_package'] == '0'  &&  array_key_exists((int)$get_product_detail['provider_id'],$provider_detail_array)) ) && $dep_date != '0000-00-00 00:00:00'){
@@ -2807,17 +2807,17 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
             }else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_JOY))) || in_array($product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_LOCAL_MIAMI))) ){
                 $default_duration_diff_check = 4;
             }else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_SEA))) || in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_HGH)))){
-				$default_duration_diff_check = 7;			
+				$default_duration_diff_check = 7;
 			}else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LASSEN)))){
-			    $default_duration_diff_check = 10;			
+			    $default_duration_diff_check = 10;
 	        }else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_AST)))){
-			    $default_duration_diff_check = 12;			
+			    $default_duration_diff_check = 12;
 	        }else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_MS)))){
-				$default_duration_diff_check = 5;			
+				$default_duration_diff_check = 5;
 			}else if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LLTS))) || in_array((int)$product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LL)))){
-				$default_duration_diff_check = 1;			
+				$default_duration_diff_check = 1;
 			}
-            
+
             //custom duration setup for selected tour
             if(in_array((int)$product_id,explode(',',YII::t('checkout_process',CUSTOME_DURATION_LOCAL_21)))){
                 $default_duration_diff_check = 21;
@@ -2870,12 +2870,12 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 					$default_duration_diff_check = 730;
 				}
             }
-			//override the auto conform stop for provider local ls and lassen for till 2014-11-01 
+			//override the auto conform stop for provider local ls and lassen for till 2014-11-01
 		    if((in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LASSEN))) || in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_LS)))) && $dep_date > '2014-09-19' && $dep_date < '2014-11-01'){
 				$default_duration_diff_check = 730;
 		    }
 			//override the auto conform stop for provider local ls and lassen end
-			
+
 			//hide auto confirm for HGH local date range start
 			if(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_HGH)))){
 				if($dep_date > '2014-12-16' && $dep_date < '2015-01-05'){
@@ -2889,7 +2889,7 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 				if($dep_date < '2015-06-01' || $dep_date > '2015-09-30'){
 					$default_duration_diff_check = 365;
 				}
-			}			
+			}
 			//hide auto confirm for NGH date range end
 			//hide auto confirm for BSSB CUSTOME date range
 			if(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_BSSB_CUSTOME)))){
@@ -2898,14 +2898,14 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 					$default_duration_diff_check = 365;
 				}
 			}
-			//hide auto confirm for BSSB CUSTOME date range end	
+			//hide auto confirm for BSSB CUSTOME date range end
 			//hide auto confirm for TP date range
 			if(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_LOCAL_TP)))){
 				$default_duration_diff_check = 4;
 				if($dep_date > '2014-12-31'){
 					$default_duration_diff_check = 365;
 				}
-			}			
+			}
 			//hide auto confirm for TP date range end
             if(array_key_exists((int)$get_product_detail['provider_id'],$provider_detail_array)){
                 $default_duration_diff_check = $provider_detail_array[$get_product_detail['provider_id']]['day'];
@@ -2928,7 +2928,7 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
                 $default_duration_diff_check = 21;
                 if($dep_date > '2014-07-14 00:00:00' && $dep_date < '2014-09-01 00:00:00'){
                     $default_duration_diff_check = 730;
-                }              
+                }
             }else if(in_array((int)$product_id,explode(',',YII::t('checkout_process',AUTO_CONFIRMED_PACKAGE_ORIENT)))){
                 $default_duration_diff_check = 10;
                 //hide auto confirm for date range start
@@ -2953,7 +2953,7 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 				$departureBlockProductsArray = array(52809,48537,48507);
 				if(in_array($product_id, $departureBlockProductsArray) && ($dep_date > '2015-03-23 00:00:00' && $dep_date < '2015-03-29 00:00:00')){
 					$default_duration_diff_check = 365;
-				}	
+				}
             }elseif(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_MS))) || in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_JC)))){
 			  $default_duration_diff_check = 5;
 			}elseif(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_NGH))) ){
@@ -2962,7 +2962,7 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 			  if($dep_date < '2015-06-01 00:00:00' || $dep_date > '2015-09-30 00:00:00'){
 					$default_duration_diff_check = 365;
 				}
-			  //hide auto confirm for date range end	
+			  //hide auto confirm for date range end
 			}
 			//custom duration setup for selected tour
             if(in_array((int)$product_id,explode(',',Yii::t('checkout_process',CUSTOME_DURATION_PACKAGE_45)))){
@@ -2985,9 +2985,9 @@ function tep_check_allow_show_auto_confirmed_button($product_id,$dep_date,$ord_d
 			if(in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_HGH))) && $dep_date > '2014-12-16' && $dep_date < '2015-01-05'){
 				$default_duration_diff_check = 730;
 			}
-			// block auto confirm for HGH for date range end	
+			// block auto confirm for HGH for date range end
 
-            //override the auto conform stop for provider package ls and lassen for till 2014-11-01 
+            //override the auto conform stop for provider package ls and lassen for till 2014-11-01
 			if((in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_LS))) || in_array($product_id,explode(',',Yii::t('checkout_process',AUTO_CONFIRMED_PACKAGE_LASSEN)))) && $dep_date > '2014-09-19' && $dep_date < '2014-11-01'){
 				$default_duration_diff_check = 730;
 			}
@@ -3673,7 +3673,7 @@ function mailchimpSubscriberSynchronize($email, $fname, $lname, $group_str)
 {
     //mailchimp code - start
     if (
-        Configuration::getVal('ENABLE_MAILCHIMP_SYNCHRONIZED') == 'true' 
+        Configuration::getVal('ENABLE_MAILCHIMP_SYNCHRONIZED') == 'true'
         && IS_PROD_SITE === true
     ) {
         $api = new MCAPI(Configuration::getVal('MCAPI_KEY'));
@@ -3695,13 +3695,13 @@ function mailchimpSubscriberSynchronize($email, $fname, $lname, $group_str)
         $listId = Configuration::getVal('MCAPI_LIST_ID');
         if ($group_str != '') {
             return $api->listSubscribe(
-                $listId, 
-                $email, 
-                $merge_vars, 
+                $listId,
+                $email,
+                $merge_vars,
                 'html',
-                true, 
-                true, 
-                true, 
+                true,
+                true,
+                true,
                 false
             );
         } else {
@@ -4051,13 +4051,13 @@ function secure_string($str) {
     return $safe_str;
 }
 /**
- * Secure a array to avoid  PCI security issue 
+ * Secure a array to avoid  PCI security issue
  */
 function secure_array($data){
     if(is_array($data)){
        foreach($data as $k=>$v){
            if(preg_match('/^[a-z0-9_-]+$/i' ,$k)){
-                $data[$k] = secure_array($v);               
+                $data[$k] = secure_array($v);
            }else{
                 unset($data[$k]);
            }
@@ -4115,6 +4115,10 @@ function cdn_image_url() {
 
 function cdn_images_url() {
     return cdn_url() . '/images/';
+}
+
+function cdn_bumeng_url() {
+    return cdn_url() . '/bumengpc/';
 }
 
 function cdn_url_for_css() {
@@ -4462,7 +4466,7 @@ function getDatesFromRange($start, $end){
 }
 function tep_get_distance($lat1, $lon1, $lat2, $lon2, $unit='') {
         $M =  69.09 * rad2deg(acos(sin(deg2rad(floatval($lat1))) * sin(deg2rad(floatval($lat2))) +  cos(deg2rad(floatval($lat1))) * cos(deg2rad(floatval($lat2))) * cos(deg2rad($lon1 - $lon2))));
-		
+
 		switch(strtoupper($unit))
 		{
 			case 'K':
@@ -4476,11 +4480,11 @@ function tep_get_distance($lat1, $lon1, $lat2, $lon2, $unit='') {
 			case 'F':
 				// feet
 				$ret_m = number_format($M * 5280, 2, ".", "")."f";
-				break;            
+				break;
 			case 'I':
 				// inches
 				$ret_m = number_format($M * 63360, 2, ".", "")."in";
-				break;            
+				break;
 			case 'M':
 			default:
 				// miles
@@ -4502,13 +4506,13 @@ function requestFromChina() {
 
 /**
  * Create directory if not exists
- * 
+ *
  * @param $path       Directory path
  * @param $permission Permission to set
  * @param $recursive  Recursively create directory
- * 
+ *
  * @return boolean true if exists or directory create succes else false
- * 
+ *
  * @author Gihan S <gihanshp@gmail.com>
  */
 function createDir($path, $permission = 0644, $recursive = true)
@@ -4537,12 +4541,12 @@ function getMetaParamsAsQueryString()
 {
     $queryString = '';
     $params      = array(
-        'utm_source', 
-        'utm_medium', 
-        'utm_term', 
-        'utm_content', 
+        'utm_source',
+        'utm_medium',
+        'utm_term',
+        'utm_content',
         'utm_campaign',
-        'ref', 
+        'ref',
         'affiliate_banner_id'
     );
     $i           = 0;
