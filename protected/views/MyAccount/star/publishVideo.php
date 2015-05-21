@@ -1,3 +1,6 @@
+<style>
+select{background-color: #f0f0f0; border: 0 none;height: 40px;padding-left: 4px;width: 120px;}
+</style>
 <div class="wrapper">
     <div class="userlj">当前位置：<a href="<?php echo Yii::app()->createUrl('/myAccount')?>">用户中心</a> > 我的资料</div>
     <div class="usercon">
@@ -14,6 +17,26 @@
                     <?php if($product->image){ ?>
                         <img src="<?php echo $product->image;?>" width="134" height="134" />
                     <?php } ?>
+                </div>
+				<div class="usercon981con">
+                    <span>视频类别</span>
+					<select name="video_type" >
+					<option value="音乐" <?php echo $product->video_type=='音乐' ? 'selected' : '';?>>音乐</option>
+					<option value="影视" <?php echo $product->video_type=='影视' ? 'selected' : '';?>>影视</option>
+					<option value="综艺" <?php echo $product->video_type=='综艺' ? 'selected' : '';?>>综艺</option>
+					<option value="其他" <?php echo $product->video_type=='其他' ? 'selected' : '';?>>其他</option>
+					</select>
+					<?php //echo $product->video_type;?>
+                </div>
+					<div class="usercon981con">
+                    <span>活动类别</span>
+					<select name="video_types" >
+					<option value="生日会" <?php echo $product->video_types=='生日会' ? 'selected' : '';?>>生日会</option>
+					<option value="畅聊室" <?php echo $product->video_types=='畅聊室' ? 'selected' : '';?>>畅聊室</option>
+					<option value="探班会" <?php echo $product->video_types=='探班会' ? 'selected' : '';?>>探班会</option>
+					<option value="其他" <?php echo $product->video_types=='其他' ? 'selected' : '';?>>其他</option>
+					</select>
+					<?php //echo $product->video_type;?>
                 </div>
                 <div class="mxcenter_tit">
                     <div class="usercon981con">

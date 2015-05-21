@@ -19,19 +19,20 @@ class MyAccountController extends BaseController
             Yii::app()->user->login($identify);
         }
         if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
-        $this->layout = 'sign_layout';
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
+   //     $this->layout = 'sign_layout';
+      //  Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
     }
 
     public function actionIndex()
     {
+
         Yii::app()->session['subtime'];
         $customer_id = Yii::app()->user->id;
         $userInfo = Customer::model()->findByPk($customer_id);
         if ($userInfo->customer_type == 2) {
-            $this->render('star/index', array('userInfo' => $userInfo));
+             $this->render('star/index', array('userInfo' => $userInfo));
         } else {
-            $this->render('index', array('userInfo' => $userInfo));
+             $this->render('index', array('userInfo' => $userInfo));
         }
     }
 
@@ -329,19 +330,25 @@ class MyAccountController extends BaseController
                 $image = Yii::app()->params['cdnUrl'] . '/' . $key;
             }
             if($product){
+				
                 $product->title = Yii::app()->request->getParam('title');
                 $product->content = Yii::app()->request->getParam('content');
+				$product->video_type = Yii::app()->request->getParam('video_type');
+				$product->video_types = Yii::app()->request->getParam('video_types');
                 if($image != ''){
                     $product->image = $image;
                 }
                 $product->url = Yii::app()->request->getParam('url');
                 $product->created = new CDbExpression('NOW()');
             }else{
+				
                 $product = new Product();
                 $data = array(
                     'title' => Yii::app()->request->getParam('title'),
                     'content' => Yii::app()->request->getParam('content'),
                     'star_id' => Yii::app()->user->id,
+					'video_type' => Yii::app()->request->getParam('video_type'),
+					'video_types' => Yii::app()->request->getParam('video_types'),
                     'image' => $image,
                     'type'=> 'video',
                     'url' => Yii::app()->request->getParam('url'),

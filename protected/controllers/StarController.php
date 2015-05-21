@@ -26,7 +26,7 @@ class StarController extends BaseController
 
     	$id = Yii::app()->getRequest()->getParam("id");
 		$newsdata=StarSchedule::model()->findByPk($id);
-		
+		StarSchedule::model()->updatelook($id);
 		$this->render('info',array('newsdata'=>$newsdata));
     }
 
@@ -40,7 +40,10 @@ class StarController extends BaseController
     	$getnews=$this->getnews($id);
     	$stardata=Customer::model()->findByPk($id);//获取明星基本资料
 		$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $id));//获取明星详细资料
-        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews));
+	
+		$getvideo = $this->getvideos($id);
+		
+        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews,'getvideo'=>$getvideo));
     }
 
 
@@ -85,6 +88,15 @@ class StarController extends BaseController
     }
     public function getnews($star_id){ 
     	$sql="SELECT * FROM `star_news` where star_id='{$star_id}' order by createtime desc LIMIT 6";
+    	$command = Yii::app()->db->createCommand($sql);
+        $newsall = $command->queryAll();
+        return $newsall;
+
+    }
+	  public function getvideos($star_id){ 
+		  	
+    	$sql="SELECT * FROM `product` where customer_id='{$star_id}' && type='video' order by created desc LIMIT 6";
+	
     	$command = Yii::app()->db->createCommand($sql);
         $newsall = $command->queryAll();
         return $newsall;

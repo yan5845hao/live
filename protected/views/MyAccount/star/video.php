@@ -19,7 +19,7 @@
                     ?>
                     <tr>
                         <td><?php echo $list['product_id'];?></td>
-                        <td><?php echo $list['title'];?></td>
+                        <td><a href="<?php echo Yii::app()->createUrl('/bigShots/playvideo',array('id'=>$list['product_id']))?>"  target="_blank" ><?php echo $list['title'];?></a></td>
                         <td style="width: 300px;" title="<?php echo $list['content'];?>"><?php echo mb_substr($list['content'],0,50,'utf-8');?></td>
                         <td><img width="100" height="80" src="<?php echo $list['image'];?>"></td>
                         <td><?php echo $list['created'];?></td>

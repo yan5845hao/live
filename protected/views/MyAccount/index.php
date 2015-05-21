@@ -1,3 +1,4 @@
+
 <div class="wrapper">
     <div class="userlj">当前位置：<a href="<?php echo Yii::app()->createUrl('/myAccount')?>">用户中心</a> > 我的资料</div>
     <div class="usercon">
@@ -18,8 +19,8 @@
                 <div class="usercon981text left">
                     <dl>
                         <dt id="nick_name"><?php echo $userInfo->nick_name;?></dt>
-                        <dd>金币： 11112<a href="#"><img src="<?php echo Yii::app()->params['cdnUrl']?>/bumengpc/webserver/css/img/userbtn02.jpg" width="52" height="24" /></a></dd>
-                        <dd>积分： 112</dd>
+                        <dd>金币： 0<!--<a href="#"><img src="<?php //echo Yii::app()->params['cdnUrl']?>/bumengpc/webserver/css/img/userbtn02.jpg" width="52" height="24" /></a>--></dd>
+                        <dd>积分： 0</dd>
                         <dd>手机已经验证：<?php echo $userInfo->phone;?></dd>
                         <dd>用户注册时间：<?php echo $userInfo->created;?> </dd>
                         <dd>最后登录时间：<?php echo Yii::app()->session['subtime'];?> </dd>

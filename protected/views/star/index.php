@@ -26,28 +26,27 @@
                 <div class="con01 small">
                     <div class="up">
 
-                        <div class="imgbox left"><a href="/star/detail"><img src="<?php echo $newsstar[0][image]?>" /></a></div>
+                        <div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$newsstar[0]['id']))?>"><img src="<?php echo $newsstar[0][image]?>" /></a></div>
                         <h3><?php echo $newsstar[0][title]?></h3>
                         <div class="date"><?php echo date('Y-m-d H:i:s',$newsstar[0][begintime]);?></div>
                         <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$newsstar[0]['id']))?>" target="_blank">[详细]</a></p>
-                        <div class="bline"><span class="left">粉丝<i>2368</i></span><span class="right">评论<i>2356</i></span></div>
+                        <div class="bline"><span class="left">浏览<i><?php echo $newsstar[0][lookcount]?></i></span><span class="right">评论<i><?php echo $newsstar[0][commentcount]?></i></span></div>
                     </div>
                     <ul class="list">
-                    <?php //print_r($newsstar) ?>
+                    
                     	<?php
-                    		$i=0;
+                    		unset($newsstar[0]);
                     		foreach($newsstar as $v){  
-                    			if($i<>0){ 
+                    		
                     	?>
 		                    	<li>
 		                            <div class="des left">
 		                                <h4><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
-		                                <div class="bline"> <span class="left">粉丝<i>2368</i></span><span class="left">评论<i>2356</i></span></div>
+		                                <div class="bline"> <span class="left">浏览<i><?php echo $v[lookcount]?></i></span><span class="left">评论<i><?php echo $v[commentcount]?></i></span></div>
 		                            </div>
 		                        </li>
                     	<?php
-                    			}
-                    			$i++;
+                    		
                     		}
 
                     	?>
@@ -96,9 +95,10 @@
                 <ul>
                 <?php
                 	foreach($newsstarall as $val){ 
-	
+				
+						$even= $even=='even'?'': 'even';
                 	?>
-                    <li>
+                    <li class="<?php echo $even?>">
                         <div class="left l">
                             <p  class="address"><?php  echo mb_substr($val['address'],0,3,'utf-8'); ?></p>
                             <div class="time">
@@ -108,68 +108,18 @@
                         </div>
                         <div class="right">
                             <div class="headbox left">
-                                <img  src="/images/yangzishan.jpg"/>
+                                <img  src="<?php echo $val['img']?>@295w_348h_1e_1c_1x.jpg"/>
                             </div>
                             <h3><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$val['id']))?>" target="_blank"><?php echo $val['title']?></a></h3>
                             <p><?php echo mb_substr($val['content'],0,278,'utf-8');?></p>
-                            <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
+                            <div class="numbers"><span class="left playicon"><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$val['id']))?>" target="_blank">浏览数：<i><?php echo $val[lookcount]?></i></a></span><span class="left comment"><!--<a href="#" target="_blank">评论<i><?php echo $val[commentcount]?></i></a>--></span></div>
                         </div>
                     </li>
                     <?php
 
                     	}
-                    	?>
-                    <li class="even">
-                        <div class="left l">
-                            <p  class="address">哈尔滨</p>
-                            <div class="time">
-                                <p>16</p>
-                                <span>2015年06月</span>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="headbox left">
-                                <img  src="/images/yangzishan.jpg"/>
-                            </div>
-                            <h3>鹿晗杨子姗跑站宣传《重返20岁》"祖孙"齐卖萌</h3>
-                            <p>《重返20岁》是由韩国CJ E&M 株式会社、北京文传世纪文化传媒有限公司、天津世纪乐成文化传播有限公司和北京世纪乐成文化传媒有限公司联合出品的喜剧电影。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。影片讲述了一位七旬老太太不可思议变身为妙龄少女后，以新身份回到日常生活，引发的一系列啼笑。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。</p>
-                            <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
-                        </div>
-                    </li>
-                    <li class="">
-                        <div class="left l">
-                            <p  class="address">成都</p>
-                            <div class="time">
-                                <p>16</p>
-                                <span>2015年06月</span>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="headbox left">
-                                <img  src="/images/yangzishan.jpg"/>
-                            </div>
-                            <h3>鹿晗杨子姗跑站宣传《重返20岁》"祖孙"齐卖萌</h3>
-                            <p>《重返20岁》是由韩国CJ E&M 株式会社、北京文传世纪文化传媒有限公司、天津世纪乐成文化传播有限公司和北京世纪乐成文化传媒有限公司联合出品的喜剧电影。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。影片讲述了一位七旬老太太不可思议变身为妙龄少女后，以新身份回到日常生活，引发的一系列啼笑。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。</p>
-                            <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
-                        </div>
-                    </li>
-                    <li class="even">
-                        <div class="left l">
-                            <p  class="address">北京</p>
-                            <div class="time">
-                                <p>16</p>
-                                <span>2015年06月</span>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="headbox left">
-                                <img  src="/images/yangzishan.jpg"/>
-                            </div>
-                            <h3>鹿晗杨子姗跑站宣传《重返20岁》"祖孙"齐卖萌</h3>
-                            <p>《重返20岁》是由韩国CJ E&M 株式会社、北京文传世纪文化传媒有限公司、天津世纪乐成文化传播有限公司和北京世纪乐成文化传媒有限公司联合出品的喜剧电影。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。影片讲述了一位七旬老太太不可思议变身为妙龄少女后，以新身份回到日常生活，引发的一系列啼笑。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。由陈正道执导，杨子姗、归亚蕾、陈柏霖、鹿晗主演。</p>
-                            <div class="numbers"><span class="left playicon"><a href="#" target="_blank">播放<i>15156</i></a></span><span class="left comment"><a href="#" target="_blank">评论<i>15156</i></a></span></div>
-                        </div>
-                    </li>
+                    ?>
+                    
                 </ul>
             </div>
 

@@ -42,8 +42,71 @@ class ApiController extends BaseController
 
 		}
 		$str.= '</ul>';
-		echo $str;
-		  
+		echo $str;	  
+	}
+
+	public function actionLogin(){
+
+		$model=new LoginForm;
+		if(isset($_POST))
+		{
+			$model->attributes=$_POST;
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login()){
+
+				$cookie = Yii::app()->request->getCookies();
+        		if(isset($cookie['subtime']->value)){
+        			Yii::app()->session['subtime'] = date("Y-m-d H:i:s",$cookie['subtime']->value);
+        		}else{
+        			Yii::app()->session['subtime'] = '你已经超过30天没有登录了';
+        		}
+				$cookie = new CHttpCookie('subtime',time());
+                $cookie->expire = time()+60*60*24*30;  //有限期30天
+                Yii::app()->request->cookies['subtime']=$cookie;
+				echo '1';		
+			}else{
+				echo '2';
+			}
+		}
+	}
+
+
+	public function actionRegister(){
+
+		$sms = new Sms;
+        $_SESSION['send_code'] = $sms->random(6, 1);
+        $form = new RegisterForm();
+        if ($_POST) {
+            $form->phone = Yii::app()->getRequest()->getParam('mobile');
+            $customer_data = array(
+                'phone' => Yii::app()->getRequest()->getParam('mobile'),
+                'password' => Yii::app()->getRequest()->getParam('password'),
+            );
+            $form->setAttributes($customer_data);
+            if ($_POST['mobile'] != $_SESSION['mobile'] or $_POST['mobile_code'] != $_SESSION['mobile_code'] or empty($_POST['mobile']) or empty($_POST['mobile_code'])) {
+                echo '3';
+            } else if ($form->validate()) {
+                $customer = new Customer();
+                if($customer->registerLive($customer_data)){
+                    $identify = new CustomerIdentity();
+                    $identify->assignCustomer($customer);
+                    Yii::app()->user->login($identify);
+
+                    $cookie = new CHttpCookie('subtime',time());
+                    $cookie->expire = time()+60*60*24*30;  //有限期30天
+                    Yii::app()->request->cookies['subtime']=$cookie;
+                    Yii::app()->session['subtime'] = '你今天刚注册成为本站会员';
+                    $_SESSION['mobile'] = '';
+                    $_SESSION['mobile_code'] = '';
+                    echo '1';
+                }else{
+                    echo '2';
+                }
+
+            }
+        }
+      
+
 	}
 }
 

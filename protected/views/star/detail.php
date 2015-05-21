@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-    <div class="bread">当前位置：<a href="/star">明星档</a><span>></span>鹿晗的个人资料  </div>
+    <div class="bread">当前位置：<a href="/star">明星主页</a><span>></span><?php echo $stardata[user_name]?>的个人资料  </div>
 </div>
 
 <div class="wrapper">
@@ -16,7 +16,7 @@
         </ul>
         <div class="intro_info_left_con">
             <dl class="clearfix">
-                <dt class="left"><img src="<?php echo $stardata[face]?>" width="190" height="245" /></dt>
+                <dt class="left"><img src="<?php echo $stardata[face]?>@207w_245h_1e_1c_1x.jpg" /></dt>
                 <dd class="right">
                     <h3><?php echo $stardata[user_name]?></h3>
                     <p class="c-gap-top"><?php echo $starinfodata[content]?></p>
@@ -105,7 +105,7 @@
         <h2 class="latest_danan news_intro_info">最近新闻<a href="<?php echo Yii::app()->createUrl('/news/index',array('id'=>$getnews[0][star_id]))?>" target="_blank">更多&gt;&gt;</a></h2>
         <div class="him_news_con">
             <dl class="him_news clearfix">
-                <dt><a href="" target="_blank"><img src="<?php echo $getnews[0][image]?>" width='94' height='117' /></a></dt>
+                <dt><a href="" target="_blank"><img src="<?php echo $getnews[0][image]?>@94w_117h_1e_1c_1x.jpg"  /></a></dt>
                 <dd>
                     <h4 class="c-gap-bottom"><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$getnews[0][id]))?>"><?php echo  mb_substr($getnews[0][title], 0, 20, 'utf-8')?></a></h4>
                     <p class="c-gap-bottom"><?php echo $getnews[0][introduce]?></p>
@@ -135,51 +135,58 @@
     <div class="him_vedio_title clearfix c-gap-bottom"><img class="left" src="/images/icon7.png" /><span class="left">TA的视频</span><a class="right" href="" target="_blank">更多&gt;&gt;</a></div>
     <div class="him_vedio_con clearfix">
         <div class="him_vedio_left">
-            <img src="/images/pic4.png" />
-            <a href="" target="_blank" class="vedio_play_btn"><img src="/images/videoicon1.png"  /></a>
-            <p class="clearfix c-gap-top-small him_vedio_left_intro"><span class="left"><img src="/images/videoicon2.png" class="c-gap-right" />EXO粉丝见面会</span><em class="right">粉丝数：<i class="red_color">1121</i></em><em class="right c-gap-right">播放次数：<i class="red_color">255554</i></em></p>
+
+            		<div id="contentbody" style="font-size:16px;" class="p01">
+						<script src="/videoplay/flowplayer-3.2.4.min.js"></script>
+<p><a id="player" style="display: block; width: 840px; height: 600px; border: 1px solid #cccccc;" href="<?php echo  $getvideo[0][url]?>"> </a></p>
+<script src="/videoplay/flowplayerVideo.js"></script>
+					</div>
+		
+			</video> 
+            <a href="" target="_blank" class="vedio_play_btn"></a>
+            <p class="clearfix c-gap-top-small him_vedio_left_intro"><span class="left"><img src="/images/videoicon2.png" class="c-gap-right" /><?php echo  $getvideo[0][title]?></span><em class="right" style="margin-right:60px">粉丝数：<i class="red_color">0</i></em><em class="right c-gap-right">播放次数：<i class="red_color"><?php echo $getvideo[0][play_total]?></i></em></p>
         </div>
         <div class="him_vedio_right">
             <div class="him_vedio_history_title clearfix"><span class="left">历史视频(内)</span><a class="right" target="_blank" href="">更多&gt;&gt;</a></div>
             <ul>
+			<?php
+				unset($getvideo[0]);
+				for ($x=1; $x<=3; $x++) {
+					
+			?>
+			
                 <li class="clearfix">
-                    <div class="left him_vedio_history_pic"><img src="/images/pic.png"  /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
+                    <div class="left him_vedio_history_pic"><img src="<?php echo $getvideo[$i][image]?>@151w_79h_1e_1c_1x.jpg" /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
                     <div class="right him_vedio_history_txt">
-                        <h3><a href="" target="_blank">EXO-M-History练习室版[12]</a></h3>
-                        <p class="him_vedio_icon"><img src="/images/icon14.png" /><span class="c-gap-right-small gray_color">686,599</span><img src="/images/icon15.png" /><span class="gray_color">123,489</span></p>
+                        <h3><a href="<?php echo Yii::app()->createUrl('/bigShots/playvideo',array('id'=> $getvideo[$i][product_id]))?>" target="_blank"><?php echo  $getvideo[$i][title]?></a></h3>
+                        <p class="him_vedio_icon"><img src="/images/icon14.png" /><span class="c-gap-right-small gray_color"><?php echo  $getvideo[$i][play_total]?></span><img src="/images/icon15.png" /><span class="gray_color"><?php echo  $getvideo[$i][talk_total]?></span></p>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <div class="left him_vedio_history_pic"><img src="/images/pic.png"  /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
-                    <div class="right him_vedio_history_txt">
-                        <h3><a href="" target="_blank">EXO-M-History练习室版[12]</a></h3>
-                        <p class="him_vedio_icon"><img src="/images/icon14.png" /><span class="c-gap-right-small gray_color">686,599</span><img src="/images/icon15.png" /><span class="gray_color">123,489</span></p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <div class="left him_vedio_history_pic"><img src="/images/pic.png"  /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
-                    <div class="right him_vedio_history_txt">
-                        <h3><a href="" target="_blank">EXO-M-History练习室版[12]</a></h3>
-                        <p class="him_vedio_icon"><img src="/images/icon14.png" /><span class="c-gap-right-small gray_color">686,599</span><img src="/images/icon15.png" /><span class="gray_color">123,489</span></p>
-                    </div>
-                </li>
+				<?php
+				}
+
+				?>
+           
             </ul>
             <div class="him_vedio_history_title clearfix"><span class="left">历史视频(内)</span></div>
             <ul>
+               	<?php
+				unset($getvideo[0]);
+				for ($x=4; $x<=5; $x++) {
+					
+			?>
                 <li class="clearfix">
-                    <div class="left him_vedio_history_pic"><img src="/images/pic.png"  /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
+                    <div class="left him_vedio_history_pic"><img src="<?php echo $getvideo[$i][image]?>@151w_79h_1e_1c_1x.jpg"   /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
                     <div class="right him_vedio_history_txt">
-                        <h3><a href="" target="_blank">EXO-M-History练习室版[12]</a></h3>
-                        <p class="him_vedio_link"><a href="" target="_blank">来源：优酷</a></p>
+                        <h3><a href="<?php echo Yii::app()->createUrl('/bigShots/playvideo',array('id'=> $getvideo[$i][product_id]))?>" target="_blank"><?php echo  $getvideo[$i][title]?></a></h3>
+                        <p class="him_vedio_icon"><img src="/images/icon14.png" /><span class="c-gap-right-small gray_color"><?php echo  $getvideo[$i][play_total]?></span><img src="/images/icon15.png" /><span class="gray_color"><?php echo  $getvideo[$i][talk_total]?></span></p>
                     </div>
                 </li>
-                <li class="clearfix">
-                    <div class="left him_vedio_history_pic"><img src="/images/pic.png"  /><i>超清</i><span class="him_vedio_history_pic_tag"></span></div>
-                    <div class="right him_vedio_history_txt">
-                        <h3><a href="" target="_blank">EXO-M-History练习室版[12]</a></h3>
-                        <p class="him_vedio_link"><a href="" target="_blank">来源：优酷</a></p>
-                    </div>
-                </li>
+				<?php
+				}
+
+				?>
+        
             </ul>
         </div>
     </div>
@@ -187,8 +194,12 @@
 <div class="him_wish clearfix">
 
     <div class="him_wish_left">
-        <div class="him_vedio_title clearfix c-gap-bottom"><img class="left" src="/images/icon7.png" /><span class="left">TA的视频</span><a class="right" href="" target="_blank">更多&gt;&gt;</a></div>
+        <div class="him_vedio_title clearfix c-gap-bottom"><img class="left" src="/images/icon7.png" /><span class="left">TA的筹款</span><a class="right" href="<?php echo Yii::app()->createUrl('/jianshe')?>" target="_blank">更多&gt;&gt;</a></div>
+
         <ul class="clearfix">
+		<?php 
+			for($i=0;$i<4;$i++){
+		?>
             <li>
                 <div class="him_wish_pic"><img class="left" src="/images/pic2.png" /><span></span><i><小王子>等20本好书</i></div>
                 <div class="him_wish_txt c-gap-top">
@@ -197,36 +208,19 @@
                     <p class="choukuan_time clearfix c-gap-top-small"><span class="left">70%</span><span class="right">剩余36天</span></p>
                 </div>
             </li>
-            <li>
-                <div class="him_wish_pic"><img class="left" src="/images/pic2.png" /><span></span><i><小王子>等20本好书</i></div>
-                <div class="him_wish_txt c-gap-top">
-                    <p class="choukuan_tip">已筹款<span class="c-gap-left">6470金币</span></p>
-                    <p class="choukuan_progress c-gap-top-small"><span></span></p>
-                    <p class="choukuan_time clearfix c-gap-top-small"><span class="left">70%</span><span class="right">剩余36天</span></p>
-                </div>
-            </li>
-            <li>
-                <div class="him_wish_pic"><img class="left" src="/images/pic2.png" /><span></span><i><小王子>等20本好书</i></div>
-                <div class="him_wish_txt c-gap-top">
-                    <p class="choukuan_tip">已筹款<span class="c-gap-left">6470金币</span></p>
-                    <p class="choukuan_progress c-gap-top-small"><span></span></p>
-                    <p class="choukuan_time clearfix c-gap-top-small"><span class="left">70%</span><span class="right">剩余36天</span></p>
-                </div>
-            </li>
-            <li>
-                <div class="him_wish_pic"><img class="left" src="/images/pic2.png" /><span></span><i><小王子>等20本好书</i></div>
-                <div class="him_wish_txt c-gap-top">
-                    <p class="choukuan_tip">已筹款<span class="c-gap-left">6470金币</span></p>
-                    <p class="choukuan_progress c-gap-top-small"><span></span></p>
-                    <p class="choukuan_time clearfix c-gap-top-small"><span class="left">70%</span><span class="right">剩余36天</span></p>
-                </div>
-            </li>
+		<?php
+		}
+		?>
+    
         </ul>
     </div>
     <div class="him_wish_right ">
         <div class="fensi_title clearfix"><div class="fensi_title_left left">粉丝贡献</div><ul class="right"><li>周榜</li><li class="li_line"></li><li>月榜</li><li class="li_line"></li><li>总榜</li><li class="li_line"></li></ul></div>
         <div class="gongxian_list c-gap-top">
             <ul>
+			<?php 
+			for($i=0;$i<4;$i++){
+			?>
                 <li class="clearfix">
                     <div class="left gongxian_list_pic clearfix">
                         <div class="left"><img src="/images/pic5.png" /></div>
@@ -237,36 +231,10 @@
                     </div>
                     <div class="right gongxian_list_txt">贡献值：<span>256582</span></div>
                 </li>
-                <li class="clearfix">
-                    <div class="left gongxian_list_pic clearfix">
-                        <div class="left"><img src="/images/pic5.png" /></div>
-                        <div class="right gongxian_list_pic_txt">
-                            <p class="gongxian_list_pic_txt_title">海.阳光</p>
-                            <p class="c-gap-top-small"><span class="gongxian_icon"></span></p>
-                        </div>
-                    </div>
-                    <div class="right gongxian_list_txt">贡献值：<span>256582</span></div>
-                </li>
-                <li class="clearfix">
-                    <div class="left gongxian_list_pic clearfix">
-                        <div class="left"><img src="/images/pic5.png" /></div>
-                        <div class="right gongxian_list_pic_txt">
-                            <p class="gongxian_list_pic_txt_title">海.阳光</p>
-                            <p class="c-gap-top-small"><span class="gongxian_icon"></span></p>
-                        </div>
-                    </div>
-                    <div class="right gongxian_list_txt">贡献值：<span>256582</span></div>
-                </li>
-                <li class="clearfix">
-                    <div class="left gongxian_list_pic clearfix">
-                        <div class="left"><img src="/images/pic5.png" /></div>
-                        <div class="right gongxian_list_pic_txt">
-                            <p class="gongxian_list_pic_txt_title">海.阳光</p>
-                            <p class="c-gap-top-small"><span class="gongxian_icon"></span></p>
-                        </div>
-                    </div>
-                    <div class="right gongxian_list_txt">贡献值：<span>256582</span></div>
-                </li>
+				<?php
+				}
+				?>
+            
             </ul>
         </div>
     </div>

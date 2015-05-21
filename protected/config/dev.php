@@ -43,13 +43,13 @@ return array(
             'enableParamLogging' => YII_DEBUG,
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
-            'password' => 'root',
+            'password' => '123789aa',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
                     'connectionString' => 'mysql:host=localhost;dbname=live',
                     'username'=>'root',
-                    'password'=>'root',
+                    'password'=>'123789aa',
                     'emulatePrepare' => true,
                     'charset' => 'utf8',
                 ),
@@ -67,6 +67,8 @@ return array(
 		'urlManager'=>array(
             'showScriptName'=>false,
 			'urlFormat'=>'path',
+            'caseSensitive'=>true,
+            'showScriptName'=>false,
             'rules' => include('route.php'),
 		),
 		'log'=>array(
@@ -102,7 +104,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
     'params' => array(
-        'cdnUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
+        'cdnUrl' => 'http://ali-img.yooshow.com',
         'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
         'cookieDomain' => '',
         'admin' => md5('live_admin_A2423@#$234234sdfsfS(*&~'),

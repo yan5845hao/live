@@ -1,0 +1,1 @@
+flowplayer("player", "http://www.cppcc.gov.cn/swftest/flowplayer.commercial.swf",{clip: {autoPlay: false,autoBuffering: true},onLoad:function(){this.setVolume(30);}});

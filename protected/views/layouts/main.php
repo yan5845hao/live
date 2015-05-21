@@ -3,11 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
-    <title>title</title>
+    <title>捕捉梦想捕捉爱!-捕梦网-YOOSHOW.COM</title>
     <?php
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/active.js");
+
+	
     ?>
 </head>
 <body>
@@ -16,27 +18,114 @@
     <div class="top">
         <div class="logo left"><a href="/"><img src="/images/logo.png" /></a><span>最大的明星粉丝互动娱乐平台</span></div>
         <div class="search left">
-            <input type="text" value="" />
-            <button></button>
+            <input type="text" value="<?php echo $_GET['keyword']?>" id="topSearch" onkeydown="keydownEvent()" placeholder="关键字" autocomplete="off" />
+            <button onclick="search()"></button>
         </div>
         <div class="login left">
         <?php
         if(Yii::app()->user->isGuest){
         ?>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="<?php echo $this->createUrl('/site/login')?>" class="c-gap-left">【登录】</a>
-            <a href="<?php echo $this->createUrl('/account/register')?>">【注册】</a>
+			<a href="javascript:;" id="loginyh" class="c-gap-left">【登录】</a><a href="javascript:;" id="regyh" >【注册】</a>
+  
         <?php
-        }else{
-        ?>
+        }
+        /*}else{
+        */?><!--
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <span style="color: #5D5D5D"> 欢迎 , </span>
-        <a href="<?php echo $this->createUrl('/myaccount')?>"><?php echo Yii::app()->user->name;?></a>
-        | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>
-    <?php } ?>
+        <a href="<?php /*echo $this->createUrl('/myAccount')*/?>"><?php /*echo Yii::app()->user->name;*/?></a>
+        | <a href="<?php /*echo $this->createUrl('/site/logout')*/?>">退出</a>
+    --><?php /*} */?>
         </div>
-        <div class="enter right"><a href="" target="_blank" class="c-gap-right">开通vip</a><a href="" target="_blank">客户端</a></div>
+        <div class="enter right"><a href="javascript:;" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
     </div>
+
+
+	<!--login begin-->
+	
+    <div id="LoginBox"> 
+	<form id='custom_option' action='/api/login' method='POST'>
+      <div class="login_fc">
+        <div class="login_fc_tit">登录捕梦网</div>
+        <div class="login_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeBtn"><img src="css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
+        <div class="vspace"></div>
+        <div class="login_fc_item">用户名称
+          <input id="dphone" name="username" type="text" class="login_fc_input" />
+        </div>
+        <div class="login_fc_item">用户密码
+          <input id="dpassword" name="password" type="password" class="login_fc_input" />
+        </div>
+         <div class="login_fc_item"><input id="dcheckbox" name="rememberMe"  type="checkbox" value="" /> 保持登录状态 </div>
+         
+        <div class="login_fc_item" >
+			<span id="derroe"></span>
+			<a id="dpost"><img src="css/img/login_01.jpg" width="260" height="40" style="margin-top:5px; cursor: pointer;" /></a>
+		</div>
+        <div class="login_fc_item">
+        	<ul>
+            <li><a href="javascript:;">忘记密码</a></li>
+            <li><a href="javascript:;" onclick="regTrigger()">注册用户</a></li>
+            </ul>
+        </div>
+        <div class=" vspace" style="height:0px;"></div>
+        <div class="login_fc_btm">
+            <span>使用合作网站登录</span>
+            <ul>
+            <li><a href="javascript:;"><img src="css/img/login_02.jpg" width="51" height="52" /></a></li>
+            <li><a href="javascript:;"><img src="css/img/login_03.jpg" width="51" height="52" /></a></li>
+            <li><a href="javascript:;"><img src="css/img/login_04.jpg" width="51" height="52" /></a></li>
+            </ul>
+        
+        </div>
+        
+      </div>
+	  </form>
+        
+    </div>
+    
+ 
+<!--login end-->
+
+
+<!--reg begin-->
+	
+    <div id="RegBox">  
+	<form id='rcustom_option' action='/api/register' method='POST'>
+      <div class="reg_fc">
+        <div class="reg_fc_tit">注册新用户</div>
+        <div class="reg_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeReg"><img src="css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
+        <div class="vspace"></div>
+        <div class="reg_fc_item">手机号/用户名称
+          <input id="rphone" name="mobile" type="text" class="login_fc_input" />
+        </div>
+        <div class="reg_fc_item"><div style="width:200px;">手机验证码</div>
+          <input id="mobile_code" name="mobile_code" type="text" class="login_fc_input" value="" style="width:130px;" /><em><input type="button" onclick="get_mobile_code();" value=" 获取手机验证码 " id="zphone">
+        </div>
+          <div class="reg_fc_item">登录密码
+          <input name="password" id="rpassword" type="password" value="" class="login_fc_input" />
+        </div>
+          <div class="reg_fc_item">确认密码
+          <input id="rpassword_repeat" name="password_repeat" value="" type="password" class="login_fc_input" />
+        </div>
+         
+        <div class="login_fc_item"><input id='ty' name="checkbox" type="checkbox" value="" checked="checked" style=" vertical-align:middle;"/>我同意接受捕梦网用户协议</div>
+			
+        <div class="reg_fc_item"><b id="rerror"></b><a id="rpost"><img src="css/img/reg_01.jpg" width="260" height="40" style="margin-top:5px;" /></a>
+        </div>
+        
+        <div class="reg_fc_btm"><a href="javascript:;" onclick="loginTrigger()">使用已有账号登录</a></div>
+        
+      </div>
+      </form>
+    </div>
+<?php
+
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/form.js",CClientScript::POS_END);
+
+	?>
+    
+<!--reg end-->
 </div>
 <!--banner begin-->
 <?php 
@@ -52,26 +141,32 @@ if(empty($uri)){
     <div class="mainnav wrapper">
         <div class="nav_l left">
             <a <?php if($controller == ''){echo 'class="s"';}?> href="/">首页</a>
-            <a <?php if($controller == 'bigshots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigshots')?>">大枷秀</a>
+            <a <?php if($controller == 'bigShots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigShots')?>">大枷秀</a>
             <a <?php if($controller == 'star'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/star')?>">明星档</a>
             <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">星愿城</a>
             <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">大牌店</a>
             <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">粉社会</a>
         </div>
         <div class="nav_r left"><i></i><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">排行榜</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">娱乐厂牌</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">微入口</a></div>
-        <div class="user">
-            <img class="head left" src="/images/dkxlistpic04.jpg"/>
+        <?php
+			//if(!isset(Yii::app()->session['face'])) Yii::app()->session['face']= '/images/default.png';
+        if(!Yii::app()->user->isGuest){
+			?>
+		<div class="user">
+
+            <img class="head left" src="<?php echo Yii::app()->session['face']?>"/>
             <div class="jiangpai left"><img  src="/css/img/jiangpai1.png"/></div>
-            <h2 class="left">海.阳光<span>金牌会员</span></h2>
+            <h2 class="left"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></h2>
             <span class="down" style="display:none"></span>
             <div class="userinfo">
+
                 <div class="t">
                     <div class="imgbox">
-                        <div class="img left"><a href="#" target="_blank"><img  src="/images/dkxlistpic04.jpg"  /></a></div>
-                        <h3><a href="#">海。阳光<i>金牌会员</i></a></h3>
-                        <a href="javascript:void(0);" class="logout right">『退出』</a>
-                        <p><img  src="/css/img/jiangpai1.png"/></p>
-                        <div class="numbers"><span class=" playicon">金币：<i>15156</i></span><span class=" comment">积分：<i>15156</i></span><a href="#" target="_blank">去兑换</a></div>
+                        <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo Yii::app()->session['face']?>"  /></a></div>
+                        <h3><a href="javascript:;"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></a></h3>
+                        <a href="<?php echo $this->createUrl('/site/logout')?>" class="logout right">『退出』</a>
+
+                        <div class="numbers"><span class=" playicon">金币：<i>0</i></span><span class=" comment">积分：<i>0</i></span><a href="javascript:;">去兑换</a></div>
                     </div>
 
                     <div class="bg"></div>
@@ -79,14 +174,15 @@ if(empty($uri)){
                 </div>
                 <div class="b">
                     <div class="mycenter">
-                        <a href="#" id="gift"><img  src="/css/img/mygift.png"/></a><a href="#" id="collection" class="end"><img  src="/css/img/myccollection.png"/></a><a href="#" id="task"><img  src="/css/img/mytask.png"/></a><a href="#" id="visiter" class="end"><img  src="/css/img/myvisiter.png"/></a>
+                        <a href="javascript:;" id="gift"><img  src="/css/img/mygift.png"/></a><a href="javascript:;" id="collection" class="end"><img  src="/css/img/myccollection.png"/></a><a href="javascript:;" id="task"><img  src="/css/img/mytask.png"/></a><a href="javascript:;" id="visiter" class="end"><img  src="/css/img/myvisiter.png"/></a>
                     </div>
-                    <div class="vip"><a href="#" target="_blank">开通超级会员</a></div>
+                    <div class="vip"><a target="_blank" href="javascript:;">开通超级会员</a></div>
                     <div class="bg"></div>
                 </div>
             </div>
 
         </div>
+		<?php } ?>
 
     </div>
     <script type="text/javascript">
@@ -116,7 +212,7 @@ if(empty($uri)){
 <div class="footer">
     <div class="foot">
         <div class="foot_logo clearfix"><span class="left"><img src="/css/img/logo_bottom.png" /></span><span class="left foot_logo_intro">最大的明星粉丝互动娱乐平台</span></div>
-        <div class="foot_about"><a href="" target="_blank">关于捕梦</a><a href="" target="_blank">中国最大的明星粉丝互动视频平台</a><a href="" target="_blank">联系我们</a><a href="" target="_blank">常见问题</a></div>
+        <div class="foot_about"><a href="javascript:;">关于捕梦</a><a href="javascript:;">中国最大的明星粉丝互动视频平台</a><a href="javascript:;">联系我们</a><a href="javascript:;">常见问题</a></div>
     </div>
 </div>
 </body>

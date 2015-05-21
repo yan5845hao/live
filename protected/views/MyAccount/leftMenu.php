@@ -4,10 +4,11 @@
     <div class="usercon205con">
         <dl>
             <dt><img src="/css/img/user04.jpg" width="24" height="22" />基本信息</dt>
-            <dd <?php if($uri == 'myaccount'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount')?>">我的资料</a></dd>
+            <dd <?php if($uri == 'myaccount'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount')?>">我的资料</a></dd><!--
             <dd <?php if($uri == 'myaccount/modify'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/modify')?>">修改密码</a></dd>
-            <dd <?php if($uri == 'myaccount/gold'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/gold')?>">我的金币</a></dd>
+            <dd <?php if($uri == 'myaccount/gold'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/gold')?>">我的金币</a></dd>-->
         </dl>
+		<!--
         <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />直播管理</dt>
             <dd><a href="#">我的守护记录</a></dd>
@@ -20,5 +21,6 @@
             <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的收藏</dt>
             <dd><a href="#">我收藏的视频</a></dd>
         </dl>
+		-->
     </div>
 </div>

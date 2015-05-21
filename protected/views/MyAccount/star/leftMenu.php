@@ -5,8 +5,10 @@
         <dl>
             <dt><img src="/css/img/user04.jpg" width="24" height="22" />明星主页管理</dt>
             <dd <?php if($uri == 'myaccount'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount')?>">明星信息</a></dd>
+			<!--
             <dd <?php if($uri == 'myaccount/store'){ echo 'class="current"'; } ?>><a href="#">店铺维护管理</a></dd>
             <dd <?php if($uri == 'myaccount/evaluation'){ echo 'class="current"'; } ?>><a href="#">我收到的评价</a></dd>
+			-->
         </dl>
         <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />我的档期管理</dt>

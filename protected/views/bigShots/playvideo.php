@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">大咖秀</a><span>></span><?php echo $videodata['title']?></div>
+	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="<?php echo Yii::app()->createUrl('/bigShots')?>">大咖秀</a><span>></span><?php echo $videodata['title']?></div>
 </div>
 
 <!--topnav end-->
@@ -9,16 +9,14 @@
 <!-- begin-->
 <div class="wrapper">
 	<div class="col857 left">
-        <div> 
-        	
-        	<video width="800" height="520" controls>
-			  <source src="<?php echo $videodata['url']?>" type="video/mp4">
-			  <source src="movie.ogg" type="video/ogg">
-			  <source src="movie.webm" type="video/webm">
-			  <object data="<?php echo $videodata['url']?>" width="800" height="520">
-			    <embed src="movie.swf" width="800" height="520">
-			  </object>
-			</video> 
+        <div style="text-align: center; min-height: 520px;">
+
+		<div id="contentbody" style="font-size:16px;" class="p01">
+						<script src="/videoplay/flowplayer-3.2.4.min.js"></script>
+<p><a id="player" style="display: block; width: 840px; height: 600px; border: 1px solid #cccccc;" href="<?php echo  $videodata[url];?>"> </a></p>
+<script src="/videoplay/flowplayerVideo.js"></script>
+					</div>
+       
         </div>
         <div class="vspace" style="height:25px;"></div>
         <div class="md md3">
@@ -44,7 +42,7 @@
                 <div class="con14">
                     <div class="up">
                         <div class="imgbox left">
-                        	<img src="<?php echo $stardata['face']?>" />
+                        	<img src="<?php echo $stardata['face']?>@w127_h148.jpg" />
                         	<a href="javascript:void(0);" id="guanzhu">关注</a>
                             <a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$starinfodata['customer_id']))?>">TA的主页</a>
                          <script type="text/javascript">$("#guanzhu").click(function(){
@@ -75,13 +73,13 @@
                 		?>
                 		<li>
                         	<div class="imgbox left">
-                            	<a href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>"><img  src="<?php echo $v['image']?>"/></a>
+                            	<a href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>"><img  src="<?php echo $v['image']?>@150w_80h_1e_1c_1x.jpg"/></a>
                                 <div class="txtbg gq"></div>
                                 <div class="txt">超清</div>
                             </div>
                             <p><a href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>" target="_blank"><?php echo $v['title']?></a></p>
                             <div class="source"></div>
-							<div class="numbers"><span class="left playicon"><a target="_blank" href="#">播放<i><?php echo $v['play_total']?></i></a></span><span class="left comment"><a target="_blank" href="#">评论<i><?php echo $v['talk_total']?></i></a></span></div>
+							<div class="numbers"><span class="left playicon"><a target="_blank" href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>">播放<i><?php echo $v['play_total']?></i></a></span><span class="left comment"><a target="_blank" href="<?php echo Yii::app()->createUrl('/bigshots/playvideo',array('id'=>$v['product_id']))?>">评论<i><?php echo $v['talk_total']?></i></a></span></div>
                         </li>
 
                 	<?php	

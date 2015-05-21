@@ -3,15 +3,14 @@
 <div class="md">
 <div class="hd">
     <span class="title left">大咖秀<i>你想见的男神、女神在这里！</i></span>
-    <span class="more right"><a href="#" target="_blank">更多大咖秀场>></a></span>
+    <span class="more right"><a href="<?php echo Yii::app()->createUrl('/bigShots')?>" target="_blank">更多大咖秀场>></a></span>
 </div>
 <div class="bd">
 <div class="col690 left">
     <div class="ind01">
-      
-        <?php 
-                 if(defined('HOME_PAGE_ONE_GUANGGAO')) echo HOME_PAGE_ONE_GUANGGAO; 
-             ?>
+        <div class="imgbox"><a href="#" target="_blank"><img src="/images/picshow01.jpg" title="男团" alt="男团"  /></a></div>
+        <div class="txtbg"></div>
+        <div class="txt"><p class="left"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></p><span class="right">粉丝<i>15156</i></span></div>
     </div>
 </div>
 <div class="col534 right">

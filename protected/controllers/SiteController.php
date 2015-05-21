@@ -12,7 +12,14 @@ class SiteController extends BaseController
 //        }
     	$date=strtotime(date('Y-m-d'));
     	$scheduledata = StarSchedule::model()->getSchedule($date);
-        $this->render('index',array('scheduledata'=>$scheduledata));
+		$model=new LoginForm;
+		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+        $this->render('index',array('scheduledata'=>$scheduledata,'model'=>$model));
     }
 
 	/**
@@ -41,10 +48,11 @@ class SiteController extends BaseController
 	{
 	    if($error=Yii::app()->errorHandler->error)
 	    {
-	    	if(Yii::app()->request->isAjaxRequest)
-	    		echo $error['message'];
-	    	else
-	        	$this->render('error', $error);
+            $this->render('error', $error);
+//	    	if(Yii::app()->request->isAjaxRequest)
+//	    		echo $error['message'];
+//	    	else
+//	        	$this->render('error', $error);
 	    }
 	}
 
@@ -116,6 +124,7 @@ class SiteController extends BaseController
 	 */
 	public function actionLogout()
 	{
+		Yii::app()->session['face']= '/images/default.png';
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}

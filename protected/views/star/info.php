@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">明星档</a><span>></span>周华健演唱会  </div>
+	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">明星档</a> </div>
 </div>
 
 <!--topnav end-->
@@ -11,7 +11,7 @@
 	<div class="col857 left">
         <div class="ind08" >
         	<div class="innerbox">
-            	<div class="imgbox left"><img src="<?php echo $newsdata->img?>" /></div>
+            	<div class="imgbox left"><img src="<?php echo $newsdata->img?>@403w_800h_1e_1c_1x.jpg" /></div>
                 <h2><?php echo $newsdata->title?></h2>
                 <div class="time">发布时间：<?php echo date('Y-m-d',$newsdata->createtime);?>  </div>
                 <p><span>时　　间：</span><?php echo date('Y-m-d',$newsdata->begintime);?> </p>

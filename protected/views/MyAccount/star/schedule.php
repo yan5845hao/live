@@ -20,17 +20,18 @@
                 ?>
                 <tr>
                     <td><?php echo $list['id'];?></td>
-                    <td><?php echo $list['title'];?></td>
+                    <td><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$list['id']))?>"  target="_blank" ><?php echo $list['title'];?></a></td>
                     <td style="width: 100px;"><?php echo $list['address'];?></td>
                     <td style="width: 100px;"><?php echo date('Y-d-m',$list['begintime']);?></td>
                      <td style="width: 100px;"><?php echo $list['showtime'];?></td>
                     <td><img width="100" height="80" src="<?php echo $list['img'];?>"></td>
                     <td><?php echo date('Y-d-m',$list['createtime']);?></td>
-                    <td><a href="<?php echo Yii::app()->createUrl('/myAccount/pubschedule',array('id'=>$list['id']))?>">修改</a> | <a href='javascript:if(confirm("确实要删除该内容吗?"))location="<?php echo $url;?>"'>删除</a></td>
+                    <td><a href="<?php echo Yii::app()->createUrl('/myAccount/pubschedule',array('id'=>$list['id']))?>">修改</a> | <a href='javascript:if(confirm("确实要删除该内容吗?"))location="<?php echo $url;?>"'>删a除</a></td>
                 </tr>
                 <?php } ?>
                 </tbody></table>
                 <?php
+				/*
                 $this->widget('CLinkPager', array(
                     'cssFile'=>false,
                     'header'=>'',
@@ -40,7 +41,7 @@
                     'nextPageLabel'=>'下一页',
                     'prevPageLabel'=>'上一页',
                     'pages' => $dataProvider->pagination
-                ));
+                ));*/
                 ?>
         </div>
     </div>

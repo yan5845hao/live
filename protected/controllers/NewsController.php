@@ -18,7 +18,7 @@
 
 				$newsid = Yii::app()->getRequest()->getParam("newsid");
 				$newsdata=StarNews::model()->findByPk($newsid);
-
+				StarNews::model()->updatelook($newsid);
 				$stardata=Customer::model()->findByPk($newsdata[star_id]);//获取明星基本资料
 				$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $newsdata[star_id]));//获取明星详细资料
 				//print_r($newsdata);

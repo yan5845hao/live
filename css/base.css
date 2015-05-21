@@ -717,7 +717,7 @@ i{ font-style:normal;}
 .dk_phtitle1 li{width:40px; float:left; height:40px; line-height:40px; font-size:16px; text-align:right;}
 .dk_phtitle1 li.current{color:#a808fe;}
 .dk_phtitle1 li.current a{color:#a808fe;}
-.dk_phtitle1 li a{color:#333;}
+.dk_phtitle1 li a{color:#333;cursor:pointer;}
 .dk_phtitle1 li a:hover{color:#a808fe;}
 .dk_phtitle2{width:281px;  height:924px; background-color:#fff; margin-top:20px;}
 .dk_phtitle2 ul{padding:15px; float:left;}
