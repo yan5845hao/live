@@ -46,7 +46,7 @@ class StarNews extends CActiveRecord
         * star news paging
         */
        public function getNews($page,$star_id=null){
-       		$size=5;
+       		$size=10;
        		if($page<2){
        			$l=0;
        		}else{
@@ -75,4 +75,10 @@ class StarNews extends CActiveRecord
 			return $model;
 
     	}
+
+		public function updatelook($id){
+			$model=StarNews::model()->findByPk($id);
+			$model->lookcount = ($model->lookcount+1);
+			$model->save();
+		}
     }

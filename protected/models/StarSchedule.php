@@ -58,5 +58,10 @@ class StarSchedule extends CActiveRecord
             return $command->queryAll();
            
         }   
+		public function updatelook($id){
+			$model=StarSchedule::model()->findByPk($id);
+			$model->lookcount = ($model->lookcount+1);
+			$model->save();
+		}
 	
 }

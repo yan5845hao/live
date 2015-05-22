@@ -46,4 +46,10 @@ class Product extends CActiveRecord
         );
     }
 
+	public function updateplay_total($id){
+			$model=Product::model()->findByPk($id);
+			$model->play_total = ($model->play_total+1);
+			$model->save();
+	}
+
 }
