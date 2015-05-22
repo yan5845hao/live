@@ -48,7 +48,7 @@
 	<form id='custom_option' action='/api/login' method='POST'>
       <div class="login_fc">
         <div class="login_fc_tit">登录捕梦网</div>
-        <div class="login_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeBtn"><img src="css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
+        <div class="login_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeBtn"><img src="/css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
         <div class="vspace"></div>
         <div class="login_fc_item">用户名称
           <input id="dphone" name="username" type="text" class="login_fc_input" />
@@ -60,7 +60,7 @@
          
         <div class="login_fc_item" >
 			<span id="derroe"></span>
-			<a id="dpost"><img src="css/img/login_01.jpg" width="260" height="40" style="margin-top:5px; cursor: pointer;" /></a>
+			<a id="dpost"><img src="/css/img/login_01.jpg" width="260" height="40" style="margin-top:5px; cursor: pointer;" /></a>
 		</div>
         <div class="login_fc_item">
         	<ul>
@@ -72,9 +72,9 @@
         <div class="login_fc_btm">
             <span>使用合作网站登录</span>
             <ul>
-            <li><a href="javascript:;"><img src="css/img/login_02.jpg" width="51" height="52" /></a></li>
-            <li><a href="javascript:;"><img src="css/img/login_03.jpg" width="51" height="52" /></a></li>
-            <li><a href="javascript:;"><img src="css/img/login_04.jpg" width="51" height="52" /></a></li>
+            <li><a href="javascript:;"><img src="/css/img/login_02.jpg" width="51" height="52" /></a></li>
+            <li><a href="javascript:;"><img src="/css/img/login_03.jpg" width="51" height="52" /></a></li>
+            <li><a href="javascript:;"><img src="/css/img/login_04.jpg" width="51" height="52" /></a></li>
             </ul>
         
         </div>
@@ -94,7 +94,7 @@
 	<form id='rcustom_option' action='/api/register' method='POST'>
       <div class="reg_fc">
         <div class="reg_fc_tit">注册新用户</div>
-        <div class="reg_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeReg"><img src="css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
+        <div class="reg_fc_clo"><a href="javascript:;" title="关闭窗口" id="closeReg"><img src="/css/img/mxcenterbtn01.png" width="26" height="26" /></a></div>
         <div class="vspace"></div>
         <div class="reg_fc_item">手机号/用户名称
           <input id="rphone" name="mobile" type="text" class="login_fc_input" />
@@ -111,7 +111,7 @@
          
         <div class="login_fc_item"><input id='ty' name="checkbox" type="checkbox" value="" checked="checked" style=" vertical-align:middle;"/>我同意接受捕梦网用户协议</div>
 			
-        <div class="reg_fc_item"><b id="rerror"></b><a id="rpost"><img src="css/img/reg_01.jpg" width="260" height="40" style="margin-top:5px;" /></a>
+        <div class="reg_fc_item"><b id="rerror"></b><a id="rpost"><img src="/css/img/reg_01.jpg" width="260" height="40" style="margin-top:5px;" /></a>
         </div>
         
         <div class="reg_fc_btm"><a href="javascript:;" onclick="loginTrigger()">使用已有账号登录</a></div>

@@ -3,7 +3,7 @@
 
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">明星新闻</a><span>  </div>
+	<div class="bread">当前位置：<a href="#">首页</a><span>></span>明星新闻<span>  </div>
 </div>
 
 <!--topnav end-->
