@@ -3,7 +3,7 @@ assets/*
 protected/runtime/*
 !protected/runtime/.gitignore
 themes/classic/views/
-protected/configs/dev.php
+protected/config/dev.php
 .gitignore
 LICENSE
 README.md
