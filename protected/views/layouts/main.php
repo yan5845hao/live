@@ -28,20 +28,14 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="javascript:;" id="loginyh" class="c-gap-left">【登录】</a><a href="javascript:;" id="regyh" >【注册】</a>
   
-        <?php
-        }
-        /*}else{
-        */?><!--
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span style="color: #5D5D5D"> 欢迎 , </span>
-        <a href="<?php /*echo $this->createUrl('/myAccount')*/?>"><?php /*echo Yii::app()->user->name;*/?></a>
-        | <a href="<?php /*echo $this->createUrl('/site/logout')*/?>">退出</a>
-    --><?php /*} */?>
+        <?php } ?>
         </div>
         <div class="enter right"><a href="javascript:;" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
     </div>
 
-
+    <?php
+    if(Yii::app()->user->isGuest){
+    ?>
 	<!--login begin-->
 	
     <div id="LoginBox"> 
@@ -83,13 +77,7 @@
 	  </form>
         
     </div>
-    
- 
-<!--login end-->
 
-
-<!--reg begin-->
-	
     <div id="RegBox">  
 	<form id='rcustom_option' action='/api/register' method='POST'>
       <div class="reg_fc">
@@ -100,7 +88,7 @@
           <input id="rphone" name="mobile" type="text" class="login_fc_input" />
         </div>
         <div class="reg_fc_item"><div style="width:200px;">手机验证码</div>
-          <input id="mobile_code" name="mobile_code" type="text" class="login_fc_input" value="" style="width:130px;" /><em><input type="button" onclick="get_mobile_code();" value=" 获取手机验证码 " id="zphone">
+          <input id="mobile_code" name="mobile_code" type="text" class="login_fc_input" value="" style="width:130px;" /><input type="button" onclick="get_mobile_code();" value=" 获取手机验证码 " id="zphone">
         </div>
           <div class="reg_fc_item">登录密码
           <input name="password" id="rpassword" type="password" value="" class="login_fc_input" />
@@ -119,10 +107,9 @@
       </div>
       </form>
     </div>
-<?php
-
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/form.js",CClientScript::POS_END);
-
+    <?php
+        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/form.js",CClientScript::POS_END);
+    }
 	?>
     
 <!--reg end-->
@@ -131,7 +118,6 @@
 <?php 
 $uri = strtolower(Yii::app()->request->getPathInfo());
 if(empty($uri)){
-
 
 	$this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Top1920x570','slider_type'=>'home'));
 }
@@ -151,10 +137,11 @@ if(empty($uri)){
         <?php
 			//if(!isset(Yii::app()->session['face'])) Yii::app()->session['face']= '/images/default.png';
         if(!Yii::app()->user->isGuest){
+            $customer = customer::model()->getUserinfo(Yii::app()->user->id);
 			?>
 		<div class="user">
 
-            <img class="head left" src="<?php echo Yii::app()->session['face']?>"/>
+            <a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img class="head left" src="<?php echo $customer->face;?>"/></a>
             <div class="jiangpai left"><img  src="/css/img/jiangpai1.png"/></div>
             <h2 class="left"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></h2>
             <span class="down" style="display:none"></span>
@@ -162,15 +149,13 @@ if(empty($uri)){
 
                 <div class="t">
                     <div class="imgbox">
-                        <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo Yii::app()->session['face']?>"  /></a></div>
+                        <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo $customer->face;?>"  /></a></div>
                         <h3><a href="javascript:;"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></a></h3>
                         <a href="<?php echo $this->createUrl('/site/logout')?>" class="logout right">『退出』</a>
-
+                        <p><img src="css/img/jiangpai1.png"></p>
                         <div class="numbers"><span class=" playicon">金币：<i>0</i></span><span class=" comment">积分：<i>0</i></span><a href="javascript:;">去兑换</a></div>
                     </div>
-
                     <div class="bg"></div>
-
                 </div>
                 <div class="b">
                     <div class="mycenter">
