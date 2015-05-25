@@ -97,4 +97,9 @@ class Customer extends CActiveRecord
         }
     }
 
+    public function getUserInfo($customer_id)
+    {
+        return $this->findByPk($customer_id);
+    }
+
 }
