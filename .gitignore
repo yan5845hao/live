@@ -1,2 +1,9 @@
-assets/
-protected/config/dev.php
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+themes/classic/views/
+protected/configs/dev.php
+.gitignore
+LICENSE
+README.md
