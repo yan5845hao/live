@@ -60,10 +60,12 @@ return array(
 //                ),
             ),
 		),
+/*
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
 		),
+		*/
 		'urlManager'=>array(
             'showScriptName'=>false,
 			'urlFormat'=>'path',
@@ -84,6 +86,11 @@ return array(
 					'class'=>'CWebLogRoute',
 				),
 				*/
+				array(
+						'class'=>'CWebLogRoute',
+	                    'levels'=>'trace, info, error, warning, xdebug',
+	                    'categories' =>'system.db.*'
+					),
 			),
 		),
         'sms'=>array(

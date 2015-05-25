@@ -3,11 +3,11 @@
  * This is the model class for table "banners".
  *
  */
-class StarSchedule extends CActiveRecord
+class Starjourney extends CActiveRecord
 {
         /**
          * Returns the static model of the specified AR class.
-         * @return star_schedule the static model class
+         * @return Banners the static model class
          */
         public static function model($className=__CLASS__)
         {
@@ -18,7 +18,7 @@ class StarSchedule extends CActiveRecord
          */
         public function tableName()
         {
-                return 'star_schedule';
+                return 'starjourney';
         }
         /**
          * @return array validation rules for model attributes.
@@ -28,10 +28,9 @@ class StarSchedule extends CActiveRecord
                 // NOTE: you should only define rules for those attributes that
                 // will receive user inputs.
                 return array(
-                	     array('title,starid,starname,begintime,address,content', 'required'),
-                             array('title', 'length', 'max'=>128),
-                             array('starname', 'length', 'max'=>40),
-                             array('address', 'length', 'max'=>128),
+                	 array('liveid,roomid,mastername,prestarttime', 'required'),
+                         array('liveid', 'length', 'max'=>40),
+                         array('roomid', 'length', 'max'=>6),
                         );
         }
         /**
@@ -47,21 +46,6 @@ class StarSchedule extends CActiveRecord
         /*
         * star news paging
         */
-       public function getSchedule($begintime){
-            
-            $begintimeend=$begintime+86400;
-          
-            $sql = "select * from star_schedule where begintime > :begintime && begintime < :begintimeend order by begintime asc limit 3";
-            $command = Yii::app()->db->createCommand($sql);
-            $command->bindParam(':begintime', $begintime);
-            $command->bindParam(':begintimeend', $begintimeend);
-            return $command->queryAll();
-           
-        }   
-		public function updatelook($id){
-			$model=StarSchedule::model()->findByPk($id);
-			$model->lookcount = ($model->lookcount+1);
-			$model->save();
-		}
+       
 	
 }
