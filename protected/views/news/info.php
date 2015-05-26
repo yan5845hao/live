@@ -62,14 +62,16 @@
    		 <div class="md ">
             <div class="hd">
                 <span class="title left d">明星相关介绍<i></i></span>
-                <span class="more right"><a href="#" target="_blank">详细>></a></span>
+                <span class="more right"><a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$newsdata->star_id))?>" target="_blank">详细>></a></span>
             </div>
             <div class="bd w" style="height:451px">
                 <div class="con14">
                     <div class="up">
                         <div class="imgbox left">
                         	<img src="<?php echo $stardata[face]?>" width="175" height="205" />
-                        	<a href="javascript:void(0);" id="guanzhu">关注</a>
+                        	<?php 
+                        	echo $isattention==false ? "<a onclick=attention($newsdata->star_id) id='guanzhu'>关注</a>" : '<a id="guanzhu">已关注</a>';
+                        	?>
                             <a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$newsdata->star_id))?>">TA的主页</a>
                          <script type="text/javascript">$("#guanzhu").click(function(){
 							 $(this).toggleClass("cur");
@@ -102,14 +104,20 @@
 <!-- end-->
 
 
-
-
-
-
-
 <!-- begin-->
 <div class="wrapper">
 	<div class="gototop" id="gototop1"><span></span></div>
     <script type="text/javascript">var mygototop = new gototop("gototop1")</script>
 </div>
 <!-- end-->
+<script>
+function attention(id){ 
+$.post("/api/attention",{id:id},function(result){
+   alert(result);
+   // $("span").html(result);
+  });
+
+}
+
+
+</script>

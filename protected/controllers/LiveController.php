@@ -27,7 +27,7 @@ class LiveController extends BaseController
 	}
 
 	public function actionYuyue(){ 
-		
+
 		
 		$id = intval(Yii::app()->getRequest()->getParam("id"));
 		$livedata=Starjourney::model()->findByPk($id);
@@ -39,7 +39,6 @@ class LiveController extends BaseController
 		if(!empty($yuyue)){ 
 			$yuyue='已预约';	
 		}else if(isset($_GET['act']) && isset($_GET['id']) && isset(Yii::app()->user->id) ){ 
-			
 			$model= new CustomerLiveRelation();
 			$model->liveid = intval(Yii::app()->getRequest()->getParam("id"));
 			$model->title = $livedata['title'];

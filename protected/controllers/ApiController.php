@@ -6,7 +6,7 @@
  */
 class ApiController extends BaseController
 {
-	public  function actionSchedule(){
+	public  function actionSchedule(){//明星档调用
 
 		$begintime = Yii::app()->getRequest()->getParam("startime");
 		$begintime = explode("星期",$begintime);
@@ -45,7 +45,7 @@ class ApiController extends BaseController
 		echo $str;	  
 	}
 
-	public function actionLogin(){
+	public function actionLogin(){//登录
 
 		$model=new LoginForm;
 		if(isset($_POST))
@@ -71,7 +71,7 @@ class ApiController extends BaseController
 	}
 
 
-	public function actionRegister(){
+	public function actionRegister(){//注册
 
 		$sms = new Sms;
         $_SESSION['send_code'] = $sms->random(6, 1);
@@ -105,7 +105,24 @@ class ApiController extends BaseController
 
             }
         }
-      
+	}
+
+
+	public function actionAttention(){ //加关注
+		
+
+			if(!isset(Yii::app()->user->id)) {
+				echo '3';//未登录
+			}else{
+				$strid = intval(Yii::app()->getRequest()->getParam('id'));
+				
+				if(CustomerAttention::model()->updateattention(Yii::app()->user->id，$strid)==true){ 
+					echo '1';
+				}else{ 
+					echo '2';
+				}
+			}
+		
 
 	}
 }
