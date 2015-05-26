@@ -23,7 +23,7 @@
 		<div style="height:280px;">            
       		<?php echo $livedata['description'];?>
       	</div>
-        <div class="link"> <a href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$livedata['id'],'act'=>'yuyue'))?>" target="_blank"><?php echo $yuyue?></a><a href="#" target="_blank" class="yellow">进入房间</a></div>
+        <div class="link"> <a href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$livedata['id'],'act'=>'yuyue'))?>" target="_blank"><?php echo $yuyue?></a><a href="<?php echo Yii::app()->params['liveLUrl'].'/'.$livedata['liveIdentity'];?>" target="_blank" class="yellow">进入房间</a></div>
 
 
         </div>
@@ -68,9 +68,9 @@
             	<div class="vspace"></div>
             	<div class="con21">
 					<div class="reply">
-						<div class="imgbox"><a target="_blank" href=""><img src="/images/mxindex/pic5.png"></a></div>
+						
 						<div class="box">
-							<div class="user"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/mxindex/icon9.png"></div><div class="right">至少输入140字</div></div>
+							<div class="user"><div class="left"></div><div class="right">至少输入140字</div></div>
                            	<div class="vspace"></div>
 							<div class="textbox"><textarea>有什么感想你也来说说吧</textarea></div>
                             <div class="vspace"></div>

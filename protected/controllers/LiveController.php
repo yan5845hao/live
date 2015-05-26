@@ -28,6 +28,7 @@ class LiveController extends BaseController
 
 	public function actionYuyue(){ 
 		
+		
 		$id = intval(Yii::app()->getRequest()->getParam("id"));
 		$livedata=Starjourney::model()->findByPk($id);
 		$yuyue=CustomerLiveRelation::model()->find('liveid=:liveid && customerid=:customerid', array(':liveid' => $id,'customerid'=>Yii::app()->user->id));

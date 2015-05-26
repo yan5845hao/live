@@ -113,6 +113,7 @@ return array(
     'params' => array(
         'cdnUrl' => 'http://ali-img.yooshow.com',
         'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
+        'liveLUrl' => 'http://vtest4.yooshow.com',
         'cookieDomain' => '',
         'admin' => md5('live_admin_A2423@#$234234sdfsfS(*&~'),
     ),
