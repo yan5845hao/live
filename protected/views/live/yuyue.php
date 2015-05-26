@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">预约</a><span>></span>Swing Girls组合粉丝畅聊会  </div>
+	<div class="bread">当前位置：<a href="<?php echo Yii::app()->createUrl('/site')?>">首页</a><span>></span><a href="<?php echo Yii::app()->createUrl('/live')?>">直播</a><span>></span><?php echo $livedata['title']?></div>
 </div>
 
 <!--topnav end-->
@@ -10,9 +10,9 @@
 <div class="wrapper">
 	<div class="ind09">
     	<div class="imgbox">
-        	<div  class="img left"><img src="images/pic09.jpg"/></div>
+        	<div  class="img left"><img src="<?php echo $livedata['image'];?>"/></div>
             <div class="info left">
-            	 <h4>陈奕、沈建宏粉丝畅聊会</h4>
+            	 <h4><?php echo $livedata['title']?></h4>
                  <div class="bdsharebuttonbox right"><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a>
                        </div>
 <script type="text/javascript">window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
@@ -20,16 +20,16 @@
             
             </div>
                    
-
-        <p>一个是温文尔雅的天枰<br />一个是神秘执着的天蝎<br />同样的阳光帅气、俊朗迷人<br />两相碰撞，会产生什么样的化学反应？<br />小伙伴们注意啦！线上直播只能用PC端电脑来进行观看<br />4月20日晚20:00，台湾新生代小鲜肉、人气偶像陈奕、沈建宏与你在捕梦网不见不散。
-</p>
-        <div class="link"> <a href="#" target="_blank">我要预约</a><a href="#" target="_blank" class="yellow">进入房间</a></div>
+		<div style="height:280px;">            
+      		<?php echo $livedata['description'];?>
+      	</div>
+        <div class="link"> <a href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$livedata['id'],'act'=>'yuyue'))?>" target="_blank"><?php echo $yuyue?></a><a href="#" target="_blank" class="yellow">进入房间</a></div>
 
 
         </div>
         <div class="timebox">
-        	<p class="z">2015年4月20日  20:00</p>
-            <p>偶像小鲜肉陈奕、沈建宏首次做客明星直播间</p>
+        	<p class="z"><?php echo $livedata['prestarttime']?></p>
+            <p><?php echo $livedata['title']?></p>
         </div>
     </div>
 </div>
@@ -49,14 +49,7 @@
             </div>
             <div class="bd w">
             		<div class="con20">
-                    	<h5>陈   奕（Andy Chen）</h5>
-                        <div>1986年10月16日出生于台湾，歌手、演员。代表作品：《兰陵王妃》《死神少女》</div>
-                        <h5>沈建宏（Kris Shen）</h5>
-                        <div>1992年11月9日出生于台湾，演员、歌手，前少男元气G-Boy成员。代表作品：《廉政英雄》《唐朝浪漫英雄》《泡沫之夏》</div>
-                        <div class="content">
-                        	<p>2015年4月20日晚20:00，偶像小鲜肉陈奕、沈建宏首次做客明星直播间，与在线粉丝互动，分享他们的演艺经历。直播当晚你可以通过线上参与互动,提出你最关心的问题!最有创意的小伙伴，我们将会送出精美礼物哦！</p>
-                            <p>特别通知：小伙伴们注意啦！线上直播只能用PC端电脑来进行观看哦（不支持手机端，app端）！小伙伴相互告知哦！</p>
-                        </div>
+                    	<?php echo $livedata['description'];?>
                         
                     </div>
                  	
@@ -72,10 +65,66 @@
               
             </div>
             <div class="bd">
-            		
-                 	
-               
-              </div>
+            	<div class="vspace"></div>
+            	<div class="con21">
+					<div class="reply">
+						<div class="imgbox"><a target="_blank" href=""><img src="/images/mxindex/pic5.png"></a></div>
+						<div class="box">
+							<div class="user"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/mxindex/icon9.png"></div><div class="right">至少输入140字</div></div>
+                           	<div class="vspace"></div>
+							<div class="textbox"><textarea>有什么感想你也来说说吧</textarea></div>
+                            <div class="vspace"></div>
+							
+								<div class="expression"><img src="/images/mxindex/icon8.png"><a target="_blank" href="">表情</a></div>
+								<div class="fabiao_btn right"><button>发表评论</button></div>
+
+						</div>
+					</div>
+                    <div class="replylist">
+                    <div class="vspace"></div>
+						<div class="imgbox"><a target="_blank" href=""><img src="/images/mxindex/pic5.png" class="left"></a></div>
+						<div class="replybox">
+							<div class="username"><a target="_blank" href="">nns</a></div>
+							<p>大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO</p>
+							<div class="clear"><div class="retime left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right repeat"><a class="c-gap-right" target="_blank" href="">转发</a><a class="remsg">回复</a></div></div>
+						</div>
+                        <div class="vspace"></div>
+					</div>
+             
+          
+           
+                    
+                    <div class="page_list">
+                    <div style="height:20px;" class="vspace"></div><a target="_blank" href="" class="current">1</a><a target="_blank" href="">2</a><a target="_blank" href="">3</a><a target="_blank" href="">4</a><a target="_blank" href="">5</a><a target="_blank" href="">5</a><a target="_blank" href="">6</a><a target="_blank" href="">7</a><a target="_blank" href="">9</a><a target="_blank" href="">10</a><a class="prev_page" target="_blank" href="">上一页</a><a class="next_page page_focus" target="_blank" href="">下一页</a></div>
+				</div>	
+              
+             <script>
+             //回复js
+			 $(".textbox textarea, .rebox textarea").one("click",function(){
+				 	$(this).html("");
+				 })
+				var rename = ''; 
+				var repeat = ''
+			 $(".remsg").live("click",function(){
+				 rename  = $(this).parents(".clear").siblings(".username").find("a").text();
+				 repeat = $(this).parents(".repeat")
+				 repeat.hide();
+				 $(this).siblings().parents(".replylist").remove(".rebox");
+				 $(this).parents(".replylist").append('&lt;div class="rebox"&gt;&lt;div class="vspace"&gt;&lt;/div&gt;&lt;p class="username"&gt;&lt;a href="" target="_blank"&gt;穆穆&lt;/a&gt;&lt;/p&gt;&lt;div class="vspace"&gt;&lt;/div&gt;&lt;textarea&gt;会员就是爽啊,一元免费看&lt;/textarea&gt;&lt;div class="vspace"&gt;&lt;/div&gt;&lt;div class="icon"&gt;&lt;div class="biaoqing left"&gt;&lt;img src="images/mxindex/icon8.png"&gt;&lt;a href="" target="_blank"&gt;表情&lt;/a&gt;&lt;/div&gt;&lt;div class="fabiao_btn right clearfix"&gt;&lt;button class="left btn_focus c-gap-right answer"&gt;回复&lt;/button&gt;&lt;button class="left cancel"&gt;取消&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="vspace"&gt;&lt;/div&gt;');			 
+				 })
+				$(".answer").live("click",function(){
+				 var msg = $(".answer").parents(".rebox").find("textarea").val();
+				$(this).parents(".con21").find(".replylist").eq(0).prepend('&lt;div class="replylist"&gt;&lt;div class="vspace"&gt;&lt;/div&gt;&lt;div class="imgbox"&gt;&lt;a href="" target="_blank"&gt;&lt;img class="left" src="images/mxindex/pic5.png"&gt;&lt;/a&gt;&lt;/div&gt;&lt;div class="replybox"&gt;&lt;div class="username"&gt;&lt;a href="" target="_blank"&gt;@'+rename+'&lt;/a&gt;&lt;/div&gt;&lt;p&gt;'+msg+'&lt;/p&gt;&lt;div class="clear"&gt;&lt;div class="retime left"&gt;&lt;span class="c-gap-right"&gt;1小时前&lt;/span&gt;&lt;span&gt;来自优酷&lt;/span&gt;&lt;/div&gt;&lt;div class="right repeat"&gt;&lt;a href="" target="_blank" class="c-gap-right"&gt;转发&lt;/a&gt;&lt;a class="remsg"&gt;回复&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="vspace"&gt;&lt;/div&gt;&lt;/div&gt;'); 
+				  $(this).parents(".rebox").remove();
+				  repeat.show();
+				  })
+				  $(".cancel").live("click",function(){
+					  $(this).parents(".rebox").remove();
+					   repeat.show();
+				  })
+				  
+             </script>  	
+            </div>
       </div>
     </div>
     <div class="col373 right">
@@ -93,28 +142,28 @@
             <div class="bd w">
                 <div class="con11 smallpadding">
                                 	<div class="line">
-                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="images/baby.jpg"/></a></div>
+                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
                                         <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
                                         <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
                                         <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
 
                                     </div>
                                     <div class="line">
-                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="images/baby.jpg"/></a></div>
+                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
                                         <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
                                         <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
                                         <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
 
                                     </div>
                                     <div class="line">
-                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="images/baby.jpg"/></a></div>
+                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
                                         <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
                                         <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
                                         <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>
 
                                     </div>
                                     <div class="line last">
-                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="images/baby.jpg"/></a></div>
+                                    	<div class="headbox left"><a href="#"  target="_blank"><img  src="/images/baby.jpg"/></a></div>
                                         <h5><a  href="#" target="_blank">杨颖2015六一特别签售会倒计时15天</a></h5>
                                         <p class="numbers"><span class="comment">粉    丝：<i>1212133</i></span></p>
                                         <p><span class="playicon">直播时间：2015-5-1<i>9 19:00</i></span></p>

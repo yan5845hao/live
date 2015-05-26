@@ -27,10 +27,10 @@
 	function check_phone() {
 			  var phone = $.trim($('#dphone').val());
 			  if (phone == '') {
-				$('#derroe').text('ÓÃ»§ÊÇ±ØÌîÏî');
+				$('#derroe').text('ç”¨æˆ·æ˜¯å¿…å¡«é¡¹');
 				return false;
 				 } else if (!/(?:13\d|15\d|17\d|18\d)\d{5}(\d{3}|\*{3})$/.test(phone)) {
-				$('#derroe').text('ÊÖ»ú¸ñÊ½²»ÕıÈ·!')
+				$('#derroe').text('æ‰‹æœºæ ¼å¼ä¸æ­£ç¡®!')
 				return false;
 			  };
 			  $('#derroe').text('');
@@ -40,10 +40,10 @@
 			function check_password(){
 				var password = $.trim($('#dpassword').val());
 				if (password == '') {
-					$('#derroe').text('ÃÜÂë²»ÄÜÎª¿Õ');
+					$('#derroe').text('å¯†ç ä¸èƒ½ä¸ºç©º');
 					return false;
 				 } else if (password.length<6) {
-					$('#derroe').text('ÃÜÂëĞ¡ÓÚ6Î»!')
+					$('#derroe').text('å¯†ç å°äº6ä½!')
 					return false;
 			  }
 			  $('#derroe').text('');
@@ -64,7 +64,7 @@
 						if(result==1){
 							location.reload();
 						}else{
-							$('#derroe').text('ÕËºÅ»òÃÜÂë´íÎó!')
+							$('#derroe').text('è´¦å·æˆ–å¯†ç é”™è¯¯!')
 						}		
 					  });
 				}
@@ -76,7 +76,7 @@
 
 	 function get_mobile_code() {
         $.post('/account/verifycode', {mobile: jQuery.trim($('#rphone').val()), send_code:276857}, function (data) {
-            if(data.message == 'Ìá½»³É¹¦'){
+            if(data.message == 'æäº¤æˆåŠŸ'){
                 RemainTime();
                 $("#verify_mobile").text();
             }else{
@@ -95,15 +95,15 @@
             iMinute = parseInt(iTime / 60)
             if (iSecond >= 0) {
                 if (iMinute > 0) {
-                    sSecond = iMinute + "·Ö" + iSecond + "Ãë";
+                    sSecond = iMinute + "åˆ†" + iSecond + "ç§’";
                 } else {
-                    sSecond = iSecond + "Ãë";
+                    sSecond = iSecond + "ç§’";
                 }
             }
             sTime = sSecond;
             if (iTime == 0) {
                 clearTimeout(Account);
-                sTime = '»ñÈ¡ÊÖ»úÑéÖ¤Âë';
+                sTime = 'è·å–æ‰‹æœºéªŒè¯ç ';
                 iTime = 59;
                 document.getElementById('zphone').disabled = false;
             } else {
@@ -111,7 +111,7 @@
                 iTime = iTime - 1;
             }
         } else {
-            sTime = 'Ã»ÓĞµ¹¼ÆÊ±';
+            sTime = 'æ²¡æœ‰å€’è®¡æ—¶';
         }
         document.getElementById('zphone').value = sTime;
     }
@@ -120,10 +120,10 @@
 			
 			  var phone = $.trim($('#rphone').val());
 			  if (phone == '') {
-				$('#rerror').text('ÓÃ»§ÊÇ±ØÌîÏî');
+				$('#rerror').text('ç”¨æˆ·æ˜¯å¿…å¡«é¡¹');
 				return false;
 				 } else if (!/(?:13\d|15\d|17\d|18\d)\d{5}(\d{3}|\*{3})$/.test(phone)) {
-				$('#rerror').text('ÊÖ»ú¸ñÊ½²»ÕıÈ·!')
+				$('#rerror').text('æ‰‹æœºæ ¼å¼ä¸æ­£ç¡®!')
 				return false;
 			  };
 			  $('#rerror').text('');
@@ -133,13 +133,13 @@
 				var password = $.trim($('#rpassword').val());
 				var rpassword_repeat = $.trim($('#rpassword_repeat').val());
 				if (password == '') {
-					$('#rerror').text('ÃÜÂë²»ÄÜÎª¿Õ');
+					$('#rerror').text('å¯†ç ä¸èƒ½ä¸ºç©º');
 					return false;
 				 } else if(password.length<6) {
-					$('#rerror').text('ÃÜÂë²»ÄÜĞ¡ÓÚ6Î»!')
+					$('#rerror').text('å¯†ç ä¸èƒ½å°äº6ä½!')
 					return false;
 				  }else if(password != rpassword_repeat){
-					 $('#rerror').text('ÃÜÂë²»Ò»ÖÂ!')
+					 $('#rerror').text('å¯†ç ä¸ä¸€è‡´!')
 					 return false;
 
 				  }
@@ -149,7 +149,7 @@
 			function check_code(){
 				var code = $.trim($('#mobile_code').val());
 				if(code.length<2){
-					 $('#rerror').text('ÑéÖ¤Âë´íÎó!')
+					 $('#rerror').text('éªŒè¯ç é”™è¯¯!')
 					 return false;
 				}
 				 $('#rerror').text('');
@@ -178,12 +178,12 @@
 							if(result==1){
 								location.reload();
 							}else if(result==2){
-								$('#derroe').text('¸ÃÊÖ»úºÅÒÑ¾­ÊÇ±¾Õ¾»áÔ±');
+								$('#derroe').text('è¯¥æ‰‹æœºå·å·²ç»æ˜¯æœ¬ç«™ä¼šå‘˜');
 							}else if(result==3){
-								$('#derroe').text('ÑéÖ¤Âë´íÎó');	
+								$('#derroe').text('éªŒè¯ç é”™è¯¯');	
 								}
 					  });
 				}
 			});
 
-			//½áÊø
+			//ç»“æŸ

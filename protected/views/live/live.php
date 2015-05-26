@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span><a href="#">大咖秀</a><span>></span>直播列表  </div>
+	<div class="bread">当前位置：<a href="<?php echo Yii::app()->createUrl('/index')?>">首页</a><span>></span><a href="<?php echo Yii::app()->createUrl('/bigShots')?>">大咖秀</a><span>></span>直播列表  </div>
 </div>
 
 <!--topnav end-->

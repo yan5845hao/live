@@ -133,7 +133,7 @@ if (count($lubo) > 40) {
 
 
 <div class="dk_phtitle3">
-    <span><a >更多>></a></span>
+    <span><a href="<?php echo Yii::app()->createUrl('/live')?>" >更多>></a></span>
 </div>
 <div class="dk_phtitle2" id="showdata">
     <ul>

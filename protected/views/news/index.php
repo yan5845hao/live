@@ -3,7 +3,7 @@
 
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="#">首页</a><span>></span>明星新闻<span>  </div>
+	<div class="bread">当前位置：<a href="<?php echo Yii::app()->createUrl('/site')?>">首页</a><span>></span>明星新闻<span>  </div>
 </div>
 
 <!--topnav end-->
@@ -15,7 +15,7 @@
        <div class="md">
             <div class="hd">
                 <span class="title left d">全部新闻<i></i></span>
-                <span class="more right" ><a href="#"  target="_blank"></a></span>
+                <span class="more right" ><a href="<?php echo Yii::app()->createUrl('/news')?>"  target="_blank"></a></span>
             </div>
             <div class="bd w">
             		<div class="con17">

@@ -1,6 +1,6 @@
 <!--topnav begin-->
 <div class="wrapper">
-	<div class="bread">当前位置：<a href="">首页</a><span>></span><a href="#">大咖秀</a><span>></span>倒计时  </div>
+	<div class="bread">当前位置：<a href="<?php echo Yii::app()->createUrl('/site')?>">首页</a><span>></span><a href="<?php echo Yii::app()->createUrl('/live')?>">直播</a><span>></span>倒计时</div>
 </div>
 
 <!--topnav end-->
@@ -11,7 +11,7 @@
         <div class="md">
             <div class="hd">
                 <span class="title left d">倒计时<i></i></span>
-                <span class="more right" ><a href="#"  target="_blank"></a></span>
+                <span class="more right" ><a  target="_blank"></a></span>
             </div>
             <div class="bd">
             		<div class="con19 small">
@@ -19,11 +19,11 @@
                     	<script type="text/javascript">
 
 						    function showtime(EndTimes){
-						    	var EndTimesarr=new Array();
+						    	
 
-						       var EndTimesarr = EndTimes.split('_');
-						      
-						       var EndTime= EndTimesarr[0] * 1000;
+						       var EndTimesarr = EndTimes.substring(0,10);
+						      //alert(EndTimesarr);
+						       var EndTime= EndTimesarr * 1000;
 						     
 						       var NowTime = new Date();
 						       var t =EndTime - NowTime.getTime();
@@ -35,14 +35,13 @@
 
 						       if(EndTime>= NowTime){
 						       		var sid="#tc_"+EndTimes;
-						       		
 						       		$(sid).html("倒计时:" + d + "天" + h + "时" + m + "分" + s + "秒");
-						       		//document.getElementById(sid).innerHTML = d + "天" + h + "时" + m + "分" + s + "秒";
-						       		//this.span
+						     
 						   		}else{ 
 
 						   			document.getElementById("t_"+EndTimes).innerHTML = "直播中";
 						   		}
+
 						   		setTimeout(function() {
 										showtime(EndTimes)
 									},
@@ -55,30 +54,30 @@
                     		$i=0;
                     		foreach($dataProvider as $v){ 
                     			$i++;
-                    			//$v['image']=str_replace('http://files.yooshow.com', 'http://ali-img.yooshow.com', $v['image'])
+                    		
                     			$endtime=strtotime($v['prestarttime']);
                     			$js_id=$endtime.'_'.$i;
                     	?>
                     		
                     		<li class="">
                             	<div class="imgbox">
-                                    <a href="#" target="_blank"><img src="<?php echo $v['image']?>" /></a>
-                                    <a class="imgbg" href="#"></a>
-                                    <a class="yuyue" href="#"></a>
+                                    <a href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$v['id']))?>" target="_blank"><img src="<?php echo $v['image']?>" /></a>
+                                    <a class="imgbg" href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$v['id']))?>"></a>
+                                    <a class="yuyue" href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$v['id']))?>"></a>
                                 </div>
-                                <h4><a href="#" target="_blank"><?php echo $v['title']?></a></h4>
-								<div class="numbers"><span class="left fansi"><a target="_blank" href="#">预约:<i>1</i></a></span><span class="left playtime"><a target="_blank" id="tc_<?php echo $js_id;?>" href="#">倒计时：<?php echo $v['prestarttime']?>
+                                <h4><a href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
+								<div class="numbers"><span class="left fansi"><a target="_blank" href="<?php echo Yii::app()->createUrl('/live/yuyue',array('id'=>$v['id']))?>">预约:<i>1</i></a></span><span class="left playtime"><a target="_blank" id="tc_<?php echo $js_id;?>" >倒计时：<?php echo $v['prestarttime']?>
 </a></span></div>                 
                             </li>
                             <script type="text/javascript">
+
                     					 showtime("<?php echo $js_id?>");
                     		</script>
                     	<?php	
                     		}
                     	?>
                         
-                         <script type="text/javascript">showtime(1432814400);</script>
-                         
+                    
                         </ul>
                     	<div class="more"><a href="javascript:void(0);">点击加载更多</a></div>
 						<script type="text/javascript">

@@ -560,8 +560,41 @@ i{ font-style:normal;}
 .con20 div.content{border-top:1px dashed #ccc;padding-top:30px;}
 
 
-
-
+.con21{ background:#fff; overflow:hidden; padding:2%;}
+.con21 .reply{ width:100%; overflow: hidden;}
+.con21 .reply .imgbox{ float:left; width:10%}
+.con21 .reply .box{ width:90%; float:right;}
+.con21 .reply .box .user .c-gap-right{ font-size: 20px;color: #6B33A2;}
+.con21 .reply .box .textbox textarea { border: 1px solid #dbdbdb;width: 97%;height: 60px;color: #999;padding: 10px;resize: none;}
+.con21 .expression{ float:left;}
+.con21 .expression a{ color: #5c7a99;text-decoration: none;}
+.con21 .expression img{position: relative;right: 4px;}
+.con21 .fabiao_btn button {padding: 5px 10px;background: #f1f1f1; border: none;}
+.con21 .replylist{ overflow:hidden;border-bottom: 1px dashed #dbdbdb;}
+.con21 .replylist .imgbox {float: left;width: 10%;}
+.con21 .replylist .replybox{ width: 90%;float: right;}
+.con21 .replybox .username a, .username a:visited{ color: #5bc5f1;text-decoration: none;}
+.con21 .retime {color: #999;}
+.con21 .repeat a, .repeat a:visited { color: #5bc5f1;text-decoration: none;}
+.con21 .rebox {width:90%; margin:0 auto;}
+.con21 .rebox textarea { border: 1px solid #5bc5f1;width: 97%;height: 60px;color: #999;padding: 10px;resize: none;}
+.con21 .biaoqing a{color: #5c7a99;text-decoration: none;} 
+.con21 .fabiao_btn button.btn_focus {background: #9700f0;color: #fff;}
+.con21 .fabiao_btn button {padding: 5px 10px;background: #f1f1f1;border: none;}
+.con21 .page_list {width:90%;margin: 0 auto;text-align: right;}
+.page_list a.current {
+  background: #c6c6c6;
+}
+.page_list a {
+  margin: 0 3px;
+  padding: 0 4px;
+}
+.prev_page, .next_page {
+  border: 1px solid #dbdbdb;
+}
+.page_focus {
+  border: 1px solid #5bc5f1;
+}
 
 .ind07{width:950px; height:588px;}
 .ind07 .focus{width:950px; height:588px; margin:0 auto; position:relative;}
@@ -717,7 +750,7 @@ i{ font-style:normal;}
 .dk_phtitle1 li{width:40px; float:left; height:40px; line-height:40px; font-size:16px; text-align:right;}
 .dk_phtitle1 li.current{color:#a808fe;}
 .dk_phtitle1 li.current a{color:#a808fe;}
-.dk_phtitle1 li a{color:#333;cursor:pointer;}
+.dk_phtitle1 li a{color:#333;}
 .dk_phtitle1 li a:hover{color:#a808fe;}
 .dk_phtitle2{width:281px;  height:924px; background-color:#fff; margin-top:20px;}
 .dk_phtitle2 ul{padding:15px; float:left;}
