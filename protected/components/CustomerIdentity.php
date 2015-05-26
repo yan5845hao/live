@@ -61,4 +61,11 @@ class CustomerIdentity extends CUserIdentity
     {
         return $this->user_id;
     }
+
+    public function getPersistentStates()
+    {
+        return array(
+            'test' => '123',
+        );
+    }
 }
