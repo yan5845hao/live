@@ -33,6 +33,8 @@ class CustomerIdentity extends CUserIdentity
             $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
             $this->username = $customer->nick_name ? $customer->nick_name : $phone;
             $this->user = $customer;
+            $customer->last_login = new CDbExpression('NOW()');
+            $customer->save();
             $this->errorCode = self::ERROR_NONE;
         }
         return $this->errorCode == self::ERROR_NONE;
@@ -49,7 +51,8 @@ class CustomerIdentity extends CUserIdentity
         $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
         $this->username = $customer->nick_name ? $customer->nick_name : $phone;
         $this->user = $customer;
-        $this->errorCode = self::ERROR_NONE;
+        $customer->last_login = new CDbExpression('NOW()');
+        $customer->save();
         $this->errorCode = self::ERROR_NONE;
         return $this->errorCode == self::ERROR_NONE;
     }
