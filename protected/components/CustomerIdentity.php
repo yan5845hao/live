@@ -65,7 +65,14 @@ class CustomerIdentity extends CUserIdentity
     public function getPersistentStates()
     {
         return array(
-            'test' => '123',
+            'level' => $this->user->vip_code,
+            'type' => $this->user->customer_type,
+            'user_name' => $this->user->user_name,
+            'nick_name' => $this->user->nick_name,
+            'gender' => $this->user->gender,
+            'email' => $this->user->email,
+            'last_login' => $this->user->last_login,
+            'is_mer' => $this->user->is_mer
         );
     }
 }
