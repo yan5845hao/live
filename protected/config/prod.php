@@ -8,7 +8,7 @@
 error_reporting(E_ALL^E_NOTICE);
 return array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>'admin',
+    'name'=>'home',
 
     // preloading 'log' component
     'preload'=>array('log'),
@@ -43,14 +43,13 @@ return array(
             'enableParamLogging' => YII_DEBUG,
             'connectionString' => 'mysql:host=localhost;dbname=live',
             'username' => 'root',
-            'password' => 'root',
-            'tablePrefix' => 'tbl_',
+            'password' => '123789aa',
             'enableSlave' => true,                  //Read write splitting function is swithable.You can specify this
             'slaves'=>array(                        //slave connection config is same as CDbConnection
                 array(
                     'connectionString' => 'mysql:host=localhost;dbname=live',
                     'username'=>'root',
-                    'password'=>'root',
+                    'password'=>'123789aa',
                     'emulatePrepare' => true,
                     'charset' => 'utf8',
                 ),
@@ -61,18 +60,18 @@ return array(
 //                ),
             ),
         ),
-        'errorHandler'=>array(
-            // use 'site/error' action to display errors
-            'errorAction'=>'site/error',
-        ),
+        /*
+                'errorHandler'=>array(
+                    // use 'site/error' action to display errors
+                    'errorAction'=>'site/error',
+                ),
+                */
         'urlManager'=>array(
             'showScriptName'=>false,
             'urlFormat'=>'path',
-            'rules'=>array(
-                'post/<id:\d+>/<title:.*?>'=>'post/view',
-                'posts/<tag:.*?>'=>'post/index',
-                '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-            ),
+            'caseSensitive'=>true,
+            'showScriptName'=>false,
+            'rules' => include('route.php'),
         ),
         'log'=>array(
             'class'=>'CLogRouter',
@@ -87,15 +86,36 @@ return array(
                     'class'=>'CWebLogRoute',
                 ),
                 */
+                array(
+                    'class'=>'CWebLogRoute',
+                    'levels'=>'trace, info, error, warning, xdebug',
+                    'categories' =>'system.db.*'
+                ),
             ),
+        ),
+        'sms'=>array(
+            'class' => 'Sms',
+            'url' => "http://106.ihuyi.cn/webservice/sms.php?method=Submit",
+            'account' => 'cf_fjy',
+            'password' => '123456'
+        ),
+        'aliyun'=>array (
+            'class' => 'application.extensions.oss.Aliyun',
+            'keyId' => 'Z7JWc80Qr4sa9z1y',
+            'keySecret' => 'wYNthiODxexruCFaz9jDQ8Yfr8MujJ',
+            'bucket' => 'bumeng-default',
+            'savePath' => 'bumengpc'
         ),
     ),
 
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(
-        'cdnUrl' => '',
-        'cdnSSLUrl' => '',
+        'cdnUrl' => 'http://ali-img.yooshow.com',
+        'cdnSSLUrl' => 'http://bumeng-default.oss-cn-hangzhou.aliyuncs.com',
         'cookieDomain' => '',
+        'admin' => md5('live_admin_A2423@#$234234sdfsfS(*&~'),
     ),
+
+
 );
