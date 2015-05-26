@@ -30,7 +30,7 @@ class CustomerLiveRelation extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('title,starname', 'safe'),
+            array('title,starname', 'safe'), 
         );
     }
 
