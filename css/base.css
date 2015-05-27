@@ -881,7 +881,7 @@ i{ font-style:normal;}
 
 /*登录浮层*/
 .mask{margin:0;padding:0;border:none;width:100%;height:100%;background:#333;opacity:0.6;filter:alpha(opacity=60);z-index:9999;position:fixed;top:0;left:0;display:none;}
-#LoginBox{position:absolute;left:460px;top:150px;background:white;width:360px;height:485px;border:3px solid #444;border-radius:7px;z-index:10000;display:none;}
+#LoginBox{position:absolute;left:40%;top:150px;background:white;width:360px;height:485px;border:3px solid #444;border-radius:7px;z-index:10000;display:none;}
 .login_fc{width:358px; height:483px; border:1px solid #eee; background-color:#Fff;}
 .login_fc_tit{width:320px; float:left; height:20px;  text-align:center; font-size:24px; vertical-align:middle; margin-top:20px;}
 .login_fc_clo{width:25px; float:right; margin:5px; }
@@ -902,7 +902,7 @@ i{ font-style:normal;}
 
 
 /*注册浮层*/
-#RegBox{position:absolute;left:460px;top:150px;background:white;width:360px;height:560px;border:3px solid #444;border-radius:7px;z-index:10000;display:none;}
+#RegBox{position:absolute;left:40%;top:150px;background:white;width:360px;height:560px;border:3px solid #444;border-radius:7px;z-index:10000;display:none;}
 
 .reg_fc{width:358px; height:563px; border:1px solid #eee; background-color:#Fff;}
 .reg_fc_tit{width:320px; float:left; height:20px;  text-align:center; font-size:24px; vertical-align:middle; margin-top:20px;}

@@ -346,7 +346,35 @@
                     <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/icon9.png" /></div><div class="right">至少输入140字</div></div>
                     <div class="him_fensi_textarea"><textarea>有什么感想你也来说说吧</textarea></div>
                     <div class="him_fensi_biaodan_oper c-gap-top clearfix">
-                        <div class="biaoqing left"><img src="/images/icon8.png" /><a href="" target="_blank">表情</a></div>
+                        <div class="biaoqing left">
+                        	<img src="/images/icon8.png" /><a href="" target="_blank">表情</a>
+                        </div>
+                        <!--表情-->
+                        <style>
+                        	.faces {
+								    position: relative;
+								    width: 200px;
+								    height: 58px;
+								}
+							faces .ico__faces_act {
+							    width: 165px;
+							}
+                        </style>
+                        <div class="faces">
+							<div class="ico__faces_act">
+								<a onclick="grinComments('[赞]'); DropMenus.hideall();return false;" title="赞" href="#" class="o1"><em>赞</em></a>
+								<a onclick="grinComments('[稀饭]'); DropMenus.hideall();return false;" title="稀饭" href="#" class="o2"><em>稀饭</em></a>
+								<a onclick="grinComments('[愤怒]'); DropMenus.hideall();return false;" title="愤怒" href="#" class="o3"><em>怒</em></a>
+								<a onclick="grinComments('[吐]'); DropMenus.hideall();return false;" title="吐" href="#" class="o4"><em>吐</em></a>
+								<a onclick="grinComments('[无语]');DropMenus.hideall(); return false;" title="无语" href="#" class="o5"><em>无语</em></a>
+								<a onclick="grinComments('[难过]'); DropMenus.hideall();return false;" title="难过" href="#" class="o6"><em>难过</em></a>
+								<a onclick="grinComments('[汗]'); DropMenus.hideall();return false;" title="汗" href="#" class="o7"><em>汗</em></a>
+								<a onclick="grinComments('[搞笑]'); DropMenus.hideall();return false;" title="搞笑" href="#" class="o8"><em>搞笑</em></a>
+                                <a onclick="grinComments('[牛]'); DropMenus.hideall();return false;" title="牛" href="#" class="niu"><em>牛</em></a>
+                                <a onclick="grinComments('[强]'); DropMenus.hideall();return false;" title="强" href="#" class="qiang"><em>强</em></a>'
+							</div>
+						</div>
+						<!--表情end-->
                         <div class="fabiao_btn right"><button>发表评论</button></div>
                     </div>
                 </div>

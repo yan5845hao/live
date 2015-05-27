@@ -23,12 +23,19 @@
         </div>
         <div class="login left">
         <?php
-        if(Yii::app()->user->isGuest){
+        	if(Yii::app()->user->isGuest){
         ?>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="javascript:;" id="loginyh" class="c-gap-left">【登录】</a><a href="javascript:;" id="regyh" >【注册】</a>
   
-        <?php } ?>
+        <?php
+        	}else{
+        ?>
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	        <span style="color: #5D5D5D"> 欢迎 , </span>
+	        <a href="<?php echo $this->createUrl('/myAccount')?>"><?php echo Yii::app()->user->name;?></a>
+	        | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>
+   		<?php } ?>
         </div>
         <div class="enter right"><a href="javascript:;" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
     </div>
