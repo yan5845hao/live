@@ -9,9 +9,9 @@
             <div class="usercon981info">
                 <div style="font-size:14px; font-weight:bolder; margin-bottom:5px;">明星海报</div>
                 <div class="left">
-                    <?php $face = $userInfo->face?$userInfo->face:'/images/default.png'; ?>
+                    <?php $face = $userInfo->face?staticUrl($userInfo->face,array('mode' => 2, 'width' => '205','height' => '205')):'/images/default.png'; ?>
                     <div>
-                        <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" height="205" /></div>
+                        <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" /></div>
                         <div style="line-height: 30px; height: 30px; font-size: 14px; background: #f0f0f0;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
                         <div id="imgError" style="color: red;"></div>
                     </div>
@@ -38,7 +38,7 @@
                 <div class="usercon981con"><span>图片</span><input name="faces[]" type="file" /></div>
                 <div class="usercon981con">
                     <?php if(isset($relation_star[0]['face']) && $relation_star[0]['face']){ ?>
-                    <img src="<?php echo $relation_star[0]['face'];?>" width="134" height="134" />
+                    <img src="<?php echo $relation_star[0]['face'];?>@134w_1l" width="134" height="134" />
                     <?php } ?>
                     <input type="hidden" name="relation_star[0][face]" value="<?php echo $relation_star[0]['face'];?>">
                 </div>
@@ -51,7 +51,7 @@
                 <div class="usercon981con"><span>图片</span><input name="faces[]" type="file" /></div>
                 <div class="usercon981con">
                     <?php if(isset($relation_star[1]['face']) && $relation_star[1]['face']){ ?>
-                        <img src="<?php echo $relation_star[1]['face'];?>" width="134" height="134" />
+                        <img src="<?php echo $relation_star[1]['face'];?>@134w_1l" width="134" height="134" />
                     <?php } ?>
                     <input type="hidden" name="relation_star[1][face]" value="<?php echo $relation_star[1]['face'];?>">
                 </div>
@@ -64,7 +64,7 @@
                 <div class="usercon981con"><span>图片</span><input name="faces[]" type="file" /></div>
                 <div class="usercon981con">
                     <?php if(isset($relation_star[2]['face']) && $relation_star[2]['face']){ ?>
-                        <img src="<?php echo $relation_star[2]['face'];?>" width="134" height="134" />
+                        <img src="<?php echo $relation_star[2]['face'];?>@134w_1l" width="134" height="134" />
                     <?php } ?>
                     <input type="hidden" name="relation_star[2][face]" value="<?php echo $relation_star[2]['face']?>">
                 </div>

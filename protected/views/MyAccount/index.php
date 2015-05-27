@@ -11,7 +11,7 @@
                 <div class="left">
 <!--                    <span></span><em><a href="#">修改头像</a></em>-->
                     <div>
-                        <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo $face;?>" width="205" height="205" /></div>
+                        <div id="imgshow" style="margin-bottom: -6px;"><img src="<?php echo staticUrl($userInfo->face,array('mode' => 2, 'width' => '205','height' => '205'));?>" width="205" /></div>
                         <div style="line-height: 30px; height: 30px; font-size: 14px; background: #f0f0f0;"><?php $this->widget('application.widgets.Upload.UploadWidget');?></div>
                         <div id="imgError" style="color: red;"></div>
                     </div>
@@ -83,6 +83,7 @@
         $.post(url,postData,function(result){
             if(result.ok){
                 alert('资料修改成功!');
+                window.location.reload();
             }
         },'json');
     }
