@@ -43,13 +43,17 @@ class CustomerAttention extends CActiveRecord
         // class name for the relations automatically generated below.
         return array();
     }
-    public function updateattention($customerid,$starid){ 
-    
-    	$model = new CustomerAttention();
-    	$model->customerid = intval($customerid);
-    	$model->starid = intval($starid);
-		if($model->save()){ 
-			return true;
+    public function addattention($customerid,$starid){ 
+    	
+    	if($this->isattention($customerid,$starid)==false){ 
+	    	$model = new CustomerAttention();
+	    	$model->customerid = intval($customerid);
+	    	$model->starid = intval($starid);
+			if($model->save()){ 
+				return true;
+			}else{ 
+				return false;
+			}
 		}else{ 
 			return false;
 		}

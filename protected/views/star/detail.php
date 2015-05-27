@@ -24,7 +24,7 @@
             </dl>
             <div class="fensi_rank clearfix">
                 <h4 class="c-gap-bottom">粉丝总排名第9位</h4>
-                <p class="fensi_rank_num clearfix"><span>0</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><button></button></p>
+                <p class="fensi_rank_num clearfix"><span>0</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><button id='attention' onclick=attention(<?php echo $stardata[customer_id] ?>)><?php echo $isattention==false ? '关注' : '已关注'; ?></button></p>
             </div>
             <h5 class="him_word_title">他的词条</h5>
             <div class="him_word">
@@ -409,3 +409,16 @@
 </div>
 </div>
 </div>
+<script>
+function attention(id){ 
+$.post("/api/attention",{id:id},function(result){
+   if(result==1){ 
+   		$("#attention").html('已关注');
+   }
+   // $("span").html(result);
+  });
+
+}
+
+
+</script>

@@ -116,7 +116,7 @@ class ApiController extends BaseController
 			}else{
 				$strid = intval(Yii::app()->getRequest()->getParam('id'));
 				
-				if(CustomerAttention::model()->updateattention(Yii::app()->user->id，$strid)==true){ 
+				if(CustomerAttention::model()->addattention(Yii::app()->user->id,$strid)==true){ 
 					echo '1';
 				}else{ 
 					echo '2';

@@ -34,16 +34,27 @@ class StarController extends BaseController
     public function actionDetail()
     {
     	
-    	$id = Yii::app()->getRequest()->getParam("id");//获取明星ID
-    	$day = Yii::app()->getRequest()->getParam("day");//获取明星ID
+    	$id = intval(Yii::app()->getRequest()->getParam("id"));//获取明星ID
+    	$day = Yii::app()->getRequest()->getParam("day");//获取 
     	$schedule=$this->starschedule($id,$day);//获取明星档数据
     	$getnews=$this->getnews($id);
     	$stardata=Customer::model()->findByPk($id);//获取明星基本资料
 		$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $id));//获取明星详细资料
 	
 		$getvideo = $this->getvideos($id);
+			if(Yii::app()->user->id){ 
+				
+					$isattention= CustomerAttention::model()->isattention(Yii::app()->user->id,$id);
+				}else{ 
+					$isattention=false;
+				}
+				if($isattention==false){ 
+					echo '1';
+				}else{ 
+					echo '2';
+				}
 		
-        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews,'getvideo'=>$getvideo));
+        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews,'getvideo'=>$getvideo,'isattention'=>$isattention));
     }
 
 

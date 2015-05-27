@@ -24,6 +24,8 @@
 				if(Yii::app()->user->id){ 
 					//$attention=new CustomerAttention();
 					$isattention= CustomerAttention::model()->isattention(Yii::app()->user->id,$newsdata['star_id']);
+				}else{ 
+					$isattention=false;
 				}
 				$this->render('info',array('newsdata'=>$newsdata,'stardata'=>$stardata,'starinfodata'=>$starinfodata,'isattention'=>$isattention));
 

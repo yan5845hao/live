@@ -69,9 +69,11 @@
                     <div class="up">
                         <div class="imgbox left">
                         	<img src="<?php echo $stardata[face]?>" width="175" height="205" />
+                        	<span id='attention'>
                         	<?php 
                         	echo $isattention==false ? "<a onclick=attention($newsdata->star_id) id='guanzhu'>关注</a>" : '<a id="guanzhu">已关注</a>';
                         	?>
+                        	</span>
                             <a href="<?php echo Yii::app()->createUrl('/star/detail',array('id'=>$newsdata->star_id))?>">TA的主页</a>
                          <script type="text/javascript">$("#guanzhu").click(function(){
 							 $(this).toggleClass("cur");
@@ -113,7 +115,9 @@
 <script>
 function attention(id){ 
 $.post("/api/attention",{id:id},function(result){
-   alert(result);
+   if(result==1){ 
+   		$("#attention").html('<a id="guanzhu">已关注</a>');
+   }
    // $("span").html(result);
   });
 
