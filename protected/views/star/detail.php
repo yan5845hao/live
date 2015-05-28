@@ -338,78 +338,73 @@
 </div>
 <div class="him_fensi clearfix">
     <div class="him_fensi_left">
+
         <div class="him_vedio_title clearfix c-gap-bottom"><img class="left" src="/images/icon7.png" /><span class="left">TA的粉丝圈</span><a class="right" href="" target="_blank">更多&gt;&gt;</a></div>
         <div class="fensi_hudong">
+
             <div class="him_fensi_left_con cur clearfix">
+            <form id="form1" method="post" action="/api/addcomment">
                 <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
                 <div class="him_fensi_biaodan">
                     <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/icon9.png" /></div><div class="right">至少输入140字</div></div>
-                    <div class="him_fensi_textarea"><textarea>有什么感想你也来说说吧</textarea></div>
+                    <div class="him_fensi_textarea"><textarea name="content" id="content1" ></textarea></div>
                     <div class="him_fensi_biaodan_oper c-gap-top clearfix">
+                   		<input type="hidden" id="starid"  name="starid" value="<?php echo $stardata[customer_id]?>" />
+                   		<input id="customerid" type="hidden" name="customerid" value="<?php echo Yii::app()->user->id?>" />
+                   		<input id="type" type="hidden" name="type" value="starhome" />
                         <div class="biaoqing left">
-                        	<img src="/images/icon8.png" /><a href="" target="_blank">表情</a>
+                        	<img src="/images/icon8.png" /><a id="face1" class="faceBtn">表情</a>
                         </div>
-                        <!--表情-->
-                        <style>
-                        	.faces {
-								    position: relative;
-								    width: 200px;
-								    height: 58px;
-								}
-							faces .ico__faces_act {
-							    width: 165px;
-							}
-                        </style>
-                        <div class="faces">
-							<div class="ico__faces_act">
-								<a onclick="grinComments('[赞]'); DropMenus.hideall();return false;" title="赞" href="#" class="o1"><em>赞</em></a>
-								<a onclick="grinComments('[稀饭]'); DropMenus.hideall();return false;" title="稀饭" href="#" class="o2"><em>稀饭</em></a>
-								<a onclick="grinComments('[愤怒]'); DropMenus.hideall();return false;" title="愤怒" href="#" class="o3"><em>怒</em></a>
-								<a onclick="grinComments('[吐]'); DropMenus.hideall();return false;" title="吐" href="#" class="o4"><em>吐</em></a>
-								<a onclick="grinComments('[无语]');DropMenus.hideall(); return false;" title="无语" href="#" class="o5"><em>无语</em></a>
-								<a onclick="grinComments('[难过]'); DropMenus.hideall();return false;" title="难过" href="#" class="o6"><em>难过</em></a>
-								<a onclick="grinComments('[汗]'); DropMenus.hideall();return false;" title="汗" href="#" class="o7"><em>汗</em></a>
-								<a onclick="grinComments('[搞笑]'); DropMenus.hideall();return false;" title="搞笑" href="#" class="o8"><em>搞笑</em></a>
-                                <a onclick="grinComments('[牛]'); DropMenus.hideall();return false;" title="牛" href="#" class="niu"><em>牛</em></a>
-                                <a onclick="grinComments('[强]'); DropMenus.hideall();return false;" title="强" href="#" class="qiang"><em>强</em></a>'
-							</div>
-						</div>
-						<!--表情end-->
+                        <inptu />
                         <div class="fabiao_btn right"><button>发表评论</button></div>
                     </div>
                 </div>
+            </form> 
             </div>
+
+             <script type="text/javascript" src="/js/jquery.qqFace.min.js"></script>
+                    <script type="text/javascript">
+					//实例化表情插件
+					$(function(){
+						$('#face1').qqFace({
+							id : 'facebox1', //表情盒子的ID
+							assign:'content1', //给那个控件赋值
+							path:'/images/face/'	//表情存放的路径
+						});
+						/*
+						$('#face2').qqFace({
+							id : 'facebox2',
+							assign:'content2',
+							path:'/images/face/'
+						});*/
+					});
+
+					//查看结果
+					function view(id){
+						var str = $('#'+id).val();
+						str = str.replace(/\</g,'&lt;');
+						str = str.replace(/\>/g,'&gt;');
+						str = str.replace(/\n/g,'<br/>');
+						str = str.replace(/\[\/表情([0-9]*)\]/g,'<img src="face/$1.gif" border="0" />');
+						$('#result').html($('#result').html() + str);
+					}
+					</script>
+       
+          <!--评论内容-->
             <div class="him_fensi_left_con clearfix">
+            
                 <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
                 <div class="him_fensi_biaodan">
                     <div class="him_fensi_name"><a href="" target="_blank">怎么说如何做</a></div>
                     <p>大爱EXO</p>
                     <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><a href="" target="_blank">回复</a></div></div>
                 </div>
+            
             </div>
-            <div class="him_fensi_left_con clearfix">
-                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
-                <div class="him_fensi_biaodan">
-                    <div class="him_fensi_name"><a href="" target="_blank">怎么说如何做</a></div>
-                    <p>大爱EXO</p>
-                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><a href="" target="_blank">回复</a></div></div>
-                </div>
-            </div>
-            <div class="him_fensi_left_con clearfix">
-                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
-                <div class="him_fensi_biaodan">
-                    <div class="him_fensi_name"><a href="" target="_blank">怎么说如何做</a></div>
-                    <p>大爱EXO</p>
-                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><a href="" target="_blank">回复</a></div></div>
-                </div>
-            </div>
+            <!--评论内容end-->
+
             <div class="answer_box">
-                <p class="him_fensi_name"><a href="" target="_blank">穆穆</a></p>
-                <textarea>会员就是爽啊,一元免费看</textarea>
-                <div class="him_fensi_biaodan_oper c-gap-top clearfix">
-                    <div class="biaoqing left"><img src="/images/icon8.png" /><a href="" target="_blank">表情</a></div>
-                    <div class="fabiao_btn right clearfix"><button class="left btn_focus c-gap-right">回复</button><button class="left">取消</button></div>
-                </div>
+       
             </div>
             <div class="page_list"><a class="current" href="" target="_blank">1</a><a href="" target="_blank">2</a><a href="" target="_blank">3</a><a href="" target="_blank">4</a><a href="" target="_blank">5</a><a href="" target="_blank">5</a><a href="" target="_blank">6</a><a href="" target="_blank">7</a><a href="" target="_blank">9</a><a href="" target="_blank">10</a><a href="" target="_blank" class="prev_page">上一页</a><a href="" target="_blank" class="next_page page_focus">下一页</a></div>
         </div>
@@ -443,7 +438,7 @@ $.post("/api/attention",{id:id},function(result){
    if(result==1){ 
    		$("#attention").html('已关注');
    }
-   // $("span").html(result);
+
   });
 
 }

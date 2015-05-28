@@ -149,7 +149,7 @@
 
 .him_fensi_zhufa a,.him_fensi_zhufa a:visited{color:#5bc5f1;text-decoration:none;}
 .him_fensi_zhufa a:hover,.him_fensi_zhufa a:active{color:#5bc5f1;text-decoration:none;}
-.fensi_hudong{background:#fff;}
+.fensi_hudong{background:#fff;min-height:625px;}
 .him_fensi_operator{color:#999;}
 .fensi_hudong{padding-bottom:10px;}
 .answer_box{width:800px;margin:10px auto;padding-bottom:10px;}

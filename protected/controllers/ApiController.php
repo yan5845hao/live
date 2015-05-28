@@ -122,9 +122,29 @@ class ApiController extends BaseController
 					echo '2';
 				}
 			}
-		
+	}
+
+	public function actionAddcomment(){ 
+		if(empty(Yii->app()->user->id)) returt '{"code" : "false","message" : "尚未登录"}';
+		if(empty($_POST['content'])) returt '{"code" : "false","message" : "内容不能为空"}';
+		if(empty($_POST['type']) returt '{"code" : "false","message" : "内别不能为空"}';
+
+		$model= new comment();
+		$model->customerid = Yii->app()->user->id;
+	    $model->starid = intval($starid);
+	    $model->type = Yii::app()->getRequest()->getQuery("type");
+		$model->product_id = Yii::app()->getRequest()->getQuery("product_id");
+		$model->content = Yii::app()->getRequest()->getQuery("content");
+		if($model->save()){ 
+			return true;
+		}else{ 
+			return false;
+		}
+
 
 	}
+
+ 
 }
 
 ?>

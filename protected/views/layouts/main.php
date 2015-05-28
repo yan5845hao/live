@@ -159,7 +159,7 @@ if(empty($uri)){
                         <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo $customer->face;?>"  /></a></div>
                         <h3><a href="javascript:;"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></a></h3>
                         <a href="<?php echo $this->createUrl('/site/logout')?>" class="logout right">『退出』</a>
-                        <p><img src="css/img/jiangpai1.png"></p>
+                        <p><img src="/css/img/jiangpai1.png"></p>
                         <div class="numbers"><span class=" playicon">金币：<i>0</i></span><span class=" comment">积分：<i>0</i></span><a href="javascript:;">去兑换</a></div>
                     </div>
                     <div class="bg"></div>
