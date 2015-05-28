@@ -29,7 +29,7 @@
         function uploadSuccess(file,data){
             var data = JSON.parse(data);
             var url = data['url'];
-            content =  '<img width="205" height="205" src="'+url+'">';
+            content =  '<img width="205" src="'+url+'@205h_205w_1e|0-0-205-205a">';
             $('#imgshow').html(content);
             $('#face').val(url);
         }

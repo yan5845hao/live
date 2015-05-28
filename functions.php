@@ -4584,3 +4584,29 @@ function getMetaParamsAsQueryString()
     }
     return $queryString;
 }
+
+/**
+ * staticUrl('/img/example.jpg',array('mode' => 1, 'width' => '200','height' => '200'));
+ */
+function staticUrl($url, $options = array())
+{
+    $suffix = '';
+    $mode = isset($options['mode']) ? $options['mode'] : 1;
+    if (isset($options['width']) && !preg_match('/^\d+$/', $options['width'])) {
+        throw new Exception('Invalid option `width`');
+    }
+    if (isset($options['height']) && !preg_match('/^\d+$/', $options['height'])) {
+        throw new Exception('Invalid option `height`');
+    }
+    if (isset($options['width']) && $options['width'] && isset($options['height']) && $options['height']) {
+        if ($mode == 1) {
+            $suffix .= $options['width'] . 'w_' . $options['height'] . 'h_1e_1c_1x';
+        } else if ($mode == 2) {
+            $suffix .= $options['height'] . 'h_' . $options['width'] . 'w_1e|0-0-' . $options['height'] . '-' . $options['width'] . 'a';
+        }
+    }
+    if ($suffix != '') {
+        $url = $url . '@' . $suffix;
+    }
+    return $url;
+}

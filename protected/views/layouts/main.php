@@ -148,7 +148,7 @@ if(empty($uri)){
 			?>
 		<div class="user">
 
-            <a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img class="head left" src="<?php echo $customer->face;?>"/></a>
+            <a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img class="head left" src="<?php echo staticUrl($customer->face,array('mode' => 2, 'width' => '120','height' => '120'));?>"/></a>
             <div class="jiangpai left"><img  src="/css/img/jiangpai1.png"/></div>
             <h2 class="left"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></h2>
             <span class="down" style="display:none"></span>
@@ -156,7 +156,7 @@ if(empty($uri)){
 
                 <div class="t">
                     <div class="imgbox">
-                        <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo $customer->face;?>"  /></a></div>
+                        <div class="img left"><a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img  src="<?php echo staticUrl($customer->face,array('mode' => 2, 'width' => '104','height' => '104'));?>"  /></a></div>
                         <h3><a href="javascript:;"><?php echo Yii::app()->user->name?><!--<span>金牌会员</span>--></a></h3>
                         <a href="<?php echo $this->createUrl('/site/logout')?>" class="logout right">『退出』</a>
                         <p><img src="/css/img/jiangpai1.png"></p>
