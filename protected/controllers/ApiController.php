@@ -125,23 +125,37 @@ class ApiController extends BaseController
 	}
 
 	public function actionAddcomment(){ 
-		if(empty(Yii->app()->user->id)) returt '{"code" : "false","message" : "尚未登录"}';
-		if(empty($_POST['content'])) returt '{"code" : "false","message" : "内容不能为空"}';
-		if(empty($_POST['type']) returt '{"code" : "false","message" : "内别不能为空"}';
-
-		$model= new comment();
-		$model->customerid = Yii->app()->user->id;
-	    $model->starid = intval($starid);
-	    $model->type = Yii::app()->getRequest()->getQuery("type");
-		$model->product_id = Yii::app()->getRequest()->getQuery("product_id");
-		$model->content = Yii::app()->getRequest()->getQuery("content");
-		if($model->save()){ 
-			return true;
-		}else{ 
-			return false;
+		
+		if(empty(Yii::app()->user->id)){
+			echo CJSON::encode(array('code'=>'4001','message'=>'尚未登录'));
+			Yii::app()->end();
 		}
+		if(empty($_POST['content'])){
+		 	echo CJSON::encode(array('code'=>'4002','message'=>'内容不能为空'));
+			Yii::app()->end();
+		}
+		if(empty($_POST['type'])){
+		 	echo CJSON::encode(array('code'=>'4003','message'=>'无法判断来源'));
+			Yii::app()->end();
+		}
+		
+		$model= new comment();
+		$model->customerid = Yii::app()->user->id;
+	    $model->starid = intval($starid);
 
+	    $model->type = yii::app()->request->getparam("type");
+		$model->product_id = yii::app()->request->getparam("product_id");
+		$model->content = yii::app()->request->getparam("content");
+		$model->starname = yii::app()->request->getparam("starname");
+		$model->author = Yii::app()->user->name;
 
+		if($model->save()){ 
+			echo CJSON::encode(array('code'=>'4000','message'=>'评论成功','author'=>Yii::app()->user->name,'content'=>yii::app()->request->getparam("content")));
+			Yii::app()->end();
+		}else{ 
+			echo CJSON::encode(array('code'=>'4004','message'=>'评论失败'));
+			Yii::app()->end();
+		}
 	}
 
  

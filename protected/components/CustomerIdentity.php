@@ -64,6 +64,7 @@ class CustomerIdentity extends CUserIdentity
     {
         return $this->user_id;
     }
+ 
 
     public function getPersistentStates()
     {
@@ -75,7 +76,8 @@ class CustomerIdentity extends CUserIdentity
             'gender' => $this->user->gender,
             'email' => $this->user->email,
             'last_login' => $this->user->last_login,
-            'is_mer' => $this->user->is_mer
+            'is_mer' => $this->user->is_mer,
+            'face' => $this->user->face
         );
     }
 }

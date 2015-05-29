@@ -346,17 +346,18 @@
             <form id="form1" method="post" action="/api/addcomment">
                 <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
                 <div class="him_fensi_biaodan">
-                    <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/icon9.png" /></div><div class="right">至少输入140字</div></div>
-                    <div class="him_fensi_textarea"><textarea name="content" id="content1" ></textarea></div>
+                    <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/icon9.png" /></div><div class="right">至多输入140字</div></div>
+                    <div class="him_fensi_textarea"><textarea  maxlength="140" name="content" id="content1" ></textarea></div>
                     <div class="him_fensi_biaodan_oper c-gap-top clearfix">
                    		<input type="hidden" id="starid"  name="starid" value="<?php echo $stardata[customer_id]?>" />
                    		<input id="customerid" type="hidden" name="customerid" value="<?php echo Yii::app()->user->id?>" />
+                   		<input type="hidden" name="starname" value="<?php echo $stardata[user_name]?>">
                    		<input id="type" type="hidden" name="type" value="starhome" />
                         <div class="biaoqing left">
                         	<img src="/images/icon8.png" /><a id="face1" class="faceBtn">表情</a>
                         </div>
-                        <inptu />
-                        <div class="fabiao_btn right"><button>发表评论</button></div>
+                       
+                        <div class="fabiao_btn right"><submit style="background: #f1f1f1 none repeat scroll 0 0;border: medium none;padding: 5px 10px;"  id="fabiao_btn" >发表评论</submit></div>
                     </div>
                 </div>
             </form> 
@@ -420,7 +421,7 @@
         </ul>
     </div>
     <div class="him_fensi_right">
-        <div class="fensi_title clearfix"><div class="fensi_title_left left">土豪粉丝榜</div><a class="right" target="_blank" href="">更多&gt;&gt;</a></div>
+        <div class="fensi_title clearfix"><div class="fensi_title_left left">土豪<?php yii::app()->user->face?>粉丝榜</div><a class="right" target="_blank" href="">更多&gt;&gt;</a></div>
         <ul class="fensi_jiazu_list">
             <li class="tuhao_current"><span class="left"><img src="/images/one.jpg" /></span><img class="c-gap-left-small c-gap-right-small left" src="/images/pic5.png"><div><p class="c-gap-bottom-small">海.阳光</p><img src="/images/icon9.png" /></div></li>
             <li class="clearfix"><span class="left xuhao">2</span><span class="left">前进鹿小七</span></li>
@@ -433,6 +434,7 @@
 </div>
 </div>
 <script>
+var face='<?php echo $customer->face ?>';
 function attention(id){ 
 $.post("/api/attention",{id:id},function(result){
    if(result==1){ 
@@ -442,6 +444,104 @@ $.post("/api/attention",{id:id},function(result){
   });
 
 }
+$("#fabiao_btn").click(function(){ 
 
+	$.post('/api/addcomment/',$("#form1").serialize(),function(data){ 
+		var msg=data.message;
+		
+		if(data.code == '4001' ){ 
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+			letDivCenter('#LoginBox');
+		}else{ 	
+			$(document).masks(msg).click(function(){$(document).unmasks()})
+		}
+	},'json');
+
+});
+
+   function letDivCenter(divName){   
+        var top = ($(window).height() - $(divName).height())/2;   
+        var left = ($(window).width() - $(divName).width())/2;   
+        var scrollTop = $(document).scrollTop();   
+        var scrollLeft = $(document).scrollLeft();   
+        $(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();  
+    }  
+
+(function(){
+$.extend($.fn,{
+masks: function(msg,maskDivClass){
+this.unmasks();
+// 参数
+var op = {
+opacity: 0.8,
+z: 10000,
+bgcolor: '#ccc'
+};
+var original=$(document.body);
+var position={top:0,left:0};
+if(this[0] && this[0]!==window.document){
+original=this;
+position=original.position();
+}
+// 创建一个 Mask 层，追加到对象中
+var maskDiv=$('<div class="maskdivgen"> </div>');
+maskDiv.appendTo(original);
+var maskWidth=original.outerWidth();
+if(!maskWidth){
+maskWidth=original.width();
+}
+var maskHeight=original.outerHeight();
+if(!maskHeight){
+maskHeight=original.height();
+}
+maskDiv.css({
+position: 'absolute',
+top: position.top,
+left: position.left,
+'z-index': op.z,
+width: maskWidth,
+height:maskHeight,
+'background-color': op.bgcolor,
+opacity: 0
+});
+if(maskDivClass){
+maskDiv.addClass(maskDivClass);
+}
+if(msg){
+var msgDiv=$('<div id="showmsg"  style="position:absolute;border:#6593cf 1px solid; padding:2px;background:#444"><div style="line-height:80px;text-align: center; width:200px;font-size:24px; border:#a3bad9 1px solid;background:white;padding:2px 10px 2px 10px">'+msg+'</div></div>');
+msgDiv.appendTo(maskDiv);
+var widthspace=(maskDiv.width()-msgDiv.width());
+var heightspace=(maskDiv.height()-msgDiv.height());
+ var top = $(window).height() - msgDiv.height()/2;   
+ var left = $(window).width() - msgDiv.width()/2;   
+  var scrollTop = $(document).scrollTop()+200;   
+var scrollLeft = $(document).scrollLeft()+500;   
+
+msgDiv.css({
+cursor:'wait',
+top:(scrollTop),
+left:(scrollLeft)
+});
+}
+maskDiv.fadeIn('fast', function(){
+// 淡入淡出效果
+$(this).fadeTo('slow', op.opacity);
+})
+return maskDiv;
+},
+unmasks: function(){
+var original=$(document.body);
+if(this[0] && this[0]!==window.document){
+original=$(this[0]);
+}
+original.find("> div.maskdivgen").fadeOut('slow',0,function(){
+$(this).remove();
+});
+}
+});
+})();
+   
 
 </script>

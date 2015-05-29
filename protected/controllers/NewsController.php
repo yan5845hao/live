@@ -16,9 +16,9 @@
 		}
 		public function actionInfo(){
 
-				$newsid = Yii::app()->getRequest()->getParam("newsid");
+				$newsid = Yii::app()->getRequest()->getParam("id");
 				$newsdata=StarNews::model()->findByPk($newsid);
-				StarNews::model()->updatelook($newsid);
+				if($newsid>1) StarNews::model()->updatelook($newsid);
 				$stardata=Customer::model()->findByPk($newsdata[star_id]);//获取明星基本资料
 				$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $newsdata[star_id]));//获取明星详细资料
 				if(Yii::app()->user->id){ 

@@ -42,7 +42,7 @@ class Comment extends CActiveRecord
 		return array(
 			array('content, author, starid, customerid, type', 'required'),
 			array('author, url', 'length', 'max'=>128),
-			array('content,author', 'safe'),
+			array('content,author,starname,type', 'safe'),
 			
 			array('url','url'),
 		);

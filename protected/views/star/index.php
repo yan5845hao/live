@@ -26,10 +26,10 @@
                 <div class="con01 small">
                     <div class="up">
 
-                        <div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$newsstar[0]['id']))?>"><img src="<?php echo $newsstar[0][image]?>" /></a></div>
-                        <h3><?php echo $newsstar[0][title]?></h3>
+                        <div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$newsstar[0]['id']))?>"><img src="<?php echo $newsstar[0][image]?>" /></a></div>
+                        <h3><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$newsstar[0]['id']))?>"><?php echo $newsstar[0][title]?></a></h3>
                         <div class="date"><?php echo date('Y-m-d H:i:s',$newsstar[0][begintime]);?></div>
-                        <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$newsstar[0]['id']))?>" target="_blank">[详细]</a></p>
+                        <p><?php echo mb_substr($newsstar[0][content],0,18,'utf-8');?>...<a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$newsstar[0]['id']))?>" target="_blank">[详细]</a></p>
                         <div class="bline"><span class="left">浏览<i><?php echo $newsstar[0][lookcount]?></i></span><span class="right">评论<i><?php echo $newsstar[0][commentcount]?></i></span></div>
                     </div>
                     <ul class="list">
@@ -41,7 +41,7 @@
                     	?>
 		                    	<li>
 		                            <div class="des left">
-		                                <h4><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
+		                                <h4><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
 		                                <div class="bline"> <span class="left">浏览<i><?php echo $v[lookcount]?></i></span><span class="left">评论<i><?php echo $v[commentcount]?></i></span></div>
 		                            </div>
 		                        </li>
