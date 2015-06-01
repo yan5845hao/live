@@ -147,19 +147,34 @@ class ApiController extends BaseController
 		$model->product_id = yii::app()->request->getparam("product_id");
 		$model->content = yii::app()->request->getparam("content");
 		$model->starname = yii::app()->request->getparam("starname");
+		$model->url = Yii::app()->user->face;    
 		$model->author = Yii::app()->user->name;
 
 		if($model->save()){ 
-			$strhtml=' <div class="him_fensi_left_con clearfix">
-            
-                <div class="him_fensi_pic"><img class="left" src="'.Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg" /></div>
-                <div class="him_fensi_biaodan">
-                    <div class="him_fensi_name"><a>'.$model->content.'</a></div>
-                    <p>'.Yii::app()->user->name.'</p>
-                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">当前评论</span><span>来自捕梦网</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
-                </div>
-            
-            </div>';
+			if($model->type == 'starhome'){
+				$strhtml=' <div class="him_fensi_left_con clearfix">
+	            
+	                <div class="him_fensi_pic"><img class="left" src="'.Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg" /></div>
+	                <div class="him_fensi_biaodan">
+	                    <div class="him_fensi_name"><a>'.$model->content.'</a></div>
+	                    <p>'.Yii::app()->user->name.'</p>
+	                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">当前评论</span><span>来自捕梦网</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
+	                </div>
+	            
+	            </div>';
+        	}else{ 
+        		$strhtml='<div class="replylist">
+                    <div class="vspace"></div>
+						<div class="imgbox"><a target="_blank" href=""><img src="'.Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg" class="left"></a></div>
+						<div class="replybox">
+							<div class="username"><a >'.Yii::app()->user->name.'</a></div>
+							<p>'.$model->content.'</p>
+							<div class="clear"><div class="retime left"><span class="c-gap-right">当前评论</span><span>来自捕梦网</span></div><div class="right repeat"><a class="c-gap-right" target="_blank" href="">转发</a></div></div>
+						</div>
+                        <div class="vspace"></div>
+					</div>';
+
+        	}
 			echo CJSON::encode(array('code'=>'4000','message'=>'评论成功','author'=>Yii::app()->user->name,'content'=>$strhtml));
 			Yii::app()->end();
 		}else{ 

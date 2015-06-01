@@ -61,9 +61,28 @@ class BigShotsController extends BaseController
         $command = Yii::app()->db->createCommand($sql);
         $videodatas = $command->queryAll();
 
-        $stardata = Customer::model()->findByPk($videodata[customer_id]);
-        $starinfodata = CustomerInfo::model()->findByAttributes(array('customer_id' => $videodata[customer_id]));
+        $stardata=Customer::model()->findByPk($videodata[customer_id]);
+        $starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $videodata[customer_id]));
+        /*获取评论数据*/
 
-        $this->render('playvideo', array('videodata' => $videodata, 'starinfodata' => $starinfodata, 'stardata' => $stardata, 'videodatas' => $videodatas));
+
+        $criteria = new CDbCriteria();
+        $criteria->order = 'create_time desc';
+        $criteria->addCondition('starid='.$videodata[customer_id]);
+        $criteria->addCondition('type= :type');
+        $criteria->params[':type']='video';
+        $dataProvider=new CActiveDataProvider('Comment',array(
+            'criteria'=>$criteria,
+            'pagination'=>array(
+                'pageSize'=>7,
+            ),
+        ));
+        if(Yii::app()->user->id){//判断是否关注
+            //$attention=new CustomerAttention();
+            $isattention= CustomerAttention::model()->isattention(Yii::app()->user->id,$videodata[customer_id]);
+        }else{
+            $isattention=false;
+        }
+        $this->render('playvideo',array('videodata'=>$videodata,'starinfodata'=>$starinfodata,'stardata'=>$stardata,'videodatas'=>$videodatas,'dataProvider'=>$dataProvider,'isattention'=>$isattention));
     }
 }
