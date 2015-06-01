@@ -347,7 +347,7 @@
 
             <div class="him_fensi_left_con cur clearfix" id='comments'>
             <form id="form1" method="post" action="/api/addcomment">
-                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" width="62" height="62" src="<?php echo isset(Yii::app()->user->face)?Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg':'/images/default.png'?>" /></a></div>
+                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" width="62" height="62" src="<?php echo isset(Yii::app()->user->face)?Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg':'/images/default.jpg'?>" /></a></div>
                 <div class="him_fensi_biaodan">
                     <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right"><?php echo Yii::app()->user->name ?></span><img src="/images/icon9.png" /></div><div class="right">至多输入140字</div></div>
                     <div class="him_fensi_textarea"><textarea  maxlength="140" name="content" id="content1" ></textarea></div>
@@ -367,7 +367,7 @@
             </div>
 
              <script type="text/javascript" src="/js/jquery.qqFace.min.js"></script>
-                    <script type="text/javascript">
+              <script type="text/javascript">
 					//实例化表情插件
 					$(function(){
 						$('#face1').qqFace({
@@ -395,26 +395,47 @@
 					</script>
       
           <!--评论内容-->
+         	<?php foreach($dataProvider->getData() as $data)
+				{
+					$fbtime=time()-$data['create_time'];
+					if($fbtime>86400){ 
+						$fbtime=intval($fbtime/86400);
+						$fbtime.='天前';
+					}else if($fbtime<86400 && $fbtime>3600){ 
+						$fbtime=intval($fbtime/3600);
+						$fbtime.='小时前';
+					}else{ 
+						 $fbtime= intval($fbtime/60);	
+						 $fbtime .= '分钟前';	
+					}
+					
+					$data['url'] = $data['url']?$data['url'].'@62w_62h_1e_1c_1x.jpg':'/images/default.jpg';
 
+			?>		
             <div class="him_fensi_left_con clearfix">
             
-                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
+                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="<?php echo $data['url']?>" /></a></div>
                 <div class="him_fensi_biaodan">
-                    <div class="him_fensi_name"><a href="" target="_blank">怎么说如何做</a></div>
-                    <p>大爱EXO</p>
-                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
+                    <div class="him_fensi_name"><a ><?php echo $data['content']?></a></div>
+                    <p><?php echo $data['author']?></p>
+                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right"><?php echo $fbtime?></span><span>来自捕梦网</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
                 </div>
             
             </div>
+            <?php
+            	}
+            ?>
             <!--评论内容end-->
-
-
-    
-
             <div class="answer_box">
-       
+
+       		<?php $this->widget('CLinkPager', array('cssFile'=>false,'header'=>'', 'firstPageLabel' => '首页',
+               'lastPageLabel' => '末页',
+               'prevPageLabel' => '上一页',
+               'nextPageLabel' => '下一页',
+               'pages' => $dataProvider->pagination,
+               'maxButtonCount'=>10));?>
             </div>
-            <div class="page_list"><a class="current" href="" target="_blank">1</a><a href="" target="_blank">2</a><a href="" target="_blank">3</a><a href="" target="_blank">4</a><a href="" target="_blank">5</a><a href="" target="_blank">5</a><a href="" target="_blank">6</a><a href="" target="_blank">7</a><a href="" target="_blank">9</a><a href="" target="_blank">10</a><a href="" target="_blank" class="prev_page">上一页</a><a href="" target="_blank" class="next_page page_focus">下一页</a></div>
+    
         </div>
     </div>
     <div class="him_fensi_right">
@@ -451,108 +472,5 @@ $.post("/api/attention",{id:id},function(result){
   });
 
 }
-$("#fabiao_btn").click(function(){ 
-
-	$.post('/api/addcomment/',$("#form1").serialize(),function(data){ 
-		var msg=data.message;
-		
-		if(data.code == '4001' ){ 
-			$("body").append("<div id='mask'></div>");
-			$("#mask").addClass("mask").fadeIn("slow");
-			$("#LoginBox").fadeIn("slow");
-			letDivCenter('#LoginBox');
-		}else if(data.code == '4000'){
-			$(document).masks(msg).click(function(){$(document).unmasks()});
-			$("#comments").after(data.content);
-
-		}else{ 	
-			$(document).masks(msg).click(function(){$(document).unmasks()});
-		}
-	},'json');
-
-});
-
-   function letDivCenter(divName){   
-        var top = ($(window).height() - $(divName).height())/2;   
-        var left = ($(window).width() - $(divName).width())/2;   
-        var scrollTop = $(document).scrollTop();   
-        var scrollLeft = $(document).scrollLeft();   
-        $(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();  
-    }  
-
-(function(){
-$.extend($.fn,{
-masks: function(msg,maskDivClass){
-this.unmasks();
-// 参数
-var op = {
-opacity: 0.8,
-z: 10000,
-bgcolor: '#ccc'
-};
-var original=$(document.body);
-var position={top:0,left:0};
-if(this[0] && this[0]!==window.document){
-original=this;
-position=original.position();
-}
-// 创建一个 Mask 层，追加到对象中
-var maskDiv=$('<div class="maskdivgen"> </div>');
-maskDiv.appendTo(original);
-var maskWidth=original.outerWidth();
-if(!maskWidth){
-maskWidth=original.width();
-}
-var maskHeight=original.outerHeight();
-if(!maskHeight){
-maskHeight=original.height();
-}
-maskDiv.css({
-position: 'absolute',
-top: position.top,
-left: position.left,
-'z-index': op.z,
-width: maskWidth,
-height:maskHeight,
-'background-color': op.bgcolor,
-opacity: 0
-});
-if(maskDivClass){
-maskDiv.addClass(maskDivClass);
-}
-if(msg){
-var msgDiv=$('<div id="showmsg"  style="position:absolute;border:#6593cf 1px solid; padding:2px;background:#444"><div style="line-height:80px;text-align: center; width:200px;font-size:24px; border:#a3bad9 1px solid;background:white;padding:2px 10px 2px 10px">'+msg+'</div></div>');
-msgDiv.appendTo(maskDiv);
-var widthspace=(maskDiv.width()-msgDiv.width());
-var heightspace=(maskDiv.height()-msgDiv.height());
- var top = $(window).height() - msgDiv.height()/2;   
- var left = $(window).width() - msgDiv.width()/2;   
-  var scrollTop = $(document).scrollTop()+200;   
-var scrollLeft = $(document).scrollLeft()+500;   
-
-msgDiv.css({
-cursor:'wait',
-top:(scrollTop),
-left:(scrollLeft)
-});
-}
-maskDiv.fadeIn('fast', function(){
-// 淡入淡出效果
-$(this).fadeTo('slow', op.opacity);
-})
-return maskDiv;
-},
-unmasks: function(){
-var original=$(document.body);
-if(this[0] && this[0]!==window.document){
-original=$(this[0]);
-}
-original.find("> div.maskdivgen").fadeOut('slow',0,function(){
-$(this).remove();
-});
-}
-});
-})();
-   
-
 </script>
+<script type="text/javascript" src="/js/comments.js"></script>

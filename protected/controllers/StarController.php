@@ -36,22 +36,36 @@ class StarController extends BaseController
     
     	$id = intval(Yii::app()->getRequest()->getParam("id"));//获取明星ID
     	$day = Yii::app()->getRequest()->getParam("day");//获取 
-    	
-    	$schedule=$this->starschedule($id,$day);//获取明星档数据
+    	if(!empty($day)){
+    		$schedule=$this->starschedule($id,$day);//获取明星档数据
+    	}else{ 
+    		$schedule=$this->starschedule($id,$day);
+    	}
     	$getnews=$this->getnews($id);
     	$stardata=Customer::model()->findByPk($id);//获取明星基本资料
 		$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $id));//获取明星详细资料
-	
 		$getvideo = $this->getvideos($id);
-			if(Yii::app()->user->id){ 
-				
-					$isattention= CustomerAttention::model()->isattention(Yii::app()->user->id,$id);
-				}else{ 
-					$isattention=false;
-				}
-	
+		/**判断是否关注*/
+		if(Yii::app()->user->id){ 
+			$isattention= CustomerAttention::model()->isattention(Yii::app()->user->id,$id);
+		}else{ 
+			$isattention=false;
+		}
+		/*获取评论数据*/
 		
-        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews,'getvideo'=>$getvideo,'isattention'=>$isattention));
+		$criteria = new CDbCriteria(); 
+		$criteria->order = 'create_time desc'; 
+		$criteria->addCondition('starid='.$id);  
+		$criteria->addCondition('type= :type');
+		$criteria->params[':type']='starhome';
+		$dataProvider=new CActiveDataProvider('Comment',array(
+            'criteria'=>$criteria,
+            'pagination'=>array(
+            'pageSize'=>5,
+            ),
+        ));
+		
+        $this->render('detail',array('stardata'=>$stardata,'starinfodata'=>$starinfodata,'schedule'=>$schedule,'getnews'=>$getnews,'getvideo'=>$getvideo,'isattention'=>$isattention,'dataProvider'=>$dataProvider));
     }
 
 

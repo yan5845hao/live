@@ -917,4 +917,6 @@ i{ font-style:normal;}
 .reg_fc_btm a:hover{color:#7d03e4;}
 
 .reg_fc_item b{color:#7d03e4; height:19px; display:block; font-weight:normal;}
+#yw0{float:right;}
+#yw0 li{ float:left;margin: 0 3px;padding: 0 4px;width: auto;}
 
