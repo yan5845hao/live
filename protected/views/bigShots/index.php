@@ -15,18 +15,18 @@
         <div class="dkcol_w501con">
             <ul>
 			<?php
-				if(defined('STAR_SHOW_TJ_RIGHT1')) echo STAR_SHOW_TJ_RIGHT1; 
+				if(defined('STAR_SHOW_TJ_RIGHT1')) echo STAR_SHOW_TJ_RIGHT1;
 			?>
 			</ul>
             <ul style="display:none;">
             <?php
-				if(defined('STAR_SHOW_TJ_RIGHT2')) echo STAR_SHOW_TJ_RIGHT2; 
+				if(defined('STAR_SHOW_TJ_RIGHT2')) echo STAR_SHOW_TJ_RIGHT2;
 			?>
 
             </ul>
             <ul style="display:none;">
    			<?php
-				if(defined('STAR_SHOW_TJ_RIGHT3')) echo STAR_SHOW_TJ_RIGHT3; 
+				if(defined('STAR_SHOW_TJ_RIGHT3')) echo STAR_SHOW_TJ_RIGHT3;
 			?>
             </ul>
             <div class="dkcol_w501btn left">
@@ -43,8 +43,8 @@
     <div class="dksearchtitle">
         <ul>
             <li class="current">全部</li>
-          
-         
+
+
         </ul>
         <div class="right"><a class="dkxlb"><img src="images/daka_xiala.jpg" width="76" height="77" /></a></div>
     </div>
@@ -74,25 +74,7 @@
 </div>
 <div class="dklist clearfix">
 <div class="dklist_list left">
-<?php
-if (empty($lubo)) {
-    echo '<div style="height:300px;text-align:center;font-size:18px;"><br><br><br><br><br>很抱歉！没有找到“<span style="color:red;">'.$_GET['keyword'].'</span>”相关的内容<br><br><p><a href="/bigShots">返回顶部</a></p></div>';
-}else{
-	foreach((array)$lubo as $v){
-?>
-        <div class="dklist_col">
-            <img src="<?php echo $v[image]?>@213w_175h_1e_1c_1x.jpg" /><span></span><i><a href="<?php echo Yii::app()->createUrl('/bigShots/playvideo',array('id'=>$v['product_id']))?>"><?php echo mb_substr($v[title],0,12,'utf-8');?></a>
-                <br>
-            <img src="images/daka_minifensi.png" width="11" height="15">粉丝：<em><?php echo $v['fans_total']?></em> <img src="images/daka_miniplay.png" width="16" height="15">播放：<em><?php echo $v['play_total']?></em></i>
-        </div>
-<?php
-     }
-}
-if (count($lubo) > 40) {
-    echo '<div class="dk_jiazai"><a href="">点击加载更多...</a></div>';
-}
-?>
-
+<?php include('list.php');?>
 </div>
 <div class="dk_ph right">
 <div class="dk_phtitle1">
@@ -140,7 +122,7 @@ if (count($lubo) > 40) {
     <?php
     	unset($zhibo[0]);
     	$i=0;
-    	foreach($zhibo as $v){ 
+    	foreach($zhibo as $v){
     		$i++;
 
     ?>
@@ -156,7 +138,7 @@ if (count($lubo) > 40) {
         </li>
         <?php
         	}
-      
+
         ?>
     </ul>
 
@@ -172,18 +154,20 @@ if (count($lubo) > 40) {
 
 
 <script text="text/javascript">
-   //加载更多
-   $(".dk_jiazai").on("click",function(){
-	   $("#showdata").after("<p>姚明退役了...</p>"); 
-//        $.post("api/schedule",{startime:Y(c, a)},function(result){
-		
-            
-            // $("#showstartime").html(result);
-             
-            //});
-
-    });
-
+    var loadMore = function () {
+        var url = $("#dk_jiazai").attr('data-url');
+        $.ajax({
+                type:"GET",
+                url:url,
+                beforeSend:function(){
+                    $("#dk_jiazai").html('<a href="javascript:;">数据加载中...</a>');
+                },
+                success:function(html){
+                    $("#bigShowsListMore").remove();
+                    $("#bigShowsList .dklist_col").last().after(html);
+                }
+            })
+    }
     //下拉窗口
     $(".dkxlb").on("click",function(){
         $(".dksearchxx").slideToggle();
