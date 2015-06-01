@@ -42,7 +42,7 @@
     <div class="intro_info_mid left">
         <h2 class="latest_danan">最近档案<a href="" target="_blank">更多&gt;&gt;</a></h2>
         <div class="latest_danan_con" style="height:410px">
-            <p><select class="c-gap-right"><option>2015</option></select><select><option>1月</option></select></p>
+            <p><select class="c-gap-right"><option><?php echo date('Y')?></option></select><select><option><?php echo date('m')?>月</option></select></p>
             <div class="month_cycle clearfix">
                 <div class="month_cycle_layer">
                     <div class="month_cycle_btn_left"></div>
@@ -50,23 +50,25 @@
                     <?php
                   		$day=Yii::app()->getRequest()->getParam("day");
                   		$i=0;
-                    	foreach($schedule as $k=>$v){ 
+                  		if(!empty($schedule)){
+	                    	foreach($schedule as $k=>$v){ 
 
-                    		if($i==0){ 
-                    			$donum=$k;
-                    		}
-                    		if($i<5){ 
-		                  		if(empty($day) && $i==0){ 
-		                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
-		                  		}else if($k==$day){ 
-		                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
-		                  		}else{ 
-		                  			echo '<li><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+	                    		if($i==0){ 
+	                    			$donum=$k;
+	                    		}
+	                    		if($i<5){ 
+			                  		if(empty($day) && $i==0){ 
+			                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+			                  		}else if($k==$day){ 
+			                  			echo '<li class="current"><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
+			                  		}else{ 
+			                  			echo '<li><span><a href="'.Yii::app()->createUrl('/star/detail',array('id'=>$v[0]['starid'],'day'=>$k)).'" >'.$k.'</a></span><em></em></li>';
 
+			                  		}
 		                  		}
-	                  		}
-	                  		$i++;
-                    	}
+		                  		$i++;
+	                    	}
+	                    }	
 
                     ?>
                     
@@ -83,6 +85,7 @@
             	$key=intval($day);
             }
             $i=1;
+           if(!empty($schedule)){ 
             foreach($schedule[$key] as $val){ 
             	if($i>3)continue;
             ?>
@@ -96,7 +99,7 @@
 			<?php
 				$i++;
             }
-         
+         }
             ?>
             </div>
         </div>
@@ -342,11 +345,11 @@
         <div class="him_vedio_title clearfix c-gap-bottom"><img class="left" src="/images/icon7.png" /><span class="left">TA的粉丝圈</span><a class="right" href="" target="_blank">更多&gt;&gt;</a></div>
         <div class="fensi_hudong">
 
-            <div class="him_fensi_left_con cur clearfix">
+            <div class="him_fensi_left_con cur clearfix" id='comments'>
             <form id="form1" method="post" action="/api/addcomment">
-                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
+                <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" width="62" height="62" src="<?php echo isset(Yii::app()->user->face)?Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg':'/images/default.png'?>" /></a></div>
                 <div class="him_fensi_biaodan">
-                    <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right">海天.阳光</span><img src="/images/icon9.png" /></div><div class="right">至多输入140字</div></div>
+                    <div class="him_fensi_title clearfix"><div class="left"><span class="c-gap-right"><?php echo Yii::app()->user->name ?></span><img src="/images/icon9.png" /></div><div class="right">至多输入140字</div></div>
                     <div class="him_fensi_textarea"><textarea  maxlength="140" name="content" id="content1" ></textarea></div>
                     <div class="him_fensi_biaodan_oper c-gap-top clearfix">
                    		<input type="hidden" id="starid"  name="starid" value="<?php echo $stardata[customer_id]?>" />
@@ -390,19 +393,23 @@
 						$('#result').html($('#result').html() + str);
 					}
 					</script>
-       
+      
           <!--评论内容-->
+
             <div class="him_fensi_left_con clearfix">
             
                 <div class="him_fensi_pic"><a href="" target="_blank"><img class="left" src="/images/pic5.png" /></a></div>
                 <div class="him_fensi_biaodan">
                     <div class="him_fensi_name"><a href="" target="_blank">怎么说如何做</a></div>
                     <p>大爱EXO</p>
-                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><a href="" target="_blank">回复</a></div></div>
+                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
                 </div>
             
             </div>
             <!--评论内容end-->
+
+
+    
 
             <div class="answer_box">
        
@@ -421,7 +428,7 @@
         </ul>
     </div>
     <div class="him_fensi_right">
-        <div class="fensi_title clearfix"><div class="fensi_title_left left">土豪<?php yii::app()->user->face?>粉丝榜</div><a class="right" target="_blank" href="">更多&gt;&gt;</a></div>
+        <div class="fensi_title clearfix"><div class="fensi_title_left left">土豪粉丝榜</div><a class="right" target="_blank" href="">更多&gt;&gt;</a></div>
         <ul class="fensi_jiazu_list">
             <li class="tuhao_current"><span class="left"><img src="/images/one.jpg" /></span><img class="c-gap-left-small c-gap-right-small left" src="/images/pic5.png"><div><p class="c-gap-bottom-small">海.阳光</p><img src="/images/icon9.png" /></div></li>
             <li class="clearfix"><span class="left xuhao">2</span><span class="left">前进鹿小七</span></li>
@@ -454,8 +461,12 @@ $("#fabiao_btn").click(function(){
 			$("#mask").addClass("mask").fadeIn("slow");
 			$("#LoginBox").fadeIn("slow");
 			letDivCenter('#LoginBox');
+		}else if(data.code == '4000'){
+			$(document).masks(msg).click(function(){$(document).unmasks()});
+			$("#comments").after(data.content);
+
 		}else{ 	
-			$(document).masks(msg).click(function(){$(document).unmasks()})
+			$(document).masks(msg).click(function(){$(document).unmasks()});
 		}
 	},'json');
 

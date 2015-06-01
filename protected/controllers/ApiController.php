@@ -37,7 +37,7 @@ class ApiController extends BaseController
 				$str.=  '</div>';
 				$str.=  '<div class="des left">';
 				$str.=  '<h5>'.$v['title'].'</h5>';
-				 $str.= '<div><span class="time">'.date('H:i',$v['begintime']).'</span><span class="address">'.$v['address'].'</span></div></div></li>';
+				 $str.= '<div><span class="time">'.date('H:i',$v['begintime']).'</span><span class="address">'.mb_substr($v['address'],0,2,'utf-8').'</span></div></div></li>';
 			}
 
 		}
@@ -141,7 +141,7 @@ class ApiController extends BaseController
 		
 		$model= new comment();
 		$model->customerid = Yii::app()->user->id;
-	    $model->starid = intval($starid);
+	    $model->starid = intval($_POST['starid']);
 
 	    $model->type = yii::app()->request->getparam("type");
 		$model->product_id = yii::app()->request->getparam("product_id");
@@ -150,7 +150,17 @@ class ApiController extends BaseController
 		$model->author = Yii::app()->user->name;
 
 		if($model->save()){ 
-			echo CJSON::encode(array('code'=>'4000','message'=>'评论成功','author'=>Yii::app()->user->name,'content'=>yii::app()->request->getparam("content")));
+			$strhtml=' <div class="him_fensi_left_con clearfix">
+            
+                <div class="him_fensi_pic"><img class="left" src="'.Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg" /></div>
+                <div class="him_fensi_biaodan">
+                    <div class="him_fensi_name"><a>'.$model->content.'</a></div>
+                    <p>'.Yii::app()->user->name.'</p>
+                    <div class="clearfix"><div class="him_fensi_operator left"><span class="c-gap-right">当前评论</span><span>来自捕梦网</span></div><div class="right him_fensi_zhufa"><a href="" target="_blank" class="c-gap-right">转发</a><!--<a href="" target="_blank">回复</a>--></div></div>
+                </div>
+            
+            </div>';
+			echo CJSON::encode(array('code'=>'4000','message'=>'评论成功','author'=>Yii::app()->user->name,'content'=>$strhtml));
 			Yii::app()->end();
 		}else{ 
 			echo CJSON::encode(array('code'=>'4004','message'=>'评论失败'));
