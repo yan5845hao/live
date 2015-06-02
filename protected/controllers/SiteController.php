@@ -10,6 +10,8 @@ class SiteController extends BaseController
 //        } else {
 //            $this->render('index');
 //        }
+    	//Yii::app()->redis_cache->set('aaaa','value');
+    	//echo Yii::app()->redis_cache->get('aaaa');exit;
     	$date=strtotime(date('Y-m-d'));
     	$scheduledata = StarSchedule::model()->getSchedule($date);
 		$model=new LoginForm;
