@@ -18,29 +18,8 @@
                 <span class="more right" ><a href="<?php echo Yii::app()->createUrl('/news')?>"  target="_blank"></a></span>
             </div>
             <div class="bd w">
-            		<div class="con17">
-                    	<ul>
-                    	<?php
-
-                    		foreach($newsdata as $v){ 
-
-
-                    	?>
-                        	<li>
-                            	<div class="imgbox left"><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><img src="<?php echo $v['image']?>" style="width:160px; height:160px"/></a></div>
-                                <h4><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank"><?php echo $v['title']?></a></h4>
-                                <div class="time"><?php echo date('Y-m-d H:i:s',$v['createtime']);?></div>
-                                <p><?php echo $v['introduce']?></p>
-                                <p><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$v['id']))?>" target="_blank">查看详情</a></p>
-                                <div class="bdsharebuttonbox"><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
-                            </li>
-                          <?php
-                          		}
-                          ?> 
-                          
-                    
-                        </ul>
-                    	<div class="more"><a href="javascript:void(0);">点击加载更多</a></div>
+            		<div class="con17" id="bigShowsList">
+                    <?php include('list.php');?>
 <script type="text/javascript">
 	window._bd_share_config={ "common":
 									 {"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},
@@ -237,5 +216,23 @@
 </div>
 
 <!-- end-->
+<script type="text/javascript">
+	
+    var loadMore = function () {
+        var url = $("#dk_jiazai").attr('data-url');
+        $.ajax({
+                type:"GET",
+                url:url,
+                beforeSend:function(){
+                    $("#dk_jiazai").html('<a href="javascript:;">数据加载中...</a>');
+                },
+                success:function(html){
+                    $("#bigShowsListMore").remove();
+                    $("#bigShowsList .shownews").last().after(html);
+                }
+            })
+    }
+
+</script>
 
 

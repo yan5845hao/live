@@ -5,13 +5,26 @@
 
 				$page =intval(Yii::app()->getRequest()->getParam("page"));
 				$star_id =intval(Yii::app()->getRequest()->getParam("id"));
-				$stardata=Customer::model()->findByPk($star_id);//获取明星基本资料
-				$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $star_id));//获取明星详细资料
-				if($star_id<1) $star_id=null;
-				if($page<2) $page=1;
-				$newsdata=StarNews::model()->getNews($page,$star_id);
-				
-				$this->render('index',array('newsdata'=>$newsdata,'stardata'=>$stardata,'starinfodata'=>$starinfodata));
+				$criteria = new CDbCriteria();
+				if($star_id>0) $criteria->addCondition("star_id = ".$star_id);
+		        $criteria->order = 'createtime desc';
+		        $dataProvider = new CActiveDataProvider('StarNews', array(
+		            'criteria' => $criteria,
+		            'pagination' => array(
+		                'pageSize' => 10,
+		                'pageVar' => 'page'
+		            ),
+		        ));
+				if (Yii::app()->request->isAjaxRequest) {
+            	$this->layout = 'blank_layout';
+            	Yii::app()->clientScript->reset();
+            	$this->render('list_ajax', array('dataProvider' => $dataProvider,'currentPage' => ($dataProvider->pagination->currentPage + 1)));
+        		} else {
+        			if($star_id<1) $star_id=3;
+        			$stardata=Customer::model()->findByPk($star_id);//获取明星基本资料
+					$starinfodata=CustomerInfo::model()->findByAttributes(array('customer_id' => $star_id));//获取明星详细资料
+					$this->render('index',array('dataProvider'=>$dataProvider,'stardata'=>$stardata,'starinfodata'=>$starinfodata));
+				}
 
 		}
 		public function actionInfo(){

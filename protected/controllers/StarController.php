@@ -10,15 +10,27 @@ class StarController extends BaseController
     public function actionIndex()
     {
 
-    	  $sql = "select * from star_news order by createtime desc limit 7";
-          $command = Yii::app()->db->createCommand($sql);
-          $newsstar = $command->queryAll();
+    	$sql = "select * from star_news order by createtime desc limit 7";
+        $command = Yii::app()->db->createCommand($sql);
+        $newsstar = $command->queryAll();
+        $criteria = new CDbCriteria();
+      
+        $criteria->order = 'begintime desc';
+        $dataProvider = new CActiveDataProvider('StarSchedule', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                'pageVar' => 'page'
+            ),
+        ));
+        if (Yii::app()->request->isAjaxRequest) {
+            $this->layout = 'blank_layout';
+            Yii::app()->clientScript->reset();
+            $this->render('list_ajax', array('dataProvider' => $dataProvider,'currentPage' => ($dataProvider->pagination->currentPage + 1)));
+        } else {
 
-          $sql = "select * from star_schedule order by begintime desc ";
-          $command = Yii::app()->db->createCommand($sql);
-          $newsstarall = $command->queryAll();
-
-        $this->render('index',array('newsstar'=>$newsstar,'newsstarall'=>$newsstarall));
+        	$this->render('index',array('newsstar'=>$newsstar,'dataProvider'=>$dataProvider));
+    	}
     }
 
     public function actionInfo()

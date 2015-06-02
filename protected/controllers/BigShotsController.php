@@ -28,7 +28,7 @@ class BigShotsController extends BaseController
         $dataProvider = new CActiveDataProvider('product', array(
             'criteria' => $criteria,
             'pagination' => array(
-                'pageSize' => 2,
+                'pageSize' => 40,
                 'pageVar' => 'page'
             ),
         ));

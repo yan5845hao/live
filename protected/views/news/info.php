@@ -52,7 +52,7 @@
               
             </div>
             <div class="bd">
-            		<div class="vspace"></div>
+            	<div class="vspace"></div>
             	<div class="con21">
 					<div class="reply" id="comments">
 						<form id="form1" method="post" action="/api/addcomment">

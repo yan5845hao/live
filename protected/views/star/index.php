@@ -82,9 +82,11 @@
             </script>
         </div>
         <div class="bd">
+        <!--搜索条件-->
             <div class="con12">
                 <a href="javascript:void(0);" class="cur">全部</a><a href="javascript:void(0);">一周内</a><a href="javascript:void(0);">一月内</a><a href="javascript:void(0);">半年内</a><a href="javascript:void(0);">一年内</a><a href="javascript:void(0);">历史</a>
             </div>
+        <!--搜索条件end-->    
             <script type="text/javascript">
                 $(".con12 a").click(function(){
                     $(this).addClass("cur").siblings("a").removeClass("cur");
@@ -92,36 +94,10 @@
                 });
             </script>
             <div class="con13">
-                <ul>
-                <?php
-                	foreach($newsstarall as $val){ 
-				
-						$even= $even=='even'?'': 'even';
-                	?>
-                    <li class="<?php echo $even?>">
-                        <div class="left l">
-                            <p  class="address"><?php  echo mb_substr($val['address'],0,3,'utf-8'); ?></p>
-                            <div class="time">
-                                <p><?php echo date('d',$val['begintime'])?></p>
-                                <span><?php echo date('Y年m月',$val['begintime'])?></span>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="headbox left">
-                                <img  src="<?php echo $val['img']?>@295w_348h_1e_1c_1x.jpg"/>
-                            </div>
-                            <h3><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$val['id']))?>" target="_blank"><?php echo $val['title']?></a></h3>
-                            <p><?php echo mb_substr($val['content'],0,278,'utf-8');?></p>
-                            <div class="numbers"><span class="left playicon"><a href="<?php echo Yii::app()->createUrl('/star/info',array('id'=>$val['id']))?>" target="_blank">浏览数：<i><?php echo $val[lookcount]?></i></a></span><span class="left comment"><!--<a href="#" target="_blank">评论<i><?php echo $val[commentcount]?></i></a>--></span></div>
-                        </div>
-                    </li>
-                    <?php
-
-                    	}
-                    ?>
-                    
-                </ul>
+                <?php include('list.php');?>
             </div>
+         
+
 
         </div>
     </div>
@@ -142,3 +118,21 @@
     <div class="gototop" id="gototop1"><span></span></div>
     <script type="text/javascript">var mygototop = new gototop("gototop1")</script>
 </div>
+<script type="text/javascript">
+	
+    var loadMore = function () {
+        var url = $("#dk_jiazai").attr('data-url');
+        $.ajax({
+                type:"GET",
+                url:url,
+                beforeSend:function(){
+                    $("#dk_jiazai").html('<a href="javascript:;">数据加载中...</a>');
+                },
+                success:function(html){
+                    $("#starmore").remove();
+                    $(".shownews").last().after(html);
+                }
+            })
+    }
+
+</script>

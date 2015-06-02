@@ -919,4 +919,14 @@ i{ font-style:normal;}
 .reg_fc_item b{color:#7d03e4; height:19px; display:block; font-weight:normal;}
 #yw0{float:right;}
 #yw0 li{ float:left;margin: 0 3px;padding: 0 4px;width: auto;}
+#starmore{width:auto;border: 5px solid #fff;height: 67px;}
 
+#starmore .morelist{background-color: #f2f2f2;
+    border-radius: 5px;
+    color: #898989;
+    float: left;
+    font-size: 16px;
+    height: 57px;
+    line-height: 57px;
+    margin-top: 7px;
+    text-align: center;width:100%}
