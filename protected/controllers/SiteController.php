@@ -10,10 +10,14 @@ class SiteController extends BaseController
 //        } else {
 //            $this->render('index');
 //        }
-    	//Yii::app()->redis_cache->set('aaaa','value');
-    	//echo Yii::app()->redis_cache->get('aaaa');exit;
+    
     	$date=strtotime(date('Y-m-d'));
-    	$scheduledata = StarSchedule::model()->getSchedule($date);
+    	$key=md5('getSchedule'.$date);
+    	$scheduledata=Yii::app()->cache->get($key);
+    	if(empty($scheduledata)){
+    		$scheduledata = StarSchedule::model()->getSchedule($date);
+    		Yii::app()->cache->set($key,$scheduledata,300);
+		}
 		$model=new LoginForm;
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{

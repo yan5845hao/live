@@ -19,9 +19,12 @@ class ApiController extends BaseController
 		$begintime = str_replace(' ','',$begintime);
 		$begintime = strtotime($begintime);
 		$cachekey = md5($begintime.'homeshowSchedule');
-	
-		$data = StarSchedule::model()->getSchedule($begintime);
-		
+		$key = md5('getSchedule'.$begintime);
+		$data = Yii::app()->cache->get($key);
+		if(empty($data)){
+			$data = StarSchedule::model()->getSchedule($begintime);
+			Yii::app()->cache->set($key,$data,300);
+		}
 	
 		
 		$str = "<p>{$showdate}<span>{$showweek}</span></p>";

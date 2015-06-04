@@ -11,8 +11,13 @@ class StarController extends BaseController
     {
 
     	$sql = "select * from star_news order by createtime desc limit 7";
-        $command = Yii::app()->db->createCommand($sql);
-        $newsstar = $command->queryAll();
+    	$key=md5($sql);
+    	$newsstar=Yii::app()->cache->get($key);
+    	if(empty($newsstar)){
+	        $command = Yii::app()->db->createCommand($sql);
+	        $newsstar = $command->queryAll();
+	        Yii::app()->cache->set($key,$newsstar,300);
+    	}
         $criteria = new CDbCriteria();
       
         $criteria->order = 'begintime desc';
@@ -23,6 +28,7 @@ class StarController extends BaseController
                 'pageVar' => 'page'
             ),
         ));
+
         if (Yii::app()->request->isAjaxRequest) {
             $this->layout = 'blank_layout';
             Yii::app()->clientScript->reset();

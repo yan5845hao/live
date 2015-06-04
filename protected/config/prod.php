@@ -68,7 +68,7 @@ return array(
                 */
 		
 
-'redis_cache' => array (
+'cache' => array (
 	'class' => 'system.caching.CRedisCache',
 	'hostname' =>'127.0.0.1',
 	'port'=>6379,
