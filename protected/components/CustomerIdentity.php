@@ -28,6 +28,9 @@ class CustomerIdentity extends CUserIdentity
             $this->errorCode = self::ERROR_USERNAME_INVALID;
         else if (!$this->validatePassword($customer->password,$this->password))
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
+        else if($customer->active != 1){
+            $this->errorCode = self::ERROR_NOT_ACTIVE ;
+        }
         else {
             $this->user_id = $customer->customer_id;
             $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
