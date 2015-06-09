@@ -531,14 +531,6 @@ function tep_get_date_disp($date)
     }
     return $date_return;
 }
-
-function show_rc_heading_repeat($heading){
-    $div_rc_heading='';
-    $div_rc_heading='<div class="rc_heading_bg">'.
-    '<h2>'.$heading.'</h2>'.
-    '<span><a href="http://tours4fun.com">'.'<img src="image/rc_logo.png" alt=""  />'.'</a></span></div>';
-    return $div_rc_heading;
-}
 function get_next_lavel_remainting_points($poinst_now_available){
     $points='';
     if($poinst_now_available<5000){ //level 1 bronze
@@ -1471,7 +1463,7 @@ function get_rooms($data){
  *
  * @param string $html
  * @return string
- * @author yichi.sun@toursforfun.com
+ * 
  */
 function to_text($html){
     $search = array("<br>","&nbsp;");
@@ -4073,7 +4065,7 @@ function secure_array($data){
  * @param $timestamp
  * @return timestamp
  *
- * @author aaron.yang@toursforfun.com
+ * 
  */
 function local_to_gmt($timestamp){
     $now = time();
@@ -4086,7 +4078,7 @@ function local_to_gmt($timestamp){
  * @param $timestamp
  * @return timestamp
  *
- * @author aaron.yang@toursforfun.com
+ * 
  */
 function gmt_to_local($timestamp){
     $now = time();
@@ -4321,40 +4313,12 @@ function resizeImage($file,$maxHeightWidth = 0, $quality = 100) {
 
 /**
  * solve path traversal loophole
- * @author tuzki.zhang@toursforfun.com
+ * 
  * @param string
  * @return string
  */
 function pathTraversalFilter($input) {
     return preg_replace('/\.{2,}/', '', $input);
-}
-
-function showStar($star){
-    $star;
-    $star_view = '';
-    if(is_numeric($star)){
-        list($int, $parse) = explode('.', $star);
-    }else{
-        return $star_view;
-    }
-    $int;
-    $parse;
-    for ($i = 1; $i <= $int; $i++){
-        $star_view .= "<IMG src=\"http://images.tours4fun.com/image/star_full.png\">";
-    }
-    if($parse==5){
-        $star_view .= "<IMG src=\"http://images.tours4fun.com/image/star_half.png\">";
-        $dim_star = 4-$int;
-    }else{
-        $star_view .= "";
-        $dim_star = 5-$int;}
-    $dim_star;
-    if($dim_star!=""){
-        for ($i = 1; $i <= $dim_star; $i++){
-            $star_view .= "<IMG src=\"http://images.tours4fun.com/image/star_none.png\">";
-        }
-    }
-    return $star_view;
 }
 
 /**
@@ -4369,7 +4333,7 @@ function stripInvalidXMLChars($string) {
 }
 
 /**
- * @author tuzki.zhang@toursforfun.com 2014-3-12
+ *  2014-3-12
  * @desc find nearby coordinates Range by location
  * @param $lng float Longitude
  * @param $lat float Latitude

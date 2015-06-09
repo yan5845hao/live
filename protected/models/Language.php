@@ -3,7 +3,7 @@
  * @property string $language_id
  * @property string $name
  * @property string $code
- * @author vincent.mi@toursforfun.com (2012-5-16)
+ * @author  (2012-5-16)
  */
 class Language extends CActiveRecord
 {

@@ -46,7 +46,7 @@ class Breadcrumbs
      * @param string  $url
      * @param boolean $searchName
      * @param int     $limit
-     * @author vincent.mi@toursforfun.com (2012-4-23)
+     *  (2012-4-23)
      * @return
      */
     function edit($name , $url ,$searchName=true ,$limit = 0)

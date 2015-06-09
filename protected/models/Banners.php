@@ -88,7 +88,7 @@ class Banners extends CActiveRecord
                         $data=$this->findAll($criteria);
                         for($i=0;$i<sizeof($data); $i++){
                          $rec[] =array(
-                   'image'=>array('src'=>'http://www.tours4fun.com/images/'.$data[$i]['image'],'alt'=>$data[$i]['title']),
+                   'image'=>array('src'=>'/images/'.$data[$i]['image'],'alt'=>$data[$i]['title']),
                   'link'=>array('url'=>$data[$i]['url'],'htmlOptions'=>array('name'=>$data[$i]['banner_id'],'title'=>$data[$i]['title']))
               );
                         }
