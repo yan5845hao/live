@@ -25,7 +25,17 @@ class SiteController extends BaseController
 			Yii::app()->end();
 		}
 
-        $this->render('index',array('scheduledata'=>$scheduledata,'model'=>$model));
+		$rankarray=array('all'=>'all','music'=>'音乐','movie'=>'影视' , 'arts'=>'综艺');
+		foreach($rankarray as $k=>$v){ 
+			$key = md5($k.$v.'rankvalue');
+			$rankvalue[$k]=Yii::app()->cache->get($key);
+			if(!$rankvalue[$k]){ 
+				$rankvalue[$k]=Product::rankvalue($v);
+				Yii::app()->cache->set($key,$rankvalue[$k],3600);
+			}
+		}
+		
+        $this->render('index',array('scheduledata'=>$scheduledata,'model'=>$model,'rankvalue'=>$rankvalue));
     }
 
 	/**

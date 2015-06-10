@@ -1,3 +1,4 @@
+
 <!-- begin-->
 <div class="wrapper">
 <div class="md">
@@ -17,7 +18,7 @@
 <div class="md4" id="tab05">
 <div class="hd">
     <span class="title left" id="tab"><a href="javascript:void(0);" class="cur">直播中</a><a href="javascript:void(0);">倒计时</a></span>
-    <span class="more right"><a href="#">更多>></a></span>
+    <span class="more right"><a href="live">更多>></a></span>
 </div>
 <div class="bd">
 <ul id="content">
@@ -27,22 +28,98 @@
         <div class="content left">
             <div class="con">
              <?php 
-                 if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_BIRTHDAY_CONTENT; 
+
+                 if(defined('LIVE_BIRTHDAY_CONTENT')){//生日会 
+                 	$live_birthday = json_decode(LIVE_BIRTHDAY_CONTENT,true);
+                 	$i=1;
+                 	foreach($live_birthday as $v){
+                 		$i++;
+	                 	$num  =	$i%2;
+	                 	$end= $num==1 ? $end='end' : '';
+	                 	$str  = '<div class="imgbox '.$end.'">';
+	                    $str .= '<div class="img">';
+	                    $str .= '<a href="'.$v['url'].'" target="_blank"><img src="'.$v['images'].'"></a>';
+	                    $str .= '<div class="txtbg"></div>';
+	                    $str .= '<div class="txt"><a href="'.$v['url'].'" target="_blank">'.$v['titles'].'</a></div>';
+	                    $str .= '<span class="only"></span>';
+	                    $str .= '</div>';
+	                    $str .= '<div class="numbers"><span class="comment">评论<i>'.$v['ccount'].'</i></span></div>';
+	                	$str .= '</div>';
+	                	echo $str;
+                 	}
+        			
+                 } 
              ?>
             </div>
             <div class="con">
-              <?php if(defined('HOME_PAGE_BIRTHDAY_CONTENT')) echo HOME_PAGE_CLASS_CONTENT; ?>
+                <?php 
+                 if(defined('LIVE_CLASS_CONTENT')){//生日会 
+                 	$live_class = json_decode(LIVE_CLASS_CONTENT,true);
+                 	$i=1;
+                 	foreach($live_class as $v){
+                 		$i++;
+	                 	$num  =	$i%2;
+	                 	$end= $num==1 ? $end='end' : '';
+	                 	$str  = '<div class="imgbox '.$end.'">';
+	                    $str .= '<div class="img">';
+	                    $str .= '<a href="'.$v['url'].'" target="_blank"><img src="'.$v['images'].'"></a>';
+	                    $str .= '<div class="txtbg"></div>';
+	                    $str .= '<div class="txt"><a href="'.$v['url'].'" target="_blank">'.$v['titles'].'</a></div>';
+	                    $str .= '<span class="only"></span>';
+	                    $str .= '</div>';
+	                    $str .= '<div class="numbers"><span class="comment">评论<i>'.$v['ccount'].'</i></span></div>';
+	                	$str .= '</div>';
+	                	echo $str;
+                 	}       			
+                 } 
+             	?>
             </div>
             <div class="con">
-                <?php if(defined('HOME_PAGE_CHAT_CONTENT')) echo HOME_PAGE_CHAT_CONTENT; ?>
-              
+                <?php 
+                 if(defined('LIVE_CHAT_CONTENT')){//畅聊室
+                 	$live_class = json_decode(LIVE_CHAT_CONTENT,true);
+                 	$i=1;
+                 	foreach($live_class as $v){
+                 		$i++;
+	                 	$num  =	$i%2;
+	                 	$end= $num==1 ? $end='end' : '';
+	                 	$str  = '<div class="imgbox '.$end.'">';
+	                    $str .= '<div class="img">';
+	                    $str .= '<a href="'.$v['url'].'" target="_blank"><img src="'.$v['images'].'"></a>';
+	                    $str .= '<div class="txtbg"></div>';
+	                    $str .= '<div class="txt"><a href="'.$v['url'].'" target="_blank">'.$v['titles'].'</a></div>';
+	                    $str .= '<span class="only"></span>';
+	                    $str .= '</div>';
+	                    $str .= '<div class="numbers"><span class="comment">评论<i>'.$v['ccount'].'</i></span></div>';
+	                	$str .= '</div>';
+	                	echo $str;
+                 	}       			
+                 } 
+             	?>             
             </div>
         </div>
     </div>
 </li>
 <li>
     <div class="con11">
-        <?php if(defined('HOME_PAGE_CHAT_CONTENT')) echo HOME_PAGE_TIME_CONTENT; ?>
+        <?php 
+        if(defined('LIVE_OTIME_CONTENT')){
+        	$live_otime = json_decode(LIVE_OTIME_CONTENT,true);
+        	foreach($live_otime as $v){ 
+
+        	$str  = '<div class="line">';
+            $str .= '<div class="headbox left"><a target="_blank" href="'.$v['url'].'"><img src="'.$v['images'].'"></a></div>';
+            $str .= '<h5><a target="_blank" href="'.$v['url'].'">'.$v['titles'].'</a></h5>';
+            $str .= '<p class="numbers"><span class="comment">粉    丝：<i>'.$v['ccount'].'</i></span></p>';
+            $str .= '<p><span class="playicon">直播时间：'.$v['lcount'].'</span></p>';
+        	$str .= '</div>';
+        	echo $str;
+
+        	}
+
+     	}
+
+        ?>
     </div>
 </li>
 </ul>
@@ -76,21 +153,117 @@
 <ul class="ind03" id="content">
 <li>
     <!--大咖秀热播全部-->
-    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_1; ?>  
+    <?php 
+
+    if(defined('BIG_SHOW_ALL')){
+     	$big_show = json_decode(BIG_SHOW_ALL,true); 
+    	$i=0;
+    	foreach($big_show as $v){ 
+    		$i++;
+    		if($i==1){
+    			$str  = '<div class="imgbox big">';
+    		}else if($i<=5){ 
+    			$str  = '<div class="imgbox">';
+    		}else{ 
+    			$str  = '<div class="imgbox col3">';
+    		}	
+       		$str .= '<div class="img">';
+            $str .= '<a target="_blank" href="#"><img src="'.$v['images'].'"></a>';
+            $str .= '<div class="txtbg"></div>';
+            $str .= '<div class="txt"><a target="_blank" href="'.$v['url'].'">'.$v['title'].'</a></div>';
+        	$str .= '</div>';
+        	$str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['lcount'].'</i></span><span class="right comment">粉丝<i>'.$v['ccount'].'</i></span></div>';
+    		$str .= '</div>';
+    		echo $str;
+    	}	 	  	
+    }
+    ?>  
 </li>
 <li>
     <!--大咖秀热播音乐-->
-    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_2; ?>  
+    <?php 
+
+    if(defined('BIG_SHOW_MUSIC')){
+     	$big_show = json_decode(BIG_SHOW_MUSIC,true); 
+    	$i=0;
+    	foreach($big_show as $v){ 
+    		$i++;
+    		if($i==1){
+    			$str  = '<div class="imgbox big">';
+    		}else if($i<=5){ 
+    			$str  = '<div class="imgbox">';
+    		}else{ 
+    			$str  = '<div class="imgbox col3">';
+    		}	
+       		$str .= '<div class="img">';
+            $str .= '<a target="_blank" href="#"><img src="'.$v['images'].'"></a>';
+            $str .= '<div class="txtbg"></div>';
+            $str .= '<div class="txt"><a target="_blank" href="'.$v['url'].'">'.$v['title'].'</a></div>';
+        	$str .= '</div>';
+        	$str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['lcount'].'</i></span><span class="right comment">粉丝<i>'.$v['ccount'].'</i></span></div>';
+    		$str .= '</div>';
+    		echo $str;
+    	}	 	  	
+    }
+    ?>  
    
 </li>
 <li>
  <!--大咖秀热播影视-->
-    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_3; ?>  
+    <?php 
+
+    if(defined('BIG_SHOW_MOVIE')){
+     	$big_show = json_decode(BIG_SHOW_MOVIE,true); 
+    	$i=0;
+    	foreach($big_show as $v){ 
+    		$i++;
+    		if($i==1){
+    			$str  = '<div class="imgbox big">';
+    		}else if($i<=5){ 
+    			$str  = '<div class="imgbox">';
+    		}else{ 
+    			$str  = '<div class="imgbox col3">';
+    		}	
+       		$str .= '<div class="img">';
+            $str .= '<a target="_blank" href="#"><img src="'.$v['images'].'"></a>';
+            $str .= '<div class="txtbg"></div>';
+            $str .= '<div class="txt"><a target="_blank" href="'.$v['url'].'">'.$v['title'].'</a></div>';
+        	$str .= '</div>';
+        	$str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['lcount'].'</i></span><span class="right comment">粉丝<i>'.$v['ccount'].'</i></span></div>';
+    		$str .= '</div>';
+    		echo $str;
+    	}	 	  	
+    }
+    ?>   
    
 </li>
 <li>
    <!--大咖秀热播综艺-->
-    <?php if(defined('HOME_HOT_BIGSHOW_LEFT_1')) echo HOME_HOT_BIGSHOW_LEFT_4; ?>  
+    <?php 
+
+    if(defined('BIG_SHOW_VRTS')){
+     	$big_show = json_decode(BIG_SHOW_VRTS,true); 
+    	$i=0;
+    	foreach($big_show as $v){ 
+    		$i++;
+    		if($i==1){
+    			$str  = '<div class="imgbox big">';
+    		}else if($i<=5){ 
+    			$str  = '<div class="imgbox">';
+    		}else{ 
+    			$str  = '<div class="imgbox col3">';
+    		}	
+       		$str .= '<div class="img">';
+            $str .= '<a target="_blank" href="#"><img src="'.$v['images'].'"></a>';
+            $str .= '<div class="txtbg"></div>';
+            $str .= '<div class="txt"><a target="_blank" href="'.$v['url'].'">'.$v['title'].'</a></div>';
+        	$str .= '</div>';
+        	$str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['lcount'].'</i></span><span class="right comment">粉丝<i>'.$v['ccount'].'</i></span></div>';
+    		$str .= '</div>';
+    		echo $str;
+    	}	 	  	
+    }
+    ?>   
 </li>
 </ul>
 </div>
@@ -105,27 +278,38 @@
 </div>
 <div class="bd">
     <ul id="content">
+    <?php
+    if(is_array($rankvalue)){
+    foreach($rankvalue as $val){
+    ?>
         <li>
             <div class="hotpop5">
-            <?php if(defined('HOME_TWO_HOT_ALL')) echo HOME_TWO_HOT_ALL; ?>  
+            <?php 
+            $i=0;
+
+            foreach($val as $v){
+            	$i++;	
+            	
+	            $str = '<div class="item">';
+	            $str .= '<i class="left">'.$i.'</i>';
+	            $str .= '<div class="imgbox left"><img src="'.$v['image'].'"></div>';
+	            $str .= '<div class="des left">';
+	            $str .= '<h3>'.$v['title'].'</h3>';
+	            $str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['play_total'].'</i></span><span class="left comment">评论<i>'.$v['talk_total'].'</i></span></div>';
+	            $str .= '</div>';
+	            $str .= '<div class="play left"><a title="点击播放" href="'.$this->createUrl('/bigshots/playvideo',array('id'=>$v['product_id'])).'">点击播放</a></div>';
+	            $str .= '</div>';
+	            echo $str;
+            }
+            ?>  
               
             </div>
         </li>
-        <li>
-            <div class="hotpop5">
-                <?php if(defined('HOME_TWO_HOT_MUSIC')) echo HOME_TWO_HOT_MUSIC; ?>   
-            </div>
-        </li>
-        <li>
-            <div class="hotpop5">
-               <?php if(defined('HOME_TWO_HOT_TV')) echo HOME_TWO_HOT_TV; ?>  
-            </div>
-        </li>
-        <li>
-            <div class="hotpop5">
-               <?php if(defined('HOME_TWO_HOT_TV')) echo HOME_TWO_HOT_ZY; ?> 
-            </div>
-        </li>
+        <?php
+        	}
+        }
+        ?>
+
     </ul>
 
 </div>
@@ -155,7 +339,29 @@
                     <ul>
 
                      <!--星愿城-->
-                    <?php if(defined('HOME_STAR_DREAM_LEFT')) echo HOME_STAR_DREAM_LEFT; ?>  
+                    <?php 
+                    if(defined('STAR_HOPE_CONTENT')){
+                    
+     					$star_hope = json_decode(STAR_HOPE_CONTENT,true);
+     					$i=0; 
+	     				foreach($star_hope as $v){
+		                     $i++;
+		                    $lastclass = $i%4 == 0 ? 'last':'';
+		                     $str  = '<li class="'.$lastclass.'"><div class="imgbox">';
+		                     $str .= '<a target="_blank" href="#"><img title="Boyfriend" alt="Boyfriend" src="/images/picshow02.jpg"></a>';
+		                     $str .= '<div class="txtbg"></div>';
+		                     $str .= '<p><a target="_blank" href="#">'.$v['titles'].'</a></p>';
+		                     $str .= '</div>';
+		                     $str .= '<div class="numberbox">';
+		                     $str .= '<p>已筹款<span>'.$v[lcount].'金币</span></p>';
+		                     $str .= '<div class="progress">';
+		                     $str .= '<div style="width:'.$v[ccount].'%" class="yellow"></div></div>';
+		                     $str .= '<div class="des"><span class="left">'.$v[ccount].'%</span><span class="right">剩余'.$v['overday'].'天</span></div></div></li>';
+		                     echo $str;
+	                      }
+                    }
+
+                     ?>  
                      
                     </ul>
                 </div>
@@ -172,16 +378,30 @@
                 <div class="ind05">
                     <ul id="content">
                          <!--星愿排行榜-->
-                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_1; ?>
-                              <!--公益贡献榜-->
-                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_2; ?>  
+                         <li style="display: none;">                       
+                        <?php
+                        for($i=0;$i<9;$i++){
+                        	echo '<div><i>'.$i.'</i><a target="_blank" href="#">和Boyfriend联手开展“童年公益计划”</a></div>';
+                        } 
+                        ?>
+                        </li>
+                       <!--公益贡献榜-->
+                        <li style="display: list-item;">    
+                        <?php
+                        for($i=1;$i<10;$i++){
+                        	echo '<div><i>'.$i.'</i><a target="_blank" href="#">和Boyfriend联手开展“童年公益计划”</a></div>';
+                        } 
+                        ?>
+                        </li>
 
                     </ul>
                 </div>
                 <script type="text/javascript">var tab06 = new changeTab("tab06",true);</script>
                 <div class="ind06">
                           <!--项目金额-->
-                        <?php if(defined('HOME_STAR_DREAM_RIGHT_1')) echo HOME_STAR_DREAM_RIGHT_3; ?>  
+                         <p>支持总金额<span>368</span></p>
+                    	<div class="item left"><h6>项目总数</h6><div>7689</div></div>
+                    	<div class="item right"><h6>项目总数</h6><div>7689</div></div>  
                 </div>
                 <?php $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom366x128','slider_type'=>'image','dotId'=>'focus1','cssClass'=>'picshow'))  ?>
             </div>
@@ -318,8 +538,36 @@
         <div class="bd w">
             <div class="con01">
                  <!--星闻-->
-                <?php if(defined('HOME_STAR_NEWS_MODDLE')) echo  HOME_STAR_NEWS_MODDLE; ?>  
-             
+                <?php 
+
+                if(defined('STAR_NEWS_CONTENT')){
+                	$starnews= json_decode(STAR_NEWS_CONTENT,true); 
+                	$i=0;
+
+                	foreach($starnews as $v){                		
+                		$i++;
+                		if($i==1){ 
+                		$str  = '<div class="up">';
+                    	$str .= '<div class="imgbox left"><img src="'.$v['images'].'"></div>';
+                    	$str .= '<h3>'.$v['titles'].'</h3>';
+                    	$str .= '<p>'.mb_strcut($v['intro'], 0, 60, 'utf-8').'<a target="_blank" href="'.$v['url'].'">[详细]</a></p>';
+                    	$str .= '<div class="bline"><span class="left">浏览<i>'.$v['lcount'].'</i></span><span class="right">评论<i>'.$v['ccount'].'</i></span></div>';
+                		$str .= '</div>';
+                		}else{ 
+                			if($i==2) $str .= '<ul class="list">';
+                			$str .= '<li><div class="des left">';
+                            $str .= '<h4><a target="_blank" href="'.$v['url'].'">'.$v['titles'].'</a></h4>';
+                            $str .= '<div class="bline"> <span class="left">浏览<i>'.$v['lcount'].'</i></span><span class="left">评论<i>'.$v['ccount'].'</i></span></div>';
+                        	$str .= '</div><div class="time right"><p>2014</p><p>09/22</p></div></li>';
+                		}
+
+                	}
+                	$str .= '</ul>';
+                	echo $str;
+                	
+                }
+                ?>  
+             </div>
         </div>
     </div>
 </div>
@@ -375,17 +623,36 @@
         <div class="bd w n">
         <?php 
             $this->widget('application.widgets.BannerWidget', array('group'=> 'Index Page Bottom574x396','slider_type'=>'image','dotId'=>'focus3','cssClass'=>'picshow con08 left')); 
-
+            $colorarr=array('dark','red','black','orange','green','blue');
             //娱乐厂牌
-                 if(defined('HOME_STAR_YULE_RIGHT')) echo  HOME_STAR_YULE_RIGHT;   
-
+            foreach($colorarr as $v){
         ?>
+	        <div class="con10 left <?php echo $v?>">
+	                <div class="album">
+	                    <h5>新亚洲娱乐集团有限公司</h5>
+	                    <p><img src="/images/company1.jpg"></p>
+	                    <div id="myalbum1" class="focus">
+	                        <div class="imgbox">
+	                            <ul class="imgline" style="width: 360px;">
+	                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"></li>
+	                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"></li>
+	                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"></li>
+	                                <li><p>黄晓明</p><img src="/images/huangxiaoming.jpg"></li>
+	                                <li><p>张柏芝</p><img src="/images/zhangbaizhi.jpg"></li>
+	                                <li><p>黄德伟</p><img src="/images/huangdewei.jpg"></li>
+	                            </ul>
+	                        </div>
+	                        <a class="prev"></a><a class="next"></a>
+	                    </div>
+	                </div>
+	                <script type="text/javascript">var myalbum1 = new album("myalbum1",3);</script>
+	            </div>
 
+        <?php
+    	}
+        ?>
         </div>
     </div>
-
-
-
     <div class="clear"></div>
     <div class="vspace" style="height:35px"></div>
 </div>
@@ -424,14 +691,26 @@
 
     <div class="con04">
         <ul id="tab03_content">
+        <?php for($i=0;$i<5;$i++){ ?>
+         <li>
         <?php
             //大牌店
-                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT1;  
-                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT2;  
-                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT3;  
-                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT4;  
-                 if(defined('HOME_STAR_SHOP_LEFT1')) echo  HOME_STAR_SHOP_LEFT5;  
+     		for($i=0;$i<6;$i++){
          ?>
+        
+                <div class="imgbox">
+                    <a href="#" target="_blank"><img src="/images/pic1.jpg" alt="Boyfriend" title="Boyfriend"></a>
+                    <div class="txtbg"></div>
+                    <p><a href="#" target="_blank">全部Boyfriend的应援公告及福利</a></p>
+                </div>
+
+          
+          <?php
+      		}
+
+          ?>
+          </li>
+          <?php } ?>
         </ul>
     </div>
 
@@ -478,8 +757,15 @@
             <ul>
             <?php
             //微入口
-            
-               if(defined('HOME_WEIBO_IN')) echo  HOME_WEIBO_IN; 
+            	for($i=0;$i<6;$i++){ 
+            		echo '<li>
+                    <div class="txtbg"></div>
+                    <p>范冰冰</p>
+                    <div class="head"><img src="/images/fanbingbing.jpg"></div>
+                    <div class="codeimg"><img src="/images/code1.jpg"></div>
+                	</li>';
+            	}
+           	
                ?>
             </ul>
         </div>
