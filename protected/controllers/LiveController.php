@@ -53,9 +53,20 @@ class LiveController extends BaseController
 			$yuyue='我要预约';
 
 		}
+		$criteria = new CDbCriteria(); 
+		$criteria->order = 'create_time desc'; 
+		$criteria->addCondition('starid='.$livedata['id']);  
+		$criteria->addCondition('type= :type');
+		$criteria->params[':type']='yuyue'; 
+		$dataProvider=new CActiveDataProvider('Comment',array(
+		    'criteria'=>$criteria,
+		    'pagination'=>array(
+		    'pageSize'=>5,
+		    ),
+		));
 		
 
-		$this->render('yuyue',array('livedata'=>$livedata,'yuyue'=>$yuyue));
+		$this->render('yuyue',array('livedata'=>$livedata,'yuyue'=>$yuyue,'dataProvider'=>$dataProvider));
 
 	}
 

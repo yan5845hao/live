@@ -101,14 +101,14 @@ class Configuration extends CActiveRecord
  		 */
 		public static function loadConstants() {
 			if(!defined('APP_INIT_CONFIGURATION')) {
-				if(Yii::app()->hasComponent('cache')) {
+				if(Yii::app()->hasComponent('cache')) {	
 					$configuration = Yii::app()->cache->get('public_constants');
-					if($configuration === false){
+					if($configuration === false){				
 						$configuration = self::model()->findAll(array('select'=>' t.key, t.value '));
 						Yii::app()->cache->set('public_constants', $configuration);
 					}
+						
 				} else $configuration = self::model()->findAll(array('select'=>' t.key, t.value '));
-
 				for($i =0,$max=count($configuration);$i<$max;$i++){
 					if(!defined($configuration[$i]['key'])) define($configuration[$i]['key'],$configuration[$i]['value']);
 				}

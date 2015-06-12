@@ -25,7 +25,7 @@ class BigShotsController extends BaseController
             $criteria->addSearchCondition("title", "%$keyword%");
         }
         $criteria->order = 'created desc';
-        $dataProvider = new CActiveDataProvider('product', array(
+        $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
             'pagination' => array(
                 'pageSize' => 40,

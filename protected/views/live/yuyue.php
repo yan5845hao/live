@@ -67,35 +67,100 @@
             <div class="bd">
             	<div class="vspace"></div>
             	<div class="con21">
-					<div class="reply">
-						
+					<div class="reply" id="comments">
+						<form id="form1" method="post" action="/api/addcomment">
+						<div class="imgbox"><a target="_blank" href=""><img width="62" height="62" src="<?php echo isset(Yii::app()->user->face)?Yii::app()->user->face.'@62w_62h_1e_1c_1x.jpg':'/images/default.jpg'?>" ></a></div>
 						<div class="box">
-							<div class="user"><div class="left"></div><div class="right">至少输入140字</div></div>
+							<div class="user"><div class="left"><span class="c-gap-right"><?php echo Yii::app()->user->name ?></span><img src="/images/mxindex/icon9.png"></div><div class="right">至多输入140字</div></div>
                            	<div class="vspace"></div>
-							<div class="textbox"><textarea>有什么感想你也来说说吧</textarea></div>
+							<div class="textbox"><textarea name="content" id="content1" ></textarea></div>
                             <div class="vspace"></div>
-							
-								<div class="expression"><img src="/images/mxindex/icon8.png"><a target="_blank" href="">表情</a></div>
-								<div class="fabiao_btn right"><button>发表评论</button></div>
+							<div class="expression">
+								<img src="/images/mxindex/icon8.png"><a id="face1" class="faceBtn">表情</a>
+							</div>
+
+								<input type="hidden" id="starid"  name="starid" value="<?php echo $livedata['id']?>" />
+                   				<input id="customerid" type="hidden" name="customerid" value="<?php echo Yii::app()->user->id?>" />
+                   				<input type="hidden" name="starname" value="<?php echo $livedata['mastername']?>">
+                   				<input id="type" type="hidden" name="type" value="yuyue" />
+								<div class="fabiao_btn right"><submit style="background: #f1f1f1 none repeat scroll 0 0;border: medium none;padding: 5px 10px;"  id="fabiao_btn" >发表评论</submit></div>
 
 						</div>
-					</div>
-                    <div class="replylist">
+						</form>
+						</div>
+						<script type="text/javascript" src="/js/jquery.qqFace.min.js"></script>
+              		<script type="text/javascript">
+						//实例化表情插件
+						$(function(){
+							$('#face1').qqFace({
+								id : 'facebox1', //表情盒子的ID
+								assign:'content1', //给那个控件赋值
+								path:'/images/face/'	//表情存放的路径
+							});
+							/*
+							$('#face2').qqFace({
+								id : 'facebox2',
+								assign:'content2',
+								path:'/images/face/'
+							});*/
+						});
+
+						//查看结果
+						function view(id){
+							var str = $('#'+id).val();
+							str = str.replace(/\</g,'&lt;');
+							str = str.replace(/\>/g,'&gt;');
+							str = str.replace(/\n/g,'<br/>');
+							str = str.replace(/\[\/表情([0-9]*)\]/g,'<img src="face/$1.gif" border="0" />');
+							$('#result').html($('#result').html() + str);
+						}
+					</script>
+          <?php foreach($dataProvider->getData() as $data)
+							{
+								$fbtime=time()-$data['create_time'];
+								if($fbtime>86400){ 
+									$fbtime=intval($fbtime/86400);
+									$fbtime.='天前';
+								}else if($fbtime<86400 && $fbtime>3600){ 
+									$fbtime=intval($fbtime/3600);
+									$fbtime.='小时前';
+								}else{ 
+									 $fbtime= intval($fbtime/60);	
+									 $fbtime .= '分钟前';	
+								}
+								
+								$data['url'] = $data['url']?$data['url'].'@62w_62h_1e_1c_1x.jpg':'/images/default.jpg';
+
+						?>
+						<div class="replylist">
                     <div class="vspace"></div>
-						<div class="imgbox"><a target="_blank" href=""><img src="/images/mxindex/pic5.png" class="left"></a></div>
+						<div class="imgbox"><a><img src="<?php echo $data['url']?>" class="left"></a></div>	
 						<div class="replybox">
-							<div class="username"><a target="_blank" href="">nns</a></div>
-							<p>大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO大爱EXO</p>
-							<div class="clear"><div class="retime left"><span class="c-gap-right">1小时前</span><span>来自优酷</span></div><div class="right repeat"><a class="c-gap-right" target="_blank" href="">转发</a><a class="remsg">回复</a></div></div>
+							<div class="username"><a><?php echo $data['author']?></a></div>
+							<p><?php echo $data['content']?></p>
+							<div class="clear"><div class="retime left"><span class="c-gap-right"><?php echo $fbtime?></span><span>来自捕梦网</span></div><div class="right repeat"><a class="c-gap-right" target="_blank" href="">转发</a></div></div>
 						</div>
                         <div class="vspace"></div>
 					</div>
+
+					<?php
+					}
+					?>
+				
              
           
            
                     
-                    <div class="page_list">
-                    <div style="height:20px;" class="vspace"></div><a target="_blank" href="" class="current">1</a><a target="_blank" href="">2</a><a target="_blank" href="">3</a><a target="_blank" href="">4</a><a target="_blank" href="">5</a><a target="_blank" href="">5</a><a target="_blank" href="">6</a><a target="_blank" href="">7</a><a target="_blank" href="">9</a><a target="_blank" href="">10</a><a class="prev_page" target="_blank" href="">上一页</a><a class="next_page page_focus" target="_blank" href="">下一页</a></div>
+                     <div class="page_list">
+                    <div style="height:20px;" class="vspace"></div>		
+                    <?php $this->widget('CLinkPager', array('cssFile'=>false,'header'=>'', 'firstPageLabel' => '首页',
+			               'lastPageLabel' => '末页',
+			               'prevPageLabel' => '上一页',
+			               'nextPageLabel' => '下一页',
+			               'pages' => $dataProvider->pagination,
+			               'maxButtonCount'=>10));
+			        ?>
+               </div>
 				</div>	
               
              <script>
@@ -192,3 +257,5 @@
 </div>
 
 <!-- end-->
+
+<script type="text/javascript" src="/js/comments.js"></script>
