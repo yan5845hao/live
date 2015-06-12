@@ -7,6 +7,7 @@
 class MyAccountController extends BaseController
 {
     private $model;
+
     public function __construct($id, $module = null)
     {
         parent::__construct($id, $module);
@@ -19,8 +20,8 @@ class MyAccountController extends BaseController
             Yii::app()->user->login($identify);
         }
         if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
-   //     $this->layout = 'sign_layout';
-      //  Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
+        //     $this->layout = 'sign_layout';
+        //  Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
     }
 
     public function actionIndex()
@@ -30,9 +31,9 @@ class MyAccountController extends BaseController
         $customer_id = Yii::app()->user->id;
         $userInfo = Customer::model()->findByPk($customer_id);
         if ($userInfo->customer_type == 2) {
-             $this->render('star/index', array('userInfo' => $userInfo));
+            $this->render('star/index', array('userInfo' => $userInfo));
         } else {
-             $this->render('index', array('userInfo' => $userInfo));
+            $this->render('index', array('userInfo' => $userInfo));
         }
     }
 
@@ -46,14 +47,14 @@ class MyAccountController extends BaseController
         $this->render('modifyAccount');
     }
 
-    public function actionmydata()
+    public function actionMyData()
     {
         $this->render('index');
     }
 
-    public function actionmypassword()
+    public function actionMyPassword()
     {
-        $this->render('mypassword');
+        $this->render('myPassword');
     }
 
     public function actionEditInfo()
@@ -69,7 +70,7 @@ class MyAccountController extends BaseController
             echo CJSON::encode(array('ok' => true));
             Yii::app()->end();
         } else {
-            echo CJSON::encode(array('ok' => true, 'message' => '保持失败，请联系管理员'));
+            echo CJSON::encode(array('ok' => true, 'message' => '保存失败，请联系管理员'));
             Yii::app()->end();
         }
 
@@ -94,7 +95,7 @@ class MyAccountController extends BaseController
     {
         $customer_id = Yii::app()->user->id;
         $file = $_FILES['faces'];
-        try{
+        try {
             for ($i = 0; $i < count($file['tmp_name']); $i++) {
                 if (!$file['tmp_name'][$i]) continue;
                 $content = fopen($file['tmp_name'][$i], 'r');
@@ -107,7 +108,7 @@ class MyAccountController extends BaseController
             $relation_star = CJSON::encode($_POST['relation_star']);
             $customer = Customer::model()->findByPk($customer_id);
             $customerInfo = CustomerInfo::model()->findByAttributes(array('customer_id' => $customer_id));
-            if($customerInfo){
+            if ($customerInfo) {
                 $customerInfo->content = Yii::app()->request->getParam('content');
                 $customerInfo->birthday = Yii::app()->request->getParam('birthday');
                 $customerInfo->address1 = Yii::app()->request->getParam('address1');
@@ -116,7 +117,7 @@ class MyAccountController extends BaseController
                 $customerInfo->occupation = Yii::app()->request->getParam('occupation');
                 $customerInfo->tag = Yii::app()->request->getParam('tag');
                 $customerInfo->relation_star = $relation_star;
-            }else{
+            } else {
                 $customerInfo = new CustomerInfo();
                 $data = array(
                     'content' => Yii::app()->request->getParam('content'),
@@ -135,7 +136,7 @@ class MyAccountController extends BaseController
             $customer->save();
             $customerInfo->save();
             $this->redirect($this->createUrl('/myAccount'));
-        }catch(Exception $e){
+        } catch (Exception $e) {
             $this->redirect($this->createUrl('/myAccount'));
             $e->getMessage();
             return false;
@@ -157,23 +158,24 @@ class MyAccountController extends BaseController
                 'pageSize' => 10,
             ),
         ));
-        $this->render('star/news', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+        $this->render('star/news', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
     }
+
     public function actionPubNews()
     {
-    	
-    	$stra_id=Yii::app()->user->id;
-    	$userdata = Customer::model()->findByPk($stra_id);
-    	$star_name = $userdata[user_name];
-    	
+
+        $stra_id = Yii::app()->user->id;
+        $userdata = Customer::model()->findByPk($stra_id);
+        $star_name = $userdata[user_name];
+
         $image = '';
         $id = Yii::app()->request->getParam('id');
         $starNews = StarNews::model()->findByPk($id);
-        if($_POST){
-        	$createtime = time();
-       
+        if ($_POST) {
+            $createtime = time();
+
             $file = $_FILES['image'];
-            if($file['tmp_name']){
+            if ($file['tmp_name']) {
                 $content = fopen($file['tmp_name'], 'r');
                 $extName = Yii::app()->aliyun->getExtName($file['name']);
                 $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
@@ -181,15 +183,15 @@ class MyAccountController extends BaseController
                 Yii::app()->aliyun->putResourceObject($key, $content, $size);
                 $image = Yii::app()->params['cdnUrl'] . '/' . $key;
             }
-            if($starNews){
+            if ($starNews) {
                 $starNews->title = Yii::app()->request->getParam('title');
                 $starNews->content = Yii::app()->request->getParam('content');
-               	$starNews->introduce = Yii::app()->request->getParam('introduce');	
-                if($image != ''){
-                $starNews->image = $image;
+                $starNews->introduce = Yii::app()->request->getParam('introduce');
+                if ($image != '') {
+                    $starNews->image = $image;
                 }
                 $starNews->createtime = $createtime;
-            }else{
+            } else {
                 $starNews = new StarNews();
                 $data = array(
                     'title' => Yii::app()->request->getParam('title'),
@@ -197,15 +199,15 @@ class MyAccountController extends BaseController
                     'star_id' => Yii::app()->user->id,
                     'introduce' => Yii::app()->request->getParam('introduce'),
                     'image' => $image,
-                    'star_name'=> $star_name,
-                    'createtime' =>  $createtime,
+                    'star_name' => $star_name,
+                    'createtime' => $createtime,
                 );
                 $starNews->setAttributes($data);
             }
             $starNews->save(false);
             $this->redirect($this->createUrl('/myAccount/news'));
         }
-        $this->render('star/publishNews',array('newsInfo'=>$starNews));
+        $this->render('star/publishNews', array('newsInfo' => $starNews));
     }
 
 
@@ -223,20 +225,20 @@ class MyAccountController extends BaseController
                 'pageSize' => 4,
             ),
         ));
-        $this->render('star/schedule', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+        $this->render('star/schedule', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
     }
 
-     public function actionPubschedule()
+    public function actionPubSchedule()
     {
 
         $image = '';
         $id = Yii::app()->request->getParam('id');
         $starNews = StarSchedule::model()->findByPk($id);
 
-        if($_POST){
-        	
+        if ($_POST) {
+
             $file = $_FILES['image'];
-            if($file['tmp_name']){
+            if ($file['tmp_name']) {
                 $content = fopen($file['tmp_name'], 'r');
                 $extName = Yii::app()->aliyun->getExtName($file['name']);
                 $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
@@ -244,18 +246,18 @@ class MyAccountController extends BaseController
                 Yii::app()->aliyun->putResourceObject($key, $content, $size);
                 $img = Yii::app()->params['cdnUrl'] . '/' . $key;
             }
-            if($starNews){
-            	$createtime = time();
+            if ($starNews) {
+                $createtime = time();
                 $starNews->title = Yii::app()->request->getParam('title');
                 $starNews->content = Yii::app()->request->getParam('content');
                 $starNews->address = Yii::app()->request->getParam('address');
                 $starNews->showtime = Yii::app()->request->getParam('showtime');
                 $starNews->begintime = strtotime(Yii::app()->request->getParam('begintime'));
-                if($img != ''){
-                	$starNews->img = $img;
+                if ($img != '') {
+                    $starNews->img = $img;
                 }
                 $starNews->createtime = $createtime;
-            }else{
+            } else {
                 $starNews = new StarSchedule();
                 $createtime = time();
                 $data = array(
@@ -267,14 +269,14 @@ class MyAccountController extends BaseController
                     'starid' => Yii::app()->user->id,
                     'starname' => Yii::app()->user->name,
                     'img' => $img,
-                    'createtime' =>  $createtime,
+                    'createtime' => $createtime,
                 );
                 $starNews->setAttributes($data);
             }
             $starNews->save(false);
             $this->redirect($this->createUrl('/myAccount/schedule'));
         }
-        $this->render('star/pubschedule',array('newsInfo'=>$starNews));
+        $this->render('star/pubschedule', array('newsInfo' => $starNews));
     }
 
     public function actionDeleteNews()
@@ -310,7 +312,7 @@ class MyAccountController extends BaseController
                 'pageSize' => 10,
             ),
         ));
-        $this->render('star/video', array('dataProvider' => $dataProvider,'data' => $dataProvider->getData()));
+        $this->render('star/video', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
     }
 
     public function actionPubVideo()
@@ -319,9 +321,9 @@ class MyAccountController extends BaseController
         $id = Yii::app()->request->getParam('id');
         $customer_id = Yii::app()->user->id;
         $product = Product::model()->findByPk($id);
-        if($_POST){
+        if ($_POST) {
             $file = $_FILES['image'];
-            if($file['tmp_name']){
+            if ($file['tmp_name']) {
                 $content = fopen($file['tmp_name'], 'r');
                 $extName = Yii::app()->aliyun->getExtName($file['name']);
                 $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
@@ -329,30 +331,30 @@ class MyAccountController extends BaseController
                 Yii::app()->aliyun->putResourceObject($key, $content, $size);
                 $image = Yii::app()->params['cdnUrl'] . '/' . $key;
             }
-            if($product){
-				
+            if ($product) {
+
                 $product->title = Yii::app()->request->getParam('title');
                 $product->content = Yii::app()->request->getParam('content');
-				$product->video_type = Yii::app()->request->getParam('video_type');
-				$product->video_types = Yii::app()->request->getParam('video_types');
-                if($image != ''){
+                $product->video_type = Yii::app()->request->getParam('video_type');
+                $product->video_types = Yii::app()->request->getParam('video_types');
+                if ($image != '') {
                     $product->image = $image;
                 }
                 $product->url = Yii::app()->request->getParam('url');
                 $product->created = new CDbExpression('NOW()');
-            }else{
-				
+            } else {
+
                 $product = new Product();
                 $data = array(
                     'title' => Yii::app()->request->getParam('title'),
                     'content' => Yii::app()->request->getParam('content'),
                     'star_id' => Yii::app()->user->id,
-					'video_type' => Yii::app()->request->getParam('video_type'),
-					'video_types' => Yii::app()->request->getParam('video_types'),
+                    'video_type' => Yii::app()->request->getParam('video_type'),
+                    'video_types' => Yii::app()->request->getParam('video_types'),
                     'image' => $image,
-                    'type'=> 'video',
+                    'type' => 'video',
                     'url' => Yii::app()->request->getParam('url'),
-                    'created' =>  new CDbExpression('NOW()'),
+                    'created' => new CDbExpression('NOW()'),
                 );
                 $product->setAttributes($data);
             }
@@ -360,7 +362,7 @@ class MyAccountController extends BaseController
             $product->save(false);
             $this->redirect($this->createUrl('/myAccount/video'));
         }
-        $this->render('star/publishVideo',array('product'=>$product));
+        $this->render('star/publishVideo', array('product' => $product));
     }
 
     public function actionDeleteVideo()
@@ -369,12 +371,56 @@ class MyAccountController extends BaseController
         Product::model()->findByPk($id)->delete();
         $this->redirect($this->createUrl('/myAccount/video'));
     }
-    public function loadModel()
+
+    public function actionMyorders()
     {
-        $customer_id = Yii::app()->user->id;
-        $model = Customer::model()->findByPk($customer_id);
-        if ($model === null)
-            throw new CHttpException(404, 'The requested page does not exist.');
-        return $model;
+        echo 'TBD:show my orders.';
+    }
+
+    public function actionRechargeGold()
+    {
+        $this->layout = 'blank_layout';
+        $this->render('recharge');
+    }
+
+    /**
+     * test alipay upgrade by Demi
+     * 2015/6/12
+     */
+    public function actionUpgradeVip()
+    {
+        $order_id = Yii::app()->request->getParam('order_id');
+        if ($_POST) {
+            Yii::import('application.extensions.alipay.AlipayApi');
+            $order_id = 100;
+            $params['order_id'] = $order_id;
+            $params['subject'] = '开通会员';
+            $params['total_fee'] = Yii::app()->request->getParam('total_fee');
+            $params['description'] = '开通捕梦网VIP会员';
+            $params['show_url'] = Yii::app()->createUrl('myAccount/myOrders', array('order_id' => $order_id));
+            $alipay = new AlipayApi();
+            $alipay->createPayForm($params);
+        } else {
+            $this->layout = 'blank_layout';
+            $this->render('vip');
+        }
+    }
+
+    public function filters()
+    {
+        return array(
+            'accessControl'
+        );
+    }
+
+    public function accessRules()
+    {
+        return array(
+            array('deny',
+                'actions' => array('EditStar', 'PubNews', 'News', 'DeleteVideo', 'PubVideo', 'Video', 'PubSchedule', 'Schedule'),
+                'expression' => 'Yii::app()->user->type == 1?1:0',
+                'message' => 'Access Denied.'
+            ),
+        );
     }
 }
