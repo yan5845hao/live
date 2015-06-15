@@ -383,10 +383,6 @@ class MyAccountController extends BaseController
         $this->render('recharge');
     }
 
-    /**
-     * test alipay upgrade by Demi
-     * 2015/6/12
-     */
     public function actionUpgradeVip()
     {
         $order_id = Yii::app()->request->getParam('order_id');

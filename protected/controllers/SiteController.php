@@ -30,7 +30,7 @@ class SiteController extends BaseController
 			$key = md5($k.$v.'rankvalue');
 			$rankvalue[$k]=Yii::app()->cache->get($key);
 			if(!$rankvalue[$k]){ 
-				$rankvalue[$k]=Product::rankvalue($v);
+				$rankvalue[$k]=Product::model()->rankvalue($v);
 				Yii::app()->cache->set($key,$rankvalue[$k],3600);
 			}
 		}
