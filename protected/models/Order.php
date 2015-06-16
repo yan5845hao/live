@@ -28,8 +28,9 @@ class Order extends CActiveRecord
     {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-        return array(//            array('phone,password', 'required'),
-//            array('user_name,nick_name,email,last_login, gender, vip_code, face, active, address', 'safe'),
+        return array(
+            array('customer_id,product_id', 'required'),
+            array('order_id,payment_method, payment_info, cost, message, status, created, last_updated', 'safe'),
         );
     }
 
@@ -49,5 +50,27 @@ class Order extends CActiveRecord
     public function attributeLabels()
     {
         return array();
+    }
+
+    public function addOrder($params)
+    {
+        $order_data = array(
+            'payment_method' => isset($params['payment_method']) ? $params['payment_method'] : 1,
+            'payment_info' => $params['payment_info'],
+            'cost' => $params['cost'],
+            'message' => isset($params['message']) ? $params['message'] : '',
+            'status' => 1,
+            'created' => new CDbExpression('NOW()'),
+            'last_updated' => new CDbExpression('NOW()'),
+            'customer_id' => Yii::app()->user->id,
+            'product_id' => $params['product_id']
+        );
+        $model = new Order();
+        $model->setAttributes($order_data);
+        if ($model->save()) {
+            return $model->order_id;
+        } else {
+            return false;
+        }
     }
 }

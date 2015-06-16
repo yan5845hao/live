@@ -9,8 +9,11 @@
     开通会员:
     支付的账号：<?php echo Yii::app()->user->name;?>
     <form name=alipayment action="/pay/vip.shtml" method=post target="_blank">
-        <input type="radio" checked value="10" name="total_fee">一个月 （100金币/￥10元）
-        <input type="radio" value="30" name="total_fee">三个月 （300金币/￥30元）
+        <input type="radio" checked value="1" name="total">一个月 （100金币/￥10元）
+        <input type="radio" value="3" name="total">三个月 （300金币/￥30元）
+        支付方式:
+        <input type="radio" value="1" checked name="method">支付宝
+        <input type="radio" value="2" name="method">余额支付
         <br>
         注：1人民币 = 10金币
         <button type="submit">确 认</button>

@@ -8,19 +8,13 @@ class Product extends CActiveRecord
         'music' => '音乐',
         'other' => '明星档'
     );
+    const RECHARGE_VIP_TYPE_ID = 101;           //会员充值类型ID
 
-    /**
-     * Returns the static model of the specified AR class.
-     * @return Configuration the static model class
-     */
     public static function model($className = __CLASS__)
     {
         return parent::model($className);
     }
 
-    /**
-     * @return string the associated database table name
-     */
     public function tableName()
     {
         return 'product';

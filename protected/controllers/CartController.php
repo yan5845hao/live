@@ -17,11 +17,6 @@ class CartController extends BaseController
         $this->render('orderVerify', array('product' => $product));
     }
 
-    public function actionAddOrder()
-    {
-
-    }
-
     public function actionCheckoutPayment()
     {
         $this->render('checkoutPayment');
