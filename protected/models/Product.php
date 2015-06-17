@@ -8,6 +8,11 @@ class Product extends CActiveRecord
         'music' => '音乐',
         'other' => '明星档'
     );
+    public static $productStatus = array(
+        '1' => '未支付',
+        '2' => '已支付',
+        '3' => '已取消'
+    );
     const RECHARGE_VIP_TYPE_ID = 101;           //会员充值类型ID
 
     public static function model($className = __CLASS__)

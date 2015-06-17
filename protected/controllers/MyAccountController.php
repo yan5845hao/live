@@ -22,6 +22,7 @@ class MyAccountController extends BaseController
         if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
         //     $this->layout = 'sign_layout';
         //  Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
     }
 
     public function actionIndex()
@@ -145,9 +146,7 @@ class MyAccountController extends BaseController
 
     public function actionNews()
     {
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
         $star_id = Yii::app()->user->id;
-
         $criteria = new CDbCriteria();
         $criteria->addCondition("star_id = :star_id");
         $criteria->params[':star_id'] = $star_id;
@@ -213,7 +212,6 @@ class MyAccountController extends BaseController
 
     public function actionSchedule()
     {
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
         $starid = Yii::app()->user->id;
         $criteria = new CDbCriteria();
         $criteria->addCondition("starid = :starid");
@@ -298,7 +296,6 @@ class MyAccountController extends BaseController
 
     public function actionVideo()
     {
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
         $customer_id = Yii::app()->user->id;
         $criteria = new CDbCriteria();
         $criteria->addCondition("customer_id = :customer_id");
@@ -372,9 +369,19 @@ class MyAccountController extends BaseController
         $this->redirect($this->createUrl('/myAccount/video'));
     }
 
-    public function actionMyorders()
+    public function actionMyOrders()
     {
-        echo 'TBD:show my orders.';
+        $criteria = new CDbCriteria();
+        $criteria->addCondition("customer_id = :customer_id");
+        $criteria->params[':customer_id'] = Yii::app()->user->id;
+        $criteria->order = 'status desc';
+        $dataProvider = new CActiveDataProvider('Order', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+            ),
+        ));
+        $this->render('myOrders', array('dataProvider' => $dataProvider));
     }
 
     public function actionRechargeGold()
@@ -414,7 +421,7 @@ class MyAccountController extends BaseController
                     $params['order_id'] = $order_id;
                     $params['subject'] = $payment_info;
                     $params['total_fee'] = $cost;
-                    $params['description'] = '开通捕梦网VIP会员';
+                    $params['description'] = $payment_info;
                     $params['show_url'] = Yii::app()->createUrl('myAccount/myOrders', array('order_id' => $order_id));
                     $alipay = new AlipayApi();
                     $alipay->createPayForm($params);
@@ -427,6 +434,51 @@ class MyAccountController extends BaseController
             $this->layout = 'blank_layout';
             $this->render('vip');
         }
+    }
+
+    public function actionMyFavorites()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->join = ' , product AS p';
+        $criteria->condition = " t.customer_id = :customer_id AND t.product_id=p.product_id AND p.active='1'";
+        $criteria->params = array(":customer_id" => Yii::app()->user->id);
+        $criteria->order = " t.created DESC";
+        $count = CustomerFavorite::model()->count($criteria);
+        $pages = new CPagination($count);
+        $pages->pageSize = 1;
+        $pages->applyLimit($criteria);
+        $result = CustomerFavorite::model()->findAll($criteria);
+        $this->render('myFavorites', array(
+            'count' => $count,
+            'favorites' => $result,
+            'pages' => $pages,
+        ));
+    }
+
+    public function actionSaveFavorite()
+    {
+        $product_id = (int)Yii::app()->request->getParam('product_id');
+        $customer_id = (int)$this->userID;
+        $fav = CustomerFavorite::model()->findByAttributes(
+            array('product_id' => $product_id, 'customer_id' => $customer_id)
+        );
+        if ($fav) {
+            $fav->last_updated = date('Y-m-d H:i:s');
+        } else {
+            $fav = new CustomerFavorite;
+            $fav->customer_id = $customer_id;
+            $fav->product_id = $product_id;
+            $fav->created = $fav->last_updated = date('Y-m-d H:i:s');
+        }
+        $fav->save();
+        return true;
+    }
+
+    public function actionDelFavorite()
+    {
+        $customer_favorite_id = (int)Yii::app()->request->getParam('customer_favorite_id');
+        CustomerFavorite::model()->deleteByPk($customer_favorite_id, 'customer_id=:customer_id', array('customer_id' => Yii::app()->user->id));
+        $this->redirect($this->createUrl('/myAccount/myFavorites'));
     }
 
     public function filters()
