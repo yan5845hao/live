@@ -136,7 +136,7 @@ if(empty($uri)){
             <a <?php if($controller == ''){echo 'class="s"';}?> href="/">首页</a>
             <a <?php if($controller == 'bigShots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigShots')?>">大枷秀</a>
             <a <?php if($controller == 'star'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/star')?>">明星档</a>
-            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">星愿城</a>
+            <a <?php if($controller == 'project'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/project')?>">星愿城</a>
             <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">大牌店</a>
             <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">粉社会</a>
         </div>

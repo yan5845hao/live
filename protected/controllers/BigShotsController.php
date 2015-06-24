@@ -20,7 +20,7 @@ class BigShotsController extends BaseController
 
         $keyword = Yii::app()->request->getParam('keyword');
         $criteria = new CDbCriteria();
-        $criteria->addCondition("type = 'video'");
+        $criteria->addCondition("product_type_id = 2");
         if ($keyword) {
             $criteria->addSearchCondition("title", "%$keyword%");
         }
