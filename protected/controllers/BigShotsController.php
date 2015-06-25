@@ -20,11 +20,12 @@ class BigShotsController extends BaseController
 
         $keyword = Yii::app()->request->getParam('keyword');
         $criteria = new CDbCriteria();
-        $criteria->addCondition("product_type_id = 2");
         if ($keyword) {
             $criteria->addSearchCondition("title", "%$keyword%");
         }
         $criteria->order = 'created desc';
+        $criteria->join = ' ,product_type pt';
+        $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 2");
         $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
             'pagination' => array(

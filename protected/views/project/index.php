@@ -66,7 +66,7 @@
 <!-- end-->
 
 <!-- begin-->
-<div class="wrapper">
+<div class="wrapper" id="tab">
     <div class="ind11">
         <div class="">
             <span>我们已经做到</span>
@@ -107,11 +107,18 @@
 
 
 <!-- begin-->
+<?php
+$id = (int)Yii::app()->request->getParam('id');
+?>
 <div class="wrapper">
     <div class="ind12">
         <div class="tab">
             <span>最新上线</span>
-            <a class="cur">全部</a><a>公益</a><a>音乐</a><a>影视</a><a>综艺</a>
+            <a <?php if(!$id){ echo 'class="cur"';}?> href="/project#tab">全部</a>
+            <a <?php if($id == 103){ echo 'class="cur"';}?> href="<?php echo Yii::app()->createUrl('/project?id=103#tab');?>">公益</a>
+            <a <?php if($id == 104){ echo 'class="cur"';}?> href="<?php echo Yii::app()->createUrl('/project?id=104#tab');?>">音乐</a>
+            <a <?php if($id == 105){ echo 'class="cur"';}?> href="<?php echo Yii::app()->createUrl('/project?id=105#tab');?>">影视</a>
+            <a <?php if($id == 106){ echo 'class="cur"';}?> href="<?php echo Yii::app()->createUrl('/project?id=106#tab');?>">综艺</a>
             <script type="text/javascript">
                 $(document).ready(function(){
                     $(".ind12 .tab a").click(function(){
