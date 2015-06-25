@@ -8,8 +8,7 @@
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/active.js");
-
-	
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/form.js",CClientScript::POS_END);
     ?>
 </head>
 <body>
@@ -37,7 +36,7 @@
 	        | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>
    		<?php } ?>
         </div>
-        <div class="enter right"><a href="javascript:;" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
+        <div class="enter right"><a href="/pay/vip.shtml" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
     </div>
 
     <?php
@@ -85,7 +84,7 @@
         
     </div>
 
-    <div id="RegBox">  
+    <div id="RegBox">
 	<form id='rcustom_option' action='/api/register' method='POST'>
       <div class="reg_fc">
         <div class="reg_fc_tit">注册新用户</div>
@@ -115,7 +114,6 @@
       </form>
     </div>
     <?php
-        Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/form.js",CClientScript::POS_END);
     }
 	?>
     

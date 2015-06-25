@@ -9,8 +9,8 @@
                 $("#project_loading").html('<a href="javascript:;">数据加载中...</a>');
             },
             success:function(html){
-//                $("#starmore").remove();
-//                $(".shownews").last().after(html);
+                $("#projectListMore").remove();
+                $("#list li").last().after(html);
             }
         })
     }

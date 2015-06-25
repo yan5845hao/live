@@ -3,7 +3,7 @@
         <?php
         $data = $dataProvider->getData();
         if (empty($data)) {
-            echo '<div style="height:300px;text-align:center;font-size:18px;"><br><br><br><br><br>暂时没有相关的内容<br><br><p><a href="/bigShots">返回顶部</a></p></div>';
+            echo '<div style="height:300px;text-align:center;font-size:18px;"><br><br><br><br><br>暂无相关的内容</div>';
         }else{
             foreach($data as $product){
                 $product_total = 0;
@@ -17,7 +17,7 @@
                 }
                 $day = ceil((strtotime($product->end_date) - strtotime($product->begin_date))/86400);
         ?>
-            <li <?php if ($proportion > 100){echo 'class="f"';}else{ echo '';}?>>
+            <li <?php if ($proportion >= 100){echo 'class="f"';}else{ echo '';}?>>
                 <div class="imgbox">
                     <div class="img"><a href="#"><img  src="<?php echo $product->image;?>" /></a>
                         <span><?php if ($proportion > 100){echo '筹款成功';}else{ echo '筹款中';}?></span>
@@ -46,12 +46,12 @@
         ?>
     </ul>
     <div class="clear"></div>
-    <div class="more"><a href="javascript:void(0);">点击加载更多</a></div>
-    <?php
-    if ((int)$dataProvider->pagination->itemCount > $dataProvider->pagination->pageSize) {
-
-        $url = Yii::app()->createUrl('/star/index', array('page' => 2));
-        echo '<div class="more" id="project_loading" data-url="' . $url . '"><a href="javascript:void(0);"  onclick="loadMore()">点击加载更多</a></div>';
-    }
-    ?>
+    <div id="projectListMore">
+        <?php
+        if ((int)$dataProvider->pagination->itemCount > $dataProvider->pagination->pageSize) {
+            $url = Yii::app()->createUrl('/project/index', array('page' => 2, 'id' => (int)Yii::app()->request->getParam('id')));
+            echo '<div class="more" id="project_loading" data-url="' . $url . '"><a href="javascript:;" onclick="loadMore()">点击加载更多...</a></div>';
+        }
+        ?>
+    </div>
 </div>
