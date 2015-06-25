@@ -7,43 +7,38 @@ $this->breadcrumbs=array(
 	'Login',
 );
 ?>
+<div class="login_fc">
+    <div class="login_fc_tit">登录捕梦网</div>
+    <div class="form">
+    <?php $form=$this->beginWidget('CActiveForm', array(
+        'id'=>'login-form',
+        'enableAjaxValidation'=>true,
+    )); ?>
+        <div class="vspace"></div>
+        <div class="login_fc_item">
+            <?php echo $form->labelEx($model,'用户名'); ?>
+            <?php echo $form->textField($model,'username',array('class'=>'login_fc_input')); ?>
+            <?php echo $form->error($model,'username'); ?>
+        </div>
 
-<h1>Login</h1>
+        <div class="login_fc_item">
+            <?php echo $form->labelEx($model,'密码'); ?>
+            <?php echo $form->passwordField($model,'password',array('class'=>'login_fc_input')); ?>
+            <?php echo $form->error($model,'password'); ?>
+        </div>
 
-<p>用户登录</p>
-
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
-	'enableAjaxValidation'=>true,
-)); ?>
-
-	<p class="note"><span class="required">*</span>号为必填项</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'用户名'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'密码'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-            提示：你可以使用 <tt>demo/demo</tt>登陆.
-		</p>
-	</div>
-
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'记住密码'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
-
-	<div class="row submit">
-		<?php echo CHtml::submitButton('登陆'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-</div><!-- form -->
+        <div class="login_fc_item rememberMe">
+            <?php echo $form->checkBox($model,'rememberMe'); ?> 保持登录状态
+            <?php echo $form->error($model,'rememberMe'); ?>
+        </div>
+        <div class="login_fc_item">
+            <ul>
+                <li><a href="javascript:;">忘记密码</a></li>
+                <li><a onclick="regTrigger()" href="javascript:;">注册用户</a></li>
+            </ul>
+        </div>
+        <div style="height:0px;" class=" vspace"></div>
+        <div class="reg_fc_item"><b id="rerror"></b><a onclick="$('form').submit();"><img src="/css/img/reg_01.jpg" width="260" height="40" style="margin-top:5px;" /></a></div>
+    <?php $this->endWidget(); ?>
+    </div>
+</div>

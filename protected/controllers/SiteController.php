@@ -97,6 +97,9 @@ class SiteController extends BaseController
 	 */
 	public function actionLogin()
 	{
+        if (!Yii::app()->user->isGuest){
+            $this->redirect('/');
+        }
         $this->layout = 'sign_layout';
         
 		if (!defined('CRYPT_BLOWFISH')||!CRYPT_BLOWFISH)
