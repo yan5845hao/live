@@ -33,4 +33,14 @@ class ProjectController extends BaseController
             $this->render('index', array('dataProvider' => $dataProvider));
         }
     }
+
+    public function actionDetail()
+    {
+        $product_id = (int)Yii::app()->request->getParam('product_id');
+        $product = Product::model()->findByPk($product_id);
+        if ($product === null) {
+            throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        $this->render('detail', array('product' => $product));
+    }
 }

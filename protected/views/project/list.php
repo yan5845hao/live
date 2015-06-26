@@ -19,10 +19,10 @@
         ?>
             <li <?php if ($proportion >= 100){echo 'class="f"';}else{ echo '';}?>>
                 <div class="imgbox">
-                    <div class="img"><a href="#"><img  src="<?php echo $product->image;?>" /></a>
+                    <div class="img"><a href="<?php echo Yii::app()->createUrl('/project/detail',array('product_id'=>$product->product_id));?>"><img  src="<?php echo $product->image;?>" /></a>
                         <span><?php if ($proportion > 100){echo '筹款成功';}else{ echo '筹款中';}?></span>
                     </div>
-                    <p><a href="#"><?php echo $product->title;?></a></p>
+                    <p><a href="<?php echo Yii::app()->createUrl('/project/detail',array('product_id'=>$product->product_id));?>"><?php echo $product->title;?></a></p>
                 </div>
                 <div class="dotline"></div>
                 <div class="pro">

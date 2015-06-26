@@ -31,7 +31,7 @@ class Product extends CActiveRecord
     public function rules()
     {
         return array(
-            array('title,type,customer_id', 'required'),
+            array('title,product_type_id,customer_id', 'required'),
             array('content,url,image,default_price,special_price,product_tag,ordered,stock_status,active,created,last_updated,fans_total,play_total,video_type,talk_total,video_types', 'safe'),
         );
     }

@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="userlj">当前位置：<a href="#">用户中心</a> > <a href="#">基本信息</a> > 我的资料</div>
+    <div class="userlj">当前位置：<a href="#">用户中心</a> > <a href="#">基本信息</a> > 我的金币</div>
     <div class="usercon">
         <?php include 'leftMenu.php' ;?>
         <div class="usercon981 right">

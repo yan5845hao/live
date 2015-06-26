@@ -166,7 +166,7 @@ if(empty($uri)){
                     <div class="mycenter">
                         <a href="javascript:;" id="gift"><img  src="/css/img/mygift.png"/></a><a href="javascript:;" id="collection" class="end"><img  src="/css/img/myccollection.png"/></a><a href="javascript:;" id="task"><img  src="/css/img/mytask.png"/></a><a href="javascript:;" id="visiter" class="end"><img  src="/css/img/myvisiter.png"/></a>
                     </div>
-                    <div class="vip"><a target="_blank" href="javascript:;">开通超级会员</a></div>
+                    <div class="vip"><a target="_blank" href="/pay/vip.shtml">开通超级会员</a></div>
                     <div class="bg"></div>
                 </div>
             </div>

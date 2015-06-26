@@ -22,17 +22,17 @@
             <div class="imgbox">
                 <ul class="imgline">
                     <li class="cur">
-                        <a href="#"><img src="images/pic061701.jpg"/></a>
+                        <a href="#"><img src="/images/pic061701.jpg"/></a>
                         <div class="txt"><a href="#">冯绍峰倪妮赴云南做公益  陪孩子跳舞谈梦想</a></div>
                         <div class="txtbg"></div>
                     </li>
                     <li>
-                        <a href="#"><img src="images/pic22.jpg"/></a>
+                        <a href="#"><img src="/images/pic22.jpg"/></a>
                         <div class="txt"><a href="#">冯绍峰倪妮赴云南做公益  陪孩子跳舞谈梦想</a></div>
                         <div class="txtbg"></div>
                     </li>
                     <li>
-                        <a href="#"><img src="images/picshow01.jpg"/></a>
+                        <a href="#"><img src="/images/picshow01.jpg"/></a>
                         <div class="txt"><a href="#">冯绍峰倪妮赴云南做公益  陪孩子跳舞谈梦想</a></div>
                         <div class="txtbg"></div>
                     </li>
@@ -42,17 +42,17 @@
     </div>
     <div class="dot ind10 right">
             	<span>
-                	<div class="imgbox"><img  src="images/pic061701.jpg"/></div>
+                	<div class="imgbox"><img  src="/images/pic061701.jpg"/></div>
                     <div class="txtbg"></div>
                     <p class="txt">Baby最新行程曝光 出席微博之夜</p>
                 </span>
                 <span>
-                	<div class="imgbox"><img  src="images/pic22.jpg"/></div>
+                	<div class="imgbox"><img  src="/images/pic22.jpg"/></div>
                     <div class="txtbg"></div>
                     <p class="txt">Baby最新行程曝光 出席微博之夜</p>
                 </span>
                 <span>
-                	<div class="imgbox"><img  src="images/picshow01.jpg"/></div>
+                	<div class="imgbox"><img  src="/images/picshow01.jpg"/></div>
                     <div class="txtbg"></div>
                     <p class="txt">Baby最新行程曝光 出席微博之夜</p>
                 </span>

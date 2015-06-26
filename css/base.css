@@ -115,6 +115,8 @@ i{ font-style:normal;}
 .col373{width:373px;}
 .col783{width:783px;}
 .col448{width:448px;}
+.col380{width:380px;}
+.col840{width:840px;}
 
 .md{width:100%;overflow:hidden;}
 .md .hd{margin-bottom:24px;height:47px;border-bottom:3px solid #a808fe; overflow:hidden;}
@@ -193,8 +195,6 @@ i{ font-style:normal;}
 .md4 .hd .more{font:14px/58px "Microsoft Yahei";color:#2b2b2b;padding-right:10px;}
 .md4 .hd .more a{color:#2b2b2b;}
 .md4 .bd{overflow:hidden; background:#fff;padding:10px 0 8px 0;}
-
-
 
 .ind01{width:100%;hegiht:535px; overflow:hidden; position:relative;}
 .ind01 .imgbox,.ind01 .imgbox img{ width:100%;hegiht:535px;}
@@ -1028,3 +1028,53 @@ i{ font-style:normal;}
 .ind12 .con li .pro span i{color:#999;font: 12px/18px "微软雅黑";}
 .ind12 .more{height:57px; background:#f2f2f2;color:#898989;font:16px/57px "微软雅黑"; text-align:center;margin:0px 23px 0;}
 .ind12 .more a{color:#898989; clear:both;}
+
+/*众筹详情页*/
+.ind13{margin-bottom: 28px;}
+.ind13 h1{color: #6b33a2;font: 28px/36px "微软雅黑";}
+.ind13 p{color: #999;font: 12px/18px "微软雅黑";}
+
+.newsContent01{background: #fff;padding:25px;}
+.newsContent01 h2{color: #6b33a2;font: 18px/26px "微软雅黑";margin:30px 0;}
+.newsContent01 p{color: #252525;font: 14px/22px "微软雅黑";margin:30px 0;}
+
+.con23{padding:20px 0px 20px 25px; background: #fff;}
+.con23 li{width: 353px;padding:15px;background: #f5f5f5;float: left;margin:0 23px 25px 0;}
+.con23 li .headbox{margin-right: 20px;width: 83px; height: 70px;}
+.con23 li .headbox img{width: 100%;height: 70px;}
+.con23 li h5{color: #252525;font: 18px/22px "微软雅黑";margin-bottom: 6px;}
+.con23 li h5 a{color: #252525;}
+.con23 li p{color: #252525;font: 12px/20px "微软雅黑";}
+.con23 li p span{margin-right: 20px;}
+.page{width: 100%;color: #e5e5e7;text-align: right;margin-bottom: 10px;}
+.page a{padding:0 3px;color: #06a7e5;font: 12px/18px "arial";margin: 0 5px;}
+.page span{padding:0 6px;margin: 0 5px;}
+.page .btn{border: 1px solid #e5e5e7;font: 12px/20px "微软雅黑";background: #fff;}
+.page .cur{background: #c6c6c6;color: #fff;}
+
+.ind14{background: #fff;padding:30px;}
+.ind14 h3{color: #6b33a2;font: 25px/26px "微软雅黑";margin:10px 0 15px 0;}
+.ind14 h3 em{font: 43px/44px "rial";}
+.ind14 p{color: #252525;font: 14px/22px "微软雅黑";margin-bottom: 3px;}
+.ind14 p em{letter-spacing: 7px;font-style: normal;margin-right: -7px;}
+.ind14 .progress{width:276px; height:9px;background:#c2c2c2; position:relative;margin:20px 0;}
+.ind14 .progress .yellow{width:75%; height:9px; background:#ffda30; position:absolute;left:0;top:0;}
+.ind14 .progress span{position: absolute;right: -48px;top:0;color: #252525;font: 14px/10px "arial";}
+.ind14 .pro{padding:10px 0; border: 1px solid #e8e8e8;}
+.ind14 .pro span{display: inline-block;width: 100px;color: #252525;font:30px/38px "airal"; text-align: center;}
+.ind14 .pro span em{font-style: normal;}
+.ind14 .pro span i{color:#999;font: 12px/14px "微软雅黑";}
+.ind14 .more{width: 100%;}
+.zcbtn{width:100%;height:43px; background:#6c33a2;color:#fff;font:18px/43px "微软雅黑"; text-align:center;margin:20px 0 0;display: block;border-radius: 5px;}
+.ind14 .msg{color: #252525;font: 14px/24px "微软雅黑";margin: 20px auto 10px;}
+.ind14 .msg span{color: #ff1400;}
+.ind14 .bdsharebuttonbox em{color: #252525;font: 14px/30px "微软雅黑";margin: 6px;}
+
+.ind15{padding:28px; background: #fff;}
+.ind15 .hd{height: 40px;position: relative; width: 100%;border-bottom: 2px solid #e8e8e8;margin-bottom: 20px;}
+.ind15 .hd .title{ color: #6b33a2;font: 18px/40px "微软雅黑";border-bottom: 2px solid #6b33a2;}
+.ind15 .hd .more,.ind15 .hd .more a{color: #999999;font: 12px/40px "微软雅黑";}
+.ind15 .con{clear:both;}
+.ind15 .con p{font: 12px/24px "微软雅黑";}
+.ind15 .con div{text-align: left;}
+.zcbtn.w93{width:93px;}

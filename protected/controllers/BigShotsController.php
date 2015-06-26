@@ -57,7 +57,7 @@ class BigShotsController extends BaseController
             throw new CHttpException(404, 'The requested page does not exist.');
 
 
-        $sql = "select * from product where customer_id='{$videodata[customer_id]}' && type='video' && product_id <> '{$id}'  order by created desc limit 3";
+        $sql = "select * from product as p, product_type as pt where customer_id='{$videodata[customer_id]}' && pt.parent_product_type_id = 2 && product_id <> '{$id}' GROUP BY p.product_id order by p.created desc limit 3";
 
         $command = Yii::app()->db->createCommand($sql);
         $videodatas = $command->queryAll();
