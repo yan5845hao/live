@@ -53,9 +53,11 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
                         $customer = Customer::model()->findByPk($list['customer_id']);
                         $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
                         $displayName = $customer->nick_name ? $customer->nick_name : $phone;
-
                         //发起产品总数
                         $projectReleaseMap = Product::model()->getProjectReleaseMap();
+                        //支持数
+                        $sql = "select count(*) from `order` where customer_id = ".$list['customer_id'] . " and payment_info = '众筹'";
+                        $supporter_count = Yii::app()->db->createCommand($sql)->queryScalar();
                         ?>
                         <li>
                             <div class="headbox left"><a target="_blank" href="#"><img style="width: 70px;" src="<?php echo staticUrl($customer->face,array('mode' => 2, 'width' => '70','height' => '70'));?>"></a></div>
@@ -63,7 +65,7 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
                             <p>支持项目￥<?php echo (int)$list['cost']?> 元</p>
                             <p class="numbers">
                                 <span>发起：<i><?php echo isset($projectReleaseMap[$customer['customer_id']])?$projectReleaseMap[$customer['customer_id']]:0;?></i></span>
-                                <span>支持：<i>1</i></span>
+                                <span>支持：<i><?php echo $supporter_count;?></i></span>
                             </p>
                         </li>
                         <?php } ?>
@@ -145,12 +147,12 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
         <?php
         foreach($projectDescription as $list){
             $sql = "select count(*) from `order` where product_project_description_id = ".$list['product_project_description_id'];
-            $supporter_count = Yii::app()->db->createCommand($sql)->queryScalar();
+            $supporter_all_count = Yii::app()->db->createCommand($sql)->queryScalar();
         ?>
         <div class="ind15">
             <div class="hd">
                 <span class="title left">支持<?php echo $list['price']?>元<i></i></span>
-                <span class="more right"><?php echo $supporter_count;?>位支持者/限<?php echo $list['number_people']?>位</span>
+                <span class="more right"><?php echo $supporter_all_count;?>位支持者/限<?php echo $list['number_people']?>位</span>
             </div>
             <div class="con">
                 <?php echo $list['content']?>
