@@ -7,6 +7,9 @@
 
 
 <!-- begin-->
+<?php
+$project = ProductProject::model()->findByAttributes(array('product_id' => $product->product_id));
+?>
 <div class="wrapper">
     <div class="ind13">
         <h1><?php echo $product->title;?></h1>
@@ -19,198 +22,147 @@
             </div>
         </div>
         <div class="vspace" style="height:25px;"></div>
-        <div class="md md3">
-            <div class="hd">
-                <span class="title left">最新评论<i>明星娱乐商城，来这儿就够了</i></span>
-                <span class="more right" ><a href="#"  target="_blank">详细>></a></span>
-
-            </div>
-            <div class="bd">
-
-
-
-            </div>
-        </div>
-        <div class="vspace" style="height:35px;"></div>
+<!--        <div class="md md3">-->
+<!--            <div class="hd">-->
+<!--                <span class="title left">最新评论<i>明星娱乐商城，来这儿就够了</i></span>-->
+<!--                <span class="more right" ><a href="javascript:;" style="color: #ccc;">详细>></a></span>-->
+<!---->
+<!--            </div>-->
+<!--            <div class="bd">-->
+<!---->
+<!---->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="vspace" style="height:35px;"></div>-->
+        <?php
+        $data = $dataProvider->getData();
+        if(!empty($data)){
+        ?>
         <div class="md">
             <div class="hd">
                 <span class="title left">支持者<i></i></span>
-                <span class="more right" ><a href="#"  target="_blank">更多>></a></span>
+                <span class="more right" ><a href="javascript:;" style="color: #ccc;">更多>></a></span>
 
             </div>
             <div class="bd">
                 <div class="con23">
-                    <ul>
+                    <ul id="con23">
+                        <?php
+                        foreach($data as $list){
+                        $customer = Customer::model()->findByPk($list['customer_id']);
+                        $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
+                        $displayName = $customer->nick_name ? $customer->nick_name : $phone;
+
+                        //发起产品总数
+                        $projectReleaseMap = Product::model()->getProjectReleaseMap();
+                        ?>
                         <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
+                            <div class="headbox left"><a target="_blank" href="#"><img style="width: 70px;" src="<?php echo staticUrl($customer->face,array('mode' => 2, 'width' => '70','height' => '70'));?>"></a></div>
+                            <h5><a target="_blank" href="#"><?php echo $displayName;?></a></h5>
+                            <p>支持项目￥<?php echo (int)$list['cost']?> 元</p>
+                            <p class="numbers">
+                                <span>发起：<i><?php echo isset($projectReleaseMap[$customer['customer_id']])?$projectReleaseMap[$customer['customer_id']]:0;?></i></span>
+                                <span>支持：<i>1</i></span>
+                            </p>
                         </li>
-                        <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
-                        </li>
-                        <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
-                        </li>
-                        <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
-                        </li>
-                        <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
-                        </li>
-                        <li>
-                            <div class="headbox left"><a target="_blank" href="#"><img src="images/baby.jpg"></a></div>
-                            <h5><a target="_blank" href="#">wagn***n456</a></h5>
-                            <p>支持项目￥100元</p>
-                            <p class="numbers"><span>发起：<i>0</i></span><span>支持：<i>3</i></span></p>
-                        </li>
+                        <?php } ?>
                     </ul>
-                    <div class="page"><span class="cur">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><span>···</span><a href="#">98</a><span class="btn dis">上一页</span><a href="#" class="btn">下一页</a></div>
                     <div class="clear"></div>
+                    <div style="text-align: right; margin-right: 20px;">
+                    <?php
+                    $this->widget('CLinkPager', array(
+                        'cssFile'=>false,
+                        'header'=>'',
+                        'maxButtonCount'=>8,
+                        'firstPageLabel'=>false,
+                        'lastPageLabel'=>false,
+                        'nextPageLabel'=>'下一页',
+                        'prevPageLabel'=>'上一页',
+                        'pages' => $dataProvider->pagination
+                    ));
+                    ?>
+                    </div>
                 </div>
-
-
             </div>
         </div>
+        <?php } ?>
     </div>
+    <?php
+    $product_total = 0;
+    $proportion = '0';
+    $project = $product->getProject($product->product_id);
+    if ($project) {
+        $product_total = $project->product_total;
+    }
+    if ($product_total > 0) {
+        $proportion = (($product_total / $product->project_price) * 100);
+        if($proportion > 100)
+            $proportion = 100;
+    }
+    $day = ceil((strtotime($product->end_date) - strtotime($product->begin_date)) / 86400);
+    ?>
     <div class="col380 right">
         <div class="ind14">
             <p>目前累计金额</p>
-            <h3><em>15278.00</em>元</h3>
-            <p>众筹金额：<span>1500万元</span></p>
-            <p><em>发起人</em>：<span>周华健</span></p>
+            <h3><em><?php echo $project->product_total?$project->product_total:0;?></em>元</h3>
+            <p>众筹金额：<span><?php echo $product->project_price;?>元</span></p>
+            <p><em>发起人</em>：<span><?php echo $product->customer->nick_name?$product->customer->nick_name:$product->customer->user_name;?></span></p>
             <p>项目进度：<span>进行中</span></p>
             <div class="progress">
-                <div style="width:75%" class="yellow"></div>
-                <span>75%</span>
+                <div style="width:<?php echo $proportion;?>%" class="yellow"></div>
+                <span><?php echo $proportion;?>%</span>
             </div>
             <div class="pro">
                         <span>
-                            <em>29</em><br>
+                            <em><?php echo $day;?></em><br>
                             <i>剩余天数</i>
                         </span>
                         <span>
-                            <em>2356</em><br>
+                            <em><?php echo $product->projectOrderCount;?></em><br>
                             <i>支持者</i>
                         </span>
                         <span>
-                            <em>64</em><br>
+                            <em>0</em><br>
                             <i>喜欢</i>
                         </span>
             </div>
-            <div class="msg">在<span>2015年06月30日</span>前得到<span>1500万</span><span>元</span>的支持才可成功</div>
+            <div class="msg">在<span><?php echo date('Y年m月d日',strtotime($product->end_date))?></span>前得到<span><?php echo $product->project_price;?></span><span>元</span>的支持才可成功</div>
             <div class="more"><a href=" javascript:void(0);" class="zcbtn">我要支持</a></div>
 
-            <div class="bdsharebuttonbox"> <em class="left">我要分享：</em><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a>
-
+            <div class="bdsharebuttonbox"> <em class="left">我要分享：</em>
+                <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                <a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a>
+                <a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a>
+                <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                <a href="#" class="bds_more" data-cmd="more"></a>
             </div>
             <script type="text/javascript">window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
             </script>
         </div>
         <div class="vspace" style="height:20px;"></div>
+        <?php
+        foreach($projectDescription as $list){
+            $sql = "select count(*) from `order` where product_project_description_id = ".$list['product_project_description_id'];
+            $supporter_count = Yii::app()->db->createCommand($sql)->queryScalar();
+        ?>
         <div class="ind15">
             <div class="hd">
-                <span class="title left">支持100元<i></i></span>
-                <span class="more right"><a href="#" target="_blank">9位支持者/限200</a></span>
+                <span class="title left">支持<?php echo $list['price']?>元<i></i></span>
+                <span class="more right"><?php echo $supporter_count;?>位支持者/限<?php echo $list['number_people']?>位</span>
             </div>
             <div class="con">
-                <p>支持100元 限200位 感谢您的爱心支持，您将获得: 1.电子感谢信（请备注您的邮箱）； 2.萤火灯一只。<br/>
-                    配送费用： 免运费<br/>
-                    预计回报发送时间：项目成功结束后30天内</p>
+                <?php echo $list['content']?>
                 <a class="zcbtn w93" href=" javascript:void(0);">支持</a>
             </div>
         </div>
         <div class="vspace" style="height:20px;"></div>
-        <div class="ind15">
-            <div class="hd">
-                <span class="title left">支持200元<i></i></span>
-                <span class="more right"><a href="#" target="_blank">9位支持者/限200</a></span>
-            </div>
-            <div class="con">
-                <p>支持200元 限200位 感谢您的爱心支持，您将获得: 1.电子感谢信（请备注您的邮箱）； 2.萤火灯一只。<br/>
-                    配送费用： 免运费<br/>
-                    预计回报发送时间：项目成功结束后30天内</p>
-                <a class="zcbtn w93" href=" javascript:void(0);">支持</a>
-            </div>
-        </div>
-        <div class="vspace" style="height:20px;"></div>
-        <div class="ind15">
-            <div class="hd">
-                <span class="title left">支持300元<i></i></span>
-                <span class="more right"><a href="#" target="_blank">15位支持者/限200</a></span>
-            </div>
-            <div class="con">
-                <p>支持300元 限200位 感谢您的爱心支持，您将获得: 1.电子感谢信（请备注您的邮箱）； 2.萤火灯一只。<br/>
-                    配送费用： 免运费<br/>
-                    预计回报发送时间：项目成功结束后30天内</p>
-                <a class="zcbtn w93" href=" javascript:void(0);">支持</a>
-            </div>
-        </div>
-        <div class="vspace" style="height:20px;"></div>
-        <div class="ind15">
-            <div class="hd">
-                <span class="title left">支持400元<i></i></span>
-                <span class="more right"><a href="#" target="_blank">20位支持者/限200</a></span>
-            </div>
-            <div class="con">
-                <p>支持400元 限200位 感谢您的爱心支持，您将获得: 1.电子感谢信（请备注您的邮箱）； 2.萤火灯一只。<br/>
-                    配送费用： 免运费<br/>
-                    预计回报发送时间：项目成功结束后30天内</p>
-                <a class="zcbtn w93" href=" javascript:void(0);">支持</a>
-            </div>
-        </div>
-
+        <?php } ?>
     </div>
     <div class="clear"></div>
 </div>
 <div class="vspace" style="height:35px"></div>
-<!-- end-->
-
-<!--支持弹出层-->
-<!--   <div class="allbg"></div>
-<div class="showbox">
-  <div>选择你的预购回报</div>
-  <ul>
-    <li>
-         <div class="hd">
-             <span class="title left">支持400元<i></i></span>
-         </div>
-            <div class="con">
-              <p>支持400元 限200位 感谢您的爱心支持，您将获得: 1.电子感谢信（请备注您的邮箱）； 2.萤火灯一只。<br/>
-配送费用： 免运费<br/>
-预计回报发送时间：项目成功结束后30天内</p>
-<div><a class="zcbtn w93" href="javascipt:void(0);">支持</a><span>53人支持/不限量</span></div>
-            </div>
-    </li>
-  </ul>
-</div>
-<script>
-$(document).ready(function(){
-   var _w =$(document.body).width();
- var _h =$(document.body).height();
- alert(_h)
-});
-</script> -->
-<!---->
-
-
-
-
-
-<!-- begin-->
 <div class="wrapper">
     <div class="gototop" id="gototop1"><span></span></div>
     <script type="text/javascript">var mygototop = new gototop("gototop1")</script>

@@ -13,7 +13,8 @@ class Product extends CActiveRecord
         '2' => '已支付',
         '3' => '已取消'
     );
-    const RECHARGE_VIP_TYPE_ID = 101;           //会员充值类型ID
+    const RECHARGE_VIP_TYPE_ID = 101; //会员充值类型ID
+    const PRODUCT_PROJECT_TYPE_ID = 102; //众筹产品类型ID
 
     public static function model($className = __CLASS__)
     {
@@ -42,7 +43,7 @@ class Product extends CActiveRecord
     public function relations()
     {
         return array(
-            'customer' => array(self::BELONGS_TO, 'customer', 'customer_id'),
+            'customer' => array(self::BELONGS_TO, 'customer', 'customer_id')
         );
     }
 
@@ -66,5 +67,30 @@ class Product extends CActiveRecord
         $result = $command->queryAll();
 
         return $result;
+    }
+
+
+    public function getProject()
+    {
+        $project = ProductProject::model()->findByAttributes(array('product_id' => $this->product_id));
+        return $project;
+    }
+
+    public function getProjectOrderCount()
+    {
+        $sql = "select count(*) from `order` where product_id = $this->product_id";
+        return Yii::app()->db->createCommand($sql)->queryScalar();
+    }
+
+    public function getProjectReleaseMap()
+    {
+        $map = array();
+        $sql = "select p.customer_id, count(*) as count from `product` p inner join `product_type` pt on p.product_type_id = pt.product_type_id where pt.parent_product_type_id = ".self::PRODUCT_PROJECT_TYPE_ID." group by customer_id";
+        $command = Yii::app()->db->createCommand($sql)->queryAll();
+        foreach($command as $list)
+        {
+            $map[$list['customer_id']] = $list['count'];
+        }
+        return $map;
     }
 }

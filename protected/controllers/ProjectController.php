@@ -36,11 +36,23 @@ class ProjectController extends BaseController
 
     public function actionDetail()
     {
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
         $product_id = (int)Yii::app()->request->getParam('product_id');
         $product = Product::model()->findByPk($product_id);
         if ($product === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
-        $this->render('detail', array('product' => $product));
+        $this->setPageTitle($product->title);
+        $projectDescription = ProductProjectDescription::model()->findAllByAttributes(array('product_id' => $product_id));
+        $criteria = new CDbCriteria();
+        $criteria->addCondition("product_id = $product_id");
+        $dataProvider = new CActiveDataProvider('Order', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+                'pageVar' => 'page'
+            ),
+        ));
+        $this->render('detail', array('product' => $product, 'dataProvider'=>$dataProvider,'projectDescription' => $projectDescription));
     }
 }

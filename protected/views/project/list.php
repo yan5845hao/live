@@ -8,14 +8,14 @@
             foreach($data as $product){
                 $product_total = 0;
                 $proportion = '0';
-                $product_project = ProductProject::model()->findByAttributes(array('product_id' => $product->product_id));
-                if ($product_project) {
-                    $product_total = $product_project->product_total;
+                $project = $product->getProject($product->product_id);
+                if ($project) {
+                    $product_total = $project->product_total;
                 }
-                if($product_total > 0){
+                if ($product_total > 0) {
                     $proportion = (($product_total / $product->project_price) * 100);
                 }
-                $day = ceil((strtotime($product->end_date) - strtotime($product->begin_date))/86400);
+                $day = ceil((strtotime($product->end_date) - strtotime($product->begin_date)) / 86400);
         ?>
             <li <?php if ($proportion >= 100){echo 'class="f"';}else{ echo '';}?>>
                 <div class="imgbox">

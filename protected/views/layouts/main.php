@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
+    <?php  $controller = strtolower(Yii::app()->controller->id); ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes" />
-    <title>捕捉梦想捕捉爱!-捕梦网-YOOSHOW.COM</title>
+    <title><?php echo '捕捉梦想捕捉爱!-捕梦网-YOOSHOW.COM';if($controller == 'project'){echo $this->pageTitle;}?></title>
     <?php
     Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl.'/css/base.css');
     Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl . "/js/jquery.js");
@@ -12,7 +13,6 @@
     ?>
 </head>
 <body>
-<?php  $controller = strtolower(Yii::app()->controller->id); ?>
 <div class="topbar">
     <div class="top">
         <div class="logo left"><a href="/"><img src="/images/logo.png" /></a><span>最大的明星粉丝互动娱乐平台</span></div>
