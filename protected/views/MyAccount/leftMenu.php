@@ -12,6 +12,7 @@
         <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />订单管理</dt>
             <dd <?php if($uri == 'myaccount/myorders'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/myOrders')?>">我的订单</a></dd>
+            <dd <?php if($uri == 'myaccount/address'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/address')?>">收货地址</a></dd>
         </dl>
 <!--        <dl>-->
 <!--            <dt><img src="/css/img/user02.jpg" width="24" height="22" />直播管理</dt>-->

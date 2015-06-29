@@ -156,7 +156,7 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
             </div>
             <div class="con">
                 <?php echo $list['content']?>
-                <a class="zcbtn w93" href=" javascript:void(0);">支持</a>
+                <a class="zcbtn w93" href="<?php echo Yii::app()->createUrl('/project/payment',array('product_id'=>$product->product_id));?>" target="_blank">支持</a>
             </div>
         </div>
         <div class="vspace" style="height:20px;"></div>

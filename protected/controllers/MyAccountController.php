@@ -112,7 +112,7 @@ class MyAccountController extends BaseController
             if ($customerInfo) {
                 $customerInfo->content = Yii::app()->request->getParam('content');
                 $customerInfo->birthday = Yii::app()->request->getParam('birthday');
-                $customerInfo->address1 = Yii::app()->request->getParam('address1');
+                $customerInfo->city = Yii::app()->request->getParam('city');
                 $customerInfo->height = Yii::app()->request->getParam('height');
                 $customerInfo->weight = Yii::app()->request->getParam('weight');
                 $customerInfo->occupation = Yii::app()->request->getParam('occupation');
@@ -123,7 +123,7 @@ class MyAccountController extends BaseController
                 $data = array(
                     'content' => Yii::app()->request->getParam('content'),
                     'birthday' => Yii::app()->request->getParam('birthday'),
-                    'address1' => Yii::app()->request->getParam('address1'),
+                    'city' => Yii::app()->request->getParam('city'),
                     'height' => Yii::app()->request->getParam('height'),
                     'weight' => Yii::app()->request->getParam('weight'),
                     'occupation' => Yii::app()->request->getParam('occupation'),
@@ -378,7 +378,7 @@ class MyAccountController extends BaseController
         $dataProvider = new CActiveDataProvider('Order', array(
             'criteria' => $criteria,
             'pagination' => array(
-                'pageSize' => 10,
+                'pageSize' => 3,
             ),
         ));
         $this->render('myOrders', array('dataProvider' => $dataProvider));
@@ -472,6 +472,16 @@ class MyAccountController extends BaseController
         }
         $fav->save();
         return true;
+    }
+
+    public function actionAddress()
+    {
+        $customer_id = Yii::app()->user->id;
+        $customerInfo = CustomerInfo::model()->findByAttributes(array('customer_id' => $customer_id));
+        if ($_POST) {
+            $address = CJSON::encode($_POST['address']);
+        }
+        $this->render('address',array('customerInfo'=>$customerInfo));
     }
 
     public function actionDelFavorite()

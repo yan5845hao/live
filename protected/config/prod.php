@@ -28,11 +28,6 @@ return array(
             // enable cookie-based authentication
             'allowAutoLogin'=>true,
         ),
-//		'db'=>array(
-//			'connectionString' => 'sqlite:protected/data/blog.db',
-//			'tablePrefix' => 'tbl_',
-//		),
-
         // uncomment the following to use a MySQL database
         //mysql读写分离
         'db'=>array(
@@ -60,23 +55,17 @@ return array(
 //                ),
             ),
         ),
-        /*
-                'errorHandler'=>array(
-                    // use 'site/error' action to display errors
-                    'errorAction'=>'site/error',
-                ),
-                */
-		
-
-'cache' => array (
-	'class' => 'system.caching.CRedisCache',
-	'hostname' =>'127.0.0.1',
-	'port'=>6379,
-	#'password'=>'',
-	'database'=>0
-),
-
-
+        'errorHandler'=>array(
+            // use 'site/error' action to display errors
+            'errorAction'=>'site/error',
+        ),
+        'cache' => array (
+            'class' => 'system.caching.CRedisCache',
+            'hostname' =>'127.0.0.1',
+            'port'=>6379,
+            #'password'=>'',
+            'database'=>0
+        ),
         'urlManager'=>array(
             'showScriptName'=>false,
             'urlFormat'=>'path',

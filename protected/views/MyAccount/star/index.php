@@ -25,7 +25,7 @@
                 <textarea name="content" style="width: 600px; height: 64px; resize:none; "><?php echo $userInfo->description->content;?></textarea>
             </div>
             <div class="usercon981con"><span>生日</span><input name="birthday" value="<?php echo $userInfo->description->birthday;?>" type="text"/><em style="color: #ccc;">请填写日期格式，如：1990-04-20</em></div>
-            <div class="usercon981con"><span>出生地</span><input name="address1" value="<?php echo $userInfo->description->address1;?>" type="text" /></div>
+            <div class="usercon981con"><span>出生地</span><input name="city" value="<?php echo $userInfo->description->city;?>" type="text" /></div>
             <div class="usercon981con"><span>身高</span><input name="height" value="<?php echo $userInfo->description->height;?>" type="text" /></div>
             <div class="usercon981con"><span>体重</span><input name="weight" value="<?php echo $userInfo->description->weight;?>" type="text" /></div>
             <div class="usercon981con"><span>职业</span><input name="occupation" value="<?php echo $userInfo->description->occupation;?>" type="text" /></div>
