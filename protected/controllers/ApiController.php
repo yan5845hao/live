@@ -48,6 +48,7 @@ class ApiController extends BaseController
 		echo $str;	  
 	}
 
+
 	public function actionLogin(){//登录
 
 		$model=new LoginForm;
@@ -127,7 +128,7 @@ class ApiController extends BaseController
 			}
 	}
 
-	public function actionAddcomment(){ 
+	public function actionAddcomment(){ //评论内容
 		
 		if(empty(Yii::app()->user->id)){
 			echo CJSON::encode(array('code'=>'4001','message'=>'尚未登录'));
@@ -185,6 +186,7 @@ class ApiController extends BaseController
 			Yii::app()->end();
 		}
 	}
+
 
  
 }

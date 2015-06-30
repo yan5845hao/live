@@ -8,11 +8,21 @@
 </div>
 <div class="bd">
 <div class="col690 left">
+<?php
+ if(defined('BIG_SHOW_TJ')){
+                    
+     $bigshow = json_decode(BIG_SHOW_TJ,true);
+     
+
+ ?>
     <div class="ind01">
-        <div class="imgbox"><a href="#" target="_blank"><img src="/images/picshow01.jpg" title="男团" alt="男团"  /></a></div>
+        <div class="imgbox"><a href="#" target="_blank"><img src="<?php echo $bigshow[0][images]?>" title="男团" alt="男团"  /></a></div>
         <div class="txtbg"></div>
-        <div class="txt"><p class="left"><a href="#" target="_blank">最强天团EXO北京首唱会直播中</a></p><span class="right">粉丝<i>15156</i></span></div>
+        <div class="txt"><p class="left"><a href="<?php echo $bigshow[0][url]?>" target="_blank"><?php echo $bigshow[0][titles]?></a></p><span class="right">粉丝<i><?php echo $bigshow[0][ccount]?></i></span></div>
     </div>
+<?php
+	}
+?>
 </div>
 <div class="col534 right">
 <div class="md4" id="tab05">
@@ -28,7 +38,6 @@
         <div class="content left">
             <div class="con">
              <?php 
-
                  if(defined('LIVE_BIRTHDAY_CONTENT')){//生日会 
                  	$live_birthday = json_decode(LIVE_BIRTHDAY_CONTENT,true);
                  	$i=1;

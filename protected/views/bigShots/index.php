@@ -6,7 +6,7 @@
         <div class="dkcol_flash "><img src="<?php echo $zhibo[0]['image'] ?>" width="730" height="485" /><span></span><i><a href="http://vtest.yooshow.com/<?php echo $zhibo[0]['liveIdentity']?>"><?php echo $zhibo[0]['title']?></a></i>
             <ul>
                 <li><img src="images/daka_bofang.png" width="27" height="26" / >预约<em>0</em></li>
-                <li><img src="images/daka_fensi.png"   width="18" height="26" />粉丝<em>0</em></li>
+                <li><img src="images/daka_fensi.png"   width="18" height="26" />评论<em>0</em></li>
             </ul>
         </div>
     </div>
