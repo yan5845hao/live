@@ -30,7 +30,7 @@
 
 				}
 
-			foreach($showhtml as $k=>$v){ 
+			foreach((array)$showhtml as $k=>$v){
 
 				if($k>1){ 
 					$style='style="display:none;"';
