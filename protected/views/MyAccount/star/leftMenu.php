@@ -11,6 +11,15 @@
 			-->
         </dl>
         <dl>
+            <dt><img src="/css/img/user02.jpg" width="24" height="22" />订单管理</dt>
+            <dd <?php if($uri == 'myaccount/myorders'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/myOrders')?>">我的订单</a></dd>
+            <dd <?php if($uri == 'myaccount/address'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/address')?>">收货地址</a></dd>
+        </dl>
+        <dl>
+            <dt><img src="/css/img/user03.jpg" width="24" height="22" />我的收藏</dt>
+            <dd <?php if($uri == 'myaccount/myfavorites'){ echo 'class="current"'; } ?>><a href="<?php echo Yii::app()->createUrl('/myAccount/myFavorites')?>">我的收藏夹</a></dd>
+        </dl>
+        <dl>
             <dt><img src="/css/img/user02.jpg" width="24" height="22" />我的档期管理</dt>
             <dd><a href="<?php echo Yii::app()->createUrl('/myAccount/schedule')?>">档期列表</a></dd>
             <dd><a href="<?php echo Yii::app()->createUrl('/myAccount/pubschedule')?>">发布档期</a></dd>

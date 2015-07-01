@@ -378,7 +378,7 @@ class MyAccountController extends BaseController
         $dataProvider = new CActiveDataProvider('Order', array(
             'criteria' => $criteria,
             'pagination' => array(
-                'pageSize' => 3,
+                'pageSize' => 20,
             ),
         ));
         $this->render('myOrders', array('dataProvider' => $dataProvider));
@@ -428,6 +428,8 @@ class MyAccountController extends BaseController
                 } elseif ($method == 2) {
                     //用户金币支付
                     //update customer_shopping_gb - cost
+                    header( 'Content-Type:text/html;charset=utf-8 ');
+                    echo "<script>alert('账户余额不足!');location.href='/pay/vip.shtml';</script>";
                 }
             }
         } else {

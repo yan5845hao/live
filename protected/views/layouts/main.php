@@ -36,7 +36,10 @@
 	        | <a href="<?php echo $this->createUrl('/site/logout')?>">退出</a>
    		<?php } ?>
         </div>
-        <div class="enter right"><a href="/pay/vip.shtml" class="c-gap-right">开通vip</a><a href="javascript:;">客户端</a></div>
+        <div class="enter right" style="margin-right: 40px;">
+            <a href="/pay/vip.shtml" class="c-gap-right">开通vip</a>
+<!--            <a href="javascript:;">客户端</a>-->
+        </div>
     </div>
 
     <?php
@@ -120,7 +123,7 @@
 <!--reg end-->
 </div>
 <!--banner begin-->
-<?php 
+<?php
 $uri = strtolower(Yii::app()->request->getPathInfo());
 if(empty($uri)){
 
@@ -131,14 +134,17 @@ if(empty($uri)){
 <div class="topnav">
     <div class="mainnav wrapper">
         <div class="nav_l left">
-            <a <?php if($controller == ''){echo 'class="s"';}?> href="/">首页</a>
-            <a <?php if($controller == 'bigShots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigShots')?>">大枷秀</a>
+            <a <?php if($controller == 'site'){echo 'class="s"';}?> href="/">首页</a>
+            <a <?php if($controller == 'bigshots'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/bigShots')?>">大枷秀</a>
             <a <?php if($controller == 'star'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/star')?>">明星档</a>
             <a <?php if($controller == 'project'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/project')?>">星愿城</a>
-            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">大牌店</a>
-            <a href="<?php echo Yii::app()->createUrl('/jianshe')?>">粉社会</a>
+            <a <?php if($controller == 'shopping'){echo 'class="s"';}?> href="<?php echo Yii::app()->createUrl('/shopping')?>">大牌店</a>
+<!--            <a --><?php //if($controller == 'shopping'){echo 'class="s"';}?><!-- href="--><?php //echo Yii::app()->createUrl('/shopping')?><!--">粉社会</a>-->
         </div>
-        <div class="nav_r left"><i></i><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">排行榜</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">娱乐厂牌</a><span>|</span><a href="<?php echo Yii::app()->createUrl('/jianshe')?>">微入口</a></div>
+        <div class="nav_r left"><i></i>
+            <a href="/">排行榜</a><span>|</span>
+            <a <?php if($controller == 'company'){echo 'style="color:#ffe400;"';}?>href="<?php echo Yii::app()->createUrl('/company')?>">娱乐厂牌</a><span>|</span>
+            <a href="/">微入口</a></div>
         <?php
 			//if(!isset(Yii::app()->session['face'])) Yii::app()->session['face']= '/images/default.png';
         if(!Yii::app()->user->isGuest){
@@ -164,7 +170,10 @@ if(empty($uri)){
                 </div>
                 <div class="b">
                     <div class="mycenter">
-                        <a href="javascript:;" id="gift"><img  src="/css/img/mygift.png"/></a><a href="javascript:;" id="collection" class="end"><img  src="/css/img/myccollection.png"/></a><a href="javascript:;" id="task"><img  src="/css/img/mytask.png"/></a><a href="javascript:;" id="visiter" class="end"><img  src="/css/img/myvisiter.png"/></a>
+                        <a href="javascript:;" id="gift"><img  src="/css/img/mygift.png"/></a>
+                        <a href="/myAccount/myFavorites" id="collection" class="end"><img  src="/css/img/myccollection.png"/></a>
+                        <a href="javascript:;" id="task"><img  src="/css/img/mytask.png"/></a>
+                        <a href="javascript:;" id="visiter" class="end"><img  src="/css/img/myvisiter.png"/></a>
                     </div>
                     <div class="vip"><a target="_blank" href="/pay/vip.shtml">开通超级会员</a></div>
                     <div class="bg"></div>

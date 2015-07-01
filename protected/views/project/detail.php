@@ -1,3 +1,10 @@
+<script>
+    $(document).ready(function(){
+        $("#showbtn_showbox").click(function(){
+            $(".allbg,.showbox").show();
+        });
+    });
+</script>
 <!--topnav begin-->
 <div class="wrapper">
     <div class="bread">当前位置：<a href="/">首页</a><span>></span><a href="<?php echo Yii::app()->createUrl('/project/index')?>">星愿城</a><span>></span><?php echo $product->title;?></div>
@@ -130,7 +137,7 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
                         </span>
             </div>
             <div class="msg">在<span><?php echo date('Y年m月d日',strtotime($product->end_date))?></span>前得到<span><?php echo $product->project_price;?></span><span>元</span>的支持才可成功</div>
-            <div class="more"><a href=" javascript:void(0);" class="zcbtn">我要支持</a></div>
+            <div class="more"><a id="showbtn_showbox" class="zcbtn" href="javascript:void(0);">我要支持</a></div>
 
             <div class="bdsharebuttonbox"> <em class="left">我要分享：</em>
                 <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
@@ -148,15 +155,20 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
         foreach($projectDescription as $list){
             $sql = "select count(*) from `order` where product_project_description_id = ".$list['product_project_description_id'];
             $supporter_all_count = Yii::app()->db->createCommand($sql)->queryScalar();
+            if ($list['number_people'] > 0) {
+                $np_value = '限' . $list['number_people'] . '位';
+            } else {
+                $np_value = '不限量';
+            }
         ?>
         <div class="ind15">
             <div class="hd">
                 <span class="title left">支持<?php echo $list['price']?>元<i></i></span>
-                <span class="more right"><?php echo $supporter_all_count;?>位支持者/限<?php echo $list['number_people']?>位</span>
+                <span class="more right"><?php echo $supporter_all_count;?>位支持者/<?php echo $np_value?></span>
             </div>
             <div class="con">
                 <?php echo $list['content']?>
-                <a class="zcbtn w93" href="<?php echo Yii::app()->createUrl('/project/payment',array('product_id'=>$product->product_id));?>" target="_blank">支持</a>
+                <a class="zcbtn w93" href="<?php echo Yii::app()->createUrl('/project/payment',array('id'=>$list['product_project_description_id']));?>" target="_blank">支持</a>
             </div>
         </div>
         <div class="vspace" style="height:20px;"></div>
@@ -165,7 +177,56 @@ $project = ProductProject::model()->findByAttributes(array('product_id' => $prod
     <div class="clear"></div>
 </div>
 <div class="vspace" style="height:35px"></div>
+<!-- end-->
+
+<!--支持弹出层-->
+<div class="allbg" style="display: none;"></div>
+<div class="showbox" style="display: none;">
+    <div class="tt">选择你的预购回报</div>
+    <div class="close" id="closebtn_showbox"></div>
+    <ul>
+        <?php
+        foreach($projectDescription as $list){
+            $sql = "select count(*) from `order` where product_project_description_id = ".$list['product_project_description_id'];
+            $supporter_all_count = Yii::app()->db->createCommand($sql)->queryScalar();
+            if ($list['number_people'] > 0) {
+                $np_value = '限' . $list['number_people'] . '位';
+            } else {
+                $np_value = '不限量';
+            }
+        ?>
+        <li>
+            <div class="hd">
+                <span class="title left">支持<?php echo $list['price'];?>元<i></i></span>
+            </div>
+            <div class="con">
+                <?php echo $list['content']?>
+                <div><a class="zcbtn w93 short left" href="<?php echo Yii::app()->createUrl('/project/payment',array('id'=>$list['product_project_description_id']));?>" target="_blank">支持</a><span class="num right"><?php echo $supporter_all_count;?>位支持者/<?php echo $np_value?></span></div>
+            </div>
+        </li>
+        <?php } ?>
+    </ul>
+</div>
+<script>
+    $(document).ready(function(){
+        var _w =$(document.body).width();
+        var _h =$(document.body).height();
+        $(".allbg").css({"width":_w+"px","height":_h+"px"});
+        $("#closebtn_showbox").click(function(){
+            $(".allbg,.showbox").hide();
+        });
+    });
+</script>
+<!---->
+
+
+
+
+
+<!-- begin-->
 <div class="wrapper">
     <div class="gototop" id="gototop1"><span></span></div>
     <script type="text/javascript">var mygototop = new gototop("gototop1")</script>
 </div>
+
+<!-- end-->

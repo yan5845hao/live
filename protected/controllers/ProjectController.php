@@ -5,6 +5,7 @@ class ProjectController extends BaseController
     public function __construct($id, $module = null)
     {
         parent::__construct($id, $module);
+        if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
     }
 
     public function actionIndex()
@@ -53,32 +54,31 @@ class ProjectController extends BaseController
                 'pageVar' => 'page'
             ),
         ));
-        $this->render('detail', array('product' => $product, 'dataProvider'=>$dataProvider,'projectDescription' => $projectDescription));
+        $this->render('detail', array('product' => $product, 'dataProvider' => $dataProvider, 'projectDescription' => $projectDescription));
     }
 
     public function actionPayment()
     {
         //未完待续。。2015/6/29 by demi
         if ($_POST) {
-            $payment_info = '开通会员';
+            $payment_info = '众筹';
             $total = (int)Yii::app()->request->getParam('total');
-            $method = (int)Yii::app()->request->getParam('method');
-            $product_id = 30; //测试产品
-//            $product_id = (int)Yii::app()->request->getParam('product_id');
-            $product = Product::model()->findByPk($product_id);
-            if ($product->product_type_id != Product::RECHARGE_VIP_TYPE_ID) {
-//                $this->addFlash('认证失效！', self::MSG_NOTICE);
-                $this->redirect($this->createUrl('myAccount/upgradeVip'));
-            }
+            $method = 1;
+            $product_id = (int)Yii::app()->request->getParam('product_id'); //测试产品
+//            if ($product->product_type_id != Product::PRODUCT_PROJECT_TYPE_ID) {
+////                $this->addFlash('认证失效！', self::MSG_NOTICE);
+//                $this->redirect($this->createUrl('myAccount/upgradeVip'));
+//            }
             if ($method == 1) { // 1：rmb支付，2：余额支付
-                $cost = $total * $product->default_price;
+                $cost = $total;
             } elseif ($method == 2) {
 //                $this->addFlash('账户金币不足，请选择其他支付方式！', self::MSG_NOTICE);
                 $exchange_rate = Currency::model()->exchangeRate;
-                $cost = ($total * $product->default_price) * $exchange_rate;
+                $cost = $total * $exchange_rate;
             }
             $order_data['product_id'] = $product_id;
             $order_data['payment_method'] = $method;
+            $order_data['product_project_description_id'] = Yii::app()->request->getParam('product_project_description_id');
             $order_data['cost'] = $cost;
             $order_data['payment_info'] = $payment_info;
             if ($order_id = Order::model()->addOrder($order_data)) {
@@ -97,9 +97,16 @@ class ProjectController extends BaseController
                     //update customer_shopping_gb - cost
                 }
             }
-        }else{
+        } else {
+            $id = (int)Yii::app()->request->getParam('id');
+            $customer = Customer::model()->findByPk(Yii::app()->user->id);
+            $project_description = ProductProjectDescription::model()->findByPk($id);
+            if (!$project_description) {
+                throw new CHttpException(404, 'The requested page does not exist.');
+            }
+            $product = Product::model()->findByPk($project_description->product_id);
             $this->layout = 'blank_layout';
-            $this->render('payment');
+            $this->render('payment', array('description' => $project_description, 'product'=>$product, 'customer'=>$customer));
         }
     }
 }

@@ -265,14 +265,14 @@
     </div>
     <br />
     <div class="module_wrap mt20">
-        <div class="common_tit"><h1 class="common_tit_name">和谢霆锋一起做公益</h1></div>
+        <div class="common_tit"><h1 class="common_tit_name"><?php echo $product->title;?></h1></div>
         <div class="module_con">
             <!-----------------需要回报内容开始-------------->
             <div>
                 <div class="module_item">
                     <dl>
                         <dt>支持金额：</dt>
-                        <dd><span class="f_red20">1</span></dd>
+                        <dd><span class="f_red20"><?php echo $description->price;?></span></dd>
                     </dl>
                     <dl>
                         <dt>配送费用：</dt>
@@ -283,14 +283,8 @@
                     <dl>
                         <dt>回报内容：</dt>
                         <dd>
-                            支持1元  不限量
-                            感谢您的爱心支持，您将获得电子感谢信（请备注您的邮箱）。由京东众筹官方从支持者中抽取100人，幸运用户将获得谢霆锋公益众筹线下活动资格，中奖名单及活动规则在话题公布。
-                            “同一账号多次支持仅限一次”
+                            <?php echo $description->content;?>
                         </dd>
-                    </dl>
-                    <dl>
-                        <dt>备注：</dt>
-                        <dd><input type="text" class="inp_remark" placeholder="您可以填写关于回报或您希望发起人知道的信息，鼓励一下也好~~" maxlength="100" id="_remarks" name="_remarks"></dd>
                     </dl>
                 </div>
                 <div class="module_item">
@@ -300,83 +294,10 @@
                             <div id="showAddress" class="clearfix write_repeat">
 
 
-                                <p>莫德蜜 182****8709 <span style="color: #ff0000;">(手机号码用于接收回报信息，请确认无误！)</span></p>
-                                <p>四川成都市高新区绕城环线以外中和镇丹桂苑24幢2单元5楼&nbsp;&nbsp;&nbsp;<a href="javascript:editAddress();" class="f_blue repeat">修改</a>
+                                <p><?php echo $customer->user_name?> <?php echo Yii::app()->user->phone?> <span style="color: #ff0000;">(手机号码用于接收回报信息，请确认无误！)</span></p>
+                                <p><?php echo $customer->address?>&nbsp;&nbsp;&nbsp;<a href="/myAccount/address" class="f_blue repeat">修改</a>
                                 </p>
                                 <input type="hidden" name="realId" id="realId" value="136445325">
-                            </div>
-                            <div style="display:none;" class="clearfix write_edit">
-                                <div id="addressList" class="bor_t_li">
-                                    <p class="addrHover">
-                                        <input type="radio" addrfulladdress="四川成都市高新区绕城环线以外中和镇丹桂苑24幢2单元5楼" addrphone="" addrmobile="182****8709" addremail="99*****19@qq.com" addrname="莫德蜜" value="136445325" selected="" id="addrList_136445325" name="addrList" checked="checked" onclick="changeAddressOpt();">&nbsp;
-                                        <label for="136445325">莫德蜜&nbsp;&nbsp;中和镇丹桂苑24幢2单元5楼&nbsp;182****8709</label>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:editaddr('136445325','莫德蜜','中和镇丹桂苑24幢2单元5楼','','182****8709','99*****19@qq.com','22','1930','50949','4283');" class="f_blue">编辑</a>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:removeaddr('136445325');" class="f_blue write_del">删除</a></p>
-
-                                    <p>
-                                        <input type="radio" addrfulladdress="上海徐汇区内环中环之间桂林路396号浦园科技1号楼306室" addrphone="" addrmobile="159****6921" addremail="17******28@qq.com" addrname="屈敏" value="137582442" id="addrList_137582442" name="addrList" onclick="changeAddressOpt();">&nbsp;
-                                        <label for="137582442">屈敏&nbsp;&nbsp;桂林路396号浦园科技1号楼306室&nbsp;159****6921</label>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:editaddr('137582442','屈敏','桂林路396号浦园科技1号楼306室','','159****6921','17******28@qq.com','2','2813','2865','0');" class="f_blue">编辑</a>
-                                        &nbsp;&nbsp;&nbsp;
-                                        <a href="javascript:removeaddr('137582442');" class="f_blue write_del">删除</a></p>
-
-                                </div>
-                                <p class="add_more mt10">
-                                    <a class="bor_btn pr " href="javascript:void(0);">更多常用地址<i class="down_icon"></i></a>
-                                </p>
-
-                                <div class="bor_t_li">
-                                    <p class="bg_yellow840">
-                                        <input type="radio" value="0" onclick="newAddress();" name="addrList"> 使用新地址
-                                    </p>
-                                    <div style="display: none;" id="modifyaddDiv">
-                                        <input type="hidden" value="" name="addressId" id="addressId">
-                                        <input type="hidden" value="" name="addressOpt" id="addressOpt">
-
-                                        <div class="new_add pt10">
-                                            <dl>
-                                                <dt><span class="f_red">*</span> 收货人：</dt>
-                                                <dd><input type="text" class="inp145" id="name" name="name"></dd>
-                                            </dl>
-                                            <dl>
-                                                <dt><span class="f_red">*</span>所在地区：</dt>
-                                                <dd>
-                                                    <select class="sel75" onchange="loadcitys();" id="consignee_province" name="consignee_province">
-                                                        <option selected="" value="0">请选择</option>
-                                                    </select>
-                                                    <select class="sel75" onchange="loadCountys();" id="consignee_city" name="consignee_city">
-                                                        <option selected="" value="0">请选择</option>
-                                                    </select>
-                                                    <select class="sel75" onchange="loadTowns()" id="consignee_countyid" name="consignee_countyid">
-                                                        <option selected="" value="0">请选择</option>
-                                                    </select>
-                                                <span class="sel75" style="display: none;" id="span_town">
-                                                    <select onchange="setTownName();" id="consignee_town">
-                                                        <option value="0" selected="">请选择</option>
-                                                    </select>
-                                                </span>
-                                                </dd>
-                                            </dl>
-                                            <dl>
-                                                <dt><span class="f_red">*</span> 详细地址：</dt>
-                                                <dd><span id="area_div"></span><input type="text" class="inp315" id="consignee_address" name="consignee_address"></dd>
-                                            </dl>
-                                            <dl>
-                                                <dt><span class="f_red">*</span> 手机号码：</dt>
-                                                <dd><input type="text" maxlength="11" class="inp145" onclick="value='';focus()" id="mobile" name="mobile">&nbsp;&nbsp;&nbsp;&nbsp;<spanclass="f_333">固定电话：
-                                                    <input type="text" maxlength="20" class="inp145" id="phone" name="phone" onclick="value='';focus()"></spanclass="f_333"></dd>
-                                            </dl>
-                                            <dl>
-                                                <dt>邮箱：</dt>
-                                                <dd><input type="text" onclick="value='';focus()" maxlength="30" class="inp145" id="email" name="email"></dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                    <p class="mt10"><a onclick="saveAddress();" class="btn130_red ml10" href="#">保存收货人地址</a></p>
-                                </div>
                             </div>
                         </dd>
 
@@ -388,36 +309,20 @@
                 <b>风险说明：</b>
 
                 <p>
-                    京东众筹是一个开放的众筹平台，公众基于对项目、发起人和回报的认同，通过资助的方式参与和支持创新。
-                    <br>筹资成功后，执行的过程中，如果项目没有按照预期的目标执行，项目发起人可能无法正常发放回报。如果产生了这种情况，您支持金额中的部分金额会退还给您，但是由于其中部分金额已经被项目组织者使用，您需要和项目组织者协商订金退还的事宜，京东众筹没有帮您追讨资金的义务。
+                    捕梦网众筹是一个开放的众筹平台，公众基于对项目、发起人和回报的认同，通过资助的方式参与和支持创新。
+                    <br>筹资成功后，执行的过程中，如果项目没有按照预期的目标执行，项目发起人可能无法正常发放回报。如果产生了这种情况，您支持金额中的部分金额会退还给您，但是由于其中部分金额已经被项目组织者使用，您需要和项目组织者协商订金退还的事宜，捕梦网众筹没有帮您追讨资金的义务。
                 </p>
                 <br>
-                <b>特别说明：</b>
-
-                <p>
-                    <font color="#FF0000">系统会自动对超出限额的订单进行全额退款。对您造成的不便，深表歉意！</font>
-                </p>
 
             </div>
 
             <div class="common_button">
-                <form method="post" action="/funding/project_subscribe.action" id="frm">
-                    <input type="hidden" id="remarks" name="remarks" value="">
-                    <input type="hidden" value="13514" name="projectId" id="projectId">
-                    <input type="hidden" value="13514" id="_projectId">
-                    <input type="hidden" value="51828" name="redoundId" id="redoundId">
-                    <input type="hidden" value="莫德蜜" name="userName" id="userName">
-                    <input type="hidden" value="182****8709" name="userPhone" id="userPhone">
-                    <input type="hidden" value="四川成都市高新区绕城环线以外中和镇丹桂苑24幢2单元5楼" name="userAddressDetail" id="userAddressDetail">
-                    <input type="hidden" value="99*****19@qq.com" name="userEmail" id="userEmail">
-                    <input type="hidden" value="0" name="invoiceFlag" id="invoiceFlag">
-                    <input type="hidden" value="" name="invoiceTitle" id="invoiceTitle">
-                    <input type="hidden" value="pc" name="ordFrom" id="ordFrom">
-                    <input type="hidden" value="136445325" name="userAddressId" id="userAddressId">
-                    <input type="hidden" value="1" name="isRedound" id="isRedound">
-                    <input type="hidden" value="1" name="supperAmount" id="supperAmount">
+                <form method="post" action="/project/payment" id="frm">
+                    <input type="hidden" value="<?php echo $product->product_id;?>" name="product_id">
+                    <input type="hidden" value="<?php echo $description->price;?>" name="total">
+                    <input type="hidden" value="<?php echo $description->product_project_description_id;?>" name="product_project_description_id">
+                    <button clstag="jr|keycount|jr_zc_support|txy" style="cursor: hand;" type="submit">提交</button>
                 </form>
-                <button clstag="jr|keycount|jr_zc_support|txy" style="cursor: hand;" onclick="next();" jrtag="29|51828" id="btn_next">下一步</button>
             </div>
         </div>
     </div>

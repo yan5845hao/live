@@ -12,6 +12,7 @@ class CustomerIdentity extends CUserIdentity
 
     private $user_id;
     private $user = null;
+    private $phone = null;
 
     public function __construct($username = '', $password = '')
     {
@@ -33,8 +34,8 @@ class CustomerIdentity extends CUserIdentity
         }
         else {
             $this->user_id = $customer->customer_id;
-            $phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
-            $this->username = $customer->nick_name ? $customer->nick_name : $phone;
+            $this->phone = @substr($customer->phone, 0, 3) . '****' . @substr($customer->phone, 7, 11);
+            $this->username = $customer->nick_name ? $customer->nick_name : $this->phone;
             $this->user = $customer;
             $customer->last_login = new CDbExpression('NOW()');
             $customer->save();
@@ -73,6 +74,7 @@ class CustomerIdentity extends CUserIdentity
     {
         return array(
             'level' => $this->user->vip_code,
+            'phone' => $this->phone,
             'type' => $this->user->customer_type,
             'user_name' => $this->user->user_name,
             'nick_name' => $this->user->nick_name,

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class Order
  */
@@ -30,7 +31,7 @@ class Order extends CActiveRecord
         // will receive user inputs.
         return array(
             array('customer_id,product_id', 'required'),
-            array('order_id,payment_method, payment_info, cost, message, status, created, last_updated', 'safe'),
+            array('order_id,payment_method, payment_info, cost, message, status, created, last_updated, product_project_description_id', 'safe'),
         );
     }
 
@@ -63,7 +64,8 @@ class Order extends CActiveRecord
             'created' => new CDbExpression('NOW()'),
             'last_updated' => new CDbExpression('NOW()'),
             'customer_id' => Yii::app()->user->id,
-            'product_id' => $params['product_id']
+            'product_id' => $params['product_id'],
+            'product_project_description_id' => isset($params['product_project_description_id']) ? $params['product_project_description_id'] : ''
         );
         $model = new Order();
         $model->setAttributes($order_data);
