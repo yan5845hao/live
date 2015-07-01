@@ -13,22 +13,35 @@
     <div class="dkcol_w501 right">
         <div class="dkcol_w501title "></div>
         <div class="dkcol_w501con">
-            <ul>
-			<?php
-				if(defined('STAR_SHOW_TJ_RIGHT1')) echo STAR_SHOW_TJ_RIGHT1;
-			?>
-			</ul>
-            <ul style="display:none;">
-            <?php
-				if(defined('STAR_SHOW_TJ_RIGHT2')) echo STAR_SHOW_TJ_RIGHT2;
-			?>
+        	<?php
+				if(defined('BIG_SHOW_VIDEO')){   
+					$bigshow = json_decode(BIG_SHOW_VIDEO,true);
+					$i=0;
+					$e=1;
+					foreach($bigshow as $v){
+						$i++;  
+						if( $i>3 && ($i%4) == 1){ 
+							$e++;
+				
+						}
+						$showhtml[$e].='<li><a href="'.$v[url].'"><img width="220" height="181" src="'.$v[images].'"></a><i><a href="/bigShots/detail">'.$v[titles].'</a><br>
+                        <img width="11" height="15" src="images/daka_minifensi.png">粉丝：<em>'.$v[ccount].'</em> <img width="16" height="15" src="images/daka_miniplay.png">播放：<em>'.$v[lcount].'</em></i><span></span></li>';
+					}
 
-            </ul>
-            <ul style="display:none;">
-   			<?php
-				if(defined('STAR_SHOW_TJ_RIGHT3')) echo STAR_SHOW_TJ_RIGHT3;
+				}
+
+			foreach($showhtml as $k=>$v){ 
+
+				if($k>1){ 
+					$style='style="display:none;"';
+				}
+				echo '<ul '.$style.'>';
+				echo $v;
+				echo '</ul>';
+
+			}
 			?>
-            </ul>
+       
             <div class="dkcol_w501btn left">
                 <dl>
                     <dd class="current"><a>1</a></dd>
@@ -88,22 +101,75 @@
 <!--周榜-->
 <ul>
     <?php
-    	if(defined('STAR_SHOW_TWO_RIGHT_WEEK')) echo STAR_SHOW_TWO_RIGHT_WEEK;
+    	
+    	if(defined('BIG_SHOW_WEEK_ORDER')){   
+					$bigshoworder = json_decode(BIG_SHOW_WEEK_ORDER,true);
+					$i=0;
+					foreach($bigshoworder  as $v){ 
+						$i++;
+						echo '<li>
+						        <div class="dk_phtitle2_pic"><a href="'.$v[url].'"><img width="62" height="63" src="'.$v[images].'"></a>
+						            <div class="dk_phtitle2_pic_ph">'.$i.'</div>
+						        </div>
+						        <div class="dk_phtitle2_title"><a href="#">'.$v[titles].'</a><span><img width="16" height="15" src="images/dklistfensi.jpg">粉丝：<em>'.$v[ccount].'</em><br>
+						                <img width="16" height="15" src="images/dklistbofang.png">播放：<em>'.$v[lcount].'</em></span></div>
+						        <div class="dk_phtitle2_btn"><a href="#"><img width="32" height="35" border="0" src="images/dkxlistpic03.jpg"></a></div>
+						        <div style="margin-top:10px; float:left;height:3px;"><img width="240" height="3" src="images/dakalistxx.png"></div>
+						    </li>';
+
+					}
+
+		}
     ?>
 </ul>
 
 
 <!--月榜-->
 <ul style=" display:none;">
-        <?php
-    	if(defined('STAR_SHOW_TWO_RIGHT_MONTH')) echo STAR_SHOW_TWO_RIGHT_MONTH;
+      <?php
+    	
+    	if(defined('BIG_SHOW_MONTH_ORDER')){   
+					$bigshoworder = json_decode(BIG_SHOW_MONTH_ORDER,true);
+					$i=0;
+					foreach($bigshoworder  as $v){ 
+						$i++;
+						echo '<li>
+						        <div class="dk_phtitle2_pic"><a href="'.$v[url].'"><img width="62" height="63" src="'.$v[images].'"></a>
+						            <div class="dk_phtitle2_pic_ph">'.$i.'</div>
+						        </div>
+						        <div class="dk_phtitle2_title"><a href="#">'.$v[titles].'</a><span><img width="16" height="15" src="images/dklistfensi.jpg">粉丝：<em>'.$v[ccount].'</em><br>
+						                <img width="16" height="15" src="images/dklistbofang.png">播放：<em>'.$v[lcount].'</em></span></div>
+						        <div class="dk_phtitle2_btn"><a href="#"><img width="32" height="35" border="0" src="images/dkxlistpic03.jpg"></a></div>
+						        <div style="margin-top:10px; float:left;height:3px;"><img width="240" height="3" src="images/dakalistxx.png"></div>
+						    </li>';
+
+					}
+
+		}
     ?>
 </ul>
 
 <!--全部-->
 <ul style=" display:none;">
      <?php
-    	if(defined('STAR_SHOW_TWO_RIGHT_YEAR')) echo STAR_SHOW_TWO_RIGHT_YEAR;
+    	if(defined('BIG_SHOW_YEAR_ORDER')){   
+					$bigshoworder = json_decode(BIG_SHOW_MONTH_ORDER,true);
+					$i=0;
+					foreach($bigshoworder  as $v){ 
+						$i++;
+						echo '<li>
+						        <div class="dk_phtitle2_pic"><a href="'.$v[url].'"><img width="62" height="63" src="'.$v[images].'"></a>
+						            <div class="dk_phtitle2_pic_ph">'.$i.'</div>
+						        </div>
+						        <div class="dk_phtitle2_title"><a href="#">'.$v[titles].'</a><span><img width="16" height="15" src="images/dklistfensi.jpg">粉丝：<em>'.$v[ccount].'</em><br>
+						                <img width="16" height="15" src="images/dklistbofang.png">播放：<em>'.$v[lcount].'</em></span></div>
+						        <div class="dk_phtitle2_btn"><a href="#"><img width="32" height="35" border="0" src="images/dkxlistpic03.jpg"></a></div>
+						        <div style="margin-top:10px; float:left;height:3px;"><img width="240" height="3" src="images/dakalistxx.png"></div>
+						    </li>';
+
+					}
+
+		}
     ?>
 
 </ul>
