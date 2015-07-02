@@ -29,7 +29,7 @@
 		}
 		public function actionInfo(){
 
-				$newsid = Yii::app()->getRequest()->getParam("id");
+				$newsid = Yii::app()->getRequest()->getParam("newsid");
 				$newsdata=StarNews::model()->findByPk($newsid);
 				if($newsid>1) StarNews::model()->updatelook($newsid);
 				$stardata=Customer::model()->findByPk($newsdata[star_id]);//获取明星基本资料
