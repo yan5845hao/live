@@ -14,14 +14,17 @@
                 <input name="begintime" value="<?php echo !empty($newsInfo->begintime) ? date('Y-m-d H:i:s',$newsInfo->begintime) : '';?>" type="text" /><em>档期时间格式(2015-05-12 17:58:00)</em></div>
                 <div class="usercon981con"><span>时长</span>
                 <input name="showtime" value="<?php echo $newsInfo->showtime;?>" type="text" /><em>10字以内</em></div>
-            <div class="mxcenter_tit"><div class="usercon981con"><span>图片</span><input name="img" value="" type="file" /></div></div>
+            <div class="mxcenter_tit"><div class="usercon981con"><span>图片<b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">尺寸400×800</b></span><input name="img" value="" type="file" /></div></div>
             <div class="usercon981con">
                 <?php if($newsInfo->img){ ?>
                     <img src="<?php echo $newsInfo->img;?>" width="134" height="134" />
                 <?php } ?>
             </div>
             <div class="usercon981con"><span>档期介绍 <b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">输入新闻内容，2000字以内</b></span>
-                <textarea name="content" cols="" rows="" style="width:900px; height:250px; border:0px; background-color:#f0f0f0;"><?php echo $newsInfo->content;?></textarea>
+                     <code>
+                    <?php $this->widget('application.widgets.Ueditor.UeditorWidget'); ?>
+                     <textarea class="tff_ueditor" id="content" name="content"  style="width:800px;height:300px;"><?php echo $newsInfo->content;?></textarea>
+                    </code> 
             </div>
             <input type="hidden" name="id" value="<?php echo $newsInfo->id?>">
             <div class="usercon981con"><a href="javascript:;" onclick="javascript:$('#form1').submit();"><img src="/css/img/userbtn01.jpg" width="260" height="40" /></a></div>
