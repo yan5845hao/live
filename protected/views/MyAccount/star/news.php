@@ -18,7 +18,7 @@
                 ?>
                 <tr>
                     <td><?php echo $list['id'];?></td>
-                    <td><a href="<?php echo Yii::app()->createUrl('/news/info',array('newsid'=>$list['id']))?>"  target="_blank" ><?php echo $list['title'];?></a></td>
+                    <td><a href="<?php echo Yii::app()->createUrl('/news/info',array('id'=>$list['id']))?>"  target="_blank" ><?php echo $list['title'];?></a></td>
                     <td style="width: 300px;"><?php echo mb_substr($list['content'],0,300,'utf-8');?></td>
                     <td><img width="100" height="80" src="<?php echo $list['image'];?>"></td>
                     <td><?php echo $list['createtime'];?></td>

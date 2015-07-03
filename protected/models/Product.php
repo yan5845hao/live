@@ -57,9 +57,9 @@ class Product extends CActiveRecord
     public function rankvalue($type, $num = 5)
     {
         if ($type == 'all') {
-            $sql = "select * from product  order by play_total desc limit {$num}";
+            $sql = "select * from product  where product_type_id='2'  order by play_total desc limit {$num}";
         } else {
-            $sql = "select * from product where video_type = '{$type}' order by play_total desc limit {$num}";
+            $sql = "select * from product where product_type_id='2' && video_type = '{$type}' order by play_total desc limit {$num}";
         }
 
         $connection = Yii::app()->db;

@@ -41,7 +41,13 @@ class StarController extends BaseController
 
     public function actionInfo()
     {
-
+    	$nowtime=time();
+    	
+    	$sql = "select * from star_schedule where begintime < '$nowtime' order by lookcount desc limit 6";
+    	echo $sql;
+    	$command = Yii::app()->db->createCommand($sql);
+	    $schedule = $command->queryAll();
+	    print_r($schedule);exit;
     	$id = Yii::app()->getRequest()->getParam("id");
 		$newsdata=StarSchedule::model()->findByPk($id);
 		StarSchedule::model()->updatelook($id);

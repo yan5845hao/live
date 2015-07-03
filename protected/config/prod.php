@@ -55,10 +55,11 @@ return array(
 //                ),
             ),
         ),
+/*
         'errorHandler'=>array(
             // use 'site/error' action to display errors
             'errorAction'=>'site/error',
-        ),
+        ),*/
         'cache' => array (
             'class' => 'system.caching.CRedisCache',
             'hostname' =>'127.0.0.1',

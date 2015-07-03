@@ -306,7 +306,7 @@
 	            $str .= '<h3>'.$v['title'].'</h3>';
 	            $str .= '<div class="numbers"><span class="left playicon">播放<i>'.$v['play_total'].'</i></span><span class="left comment">评论<i>'.$v['talk_total'].'</i></span></div>';
 	            $str .= '</div>';
-	            $str .= '<div class="play left"><a title="点击播放" href="'.$this->createUrl('/bigshots/playvideo',array('id'=>$v['product_id'])).'">点击播放</a></div>';
+	            $str .= '<div class="play left"><a title="点击播放" href="'.$this->createUrl('/bigShots/playvideo',array('id'=>$v['product_id'])).'">点击播放</a></div>';
 	            $str .= '</div>';
 	            echo $str;
             }

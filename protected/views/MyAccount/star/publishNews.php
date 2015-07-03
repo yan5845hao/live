@@ -18,7 +18,11 @@
                 <textarea name="introduce" cols="" rows="" style="width:600px; height:100px; border:0px; background-color:#f0f0f0;"><?php echo $newsInfo->introduce;?></textarea>
             </div>
             <div class="usercon981con"><span>新闻内容 <b style="font-weight:normal; color:#c3c3c3; padding-left:10px;">输入新闻内容，2000字以内</b></span>
-                <textarea name="content" cols="" rows="" style="width:900px; height:250px; border:0px; background-color:#f0f0f0;"><?php echo $newsInfo->content;?></textarea>
+            <code>
+                    <?php $this->widget('application.widgets.Ueditor.UeditorWidget'); ?>
+                     <textarea class="tff_ueditor" id="content" name="content"  style="width:800px;height:300px;"><?php echo $newsInfo->content; ?></textarea>
+                    </code> 
+        
             </div>
             <input type="hidden" name="id" value="<?php echo $newsInfo->id?>">
             <div class="usercon981con"><a href="javascript:;" onclick="javascript:$('#form1').submit();"><img src="/css/img/userbtn01.jpg" width="260" height="40" /></a></div>
