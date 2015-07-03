@@ -43,7 +43,7 @@ class Product extends CActiveRecord
     public function relations()
     {
         return array(
-            'customer' => array(self::BELONGS_TO, 'customer', 'customer_id')
+            'customer' => array(self::BELONGS_TO, 'Customer', 'customer_id')
         );
     }
 

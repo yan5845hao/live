@@ -298,11 +298,10 @@ class MyAccountController extends BaseController
     {
         $customer_id = Yii::app()->user->id;
         $criteria = new CDbCriteria();
-        $criteria->addCondition("customer_id = :customer_id");
-        $criteria->params[':customer_id'] = $customer_id;
-        $criteria->addCondition("type = :type");
-        $criteria->params[':type'] = 'video';
+        $criteria->join = ' ,product_type pt';
+        $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 2 AND t.customer_id = :customer_id");
         $criteria->order = 'created desc';
+        $criteria->params[':customer_id'] = $customer_id;
         $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
             'pagination' => array(
@@ -311,6 +310,7 @@ class MyAccountController extends BaseController
         ));
         $this->render('star/video', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
     }
+
 
     public function actionPubVideo()
     {
@@ -491,6 +491,16 @@ class MyAccountController extends BaseController
         $customer_favorite_id = (int)Yii::app()->request->getParam('customer_favorite_id');
         CustomerFavorite::model()->deleteByPk($customer_favorite_id, 'customer_id=:customer_id', array('customer_id' => Yii::app()->user->id));
         $this->redirect($this->createUrl('/myAccount/myFavorites'));
+    }
+
+    public function actionPubProject()
+    {
+        $this->render('star/pubProject');
+    }
+
+    public function actionProjects()
+    {
+        $this->render('star/myProjects');
     }
 
     public function filters()

@@ -2,13 +2,7 @@
 <div class="wrapper">
     <div class="userlj">当前位置：<a href="#">用户中心</a> >  我的收藏</div>
     <div class="usercon">
-        <?php
-        if (Yii::app()->user->type == 1) {
-            include 'leftMenu.php';
-        } else {
-            include 'star/leftMenu.php';
-        }
-        ?>
+        <?php include 'leftMenu.php';?>
         <div class="usercon981 right">
             <div class="usercon981tit">我的收藏</div>
             <div class="usercon981jinbi">

@@ -148,8 +148,9 @@ if(empty($uri)){
         <?php
 			//if(!isset(Yii::app()->session['face'])) Yii::app()->session['face']= '/images/default.png';
         if(!Yii::app()->user->isGuest){
-            $customer = customer::model()->getUserinfo(Yii::app()->user->id);
-			?>
+            $model = new Customer();
+            $customer = $model->findByPk(Yii::app()->user->id);
+		?>
 		<div class="user">
 
             <a href="<?php echo Yii::app()->createUrl('/myAccount')?>"><img class="head left" src="<?php echo staticUrl($customer->face,array('mode' => 2, 'width' => '120','height' => '120'));?>"/></a>

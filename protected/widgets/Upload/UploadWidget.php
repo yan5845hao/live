@@ -7,7 +7,7 @@ class UploadWidget extends CWidget
     public function run()
     {
         $assetUrl = Yii::app()->assetManager->publish(__DIR__ . DIRECTORY_SEPARATOR . '/resource');
-        $uploadUrl = Yii::app()->createUrl('Resource/upload');
+        $uploadUrl = Yii::app()->createUrl('Resource/uploadFile');
         $maxFileSize = ini_get('upload_max_filesize');
         $js = <<<ASSET_URL
         var ASSET_URL = '{$assetUrl}';

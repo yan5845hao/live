@@ -5,7 +5,6 @@ class ProjectController extends BaseController
     public function __construct($id, $module = null)
     {
         parent::__construct($id, $module);
-        if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
     }
 
     public function actionIndex()
@@ -59,7 +58,7 @@ class ProjectController extends BaseController
 
     public function actionPayment()
     {
-        //未完待续。。2015/6/29 by demi
+        if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
         if ($_POST) {
             $payment_info = '众筹';
             $total = (int)Yii::app()->request->getParam('total');

@@ -1,13 +1,7 @@
 <div class="wrapper">
     <div class="userlj">当前位置：<a href="#">用户中心</a> > <a href="#">基本信息</a> > 我的金币</div>
     <div class="usercon">
-        <?php
-        if (Yii::app()->user->type == 1) {
-            include 'leftMenu.php';
-        } else {
-            include 'star/leftMenu.php';
-        }
-        ?>
+        <?php include 'leftMenu.php';?>
         <div class="usercon981 right">
             <div class="usercon981tit">收货地址</div>
             <div class="usercon981titline"><img src="css/img/userline.png" width="939" height="2" /></div>

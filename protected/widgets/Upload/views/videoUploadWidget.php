@@ -38,7 +38,6 @@
             }
         });
         function uploadSuccess(file,data){
-            console.log(data);
             var data = JSON.parse(data);
             $('#videoUrl').val(data['url']);
         }
