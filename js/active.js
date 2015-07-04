@@ -173,5 +173,22 @@ $(function ($) {
         $("#RegBox").fadeOut("fast");
         $("#mask").css({ display: 'none' });
     });
+
+    $(".mxcenter_cancel").on('click', function () {
+        hide_mask();
+    });
 });
-	
+
+function hide_mask()
+{
+    $(".mxcenter_del").fadeOut("fast");
+    $("#mask").css({ display: 'none' });
+}
+
+function remove_confirm(id)
+{
+    $("body").append("<div id='mask'></div>");
+    $("#mask").addClass("mask").fadeIn("slow");
+    $(".mxcenter_del").show();
+    $("#remove_id").val(id);
+}

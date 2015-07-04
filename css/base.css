@@ -938,7 +938,7 @@ i{ font-style:normal;}
 .mxcenter_spfc_item input{width:345px; height:38px; border:1px solid #eee;}
 
 
-.mxcenter_del{width:330px; height:207px; border:1px solid #eee;}
+.mxcenter_del{width:330px; height:207px;background: white none repeat scroll 0 0;border: 3px solid #444;border-radius: 7px;display: none;left: 800px;position: absolute;top: 450px;z-index: 10000;}
 .mxcenter_del_tit{width:130px; float:left; height:60px; line-height:60px; margin-left:30px; font-size:18px;}
 .mxcenter_del_clo{width:25px; float:right; margin:5px; }
 .mxcenter_del_item{font-size:24px; color:#f8b62a; margin-left:30px; margin-top:5px; margin-bottom:30px;}

@@ -33,7 +33,7 @@ class Product extends CActiveRecord
     {
         return array(
             array('title,product_type_id,customer_id', 'required'),
-            array('content,url,image,default_price,special_price,product_tag,ordered,stock_status,active,created,last_updated,fans_total,play_total,video_type,talk_total,video_types', 'safe'),
+            array('product_id,title,content,url,image,product_type_id,default_price,special_price,project_price,begin_date,end_date,product_tag,ordered,stock_status,active,created,last_updated,fans_total,play_total,video_type,talk_total,video_types,customer_id', 'safe'),
         );
     }
 

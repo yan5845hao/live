@@ -22,7 +22,7 @@ class MyAccountController extends BaseController
         if (Yii::app()->user->isGuest) Yii::app()->user->loginRequired();
         //     $this->layout = 'sign_layout';
         //  Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/account.css');
-        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/page.css');
+        Yii::app()->clientScript->registerCssFile(Yii::app()->baseUrl . '/css/ucenter_page.css');
     }
 
     public function actionIndex()
@@ -428,7 +428,7 @@ class MyAccountController extends BaseController
                 } elseif ($method == 2) {
                     //用户金币支付
                     //update customer_shopping_gb - cost
-                    header( 'Content-Type:text/html;charset=utf-8 ');
+                    header('Content-Type:text/html;charset=utf-8 ');
                     echo "<script>alert('账户余额不足!');location.href='/pay/vip.shtml';</script>";
                 }
             }
@@ -483,7 +483,7 @@ class MyAccountController extends BaseController
         if ($_POST) {
             $address = CJSON::encode($_POST['address']);
         }
-        $this->render('address',array('customerInfo'=>$customerInfo));
+        $this->render('address', array('customerInfo' => $customerInfo));
     }
 
     public function actionDelFavorite()
@@ -495,12 +495,83 @@ class MyAccountController extends BaseController
 
     public function actionPubProject()
     {
-        $this->render('star/pubProject');
+        if ($_POST) {
+            $product = new Product();
+            $image = '';
+            $prices = Yii::app()->request->getParam('price');
+            $number_peoples = Yii::app()->request->getParam('number_people');
+            $contents = Yii::app()->request->getParam('content');
+            $file = $_FILES['image'];
+            if ($file['tmp_name']) {
+                $content = fopen($file['tmp_name'], 'r');
+                $extName = Yii::app()->aliyun->getExtName($file['name']);
+                $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
+                $size = $file['size'];
+                Yii::app()->aliyun->putResourceObject($key, $content, $size);
+                $image = Yii::app()->params['cdnUrl'] . '/' . $key;
+            }
+            $data = array(
+                'title' => Yii::app()->request->getParam('title'),
+                'project_price' => (int)Yii::app()->request->getParam('project_price'),
+                'begin_date' => Yii::app()->request->getParam('begin_date'),
+                'end_date' => Yii::app()->request->getParam('end_date'),
+                'image' => $image,
+                'active' => 1,
+                'customer_id' => Yii::app()->user->id,
+                'product_type_id' => Yii::app()->request->getParam('product_type_id'),
+                'content' => Yii::app()->request->getParam('product_content'),
+                'created' => new CDbExpression('NOW()'),
+            );
+            $product->setAttributes($data);
+            if ($product->save(false)) {
+                $desc_data = array();
+                for ($i = 0; $i <= 3; $i++) {
+                    $model = new ProductProjectDescription();
+                    if ($prices[$i] == '' && $number_peoples[$i] == '' && $contents[$i] == ''){
+                        break;
+                    }
+                    $desc_data['content'] = $contents[$i];
+                    $desc_data['number_people'] = $number_peoples[$i];
+                    $desc_data['price'] = $prices[$i];
+                    $desc_data['product_id'] = $product->product_id;
+                    $desc_data['created'] = new CDbExpression('NOW()');
+                    $model->setAttributes($desc_data);
+                    $model->save();
+                }
+            }
+            $this->redirect($this->createUrl('/myAccount/projects'));
+        }
+        $product_types = ProductType::model()->findAllByAttributes(array('parent_product_type_id' => Product::PRODUCT_PROJECT_TYPE_ID));
+        $this->render('star/pubProject', array('product_types' => $product_types));
     }
 
     public function actionProjects()
     {
-        $this->render('star/myProjects');
+        $criteria = new CDbCriteria();
+        $criteria->join = ' , product_type AS pt';
+        $criteria->condition = " t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = :product_type_id AND t.active='1' AND t.customer_id = :customer_id";
+        $criteria->params = array(":customer_id" => Yii::app()->user->id, ":product_type_id" => Product::PRODUCT_PROJECT_TYPE_ID);
+        $criteria->order = " t.end_date DESC";
+        $count = Product::model()->count($criteria);
+        $pages = new CPagination($count);
+        $pages->pageSize = 20;
+        $pages->applyLimit($criteria);
+        $result = Product::model()->findAll($criteria);
+        $this->render('star/myProjects', array(
+            'count' => $count,
+            'projects' => $result,
+            'pages' => $pages,
+        ));
+    }
+
+    public function actionDelProject()
+    {
+        $id = (int)Yii::app()->request->getParam('id');
+        Product::model()->deleteAllByAttributes(array('product_id'=>$id));
+        ProductProject::model()->deleteAllByAttributes(array('product_id'=>$id));
+        ProductProjectDescription::model()->deleteAllByAttributes(array('product_id'=>$id));
+        echo CJSON::encode(array('ok' => true));
+        Yii::app()->end();
     }
 
     public function filters()

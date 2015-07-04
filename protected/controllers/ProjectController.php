@@ -16,7 +16,7 @@ class ProjectController extends BaseController
             $criteria->addCondition("product_type_id = $type_id");
         } else {
             $criteria->join = ' ,product_type pt';
-            $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 102");
+            $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 102 AND t.end_date > NOW()");
         }
         $dataProvider = new CActiveDataProvider('Product', array(
             'criteria' => $criteria,
@@ -41,6 +41,10 @@ class ProjectController extends BaseController
         $product = Product::model()->findByPk($product_id);
         if ($product === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
+        }
+        if(strtotime($product->end_date) <= strtotime(date('Y-m-d'))){
+            header('Content-Type:text/html;charset=utf-8 ');
+            echo "<script>alert('该项目已完成众筹，请关注其他项目!');location.href='/project';</script>";
         }
         $this->setPageTitle($product->title);
         $projectDescription = ProductProjectDescription::model()->findAllByAttributes(array('product_id' => $product_id));

@@ -1,0 +1,72 @@
+.page_blue{
+    margin: 3px;
+    padding: 3px;
+    text-align: center;
+    font: 12px verdana, arial, helvetica, sans-serif;
+}
+ul.bluePager,ul.yiiPager
+{
+    font-size:12px;
+    border:0;
+    margin:0;
+    padding:0;
+    line-height:100%;
+    display:inline;
+    float: right;
+}
+
+ul.bluePager li,ul.yiiPager li
+{
+    display:inline;
+    cursor: pointer;
+    float: left;
+    margin-left: 10px;
+}
+
+ul.bluePager a:link,ul.yiiPager a:link,
+ul.bluePager a:visited,ul.yiiPager a:visited,
+ul.bluePager .total_page label,ul.yiiPager .total_page label,
+ul.bluePager .total_row label,ul.yiiPager .total_row label
+{
+
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    color: #898989;
+    padding:8px 12px;
+    height: 35px;
+    line-height: 35px;
+    text-decoration:none;
+}
+
+ul.bluePager .page a,ul.yiiPager .page a
+{
+    font-weight:normal;
+}
+
+ul.bluePager a:hover,ul.yiiPager a:hover
+{
+    background-color: #790fd4;
+    color: #fff;
+}
+
+ul.bluePager .selected a,ul.yiiPager .selected a
+{
+    background-color: #790fd4;
+    color: #fff;
+}
+
+ul.bluePager .selected a:hover,ul.yiiPager .selected a:hover
+{
+    color:#FFF !important;
+}
+
+ul.bluePager .hidden a,ul.yiiPager .hidden a
+{
+    border:solid 1px #DEDEDE;
+    color:#888888;
+}
+
+ul.bluePager .hidden,ul.yiiPager .hidden
+{
+    display:none;
+}
