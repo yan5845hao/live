@@ -283,6 +283,12 @@ class MyAccountController extends BaseController
         StarNews::model()->findByPk($id)->delete();
         $this->redirect($this->createUrl('/myAccount/news'));
     }
+    public function actionDeleteshop()
+    {
+        $id = Yii::app()->request->getParam('id');
+        StarNews::model()->findByPk($id)->delete();
+        $this->redirect($this->createUrl('/myAccount/shoplist'));
+    }
 
     public function actionStore()
     {
@@ -298,8 +304,9 @@ class MyAccountController extends BaseController
     {
         $customer_id = Yii::app()->user->id;
         $criteria = new CDbCriteria();
-        $criteria->join = ' ,product_type pt';
-        $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 2 AND t.customer_id = :customer_id");
+        // $criteria->join = ' ,product_type pt';
+        // $criteria->addCondition("t.product_type_id = pt.product_type_id AND pt.parent_product_type_id = 2 AND t.customer_id = :customer_id");
+        $criteria->addCondition("product_type_id = 2 AND customer_id = :customer_id");
         $criteria->order = 'created desc';
         $criteria->params[':customer_id'] = $customer_id;
         $dataProvider = new CActiveDataProvider('Product', array(
@@ -310,7 +317,6 @@ class MyAccountController extends BaseController
         ));
         $this->render('star/video', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
     }
-
 
     public function actionPubVideo()
     {
@@ -334,6 +340,7 @@ class MyAccountController extends BaseController
                 $product->content = Yii::app()->request->getParam('content');
                 $product->video_type = Yii::app()->request->getParam('video_type');
                 $product->video_types = Yii::app()->request->getParam('video_types');
+                $product->product_type_id='2';
                 if ($image != '') {
                     $product->image = $image;
                 }
@@ -349,7 +356,7 @@ class MyAccountController extends BaseController
                     'video_type' => Yii::app()->request->getParam('video_type'),
                     'video_types' => Yii::app()->request->getParam('video_types'),
                     'image' => $image,
-                    'type' => 'video',
+                    'product_type_id' => '2',
                     'url' => Yii::app()->request->getParam('url'),
                     'created' => new CDbExpression('NOW()'),
                 );
@@ -367,6 +374,12 @@ class MyAccountController extends BaseController
         $id = Yii::app()->request->getParam('id');
         Product::model()->findByPk($id)->delete();
         $this->redirect($this->createUrl('/myAccount/video'));
+    }
+    public function actionDeleteSchedule()
+    {
+        $id = Yii::app()->request->getParam('id');
+        StarSchedule::model()->findByPk($id)->delete();
+        $this->redirect($this->createUrl('/myAccount/schedule'));
     }
 
     public function actionMyOrders()
@@ -393,16 +406,11 @@ class MyAccountController extends BaseController
     public function actionUpgradeVip()
     {
         if ($_POST) {
+            $product_id = 30;
             $payment_info = '开通会员';
             $total = (int)Yii::app()->request->getParam('total');
             $method = (int)Yii::app()->request->getParam('method');
-            $product_id = 30; //测试产品
-//            $product_id = (int)Yii::app()->request->getParam('product_id');
             $product = Product::model()->findByPk($product_id);
-            if ($product->product_type_id != Product::RECHARGE_VIP_TYPE_ID) {
-//                $this->addFlash('认证失效！', self::MSG_NOTICE);
-                $this->redirect($this->createUrl('myAccount/upgradeVip'));
-            }
             if ($method == 1) { // 1：rmb支付，2：余额支付
                 $cost = $total * $product->default_price;
             } elseif ($method == 2) {
@@ -428,7 +436,7 @@ class MyAccountController extends BaseController
                 } elseif ($method == 2) {
                     //用户金币支付
                     //update customer_shopping_gb - cost
-                    header('Content-Type:text/html;charset=utf-8 ');
+                    header( 'Content-Type:text/html;charset=utf-8 ');
                     echo "<script>alert('账户余额不足!');location.href='/pay/vip.shtml';</script>";
                 }
             }
@@ -483,7 +491,7 @@ class MyAccountController extends BaseController
         if ($_POST) {
             $address = CJSON::encode($_POST['address']);
         }
-        $this->render('address', array('customerInfo' => $customerInfo));
+        $this->render('address',array('customerInfo'=>$customerInfo));
     }
 
     public function actionDelFavorite()
@@ -522,6 +530,7 @@ class MyAccountController extends BaseController
                 'content' => Yii::app()->request->getParam('product_content'),
                 'created' => new CDbExpression('NOW()'),
             );
+            print_vars($data);
             $product->setAttributes($data);
             if ($product->save(false)) {
                 $desc_data = array();
@@ -574,6 +583,84 @@ class MyAccountController extends BaseController
         Yii::app()->end();
     }
 
+    public function actionPubshop()
+    {//发布商品
+        $product_types = ProductType::model()->findall("parent_product_type_id=:parent_product_type_id",array(':parent_product_type_id'=>Product::PRODUCT_SHOP_TYPE_ID));
+        $image = '';
+        $id = Yii::app()->request->getParam('id');
+        $customer_id = Yii::app()->user->id;
+        $product = Product::model()->findByPk($id);
+
+        if ($_POST) {
+
+            $file = $_FILES['image'];
+            if ($file['tmp_name']) {
+                $content = fopen($file['tmp_name'], 'r');
+                $extName = Yii::app()->aliyun->getExtName($file['name']);
+                $key = Yii::app()->aliyun->savePath . '/' . md5_file($file['tmp_name']) . '.' . $extName;
+                $size = $file['size'];
+                Yii::app()->aliyun->putResourceObject($key, $content, $size);
+                $image = Yii::app()->params['cdnUrl'] . '/' . $key;
+            }
+            if ($product) {
+                $product->title = Yii::app()->request->getParam('title');
+                $product->default_price = Yii::app()->request->getParam('default_price');
+                $product->special_price = Yii::app()->request->getParam('special_price');
+                $product->active = Yii::app()->request->getParam('active');
+                $product->content = Yii::app()->request->getParam('content');
+                $product->product_type_id = Yii::app()->request->getParam('product_type_id');
+
+                if ($image != '') {
+                    $product->image = $image;
+                }
+
+                $product->created = new CDbExpression('NOW()');
+            } else {
+
+                $product = new Product();
+                $data = array(
+                    'title' => Yii::app()->request->getParam('title'),
+                    'default_price' => Yii::app()->request->getParam('default_price'),
+                    'special_price' => Yii::app()->request->getParam('special_price'),
+                    'content' => Yii::app()->request->getParam('content'),
+                    'active'=>Yii::app()->request->getParam('active'),
+                    'star_id' => Yii::app()->user->id,
+                    'product_type_id' => Yii::app()->request->getParam('product_type_id'),
+                    'image' => $image,
+                    'created' => new CDbExpression('NOW()'),
+                );
+                $product->setAttributes($data);
+            }
+            $product->customer_id = $customer_id;
+            $product->save(false);
+            $this->redirect($this->createUrl('/myAccount/shoplist'));
+        }
+        $this->render('star/pubshop', array('product' => $product,'product_types' => $product_types));
+    }
+
+    public function actionShoplist()
+    {//商品列表
+        $customer_id = Yii::app()->user->id;
+        $criteria = new CDbCriteria();
+
+        $criteria->addCondition("product_type_id in (201,202,203,204,205) AND customer_id = :customer_id");
+        $criteria->order = 'created desc';
+        $criteria->params[':customer_id'] = $customer_id;
+        $dataProvider = new CActiveDataProvider('Product', array(
+            'criteria' => $criteria,
+            'pagination' => array(
+                'pageSize' => 10,
+            ),
+        ));
+        $this->render('star/shoplist', array('dataProvider' => $dataProvider, 'data' => $dataProvider->getData()));
+
+    }
+
+    public function actionShopbuy()
+    {//订单管理
+        $this->render('star/shopbuy');
+    }
+
     public function filters()
     {
         return array(
@@ -591,4 +678,8 @@ class MyAccountController extends BaseController
             ),
         );
     }
+
+
+
+
 }

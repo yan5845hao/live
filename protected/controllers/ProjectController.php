@@ -53,7 +53,7 @@ class ProjectController extends BaseController
         $dataProvider = new CActiveDataProvider('Order', array(
             'criteria' => $criteria,
             'pagination' => array(
-                'pageSize' => 10,
+                'pageSize' => 2,
                 'pageVar' => 'page'
             ),
         ));

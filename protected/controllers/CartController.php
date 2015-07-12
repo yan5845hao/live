@@ -21,4 +21,24 @@ class CartController extends BaseController
     {
         $this->render('checkoutPayment');
     }
+
+
+    public function actionAliPayNotify()
+    {
+        Yii::app()->clientScript->reset();
+        $this->layout = '';
+        $this->render('alipayNotify');
+    }
+
+    public function actionAliPayReturn()
+    {
+        Yii::app()->clientScript->reset();
+        $this->layout = '';
+        $this->render('alipayReturn');
+    }
+
+    public function actionCheckoutSuccess()
+    {
+        echo 'order_id:' . $order_id . ',source:' . $source . '!';
+    }
 }
